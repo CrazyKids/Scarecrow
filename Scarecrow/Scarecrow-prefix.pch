@@ -15,6 +15,11 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <OctoKit/OctoKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#import "configure.h"
+#import "ADPlatformManager.h"
+#import "UIStoryboard+ViewModel.h"
 
 #endif
 

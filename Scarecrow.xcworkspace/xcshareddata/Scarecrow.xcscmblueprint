@@ -1,0 +1,72 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7E0002657A26341904E2EF084A9078017CA17E33",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38C2A0D4F62B675E8C16C8BC1437C7753846C8AC" : 0,
+    "45E4FE657A78EE4C3029D56A3C00E475C18414E6" : 0,
+    "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D" : 0,
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : 0,
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : 0,
+    "7E0002657A26341904E2EF084A9078017CA17E33" : 0,
+    "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : 0,
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CE940695-BC40-4D6D-AA7E-8A3A307652A2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38C2A0D4F62B675E8C16C8BC1437C7753846C8AC" : "Scarecrow\/Octokit\/External\/OHHTTPStubs\/",
+    "45E4FE657A78EE4C3029D56A3C00E475C18414E6" : "Scarecrow\/Octokit\/External\/ISO8601DateFormatter\/",
+    "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D" : "Scarecrow\/Octokit\/Carthage\/Checkouts\/Mantle\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : "Scarecrow\/Octokit\/Carthage\/Checkouts\/Mantle\/Carthage\/Checkouts\/xcconfigs\/",
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "Scarecrow\/Octokit\/Carthage\/Checkouts\/ReactiveCocoa\/",
+    "7E0002657A26341904E2EF084A9078017CA17E33" : "Scarecrow\/",
+    "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : "Scarecrow\/Octokit\/",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Scarecrow\/Octokit\/External\/AFNetworking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Scarecrow",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Scarecrow.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/github\/OHHTTPStubs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38C2A0D4F62B675E8C16C8BC1437C7753846C8AC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/boredzo\/iso-8601-date-formatter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "45E4FE657A78EE4C3029D56A3C00E475C18414E6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveCocoa\/ReactiveCocoa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duanhjlt\/Scarecrow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E0002657A26341904E2EF084A9078017CA17E33"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/github\/AFNetworking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Mantle\/Mantle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3F1CFC7B66794122E6D31906D72E79A4B1AAB6D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duanhjlt\/octokit.objc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4E0D01C239078022205F5EFE09E8AB524DA87ED"
+    }
+  ]
+}

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */; };
+		11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11042D821D2EADC700EECC07 /* ADLoginViewModel.m */; };
+		1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */; };
+		1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1156190D1D43D38900ABA15F /* TabBar.storyboard */; };
+		115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619101D43D3F700ABA15F /* ADTabBarLoader.m */; };
+		115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115619151D43D5DB00ABA15F /* Subscribe.storyboard */; };
+		115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */; };
+		1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156191B1D43DDFA00ABA15F /* ADTabBarController.m */; };
+		241637BC1D2F97D000A16944 /* SSKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */; };
+		241637BF1D2F97EA00A16944 /* UIStoryboard+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */; };
+		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
 		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
 		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
 		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
@@ -15,6 +26,11 @@
 		242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */; };
 		242331441D2E36BD00EF8698 /* ScarecrowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331431D2E36BD00EF8698 /* ScarecrowTests.m */; };
 		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
+		242331BF1D2E4B0D00EF8698 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331BE1D2E4B0D00EF8698 /* ADViewController.m */; };
+		242331C21D2E4B3200EF8698 /* ADViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331C11D2E4B3200EF8698 /* ADViewModel.m */; };
+		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
+		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
+		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
 /* End PBXBuildFile section */
 
@@ -184,6 +200,27 @@
 
 /* Begin PBXFileReference section */
 		0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.debug.xcconfig"; sourceTree = "<group>"; };
+		11042D6E1D2EA8C100EECC07 /* ADLoginAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginAnimation.h; path = Login/View/ADLoginAnimation.h; sourceTree = "<group>"; };
+		11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginAnimation.m; path = Login/View/ADLoginAnimation.m; sourceTree = "<group>"; };
+		11042D811D2EADC700EECC07 /* ADLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewModel.h; path = Login/ViewModel/ADLoginViewModel.h; sourceTree = "<group>"; };
+		11042D821D2EADC700EECC07 /* ADLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewModel.m; path = Login/ViewModel/ADLoginViewModel.m; sourceTree = "<group>"; };
+		1118EC081D33ED060099B82B /* configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configure.h; sourceTree = "<group>"; };
+		1156190A1D43D35C00ABA15F /* ADTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTabBarViewModel.h; path = TabBar/ViewModel/ADTabBarViewModel.h; sourceTree = "<group>"; };
+		1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTabBarViewModel.m; path = TabBar/ViewModel/ADTabBarViewModel.m; sourceTree = "<group>"; };
+		1156190D1D43D38900ABA15F /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = TabBar/View/TabBar.storyboard; sourceTree = "<group>"; };
+		1156190F1D43D3F700ABA15F /* ADTabBarLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTabBarLoader.h; path = TabBar/View/ADTabBarLoader.h; sourceTree = "<group>"; };
+		115619101D43D3F700ABA15F /* ADTabBarLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTabBarLoader.m; path = TabBar/View/ADTabBarLoader.m; sourceTree = "<group>"; };
+		115619151D43D5DB00ABA15F /* Subscribe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Subscribe.storyboard; path = Subscribe/View/Subscribe.storyboard; sourceTree = "<group>"; };
+		115619171D43DA8D00ABA15F /* ADSubscribeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeViewModel.h; path = Subscribe/ViewModel/ADSubscribeViewModel.h; sourceTree = "<group>"; };
+		115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeViewModel.m; path = Subscribe/ViewModel/ADSubscribeViewModel.m; sourceTree = "<group>"; };
+		1156191A1D43DDFA00ABA15F /* ADTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTabBarController.h; path = TabBar/View/ADTabBarController.h; sourceTree = "<group>"; };
+		1156191B1D43DDFA00ABA15F /* ADTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTabBarController.m; path = TabBar/View/ADTabBarController.m; sourceTree = "<group>"; };
+		241637BA1D2F97D000A16944 /* SSKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SSKeychain+Scarecrow.h"; path = "Utils/Category/SSKeychain+Scarecrow.h"; sourceTree = "<group>"; };
+		241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SSKeychain+Scarecrow.m"; path = "Utils/Category/SSKeychain+Scarecrow.m"; sourceTree = "<group>"; };
+		241637BD1D2F97EA00A16944 /* UIStoryboard+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIStoryboard+ViewModel.h"; path = "Utils/Category/UIStoryboard+ViewModel.h"; sourceTree = "<group>"; };
+		241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIStoryboard+ViewModel.m"; path = "Utils/Category/UIStoryboard+ViewModel.m"; sourceTree = "<group>"; };
+		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
+		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
 		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +242,15 @@
 		2423317B1D2E389900EF8698 /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = Octokit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
 		2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Octokit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		242331A51D2E3AC300EF8698 /* Scarecrow-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Scarecrow-prefix.pch"; sourceTree = "<group>"; };
+		242331BD1D2E4B0D00EF8698 /* ADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADViewController.h; path = Utils/ADViewController.h; sourceTree = "<group>"; };
+		242331BE1D2E4B0D00EF8698 /* ADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADViewController.m; path = Utils/ADViewController.m; sourceTree = "<group>"; };
+		242331C01D2E4B3200EF8698 /* ADViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADViewModel.h; path = Utils/ADViewModel.h; sourceTree = "<group>"; };
+		242331C11D2E4B3200EF8698 /* ADViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADViewModel.m; path = Utils/ADViewModel.m; sourceTree = "<group>"; };
+		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
+		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
+		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
+		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
+		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
 		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -235,6 +281,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115619071D43D2FD00ABA15F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				115619091D43D31F00ABA15F /* View */,
+				115619081D43D30A00ABA15F /* ViewModel */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		115619081D43D30A00ABA15F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1156190A1D43D35C00ABA15F /* ADTabBarViewModel.h */,
+				1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		115619091D43D31F00ABA15F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1156190D1D43D38900ABA15F /* TabBar.storyboard */,
+				1156190F1D43D3F700ABA15F /* ADTabBarLoader.h */,
+				115619101D43D3F700ABA15F /* ADTabBarLoader.m */,
+				1156191A1D43DDFA00ABA15F /* ADTabBarController.h */,
+				1156191B1D43DDFA00ABA15F /* ADTabBarController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		115619121D43D45400ABA15F /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+				115619141D43D59A00ABA15F /* View */,
+				115619131D43D58C00ABA15F /* ViewModel */,
+			);
+			name = Subscribe;
+			sourceTree = "<group>";
+		};
+		115619131D43D58C00ABA15F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				115619171D43DA8D00ABA15F /* ADSubscribeViewModel.h */,
+				115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		115619141D43D59A00ABA15F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				115619151D43D5DB00ABA15F /* Subscribe.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		241637B91D2F977300A16944 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				241637BD1D2F97EA00A16944 /* UIStoryboard+ViewModel.h */,
+				241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */,
+				241637BA1D2F97D000A16944 /* SSKeychain+Scarecrow.h */,
+				241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		241637C01D2FAE6100A16944 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				246CA4171D38E69A002167A2 /* DataBase */,
+				241637C11D2FAEB000A16944 /* Platform */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		241637C11D2FAEB000A16944 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				241637C21D2FAECA00A16944 /* ADPlatformManager.h */,
+				241637C31D2FAECA00A16944 /* ADPlatformManager.m */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
 		2423311D1D2E36BD00EF8698 = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +391,11 @@
 		242331281D2E36BD00EF8698 /* Scarecrow */ = {
 			isa = PBXGroup;
 			children = (
-				242331991D2E38B600EF8698 /* Supporting Files */,
+				115619121D43D45400ABA15F /* Subscribe */,
+				115619071D43D2FD00ABA15F /* TabBar */,
+				241637C01D2FAE6100A16944 /* Core */,
+				242331B11D2E4AEA00EF8698 /* Utils */,
+				242331C31D2E525600EF8698 /* Login */,
 				2423312C1D2E36BD00EF8698 /* AppDelegate.h */,
 				2423312D1D2E36BD00EF8698 /* AppDelegate.m */,
 				2423312F1D2E36BD00EF8698 /* ViewController.h */,
@@ -275,7 +410,11 @@
 		242331291D2E36BD00EF8698 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				242331A51D2E3AC300EF8698 /* Scarecrow-prefix.pch */,
+				242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */,
+				2423313A1D2E36BD00EF8698 /* Info.plist */,
 				2423312A1D2E36BD00EF8698 /* main.m */,
+				1118EC081D33ED060099B82B /* configure.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,14 +481,55 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		242331991D2E38B600EF8698 /* Supporting Files */ = {
+		242331B11D2E4AEA00EF8698 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				242331A51D2E3AC300EF8698 /* Scarecrow-prefix.pch */,
-				242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */,
-				2423313A1D2E36BD00EF8698 /* Info.plist */,
+				241637B91D2F977300A16944 /* Category */,
+				242331BD1D2E4B0D00EF8698 /* ADViewController.h */,
+				242331BE1D2E4B0D00EF8698 /* ADViewController.m */,
+				242331C01D2E4B3200EF8698 /* ADViewModel.h */,
+				242331C11D2E4B3200EF8698 /* ADViewModel.m */,
 			);
-			name = "Supporting Files";
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		242331C31D2E525600EF8698 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				242331C61D2E529400EF8698 /* View */,
+				242331C51D2E528E00EF8698 /* ViewModel */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		242331C51D2E528E00EF8698 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11042D811D2EADC700EECC07 /* ADLoginViewModel.h */,
+				11042D821D2EADC700EECC07 /* ADLoginViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		242331C61D2E529400EF8698 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				242331C71D2E52B500EF8698 /* login.storyboard */,
+				242331C91D2E52D900EF8698 /* ADLoginViewController.h */,
+				242331CA1D2E52D900EF8698 /* ADLoginViewController.m */,
+				11042D6E1D2EA8C100EECC07 /* ADLoginAnimation.h */,
+				11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		246CA4171D38E69A002167A2 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				246CA4231D38E6D0002167A2 /* ADDataBase.h */,
+				246CA4241D38E6D0002167A2 /* ADDataBase.m */,
+			);
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 		9B095427F6D0D959A830A929 /* Pods */ = {
@@ -380,12 +560,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				33612B78137712FE068D60ED /* 📦 Check Pods Manifest.lock */,
+				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
+				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
 				242331231D2E36BD00EF8698 /* Frameworks */,
 				242331241D2E36BD00EF8698 /* Resources */,
-				6DAC8ABC26F7DBB0C9C60B7D /* 📦 Embed Pods Frameworks */,
-				099C78DEE15379CF10314BBA /* 📦 Copy Pods Resources */,
+				6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */,
+				099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */,
+				82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */,
+				1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -617,9 +800,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
+				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
 				242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */,
 				242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */,
 				242331341D2E36BD00EF8698 /* Main.storyboard in Resources */,
+				115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +826,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		099C78DEE15379CF10314BBA /* 📦 Copy Pods Resources */ = {
+		099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -655,14 +856,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		33612B78137712FE068D60ED /* 📦 Check Pods Manifest.lock */ = {
+		33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,7 +871,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6DAC8ABC26F7DBB0C9C60B7D /* 📦 Embed Pods Frameworks */ = {
+		6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -685,6 +901,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -692,9 +923,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242331C21D2E4B3200EF8698 /* ADViewModel.m in Sources */,
+				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
+				241637BF1D2F97EA00A16944 /* UIStoryboard+ViewModel.m in Sources */,
+				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
+				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
+				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
+				242331BF1D2E4B0D00EF8698 /* ADViewController.m in Sources */,
+				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
+				1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */,
+				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
+				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
+				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
+				241637BC1D2F97D000A16944 /* SSKeychain+Scarecrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
