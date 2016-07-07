@@ -1,0 +1,3 @@
+[submodule "Octokit"]
+	path = Octokit
+	url = https://github.com/duanhjlt/octokit.objc.git

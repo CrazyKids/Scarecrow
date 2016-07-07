@@ -1,0 +1,21 @@
+//
+//  Scarecrow-prefix.pch
+//  Scarecrow
+//
+//  Created by duanhongjin on 7/7/16.
+//  Copyright © 2016 duanhongjin. All rights reserved.
+//
+
+#ifndef Scarecrow_prefix_pch
+#define Scarecrow_prefix_pch
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <OctoKit/OctoKit.h>
+
+#endif
+
+#endif /* Scarecrow_prefix_pch */

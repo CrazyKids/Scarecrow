@@ -1,0 +1,975 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
+		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
+		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
+		242331341D2E36BD00EF8698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331321D2E36BD00EF8698 /* Main.storyboard */; };
+		242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242331351D2E36BD00EF8698 /* Assets.xcassets */; };
+		242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */; };
+		242331441D2E36BD00EF8698 /* ScarecrowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331431D2E36BD00EF8698 /* ScarecrowTests.m */; };
+		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
+		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		242331401D2E36BD00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423311E1D2E36BD00EF8698 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 242331251D2E36BD00EF8698;
+			remoteInfo = Scarecrow;
+		};
+		2423314B1D2E36BD00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423311E1D2E36BD00EF8698 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 242331251D2E36BD00EF8698;
+			remoteInfo = Scarecrow;
+		};
+		242331641D2E387600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0871EA8169E2EFC00016ACA;
+			remoteInfo = "OctoKit Mac";
+		};
+		242331661D2E387600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0871EC0169E2EFC00016ACA;
+			remoteInfo = "OctoKit Mac Tests";
+		};
+		242331681D2E387600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0040CF319FEC579002869A6;
+			remoteInfo = "OctoKit iOS";
+		};
+		2423316A1D2E387600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0040CFD19FEC579002869A6;
+			remoteInfo = "OctoKit iOS Tests";
+		};
+		242331731D2E388E00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0476DBD177916920071F3CB;
+			remoteInfo = "AFNetworking Mac";
+		};
+		242331751D2E388E00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0040C9919FEC274002869A6;
+			remoteInfo = "AFNetworking iOS";
+		};
+		242331771D2E388E00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0476E5E17791AA50071F3CB;
+			remoteInfo = "ISO8601DateFormatter Mac";
+		};
+		242331791D2E388E00EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0040CBB19FEC418002869A6;
+			remoteInfo = "ISO8601DateFormatter iOS";
+		};
+		242331821D2E389900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC3C15F72B23004E8054;
+			remoteInfo = "Mantle-Mac";
+		};
+		242331841D2E389900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC5415F72B23004E8054;
+			remoteInfo = "Mantle-MacTests";
+		};
+		242331861D2E389900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C35719F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
+		242331881D2E389900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C36119F6DB38000D427D;
+			remoteInfo = "Mantle-iOSTests";
+		};
+		242331911D2E38A900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-Mac";
+		};
+		242331931D2E38A900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-MacTests";
+		};
+		242331951D2E38A900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		242331971D2E38A900EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOSTests";
+		};
+		2423319A1D2E393600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		2423319C1D2E393600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E9C35619F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
+		2423319E1D2E393600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040C9819FEC274002869A6;
+			remoteInfo = "AFNetworking iOS";
+		};
+		242331A01D2E393600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040CBA19FEC418002869A6;
+			remoteInfo = "ISO8601DateFormatter iOS";
+		};
+		242331A21D2E393600EF8698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040CF219FEC579002869A6;
+			remoteInfo = "OctoKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.debug.xcconfig"; sourceTree = "<group>"; };
+		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2423312D1D2E36BD00EF8698 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2423312F1D2E36BD00EF8698 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		242331301D2E36BD00EF8698 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		242331331D2E36BD00EF8698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		242331351D2E36BD00EF8698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		242331381D2E36BD00EF8698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2423313A1D2E36BD00EF8698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2423313F1D2E36BD00EF8698 /* ScarecrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarecrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		242331431D2E36BD00EF8698 /* ScarecrowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarecrowTests.m; sourceTree = "<group>"; };
+		242331451D2E36BD00EF8698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2423314A1D2E36BD00EF8698 /* ScarecrowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScarecrowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScarecrowUITests.m; sourceTree = "<group>"; };
+		242331501D2E36BD00EF8698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = Octokit/OctoKit.xcodeproj; sourceTree = "<group>"; };
+		2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKitDependencies.xcodeproj; path = Octokit/External/OctoKitDependencies/OctoKitDependencies.xcodeproj; sourceTree = "<group>"; };
+		2423317B1D2E389900EF8698 /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = Octokit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
+		2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Octokit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		242331A51D2E3AC300EF8698 /* Scarecrow-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Scarecrow-prefix.pch"; sourceTree = "<group>"; };
+		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
+		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		242331231D2E36BD00EF8698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2423313C1D2E36BD00EF8698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		242331471D2E36BD00EF8698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2423311D1D2E36BD00EF8698 = {
+			isa = PBXGroup;
+			children = (
+				242331281D2E36BD00EF8698 /* Scarecrow */,
+				242331421D2E36BD00EF8698 /* ScarecrowTests */,
+				2423314D1D2E36BD00EF8698 /* ScarecrowUITests */,
+				242331271D2E36BD00EF8698 /* Products */,
+				9B095427F6D0D959A830A929 /* Pods */,
+				C8BA914AFB0D04ACD6A79ABF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		242331271D2E36BD00EF8698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242331261D2E36BD00EF8698 /* Scarecrow.app */,
+				2423313F1D2E36BD00EF8698 /* ScarecrowTests.xctest */,
+				2423314A1D2E36BD00EF8698 /* ScarecrowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		242331281D2E36BD00EF8698 /* Scarecrow */ = {
+			isa = PBXGroup;
+			children = (
+				242331991D2E38B600EF8698 /* Supporting Files */,
+				2423312C1D2E36BD00EF8698 /* AppDelegate.h */,
+				2423312D1D2E36BD00EF8698 /* AppDelegate.m */,
+				2423312F1D2E36BD00EF8698 /* ViewController.h */,
+				242331301D2E36BD00EF8698 /* ViewController.m */,
+				242331321D2E36BD00EF8698 /* Main.storyboard */,
+				242331351D2E36BD00EF8698 /* Assets.xcassets */,
+				242331291D2E36BD00EF8698 /* Supporting Files */,
+			);
+			path = Scarecrow;
+			sourceTree = "<group>";
+		};
+		242331291D2E36BD00EF8698 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2423312A1D2E36BD00EF8698 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		242331421D2E36BD00EF8698 /* ScarecrowTests */ = {
+			isa = PBXGroup;
+			children = (
+				242331431D2E36BD00EF8698 /* ScarecrowTests.m */,
+				242331451D2E36BD00EF8698 /* Info.plist */,
+			);
+			path = ScarecrowTests;
+			sourceTree = "<group>";
+		};
+		2423314D1D2E36BD00EF8698 /* ScarecrowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */,
+				242331501D2E36BD00EF8698 /* Info.plist */,
+			);
+			path = ScarecrowUITests;
+			sourceTree = "<group>";
+		};
+		2423315D1D2E387500EF8698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242331651D2E387600EF8698 /* OctoKit.framework */,
+				242331671D2E387600EF8698 /* OctoKit Mac Tests.xctest */,
+				242331691D2E387600EF8698 /* OctoKit.framework */,
+				2423316B1D2E387600EF8698 /* OctoKit iOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2423316D1D2E388E00EF8698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242331741D2E388E00EF8698 /* AFNetworking.framework */,
+				242331761D2E388E00EF8698 /* AFNetworking.framework */,
+				242331781D2E388E00EF8698 /* ISO8601DateFormatter.framework */,
+				2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2423317C1D2E389900EF8698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242331831D2E389900EF8698 /* Mantle.framework */,
+				242331851D2E389900EF8698 /* Mantle-MacTests.xctest */,
+				242331871D2E389900EF8698 /* Mantle.framework */,
+				242331891D2E389900EF8698 /* Mantle-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2423318B1D2E38A900EF8698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242331921D2E38A900EF8698 /* ReactiveCocoa.framework */,
+				242331941D2E38A900EF8698 /* ReactiveCocoa-MacTests.xctest */,
+				242331961D2E38A900EF8698 /* ReactiveCocoa.framework */,
+				242331981D2E38A900EF8698 /* ReactiveCocoa-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		242331991D2E38B600EF8698 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				242331A51D2E3AC300EF8698 /* Scarecrow-prefix.pch */,
+				242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */,
+				2423313A1D2E36BD00EF8698 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B095427F6D0D959A830A929 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */,
+				A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8BA914AFB0D04ACD6A79ABF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */,
+				2423317B1D2E389900EF8698 /* Mantle.xcodeproj */,
+				2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */,
+				2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */,
+				FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		242331251D2E36BD00EF8698 /* Scarecrow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
+			buildPhases = (
+				33612B78137712FE068D60ED /* 📦 Check Pods Manifest.lock */,
+				242331221D2E36BD00EF8698 /* Sources */,
+				242331231D2E36BD00EF8698 /* Frameworks */,
+				242331241D2E36BD00EF8698 /* Resources */,
+				6DAC8ABC26F7DBB0C9C60B7D /* 📦 Embed Pods Frameworks */,
+				099C78DEE15379CF10314BBA /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2423319B1D2E393600EF8698 /* PBXTargetDependency */,
+				2423319D1D2E393600EF8698 /* PBXTargetDependency */,
+				2423319F1D2E393600EF8698 /* PBXTargetDependency */,
+				242331A11D2E393600EF8698 /* PBXTargetDependency */,
+				242331A31D2E393600EF8698 /* PBXTargetDependency */,
+			);
+			name = Scarecrow;
+			productName = Scarecrow;
+			productReference = 242331261D2E36BD00EF8698 /* Scarecrow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2423313E1D2E36BD00EF8698 /* ScarecrowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 242331561D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "ScarecrowTests" */;
+			buildPhases = (
+				2423313B1D2E36BD00EF8698 /* Sources */,
+				2423313C1D2E36BD00EF8698 /* Frameworks */,
+				2423313D1D2E36BD00EF8698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				242331411D2E36BD00EF8698 /* PBXTargetDependency */,
+			);
+			name = ScarecrowTests;
+			productName = ScarecrowTests;
+			productReference = 2423313F1D2E36BD00EF8698 /* ScarecrowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		242331491D2E36BD00EF8698 /* ScarecrowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 242331591D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "ScarecrowUITests" */;
+			buildPhases = (
+				242331461D2E36BD00EF8698 /* Sources */,
+				242331471D2E36BD00EF8698 /* Frameworks */,
+				242331481D2E36BD00EF8698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2423314C1D2E36BD00EF8698 /* PBXTargetDependency */,
+			);
+			name = ScarecrowUITests;
+			productName = ScarecrowUITests;
+			productReference = 2423314A1D2E36BD00EF8698 /* ScarecrowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2423311E1D2E36BD00EF8698 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = duanhongjin;
+				TargetAttributes = {
+					242331251D2E36BD00EF8698 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2423313E1D2E36BD00EF8698 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 242331251D2E36BD00EF8698;
+					};
+					242331491D2E36BD00EF8698 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 242331251D2E36BD00EF8698;
+					};
+				};
+			};
+			buildConfigurationList = 242331211D2E36BD00EF8698 /* Build configuration list for PBXProject "Scarecrow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2423311D1D2E36BD00EF8698;
+			productRefGroup = 242331271D2E36BD00EF8698 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2423317C1D2E389900EF8698 /* Products */;
+					ProjectRef = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+				},
+				{
+					ProductGroup = 2423315D1D2E387500EF8698 /* Products */;
+					ProjectRef = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 2423316D1D2E388E00EF8698 /* Products */;
+					ProjectRef = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+				},
+				{
+					ProductGroup = 2423318B1D2E38A900EF8698 /* Products */;
+					ProjectRef = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				242331251D2E36BD00EF8698 /* Scarecrow */,
+				2423313E1D2E36BD00EF8698 /* ScarecrowTests */,
+				242331491D2E36BD00EF8698 /* ScarecrowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		242331651D2E387600EF8698 /* OctoKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OctoKit.framework;
+			remoteRef = 242331641D2E387600EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331671D2E387600EF8698 /* OctoKit Mac Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OctoKit Mac Tests.xctest";
+			remoteRef = 242331661D2E387600EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331691D2E387600EF8698 /* OctoKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OctoKit.framework;
+			remoteRef = 242331681D2E387600EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2423316B1D2E387600EF8698 /* OctoKit iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OctoKit iOS Tests.xctest";
+			remoteRef = 2423316A1D2E387600EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331741D2E388E00EF8698 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = 242331731D2E388E00EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331761D2E388E00EF8698 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = 242331751D2E388E00EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331781D2E388E00EF8698 /* ISO8601DateFormatter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ISO8601DateFormatter.framework;
+			remoteRef = 242331771D2E388E00EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ISO8601DateFormatter.framework;
+			remoteRef = 242331791D2E388E00EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331831D2E389900EF8698 /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = 242331821D2E389900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331851D2E389900EF8698 /* Mantle-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-MacTests.xctest";
+			remoteRef = 242331841D2E389900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331871D2E389900EF8698 /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = 242331861D2E389900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331891D2E389900EF8698 /* Mantle-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-iOSTests.xctest";
+			remoteRef = 242331881D2E389900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331921D2E38A900EF8698 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 242331911D2E38A900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331941D2E38A900EF8698 /* ReactiveCocoa-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-MacTests.xctest";
+			remoteRef = 242331931D2E38A900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331961D2E38A900EF8698 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = 242331951D2E38A900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		242331981D2E38A900EF8698 /* ReactiveCocoa-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-iOSTests.xctest";
+			remoteRef = 242331971D2E38A900EF8698 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		242331241D2E36BD00EF8698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */,
+				242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */,
+				242331341D2E36BD00EF8698 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2423313D1D2E36BD00EF8698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		242331481D2E36BD00EF8698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		099C78DEE15379CF10314BBA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33612B78137712FE068D60ED /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DAC8ABC26F7DBB0C9C60B7D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		242331221D2E36BD00EF8698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
+				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
+				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2423313B1D2E36BD00EF8698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242331441D2E36BD00EF8698 /* ScarecrowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		242331461D2E36BD00EF8698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		242331411D2E36BD00EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 242331251D2E36BD00EF8698 /* Scarecrow */;
+			targetProxy = 242331401D2E36BD00EF8698 /* PBXContainerItemProxy */;
+		};
+		2423314C1D2E36BD00EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 242331251D2E36BD00EF8698 /* Scarecrow */;
+			targetProxy = 2423314B1D2E36BD00EF8698 /* PBXContainerItemProxy */;
+		};
+		2423319B1D2E393600EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = 2423319A1D2E393600EF8698 /* PBXContainerItemProxy */;
+		};
+		2423319D1D2E393600EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mantle-iOS";
+			targetProxy = 2423319C1D2E393600EF8698 /* PBXContainerItemProxy */;
+		};
+		2423319F1D2E393600EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AFNetworking iOS";
+			targetProxy = 2423319E1D2E393600EF8698 /* PBXContainerItemProxy */;
+		};
+		242331A11D2E393600EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ISO8601DateFormatter iOS";
+			targetProxy = 242331A01D2E393600EF8698 /* PBXContainerItemProxy */;
+		};
+		242331A31D2E393600EF8698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OctoKit iOS";
+			targetProxy = 242331A21D2E393600EF8698 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		242331321D2E36BD00EF8698 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242331331D2E36BD00EF8698 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		242331371D2E36BD00EF8698 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242331381D2E36BD00EF8698 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		242331511D2E36BD00EF8698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		242331521D2E36BD00EF8698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		242331541D2E36BD00EF8698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
+				INFOPLIST_FILE = Scarecrow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		242331551D2E36BD00EF8698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
+				INFOPLIST_FILE = Scarecrow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		242331571D2E36BD00EF8698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ScarecrowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.ScarecrowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scarecrow.app/Scarecrow";
+			};
+			name = Debug;
+		};
+		242331581D2E36BD00EF8698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ScarecrowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.ScarecrowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scarecrow.app/Scarecrow";
+			};
+			name = Release;
+		};
+		2423315A1D2E36BD00EF8698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ScarecrowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.ScarecrowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Scarecrow;
+			};
+			name = Debug;
+		};
+		2423315B1D2E36BD00EF8698 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ScarecrowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.ScarecrowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Scarecrow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		242331211D2E36BD00EF8698 /* Build configuration list for PBXProject "Scarecrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242331511D2E36BD00EF8698 /* Debug */,
+				242331521D2E36BD00EF8698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242331541D2E36BD00EF8698 /* Debug */,
+				242331551D2E36BD00EF8698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		242331561D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "ScarecrowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242331571D2E36BD00EF8698 /* Debug */,
+				242331581D2E36BD00EF8698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		242331591D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "ScarecrowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2423315A1D2E36BD00EF8698 /* Debug */,
+				2423315B1D2E36BD00EF8698 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2423311E1D2E36BD00EF8698 /* Project object */;
+}
