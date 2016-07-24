@@ -10,14 +10,26 @@
 
 @interface ADViewController ()
 
-@property (strong, nonatomic, readwrite) ADViewModel *viewModel;
+@property (strong, nonatomic) ADViewModel *viewModel;
 
 @end
 
 @implementation ADViewController
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    ADViewController *vc = [super allocWithZone:zone];
+    
+    @weakify(vc);
+    [[vc rac_signalForSelector:@selector(viewDidLoad)]subscribeNext:^(id x) {
+        @strongify(vc);
+        [vc bindViewModel];
+    }];
+    
+    return vc;
+}
+
 - (instancetype)initWithViewModel:(ADViewModel *)viewModel {
-    self = [super init];
+    self = [self init];
     if (self) {
         [self initializeWithViewMode:viewModel];
     }
@@ -26,12 +38,6 @@
 
 - (void)initializeWithViewMode:(ADViewModel *)viewModel {
     self.viewModel = viewModel;
-    
-    @weakify(self)
-    [[self rac_signalForSelector:@selector(viewDidLoad)]subscribeNext:^(id x) {
-        @strongify(self)
-        [self bindViewModel];
-    }];
 }
 
 - (void)viewDidLoad {

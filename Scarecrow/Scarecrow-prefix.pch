@@ -20,6 +20,7 @@
 #import "configure.h"
 #import "ADPlatformManager.h"
 #import "UIStoryboard+ViewModel.h"
+#import "DEFINES.h"
 
 #endif
 

@@ -8,10 +8,6 @@
 
 #import "ADViewModel.h"
 
-@class ADSubscribeViewModel;
-
 @interface ADTabBarViewModel : ADViewModel
-
-@property (strong, nonatomic, readonly) ADSubscribeViewModel *subscribeViewModel;
 
 @end

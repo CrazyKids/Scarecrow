@@ -6,8 +6,13 @@
 //  Copyright © 2016年 duanhongjin. All rights reserved.
 //
 
-#import "ADViewModel.h"
+#import "ADTableViewModel.h"
 
-@interface ADSubscribeViewModel : ADViewModel
+@interface ADSubscribeViewModel : ADTableViewModel
+
+@property (strong, nonatomic, readonly) NSArray *eventArray;
+@property (assign, nonatomic, readonly) BOOL isCurrentUser;
+
+- (NSArray *)dataSourceWithEvents:(NSArray *)eventArray;
 
 @end

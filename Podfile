@@ -5,7 +5,10 @@ target 'Scarecrow' do
 
 pod 'SDWebImage'
 pod 'SSKeychain'
-pod 'FMDB'
+pod 'ZRAlertController'
 pod 'MBProgressHUD'
+pod 'YYKit'
+pod 'OcticonsIOS', :git => 'https://github.com/jacksonh/OcticonsIOS.git'
+pod 'FormatterKit'
 
 end

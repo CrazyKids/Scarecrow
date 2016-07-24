@@ -7,10 +7,11 @@
 //
 
 #import "ADTabBarLoader.h"
+#import "ADTabBarController.h"
 
 @interface ADTabBarLoader ()
 
-@property (weak, nonatomic) IBOutlet UITabBarController *tabBarController;
+@property (weak, nonatomic) IBOutlet ADTabBarController *tabBarController;
 @property (strong, nonatomic) IBInspectable NSString *tabBarItemNames;
 
 @end
@@ -21,7 +22,10 @@
     NSArray *array = [self.tabBarItemNames componentsSeparatedByString:@","];
     NSMutableArray *vcArray = [NSMutableArray new];
     for (NSString *name in array) {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:name bundle:nil] instantiateInitialViewController];
+        NSString *modelName = [NSString stringWithFormat:@"AD%@ViewModel", name];
+        Class modelClass = NSClassFromString(modelName);
+        ADViewModel *model = [modelClass new];
+        UIViewController *vc = [[UIStoryboard storyboardWithName:name bundle:nil] instantiateInitialViewControllerWithViewModel:model];
         [vcArray addObject:vc];
     }
     self.tabBarController.viewControllers = vcArray;

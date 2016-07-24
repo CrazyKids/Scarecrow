@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DQL-QS-zKP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Repositories-->
+        <scene sceneID="Hmb-N8-ZFB">
+            <objects>
+                <viewController id="dzx-ib-Fah" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KCG-ph-Dps"/>
+                        <viewControllerLayoutGuide type="bottom" id="4k6-ht-PyA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXg-k5-4ju">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Repositories" id="oBa-0a-e4T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcX-LI-Ock" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EuI-QV-daF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQL-QS-zKP" customClass="ADNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Repos" selectedImage="ReposHold" id="pAs-Bf-8Mf">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWm-nI-s4A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dzx-ib-Fah" kind="relationship" relationship="rootViewController" id="n0y-cn-vzE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIo-WK-Ryw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Repos" width="19" height="23"/>
+        <image name="ReposHold" width="19" height="23"/>
+    </resources>
+</document>

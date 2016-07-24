@@ -10,6 +10,7 @@
 #import "SSKeychain+Scarecrow.h"
 #import "ADTabBarViewModel.h"
 #import "ADPlatformManager.h"
+#import "OCTUser+Persistence.h"
 
 @interface ADLoginViewModel ()
 
@@ -32,10 +33,10 @@
         return @(username.length && password.length);
     }]distinctUntilChanged];
     
-    @weakify(self)
+    @weakify(self);
     
     void (^loginSuccess)(OCTClient *) = ^(OCTClient *client) {
-        @strongify(self)
+        @strongify(self);
         
         [ADPlatformManager sharedInstance].client = client;
         
@@ -43,8 +44,8 @@
         SSKeychain.password = self.password;
         SSKeychain.accessToken = client.token;
         
-        //TODO:
-        // save user and change ui.
+        [client.user ad_update];
+        
         ADTabBarViewModel *tabBarViewModel = [ADTabBarViewModel new];
         dispatch_async(dispatch_get_main_queue(), ^{
             [[ADPlatformManager sharedInstance]resetRootViewModel:tabBarViewModel];
@@ -55,7 +56,7 @@
     self.loginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSString *oneTimePassword) {
         @strongify(self)
         OCTUser *user = [OCTUser userWithRawLogin:self.username server:OCTServer.dotComServer];
-        return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser|OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil]doNext:loginSuccess];
+        return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil]doNext:loginSuccess];
     }];
     
     self.exchangeTokenCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSString *code) {

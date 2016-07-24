@@ -10,6 +10,8 @@
 
 @interface ADViewModel : NSObject
 
+@property (nonatomic, strong, readonly) RACSubject *errors;
+
 - (void)initialize;
 
 @end

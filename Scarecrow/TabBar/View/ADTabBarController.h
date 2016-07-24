@@ -10,4 +10,9 @@
 
 @interface ADTabBarController : UITabBarController
 
+@property (strong, nonatomic, readonly) ADViewModel *viewModel;
+
+- (instancetype)initWithViewModel:(ADViewModel *)viewModel;
+- (void)bindViewModel;
+
 @end

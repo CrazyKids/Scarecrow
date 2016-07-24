@@ -10,6 +10,7 @@
 #import "ADLoginAnimation.h"
 #import "ADLoginViewModel.h"
 #import "SSKeychain+Scarecrow.h"
+#import <ZRAlertController/ZRAlertController.h>
 
 @interface ADLoginViewController ()
 
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *oauthLoginButton;
+
+@property (strong, nonatomic, readonly) ADLoginViewModel *viewModel;
 
 @end
 
@@ -32,10 +35,8 @@
 - (void)bindViewModel {
     [super bindViewModel];
     
-    ADLoginViewModel *loginViewModel = (ADLoginViewModel *)self.viewModel;
-    
-    RAC(loginViewModel, username) = self.usernameTextField.rac_textSignal;
-    RAC(loginViewModel, password) = self.passwordTextField.rac_textSignal;
+    RAC(self.viewModel, username) = self.usernameTextField.rac_textSignal;
+    RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
     
     NSString *username = SSKeychain.username;
     if (username) {
@@ -43,22 +44,42 @@
         self.passwordTextField.text = SSKeychain.password;
     }
     
-    RAC(self.loginButton, enabled) = loginViewModel.validLoginSingal;
+    RAC(self.loginButton, enabled) = self.viewModel.validLoginSingal;
     
     [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        [loginViewModel.loginCommand execute:nil];
+        [self.viewModel.loginCommand execute:nil];
     }];
     
-    @weakify(self)
-    [[[RACSignal merge:@[loginViewModel.loginCommand.executing, loginViewModel.exchangeTokenCommand.executing]]doNext:^(id x) {
+    @weakify(self);
+    [[[RACSignal merge:@[self.viewModel.loginCommand.executing, self.viewModel.exchangeTokenCommand.executing]]doNext:^(id x) {
         @strongify(self)
         [self.view endEditing:YES];
     }]subscribeNext:^(NSNumber *executing) {
-        @strongify(self)
+        @strongify(self);
         if (executing.boolValue) {
             [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"Loading...";
         } else {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
+    }];
+    
+    [[RACSignal merge:@[self.viewModel.loginCommand.errors, self.viewModel.exchangeTokenCommand.errors]]subscribeNext:^(NSError *error) {
+        @strongify(self);
+        if ([error.domain isEqualToString:OCTClientErrorDomain] && error.code == OCTClientErrorTwoFactorAuthenticationOneTimePasswordRequired) {
+            [[ZRAlertController defaultAlert]alertShow:self title:@"" message:@"Please enter the 2FA code you received via SMS or read from an authenticator app" cancelButton:@"Cancel" okayButton:@"OK" alertStyle:ZRAlertStylePlainTextInput placeHolder:@"2FA code" okayHandler:^(UITextField * _Nonnull textFiled) {
+                [self.viewModel.loginCommand execute:textFiled.text];
+            } cancelHandler:^(UITextField * _Nonnull textFiled) {
+                
+            }];
+        } else {
+            NSString *desc = error.localizedDescription;
+            if ([error.domain isEqualToString:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
+                desc = @"Incorrect username or password";
+            }
+            
+            [[ZRAlertController defaultAlert]alertShow:self title:@"" message:desc okayButton:@"OK" completion:^{
+                
+            }];
         }
     }];
 }

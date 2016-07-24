@@ -11,6 +11,8 @@
 #import "ADLoginViewModel.h"
 #import "SSKeychain+Scarecrow.h"
 #import "ADTabBarViewModel.h"
+#import "OCTUser+Persistence.h"
+#import "SSKeychain+Scarecrow.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +51,11 @@
 
 - (ADViewModel *)createInitialViewModel {
     if (SSKeychain.username.length && SSKeychain.accessToken.length) {
+        OCTUser *user = [OCTUser ad_userWithRawLogin:[SSKeychain username] server:OCTServer.dotComServer];
+        
+        OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+        [ADPlatformManager sharedInstance].client = client;
+        
         return [ADTabBarViewModel new];
     }
     
@@ -58,9 +65,9 @@
 - (void)showRootViewController {
     ADPlatformManager *platform = [ADPlatformManager sharedInstance];
     
-    @weakify(self)
+    @weakify(self);
     [[platform rac_signalForSelector:@selector(resetRootViewModel:)]subscribeNext:^(RACTuple *tuple) {
-        @strongify(self)
+        @strongify(self);
         
         UIViewController *rootVC = nil;
         if ([tuple.first isKindOfClass:[ADLoginViewModel class]]) {

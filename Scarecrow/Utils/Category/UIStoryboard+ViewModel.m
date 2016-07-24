@@ -17,12 +17,7 @@
     
     NSParameterAssert([vc isKindOfClass:[ADViewController class]]);
     
-    ADViewController *viewController = (ADViewController *)vc;
-    SEL selector = NSSelectorFromString(@"initializeWithViewMode:");
-    if ([viewController respondsToSelector:selector]) {
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [viewController performSelector:selector withObject:viewModel];
-    }
+    [self setViewModel:viewModel toVC:vc];
     
     return vc;
 }
@@ -30,16 +25,23 @@
 - (__kindof UIViewController *)instantiateInitialViewControllerWithViewModel:(ADViewModel *)viewModel {
     UIViewController *vc = [self instantiateInitialViewController];
     
-    NSParameterAssert([vc isKindOfClass:[ADTabBarController class]]);
+    NSParameterAssert([vc isKindOfClass:[ADTabBarController class]] || [vc isKindOfClass:[UINavigationController class]]);
+    [self setViewModel:viewModel toVC:vc];
     
-    ADTabBarController *viewController = (ADTabBarController *)vc;
-    SEL selector = NSSelectorFromString(@"initializeWithViewMode:");
-    if ([viewController respondsToSelector:selector]) {
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [viewController performSelector:selector withObject:viewModel];
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        UIViewController *top = ((UINavigationController *)vc).topViewController;
+        [self setViewModel:viewModel toVC:top];
     }
     
     return vc;
+}
+
+- (void)setViewModel:(ADViewModel *)viewModel toVC:(UIViewController *)vc {
+    SEL selector = NSSelectorFromString(@"initializeWithViewMode:");
+    if ([vc respondsToSelector:selector]) {
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [vc performSelector:selector withObject:viewModel];
+    }
 }
 
 @end

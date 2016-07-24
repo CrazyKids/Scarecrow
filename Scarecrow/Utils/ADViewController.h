@@ -11,9 +11,11 @@
 
 @interface ADViewController : UIViewController
 
-@property (strong, nonatomic, readonly) ADViewModel *viewModel;
+@property (strong, nonatomic, readonly) __kindof ADViewModel *viewModel;
 
 - (instancetype)initWithViewModel:(ADViewModel *)viewModel;
+- (void)initializeWithViewMode:(ADViewModel *)viewModel;
+
 - (void)bindViewModel;
 
 @end

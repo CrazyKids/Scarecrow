@@ -8,14 +8,20 @@
 
 #import "ADViewModel.h"
 
+@interface ADViewModel ()
+
+@property (nonatomic, strong) RACSubject *errors;
+
+@end
+
 @implementation ADViewModel
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     ADViewModel *viewModel = [super allocWithZone:zone];
     
-    @weakify(viewModel)
+    @weakify(viewModel);
     [[viewModel rac_signalForSelector:@selector(init)] subscribeNext:^(id x) {
-        @strongify(viewModel)
+        @strongify(viewModel);
         [viewModel initialize];
     }];
     
@@ -24,6 +30,13 @@
 
 - (void)initialize {
     
+}
+
+- (RACSubject *)errors {
+    if (!_errors) {
+        _errors = [RACSubject subject];
+    }
+    return _errors;
 }
 
 @end

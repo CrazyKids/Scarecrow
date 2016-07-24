@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lsr-9H-NMy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lsr-9H-NMy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Zov-IR-OD0">
             <objects>
-                <tabBarController id="lsr-9H-NMy" sceneMemberID="viewController">
+                <tabBarController id="lsr-9H-NMy" customClass="ADTabBarController" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Dpk-4b-2bb">
@@ -20,7 +20,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akr-nW-m3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="WSv-n6-Spa" customClass="ADTabBarLoader">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe,Repositories,Following,Discover,Profile"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tabBarController" destination="lsr-9H-NMy" id="7O6-fG-p0c"/>

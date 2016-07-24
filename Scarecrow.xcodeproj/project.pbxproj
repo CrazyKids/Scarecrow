@@ -15,9 +15,15 @@
 		115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115619151D43D5DB00ABA15F /* Subscribe.storyboard */; };
 		115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */; };
 		1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156191B1D43DDFA00ABA15F /* ADTabBarController.m */; };
+		115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619331D44F4A100ABA15F /* ADSubscribeViewController.m */; };
+		115619421D44F78200ABA15F /* ADTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619411D44F78200ABA15F /* ADTableViewController.m */; };
+		118AE3871D450E30006DD475 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE3861D450E30006DD475 /* Repositories.storyboard */; };
+		118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38A1D450EFF006DD475 /* Profile.storyboard */; };
+		118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38E1D450FBF006DD475 /* Discover.storyboard */; };
 		241637BC1D2F97D000A16944 /* SSKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */; };
 		241637BF1D2F97EA00A16944 /* UIStoryboard+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
+		241EEEAE1D4F8A14000A12A6 /* ADTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241EEEAD1D4F8A14000A12A6 /* ADTableViewModel.m */; };
 		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
 		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
 		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
@@ -30,7 +36,22 @@
 		242331C21D2E4B3200EF8698 /* ADViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331C11D2E4B3200EF8698 /* ADViewModel.m */; };
 		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
+		243224DA1D54EE7700FCCE53 /* OCTRef+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 243224D91D54EE7700FCCE53 /* OCTRef+Scarecrow.m */; };
+		2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */; };
+		2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */; };
+		2459AAE71D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAE41D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m */; };
+		2459AAE81D54403400FCD90F /* OCTEvent+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAE61D54403400FCD90F /* OCTEvent+AttributedString.m */; };
+		2459AAEE1D546EF000FCD90F /* NSURL+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAED1D546EF000FCD90F /* NSURL+Scarecrow.m */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
+		2471C34F1D50A14800EC6028 /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C34E1D50A14800EC6028 /* ADNavigationController.m */; };
+		2471C3611D50A9B400EC6028 /* OCTUser+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C3601D50A9B400EC6028 /* OCTUser+Persistence.m */; };
+		248500361D4E4A4B00DA16AF /* UIColor+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248500351D4E4A4B00DA16AF /* UIColor+Scarecrow.m */; };
+		24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C871D5020A200749A30 /* ADFollowingViewModel.m */; };
+		24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */; };
+		24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8F1D50214400749A30 /* ADProfileViewModel.m */; };
+		24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */; };
+		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
+		24B2DA961D52F08A00CD93A2 /* OCTEvent+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA951D52F08A00CD93A2 /* OCTEvent+Persistence.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
 /* End PBXBuildFile section */
 
@@ -215,12 +236,21 @@
 		115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeViewModel.m; path = Subscribe/ViewModel/ADSubscribeViewModel.m; sourceTree = "<group>"; };
 		1156191A1D43DDFA00ABA15F /* ADTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTabBarController.h; path = TabBar/View/ADTabBarController.h; sourceTree = "<group>"; };
 		1156191B1D43DDFA00ABA15F /* ADTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTabBarController.m; path = TabBar/View/ADTabBarController.m; sourceTree = "<group>"; };
+		115619321D44F4A100ABA15F /* ADSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeViewController.h; path = Subscribe/View/ADSubscribeViewController.h; sourceTree = "<group>"; };
+		115619331D44F4A100ABA15F /* ADSubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeViewController.m; path = Subscribe/View/ADSubscribeViewController.m; sourceTree = "<group>"; };
+		115619401D44F78200ABA15F /* ADTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTableViewController.h; path = Utils/ADTableViewController.h; sourceTree = "<group>"; };
+		115619411D44F78200ABA15F /* ADTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTableViewController.m; path = Utils/ADTableViewController.m; sourceTree = "<group>"; };
+		118AE3861D450E30006DD475 /* Repositories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Repositories.storyboard; path = Repositories/View/Repositories.storyboard; sourceTree = "<group>"; };
+		118AE38A1D450EFF006DD475 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/View/Profile.storyboard; sourceTree = "<group>"; };
+		118AE38E1D450FBF006DD475 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/View/Discover.storyboard; sourceTree = "<group>"; };
 		241637BA1D2F97D000A16944 /* SSKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SSKeychain+Scarecrow.h"; path = "Utils/Category/SSKeychain+Scarecrow.h"; sourceTree = "<group>"; };
 		241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SSKeychain+Scarecrow.m"; path = "Utils/Category/SSKeychain+Scarecrow.m"; sourceTree = "<group>"; };
 		241637BD1D2F97EA00A16944 /* UIStoryboard+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIStoryboard+ViewModel.h"; path = "Utils/Category/UIStoryboard+ViewModel.h"; sourceTree = "<group>"; };
 		241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIStoryboard+ViewModel.m"; path = "Utils/Category/UIStoryboard+ViewModel.m"; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
+		241EEEAC1D4F8A14000A12A6 /* ADTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTableViewModel.h; path = Utils/ADTableViewModel.h; sourceTree = "<group>"; };
+		241EEEAD1D4F8A14000A12A6 /* ADTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTableViewModel.m; path = Utils/ADTableViewModel.m; sourceTree = "<group>"; };
 		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -249,8 +279,38 @@
 		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
 		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
 		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
+		243224D81D54EE7700FCCE53 /* OCTRef+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OCTRef+Scarecrow.h"; path = "Utils/Category/OCTRef+Scarecrow.h"; sourceTree = "<group>"; };
+		243224D91D54EE7700FCCE53 /* OCTRef+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCTRef+Scarecrow.m"; path = "Utils/Category/OCTRef+Scarecrow.m"; sourceTree = "<group>"; };
+		2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Following.storyboard; path = Following/View/Following.storyboard; sourceTree = "<group>"; };
+		2459AAA71D538ADC00FCD90F /* ADSubscribeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeTableViewCell.h; path = Subscribe/View/ADSubscribeTableViewCell.h; sourceTree = "<group>"; };
+		2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
+		2459AAE31D54403400FCD90F /* NSMutableAttributedString+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+Scarecrow.h"; path = "Utils/Category/NSMutableAttributedString+Scarecrow.h"; sourceTree = "<group>"; };
+		2459AAE41D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+Scarecrow.m"; path = "Utils/Category/NSMutableAttributedString+Scarecrow.m"; sourceTree = "<group>"; };
+		2459AAE51D54403400FCD90F /* OCTEvent+AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OCTEvent+AttributedString.h"; path = "Utils/Category/OCTEvent+AttributedString.h"; sourceTree = "<group>"; };
+		2459AAE61D54403400FCD90F /* OCTEvent+AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCTEvent+AttributedString.m"; path = "Utils/Category/OCTEvent+AttributedString.m"; sourceTree = "<group>"; };
+		2459AAEC1D546EF000FCD90F /* NSURL+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Scarecrow.h"; path = "Utils/Category/NSURL+Scarecrow.h"; sourceTree = "<group>"; };
+		2459AAED1D546EF000FCD90F /* NSURL+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Scarecrow.m"; path = "Utils/Category/NSURL+Scarecrow.m"; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
 		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
+		2471C34D1D50A14800EC6028 /* ADNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADNavigationController.h; path = Utils/ADNavigationController.h; sourceTree = "<group>"; };
+		2471C34E1D50A14800EC6028 /* ADNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADNavigationController.m; path = Utils/ADNavigationController.m; sourceTree = "<group>"; };
+		2471C35F1D50A9B400EC6028 /* OCTUser+Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OCTUser+Persistence.h"; path = "Utils/Category/OCTUser+Persistence.h"; sourceTree = "<group>"; };
+		2471C3601D50A9B400EC6028 /* OCTUser+Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCTUser+Persistence.m"; path = "Utils/Category/OCTUser+Persistence.m"; sourceTree = "<group>"; };
+		2484749D1D5ABEF600D62297 /* DEFINES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEFINES.h; sourceTree = "<group>"; };
+		248500341D4E4A4B00DA16AF /* UIColor+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Scarecrow.h"; path = "Utils/Category/UIColor+Scarecrow.h"; sourceTree = "<group>"; };
+		248500351D4E4A4B00DA16AF /* UIColor+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Scarecrow.m"; path = "Utils/Category/UIColor+Scarecrow.m"; sourceTree = "<group>"; };
+		24A53C861D5020A200749A30 /* ADFollowingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFollowingViewModel.h; path = Following/ViewModel/ADFollowingViewModel.h; sourceTree = "<group>"; };
+		24A53C871D5020A200749A30 /* ADFollowingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADFollowingViewModel.m; path = Following/ViewModel/ADFollowingViewModel.m; sourceTree = "<group>"; };
+		24A53C8A1D50211500749A30 /* ADDiscoverViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewModel.h; path = Discover/ViewModel/ADDiscoverViewModel.h; sourceTree = "<group>"; };
+		24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverViewModel.m; path = Discover/ViewModel/ADDiscoverViewModel.m; sourceTree = "<group>"; };
+		24A53C8E1D50214400749A30 /* ADProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADProfileViewModel.h; path = Profile/ViewModel/ADProfileViewModel.h; sourceTree = "<group>"; };
+		24A53C8F1D50214400749A30 /* ADProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADProfileViewModel.m; path = Profile/ViewModel/ADProfileViewModel.m; sourceTree = "<group>"; };
+		24A53C921D50217B00749A30 /* ADRepositoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRepositoriesViewModel.h; path = Repositories/ViewModel/ADRepositoriesViewModel.h; sourceTree = "<group>"; };
+		24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRepositoriesViewModel.m; path = Repositories/ViewModel/ADRepositoriesViewModel.m; sourceTree = "<group>"; };
+		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
+		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
+		24B2DA941D52F08A00CD93A2 /* OCTEvent+Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OCTEvent+Persistence.h"; path = "Utils/Category/OCTEvent+Persistence.h"; sourceTree = "<group>"; };
+		24B2DA951D52F08A00CD93A2 /* OCTEvent+Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCTEvent+Persistence.m"; path = "Utils/Category/OCTEvent+Persistence.m"; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
 		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -325,6 +385,8 @@
 			children = (
 				115619171D43DA8D00ABA15F /* ADSubscribeViewModel.h */,
 				115619181D43DA8D00ABA15F /* ADSubscribeViewModel.m */,
+				24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */,
+				24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -333,6 +395,61 @@
 			isa = PBXGroup;
 			children = (
 				115619151D43D5DB00ABA15F /* Subscribe.storyboard */,
+				115619321D44F4A100ABA15F /* ADSubscribeViewController.h */,
+				115619331D44F4A100ABA15F /* ADSubscribeViewController.m */,
+				2459AAA71D538ADC00FCD90F /* ADSubscribeTableViewCell.h */,
+				2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		118AE3791D450D3B006DD475 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C911D50214E00749A30 /* ViewModel */,
+				118AE3851D450DFF006DD475 /* View */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		118AE3851D450DFF006DD475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				118AE3861D450E30006DD475 /* Repositories.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		118AE3881D450ED4006DD475 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C8D1D50211C00749A30 /* ViewModel */,
+				118AE3891D450EDD006DD475 /* View */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		118AE3891D450EDD006DD475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				118AE38A1D450EFF006DD475 /* Profile.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		118AE38C1D450F52006DD475 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C891D5020A800749A30 /* ViewModel */,
+				118AE38D1D450FA1006DD475 /* View */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		118AE38D1D450FA1006DD475 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				118AE38E1D450FBF006DD475 /* Discover.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -340,10 +457,24 @@
 		241637B91D2F977300A16944 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2459AAE31D54403400FCD90F /* NSMutableAttributedString+Scarecrow.h */,
+				2459AAE41D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m */,
+				2459AAE51D54403400FCD90F /* OCTEvent+AttributedString.h */,
+				2459AAE61D54403400FCD90F /* OCTEvent+AttributedString.m */,
 				241637BD1D2F97EA00A16944 /* UIStoryboard+ViewModel.h */,
 				241637BE1D2F97EA00A16944 /* UIStoryboard+ViewModel.m */,
 				241637BA1D2F97D000A16944 /* SSKeychain+Scarecrow.h */,
 				241637BB1D2F97D000A16944 /* SSKeychain+Scarecrow.m */,
+				248500341D4E4A4B00DA16AF /* UIColor+Scarecrow.h */,
+				248500351D4E4A4B00DA16AF /* UIColor+Scarecrow.m */,
+				2471C35F1D50A9B400EC6028 /* OCTUser+Persistence.h */,
+				2471C3601D50A9B400EC6028 /* OCTUser+Persistence.m */,
+				24B2DA941D52F08A00CD93A2 /* OCTEvent+Persistence.h */,
+				24B2DA951D52F08A00CD93A2 /* OCTEvent+Persistence.m */,
+				2459AAEC1D546EF000FCD90F /* NSURL+Scarecrow.h */,
+				2459AAED1D546EF000FCD90F /* NSURL+Scarecrow.m */,
+				243224D81D54EE7700FCCE53 /* OCTRef+Scarecrow.h */,
+				243224D91D54EE7700FCCE53 /* OCTRef+Scarecrow.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -391,6 +522,11 @@
 		242331281D2E36BD00EF8698 /* Scarecrow */ = {
 			isa = PBXGroup;
 			children = (
+				243224E61D562F6C00FCCE53 /* Resource */,
+				244998801D4DEEF800D6E9F7 /* Following */,
+				118AE38C1D450F52006DD475 /* Discover */,
+				118AE3881D450ED4006DD475 /* Profile */,
+				118AE3791D450D3B006DD475 /* Repositories */,
 				115619121D43D45400ABA15F /* Subscribe */,
 				115619071D43D2FD00ABA15F /* TabBar */,
 				241637C01D2FAE6100A16944 /* Core */,
@@ -489,6 +625,13 @@
 				242331BE1D2E4B0D00EF8698 /* ADViewController.m */,
 				242331C01D2E4B3200EF8698 /* ADViewModel.h */,
 				242331C11D2E4B3200EF8698 /* ADViewModel.m */,
+				115619401D44F78200ABA15F /* ADTableViewController.h */,
+				115619411D44F78200ABA15F /* ADTableViewController.m */,
+				241EEEAC1D4F8A14000A12A6 /* ADTableViewModel.h */,
+				241EEEAD1D4F8A14000A12A6 /* ADTableViewModel.m */,
+				2471C34D1D50A14800EC6028 /* ADNavigationController.h */,
+				2471C34E1D50A14800EC6028 /* ADNavigationController.m */,
+				2484749D1D5ABEF600D62297 /* DEFINES.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -523,6 +666,30 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		243224E61D562F6C00FCCE53 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		244998801D4DEEF800D6E9F7 /* Following */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C7A1D50206E00749A30 /* ViewModel */,
+				2449988C1D4DEF0300D6E9F7 /* View */,
+			);
+			name = Following;
+			sourceTree = "<group>";
+		};
+		2449988C1D4DEF0300D6E9F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		246CA4171D38E69A002167A2 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +697,42 @@
 				246CA4241D38E6D0002167A2 /* ADDataBase.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		24A53C7A1D50206E00749A30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C861D5020A200749A30 /* ADFollowingViewModel.h */,
+				24A53C871D5020A200749A30 /* ADFollowingViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		24A53C891D5020A800749A30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C8A1D50211500749A30 /* ADDiscoverViewModel.h */,
+				24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		24A53C8D1D50211C00749A30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C8E1D50214400749A30 /* ADProfileViewModel.h */,
+				24A53C8F1D50214400749A30 /* ADProfileViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		24A53C911D50214E00749A30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24A53C921D50217B00749A30 /* ADRepositoriesViewModel.h */,
+				24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		9B095427F6D0D959A830A929 /* Pods */ = {
@@ -560,6 +763,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
+				2D0EA600EA86CC4B92C6E8F0 /* 📦 Check Pods Manifest.lock */,
 				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
 				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
@@ -800,12 +1004,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
+				118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */,
+				118AE3871D450E30006DD475 /* Repositories.storyboard in Resources */,
 				242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */,
 				242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */,
 				242331341D2E36BD00EF8698 /* Main.storyboard in Resources */,
 				115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */,
+				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +1062,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D0EA600EA86CC4B92C6E8F0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */ = {
@@ -927,18 +1150,35 @@
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
 				241637BF1D2F97EA00A16944 /* UIStoryboard+ViewModel.m in Sources */,
 				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
+				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
+				241EEEAE1D4F8A14000A12A6 /* ADTableViewModel.m in Sources */,
+				2459AAE71D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m in Sources */,
+				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
+				2459AAE81D54403400FCD90F /* OCTEvent+AttributedString.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				242331BF1D2E4B0D00EF8698 /* ADViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
+				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
 				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
+				24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */,
+				2471C34F1D50A14800EC6028 /* ADNavigationController.m in Sources */,
+				243224DA1D54EE7700FCCE53 /* OCTRef+Scarecrow.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
+				24B2DA961D52F08A00CD93A2 /* OCTEvent+Persistence.m in Sources */,
+				2459AAEE1D546EF000FCD90F /* NSURL+Scarecrow.m in Sources */,
+				2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */,
 				1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */,
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
+				24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */,
+				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
 				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
+				115619421D44F78200ABA15F /* ADTableViewController.m in Sources */,
 				241637BC1D2F97D000A16944 /* SSKeychain+Scarecrow.m in Sources */,
+				248500361D4E4A4B00DA16AF /* UIColor+Scarecrow.m in Sources */,
+				2471C3611D50A9B400EC6028 /* OCTUser+Persistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
