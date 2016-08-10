@@ -24,6 +24,8 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 - (void)initialize {
     [super initialize];
     
+    self.title = @"subscribe";
+    
     self.bShouldFetchData = YES;
     self.isCurrentUser = YES;
     

@@ -27,16 +27,9 @@
 
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
-    @weakify(self);
-    [[[RACSignal combineLatest:@[self.viewModel.fetchRemoteDataCommamd.executing, RACObserve(self.viewModel, dataSourceArray)] reduce:^id(NSNumber *executing, NSArray *dataSource){
-        return @(executing.boolValue && dataSource.count == 0);
-    }]deliverOnMainThread]subscribeNext:^(NSNumber *showHUD) {
-        @strongify(self);
-        if (showHUD.boolValue) {
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"loading...";
-        } else {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }
+    @weakify(self);    
+    RAC(self.viewModel, titleViewType) = [self.viewModel.fetchRemoteDataCommamd.executing map:^id(NSNumber *excuting) {
+        return excuting.boolValue ? @(ADTitleViewTypeLoading) : @(ADTitleViewTypeDefault);
     }];
     
     [[[RACObserve(self.viewModel, eventArray)filter:^BOOL(NSArray *eventArray) {
@@ -64,7 +57,7 @@
             }];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-#if 0
+#if 1
                 [self.tableView beginUpdates];
                 [self.tableView insertRowsAtIndexPaths:indexPaths.copy withRowAnimation:UITableViewRowAnimationFade];
                 [self.tableView endUpdates];

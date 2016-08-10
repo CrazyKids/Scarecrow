@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, ADTitleViewType) {
+    ADTitleViewTypeDefault,
+    ADTitleViewTypeLoading,
+};
+
 @interface ADViewModel : NSObject
 
 @property (nonatomic, strong, readonly) RACSubject *errors;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, assign) ADTitleViewType titleViewType;
 
 - (void)initialize;
 

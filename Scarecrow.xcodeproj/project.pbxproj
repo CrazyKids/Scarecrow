@@ -42,6 +42,7 @@
 		2459AAE71D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAE41D54403400FCD90F /* NSMutableAttributedString+Scarecrow.m */; };
 		2459AAE81D54403400FCD90F /* OCTEvent+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAE61D54403400FCD90F /* OCTEvent+AttributedString.m */; };
 		2459AAEE1D546EF000FCD90F /* NSURL+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAED1D546EF000FCD90F /* NSURL+Scarecrow.m */; };
+		246525191D5B75620033C2A1 /* ADLoadingTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246525181D5B75620033C2A1 /* ADLoadingTitleView.xib */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		2471C34F1D50A14800EC6028 /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C34E1D50A14800EC6028 /* ADNavigationController.m */; };
 		2471C3611D50A9B400EC6028 /* OCTUser+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C3601D50A9B400EC6028 /* OCTUser+Persistence.m */; };
@@ -290,6 +291,7 @@
 		2459AAE61D54403400FCD90F /* OCTEvent+AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OCTEvent+AttributedString.m"; path = "Utils/Category/OCTEvent+AttributedString.m"; sourceTree = "<group>"; };
 		2459AAEC1D546EF000FCD90F /* NSURL+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Scarecrow.h"; path = "Utils/Category/NSURL+Scarecrow.h"; sourceTree = "<group>"; };
 		2459AAED1D546EF000FCD90F /* NSURL+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Scarecrow.m"; path = "Utils/Category/NSURL+Scarecrow.m"; sourceTree = "<group>"; };
+		246525181D5B75620033C2A1 /* ADLoadingTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADLoadingTitleView.xib; path = Utils/titleView/ADLoadingTitleView.xib; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
 		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
 		2471C34D1D50A14800EC6028 /* ADNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADNavigationController.h; path = Utils/ADNavigationController.h; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 		242331B11D2E4AEA00EF8698 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				246525091D5B745E0033C2A1 /* titleView */,
 				241637B91D2F977300A16944 /* Category */,
 				242331BD1D2E4B0D00EF8698 /* ADViewController.h */,
 				242331BE1D2E4B0D00EF8698 /* ADViewController.m */,
@@ -688,6 +691,14 @@
 				2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		246525091D5B745E0033C2A1 /* titleView */ = {
+			isa = PBXGroup;
+			children = (
+				246525181D5B75620033C2A1 /* ADLoadingTitleView.xib */,
+			);
+			name = titleView;
 			sourceTree = "<group>";
 		};
 		246CA4171D38E69A002167A2 /* DataBase */ = {
@@ -1005,6 +1016,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */,
+				246525191D5B75620033C2A1 /* ADLoadingTitleView.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
 				118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */,
