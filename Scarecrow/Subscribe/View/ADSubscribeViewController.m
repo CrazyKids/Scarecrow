@@ -57,13 +57,9 @@
             }];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-#if 1
                 [self.tableView beginUpdates];
                 [self.tableView insertRowsAtIndexPaths:indexPaths.copy withRowAnimation:UITableViewRowAnimationFade];
                 [self.tableView endUpdates];
-#else
-                [self.tableView reloadData];
-#endif
             });
         }
     }];
@@ -79,16 +75,6 @@
         ADSubscribeItemViewModel *viewModel = [[ADSubscribeItemViewModel alloc]initWithEvent:event];
         return viewModel;
     }].array;
-}
-
-- (void)bindViewModel {
-    [super bindViewModel];
-    
-    @weakify(self);
-    [[[RACObserve(self.viewModel, dataSourceArray)distinctUntilChanged]deliverOnMainThread]subscribeNext:^(id x) {
-        @strongify(self);
-        [self.tableView reloadData];
-    }];
 }
 
 #pragma mark - UITableViewDataSource
