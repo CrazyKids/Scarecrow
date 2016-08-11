@@ -10,5 +10,6 @@ pod 'MBProgressHUD'
 pod 'YYKit'
 pod 'OcticonsIOS', :git => 'https://github.com/jacksonh/OcticonsIOS.git'
 pod 'FormatterKit'
+pod 'EGOTableViewPullRefreshAndLoadMore', :git => 'https://github.com/duanhjlt/EGOTableViewPullRefreshAndLoadMore.git'
 
 end
