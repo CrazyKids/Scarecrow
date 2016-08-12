@@ -8,6 +8,10 @@
 
 #import "ADViewController.h"
 
-@interface ADTableViewController : ADViewController
+@interface ADTableViewController : ADViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)reloadData;
 
 @end

@@ -14,7 +14,6 @@
 
 @interface ADSubscribeViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic, readonly) ADSubscribeViewModel *viewModel;
 
 
@@ -77,19 +76,12 @@
     }].array;
 }
 
+- (void)reloadData {
+    
+}
+
 #pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger count = self.viewModel.dataSourceArray.count;
-    return count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger count =  [self.viewModel.dataSourceArray[section] count];
-    return count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subscribeCell"];
     
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];

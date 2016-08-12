@@ -50,10 +50,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="9m9-di-Ap1" id="rqx-t4-fqL"/>
-                                    <outlet property="delegate" destination="9m9-di-Ap1" id="NMA-id-gJA"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +62,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Subscribe" id="Wrb-9Z-taH"/>
                     <connections>
-                        <outlet property="tableView" destination="PE0-Ie-mtg" id="WFv-FH-7ob"/>
+                        <outlet property="tableView" destination="PE0-Ie-mtg" id="bXp-et-CcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1l-PA-zlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
