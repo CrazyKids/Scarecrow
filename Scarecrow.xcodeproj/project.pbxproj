@@ -46,6 +46,16 @@
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		2471C34F1D50A14800EC6028 /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C34E1D50A14800EC6028 /* ADNavigationController.m */; };
 		2471C3611D50A9B400EC6028 /* OCTUser+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2471C3601D50A9B400EC6028 /* OCTUser+Persistence.m */; };
+		247DF6411D5D5F0B00607526 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; };
+		247DF6421D5D5F0B00607526 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		247DF6451D5D5F0B00607526 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331871D2E389900EF8698 /* Mantle.framework */; };
+		247DF6461D5D5F0B00607526 /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331871D2E389900EF8698 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		247DF6491D5D5F0B00607526 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331761D2E388E00EF8698 /* AFNetworking.framework */; };
+		247DF64A1D5D5F0B00607526 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331761D2E388E00EF8698 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; };
+		247DF64E1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; };
+		247DF6521D5D5F0B00607526 /* OctoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		248500361D4E4A4B00DA16AF /* UIColor+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248500351D4E4A4B00DA16AF /* UIColor+Scarecrow.m */; };
 		24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C871D5020A200749A30 /* ADFollowingViewModel.m */; };
 		24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */; };
@@ -218,7 +228,60 @@
 			remoteGlobalIDString = D0040CF219FEC579002869A6;
 			remoteInfo = "OctoKit iOS";
 		};
+		247DF6431D5D5F0B00607526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		247DF6471D5D5F0B00607526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423317B1D2E389900EF8698 /* Mantle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E9C35619F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
+		247DF64B1D5D5F0B00607526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040C9819FEC274002869A6;
+			remoteInfo = "AFNetworking iOS";
+		};
+		247DF64F1D5D5F0B00607526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040CBA19FEC418002869A6;
+			remoteInfo = "ISO8601DateFormatter iOS";
+		};
+		247DF6531D5D5F0B00607526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2423315C1D2E387500EF8698 /* OctoKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0040CF219FEC579002869A6;
+			remoteInfo = "OctoKit iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		247DF6551D5D5F0B00607526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				247DF6421D5D5F0B00607526 /* ReactiveCocoa.framework in Embed Frameworks */,
+				247DF6521D5D5F0B00607526 /* OctoKit.framework in Embed Frameworks */,
+				247DF64A1D5D5F0B00607526 /* AFNetworking.framework in Embed Frameworks */,
+				247DF64E1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Embed Frameworks */,
+				247DF6461D5D5F0B00607526 /* Mantle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -322,7 +385,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */,
+				247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */,
 				AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */,
+				247DF6491D5D5F0B00607526 /* AFNetworking.framework in Frameworks */,
+				247DF6411D5D5F0B00607526 /* ReactiveCocoa.framework in Frameworks */,
+				247DF6451D5D5F0B00607526 /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +852,7 @@
 				099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */,
 				82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */,
 				1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */,
+				247DF6551D5D5F0B00607526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -793,6 +862,11 @@
 				2423319F1D2E393600EF8698 /* PBXTargetDependency */,
 				242331A11D2E393600EF8698 /* PBXTargetDependency */,
 				242331A31D2E393600EF8698 /* PBXTargetDependency */,
+				247DF6441D5D5F0B00607526 /* PBXTargetDependency */,
+				247DF6481D5D5F0B00607526 /* PBXTargetDependency */,
+				247DF64C1D5D5F0B00607526 /* PBXTargetDependency */,
+				247DF6501D5D5F0B00607526 /* PBXTargetDependency */,
+				247DF6541D5D5F0B00607526 /* PBXTargetDependency */,
 			);
 			name = Scarecrow;
 			productName = Scarecrow;
@@ -1248,6 +1322,31 @@
 			name = "OctoKit iOS";
 			targetProxy = 242331A21D2E393600EF8698 /* PBXContainerItemProxy */;
 		};
+		247DF6441D5D5F0B00607526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = 247DF6431D5D5F0B00607526 /* PBXContainerItemProxy */;
+		};
+		247DF6481D5D5F0B00607526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mantle-iOS";
+			targetProxy = 247DF6471D5D5F0B00607526 /* PBXContainerItemProxy */;
+		};
+		247DF64C1D5D5F0B00607526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AFNetworking iOS";
+			targetProxy = 247DF64B1D5D5F0B00607526 /* PBXContainerItemProxy */;
+		};
+		247DF6501D5D5F0B00607526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ISO8601DateFormatter iOS";
+			targetProxy = 247DF64F1D5D5F0B00607526 /* PBXContainerItemProxy */;
+		};
+		247DF6541D5D5F0B00607526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OctoKit iOS";
+			targetProxy = 247DF6531D5D5F0B00607526 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1307,7 +1406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1345,7 +1444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

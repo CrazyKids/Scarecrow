@@ -47,9 +47,7 @@
     [super viewDidLoad];
 }
 
-- (void)bindViewModel {
-    RAC(self, title) = RACObserve(self.viewModel, title);
-    
+- (void)bindViewModel {    
     UIView *titleView = self.navigationItem.titleView;
 
     UIView *loadingTitleView = [[NSBundle mainBundle] loadNibNamed:@"ADLoadingTitleView" owner:nil options:nil].firstObject;

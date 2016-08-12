@@ -16,7 +16,6 @@ typedef NS_ENUM(NSInteger, ADTitleViewType) {
 @interface ADViewModel : NSObject
 
 @property (nonatomic, strong, readonly) RACSubject *errors;
-@property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) ADTitleViewType titleViewType;
 
 - (void)initialize;

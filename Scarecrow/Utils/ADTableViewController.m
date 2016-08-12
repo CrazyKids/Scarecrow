@@ -8,10 +8,13 @@
 
 #import "ADTableViewController.h"
 #import "ADTableViewModel.h"
+#import <EGOTableViewPullRefreshAndLoadMore/EGORefreshTableHeaderView.h>
 
-@interface ADTableViewController ()
+@interface ADTableViewController () <EGORefreshTableHeaderDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic, readonly) ADTableViewModel *viewModel;
+@property (strong, nonatomic) EGORefreshTableHeaderView *refreshHeaderView;
+@property (assign, nonatomic, getter=isLoading) BOOL loading;
 
 @end
 
@@ -34,6 +37,16 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    if (self.viewModel.bShouldFetchData) {
+        CGRect frame = self.tableView.frame;
+        frame.origin.x = 0;
+        frame.origin.y = -frame.size.height;
+        
+        self.refreshHeaderView = [[EGORefreshTableHeaderView alloc]initWithFrame:frame];
+        self.refreshHeaderView.delegate = self;
+        [self.tableView addSubview:self.refreshHeaderView];
+    }
 }
 
 - (void)bindViewModel {
@@ -66,9 +79,42 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"emptyCell"];
+        cell.textLabel.text = @"Empty Cell";
     }
     
     return cell;
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+#pragma mark - EGORefreshTableHeaderDelegate
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view {
+    self.loading = YES;
+    
+    @weakify(self);
+    [[[self.viewModel.fetchRemoteDataCommamd execute:@1]deliverOnMainThread]subscribeNext:^(id x) {
+        @strongify(self);
+        self.viewModel.page = 1;
+    } error:^(NSError *error) {
+        @strongify(self);
+        self.loading = NO;
+        [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+    } completed:^{
+        @strongify(self);
+        self.loading = NO;
+        [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+    }];
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
+    return self.isLoading;
 }
 
 @end
