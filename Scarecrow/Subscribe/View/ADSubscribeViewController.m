@@ -16,10 +16,11 @@
 
 @property (strong, nonatomic, readonly) ADSubscribeViewModel *viewModel;
 
-
 @end
 
 @implementation ADSubscribeViewController
+
+@dynamic viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -8,15 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+@class ADViewController;
+
 typedef NS_ENUM(NSInteger, ADTitleViewType) {
     ADTitleViewTypeDefault,
     ADTitleViewTypeLoading,
 };
 
+typedef void (^voidCallback_id)(id);
+
 @interface ADViewModel : NSObject
 
-@property (nonatomic, strong, readonly) RACSubject *errors;
-@property (nonatomic, assign) ADTitleViewType titleViewType;
+@property (weak, nonatomic) UIViewController *ownerVC;
+
+@property (strong, nonatomic, readonly) RACSubject *errors;
+@property (assign, nonatomic) ADTitleViewType titleViewType;
+
+@property (copy, nonatomic) voidCallback_id callback;
 
 - (void)initialize;
 

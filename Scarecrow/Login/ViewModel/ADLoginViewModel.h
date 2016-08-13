@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic, readonly) RACSignal *validLoginSingal;
 @property (strong, nonatomic, readonly) RACCommand *loginCommand;
+@property (strong, nonatomic, readonly) RACCommand *oauthLoginCommand;
 @property (strong, nonatomic, readonly) RACCommand *exchangeTokenCommand;
 
 @end

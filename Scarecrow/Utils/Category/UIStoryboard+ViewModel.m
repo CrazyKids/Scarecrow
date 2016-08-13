@@ -17,6 +17,7 @@
     
     NSParameterAssert([vc isKindOfClass:[ADViewController class]]);
     
+    viewModel.ownerVC = vc;
     [self setViewModel:viewModel toVC:vc];
     
     return vc;
@@ -26,10 +27,12 @@
     UIViewController *vc = [self instantiateInitialViewController];
     
     NSParameterAssert([vc isKindOfClass:[ADTabBarController class]] || [vc isKindOfClass:[UINavigationController class]]);
+    viewModel.ownerVC = vc;
     [self setViewModel:viewModel toVC:vc];
     
     if ([vc isKindOfClass:[UINavigationController class]]) {
         UIViewController *top = ((UINavigationController *)vc).topViewController;
+        viewModel.ownerVC = top;
         [self setViewModel:viewModel toVC:top];
     }
     

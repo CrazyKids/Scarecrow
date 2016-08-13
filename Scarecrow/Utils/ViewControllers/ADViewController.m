@@ -19,6 +19,10 @@
 
 @implementation ADViewController
 
++ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
+    return nil;
+}
+
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     ADViewController *vc = [super allocWithZone:zone];
     

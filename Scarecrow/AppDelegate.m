@@ -68,15 +68,15 @@
     @weakify(self);
     [[platform rac_signalForSelector:@selector(resetRootViewModel:)]subscribeNext:^(RACTuple *tuple) {
         @strongify(self);
-        
-        UIViewController *rootVC = nil;
+
+        NSString *name = @"";
         if ([tuple.first isKindOfClass:[ADLoginViewModel class]]) {
-            UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"login" bundle:nil];
-            rootVC = [stroyboard instantiateViewControllerWithIdentifier:@"login" viewModel:tuple.first];
+            name = @"login";
         } else {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TabBar" bundle:nil];
-            rootVC = [storyboard instantiateInitialViewControllerWithViewModel:tuple.first];
+            name = @"TabBar";
         }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:name bundle:nil];
+        UIViewController *rootVC = [storyboard instantiateInitialViewControllerWithViewModel:tuple.first];
         
         self.window.rootViewController = rootVC;
         [self.window makeKeyAndVisible];

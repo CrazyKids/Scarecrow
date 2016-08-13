@@ -26,10 +26,23 @@
 
 @implementation ADLoginViewController
 
+@dynamic viewModel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupAnimationUI];
+    
+#ifdef DEBUG
+    self.usernameTextField.text = @"duanhjlt@163.com";
+    self.passwordTextField.text = @"github_19850829";
+#endif
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)bindViewModel {
@@ -49,6 +62,8 @@
     [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
         [self.viewModel.loginCommand execute:nil];
     }];
+    
+    self.oauthLoginButton.rac_command = self.viewModel.oauthLoginCommand;
     
     @weakify(self);
     [[[RACSignal merge:@[self.viewModel.loginCommand.executing, self.viewModel.exchangeTokenCommand.executing]]doNext:^(id x) {

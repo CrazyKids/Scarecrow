@@ -11,11 +11,14 @@
 #import "ADTabBarViewModel.h"
 #import "ADPlatformManager.h"
 #import "OCTUser+Persistence.h"
+#import "ADOauthViewModel.h"
+#import "ADOauthViewController.h"
 
 @interface ADLoginViewModel ()
 
 @property (strong, nonatomic) RACSignal *validLoginSingal;
 @property (strong, nonatomic) RACCommand *loginCommand;
+@property (strong, nonatomic) RACCommand *oauthLoginCommand;
 @property (strong, nonatomic) RACCommand *exchangeTokenCommand;
 
 @end
@@ -59,13 +62,29 @@
         return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil]doNext:loginSuccess];
     }];
     
+    self.oauthLoginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+
+        ADOauthViewModel *viewModel = [ADOauthViewModel new];
+        @weakify(viewModel);
+        viewModel.callback = ^(NSString *code) {
+            @strongify(viewModel);
+            [viewModel.ownerVC.navigationController popViewControllerAnimated:YES];
+            [self.exchangeTokenCommand execute:code];
+        };
+        
+        ADOauthViewController *vc = [ADOauthViewController viewControllerWithViewModel:viewModel];
+        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        
+        return [RACSignal empty];
+    }];
+    
     self.exchangeTokenCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSString *code) {
         OCTClient *client = [[OCTClient alloc]initWithServer:[OCTServer dotComServer]];
         
-        RACSignal *signal = [client exchangeTokenWithCode:code];
-        [[[[signal doNext:^(OCTAccessToken *accessToken) {
+        return [[[[[client exchangeTokenWithCode:code]doNext:^(OCTAccessToken *accessToken) {
             [client setValue:accessToken.token forKey:@"token"];
-        }] flattenMap:^RACStream *(id value) {
+        }]flattenMap:^RACStream *(id value) {
             return [[client fetchUserInfo]doNext:^(OCTUser *user) {
                 NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
                 [mutableDictionary addEntriesFromDictionary:user.dictionaryValue];
@@ -76,8 +95,7 @@
                 user = [OCTUser modelWithDictionary:mutableDictionary error:NULL];
                 [client setValue:user forKey:@"user"];
             }];
-        }] mapReplace:client]doNext:loginSuccess];
-        return nil;
+        }]mapReplace:client]doNext:loginSuccess];
     }];
 }
 

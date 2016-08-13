@@ -10,7 +10,7 @@
 
 @interface ADViewModel ()
 
-@property (nonatomic, strong) RACSubject *errors;
+@property (strong, nonatomic) RACSubject *errors;
 
 @end
 

@@ -20,6 +20,8 @@
 
 @implementation ADTableViewController
 
+@dynamic viewModel;
+
 - (void)initializeWithViewMode:(ADViewModel *)viewModel {
     [super initializeWithViewMode:viewModel];
     
