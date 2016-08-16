@@ -33,6 +33,8 @@
 		2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */; };
 		2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
+		246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */; };
+		246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */; };
 		247DF6411D5D5F0B00607526 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; };
 		247DF6421D5D5F0B00607526 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF6451D5D5F0B00607526 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331871D2E389900EF8698 /* Mantle.framework */; };
@@ -67,6 +69,11 @@
 		24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */; };
 		24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8F1D50214400749A30 /* ADProfileViewModel.m */; };
 		24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */; };
+		24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */; };
+		24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */; };
+		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
+		24B0D1631D5FF7BE00805A45 /* ADFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1621D5FF7BE00805A45 /* ADFollowButton.m */; };
+		24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Octions.m */; };
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
 /* End PBXBuildFile section */
@@ -341,6 +348,9 @@
 		2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
 		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
+		246E9DD91D62013B00ED9EC4 /* ADProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADProfileViewController.h; path = Profile/View/ADProfileViewController.h; sourceTree = "<group>"; };
+		246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADProfileViewController.m; path = Profile/View/ADProfileViewController.m; sourceTree = "<group>"; };
+		246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADWebViewController.xib; sourceTree = "<group>"; };
 		248569B21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Scarecrow.h"; sourceTree = "<group>"; };
 		248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Scarecrow.m"; sourceTree = "<group>"; };
 		248569B41D5E21820087E62D /* NSURL+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Scarecrow.h"; sourceTree = "<group>"; };
@@ -388,6 +398,15 @@
 		24A53C8F1D50214400749A30 /* ADProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADProfileViewModel.m; path = Profile/ViewModel/ADProfileViewModel.m; sourceTree = "<group>"; };
 		24A53C921D50217B00749A30 /* ADRepositoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRepositoriesViewModel.h; path = Repositories/ViewModel/ADRepositoriesViewModel.h; sourceTree = "<group>"; };
 		24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRepositoriesViewModel.m; path = Repositories/ViewModel/ADRepositoriesViewModel.m; sourceTree = "<group>"; };
+		24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderViewModel.h; path = Profile/ViewModel/ADAvatarHeaderViewModel.h; sourceTree = "<group>"; };
+		24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderViewModel.m; path = Profile/ViewModel/ADAvatarHeaderViewModel.m; sourceTree = "<group>"; };
+		24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderView.h; path = Profile/View/ADAvatarHeaderView.h; sourceTree = "<group>"; };
+		24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderView.m; path = Profile/View/ADAvatarHeaderView.m; sourceTree = "<group>"; };
+		24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADAvatarHeanderView.xib; path = Profile/View/ADAvatarHeanderView.xib; sourceTree = "<group>"; };
+		24B0D1611D5FF7BE00805A45 /* ADFollowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFollowButton.h; path = Profile/View/ADFollowButton.h; sourceTree = "<group>"; };
+		24B0D1621D5FF7BE00805A45 /* ADFollowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADFollowButton.m; path = Profile/View/ADFollowButton.m; sourceTree = "<group>"; };
+		24B0D1671D60B90500805A45 /* UIImage+Octions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Octions.h"; sourceTree = "<group>"; };
+		24B0D1681D60B90500805A45 /* UIImage+Octions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octions.m"; sourceTree = "<group>"; };
 		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
 		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
@@ -517,6 +536,13 @@
 			isa = PBXGroup;
 			children = (
 				118AE38A1D450EFF006DD475 /* Profile.storyboard */,
+				24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */,
+				24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */,
+				24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */,
+				24B0D1611D5FF7BE00805A45 /* ADFollowButton.h */,
+				24B0D1621D5FF7BE00805A45 /* ADFollowButton.m */,
+				246E9DD91D62013B00ED9EC4 /* ADProfileViewController.h */,
+				246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -777,6 +803,8 @@
 				248569C11D5E21820087E62D /* UIColor+Scarecrow.m */,
 				248569C21D5E21820087E62D /* UIStoryboard+ViewModel.h */,
 				248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */,
+				24B0D1671D60B90500805A45 /* UIImage+Octions.h */,
+				24B0D1681D60B90500805A45 /* UIImage+Octions.m */,
 			);
 			name = Category;
 			path = Utils/Category;
@@ -793,6 +821,7 @@
 				248569CA1D5E21820087E62D /* ADViewController.m */,
 				248569E81D5E26300087E62D /* ADWebViewController.h */,
 				248569E91D5E26300087E62D /* ADWebViewController.m */,
+				246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */,
 			);
 			name = ViewControllers;
 			path = Utils/ViewControllers;
@@ -844,6 +873,8 @@
 			children = (
 				24A53C8E1D50214400749A30 /* ADProfileViewModel.h */,
 				24A53C8F1D50214400749A30 /* ADProfileViewModel.m */,
+				24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */,
+				24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1135,6 +1166,7 @@
 				2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */,
 				248569E01D5E21820087E62D /* ADLoadingTitleView.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
+				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
 				24856A111D5EBDDA0087E62D /* ADOauthViewController.xib in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
 				118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */,
@@ -1143,6 +1175,7 @@
 				242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */,
 				242331341D2E36BD00EF8698 /* Main.storyboard in Resources */,
 				115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */,
+				246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */,
 				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1281,6 +1314,7 @@
 				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
+				246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */,
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
 				248569DE1D5E21820087E62D /* ADTableViewModel.m in Sources */,
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
@@ -1290,10 +1324,13 @@
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
 				248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */,
+				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
+				24B0D1631D5FF7BE00805A45 /* ADFollowButton.m in Sources */,
 				248569E41D5E21CA0087E62D /* ADWebViewModel.m in Sources */,
 				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
 				24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */,
+				24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */,
 				248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
 				2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */,
@@ -1301,6 +1338,7 @@
 				248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */,
 				1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */,
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
+				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
 				24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */,
 				248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */,

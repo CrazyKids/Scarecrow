@@ -24,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     @weakify(self);    
     RAC(self.viewModel, titleViewType) = [self.viewModel.fetchRemoteDataCommamd.executing map:^id(NSNumber *excuting) {
@@ -71,8 +69,12 @@
 }
 
 - (NSArray *)viewModelWithEvents:(NSArray *)eventArray {
+    @weakify(self);
     return [eventArray.rac_sequence map:^id(OCTEvent *event) {
+        @strongify(self);
+        
         ADSubscribeItemViewModel *viewModel = [[ADSubscribeItemViewModel alloc]initWithEvent:event];
+        viewModel.didClickLinkCommand = self.viewModel.didClickLinkCommand;
         return viewModel;
     }].array;
 }

@@ -9,6 +9,10 @@
 #import "ADSubscribeViewModel.h"
 #import "ADSubscribeItemViewModel.h"
 #import "OCTEvent+Persistence.h"
+#import "ADWebViewModel.h"
+#import "NSURL+Scarecrow.h"
+#import "ADProfileViewModel.h"
+
 
 static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 
@@ -16,6 +20,7 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 
 @property (strong, nonatomic) NSArray *eventArray;
 @property (assign, nonatomic) BOOL isCurrentUser;
+@property (strong, nonatomic) RACCommand *didClickLinkCommand;
 
 @end
 
@@ -49,6 +54,28 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
             [OCTEvent ad_saveUserReceivedEvents:eventArray];
         }];
     }
+    
+    self.didClickLinkCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSURL *url) {
+        @strongify(self);
+        if (url.linkType == ADLinkTypeUser) {
+            NSDictionary *dic = url.ad_dic[@"user"];
+            OCTUser *user = nil;
+            if (dic) {
+                user = [OCTUser modelWithDictionary:dic error:nil];
+            }
+            
+        } else if (url.linkType == ADLinkTypeRepos) {
+            
+        } else {
+            ADWebViewModel *viewModel = [ADWebViewModel new];
+            viewModel.request = [NSURLRequest requestWithURL:url];
+            
+            ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+            [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        }
+        
+        return [RACSignal empty];
+    }];
 }
 
 - (BOOL (^)(NSError *error))fetchRemoteDataError {

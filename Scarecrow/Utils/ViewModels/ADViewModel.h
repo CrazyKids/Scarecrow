@@ -24,6 +24,8 @@ typedef void (^voidCallback_id)(id);
 @property (strong, nonatomic, readonly) RACSubject *errors;
 @property (assign, nonatomic) ADTitleViewType titleViewType;
 
+@property (copy, nonatomic) NSString *title;
+
 @property (copy, nonatomic) voidCallback_id callback;
 
 - (void)initialize;

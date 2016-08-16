@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kLinkAttributeKey;
+
 typedef NS_ENUM(NSInteger, ADLinkType) {
     ADLinkTypeNormal,
     ADLinkTypeUser,

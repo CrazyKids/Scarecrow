@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ADViewController.h"
 
 @class ADViewModel;
 
@@ -17,5 +18,7 @@
 + (ADPlatformManager *)sharedInstance;
 
 - (void)resetRootViewModel:(ADViewModel *)viewModel;
+
+- (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel;
 
 @end

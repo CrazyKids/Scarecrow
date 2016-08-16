@@ -7,6 +7,7 @@
 //
 
 #import "ADPlatformManager.h"
+#import "ADViewController.h"
 
 @implementation ADPlatformManager
 
@@ -22,6 +23,26 @@
 
 - (void)resetRootViewModel:(ADViewModel *)viewModel {
     
+}
+
+- (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
+    NSString *vmClassString = NSStringFromClass(viewModel.class);
+    NSString *vcClassString = self.viewControllerMap[vmClassString];
+    
+    NSParameterAssert(vmClassString);
+    
+    Class vcClass = NSClassFromString(vcClassString);
+    ADViewController *vc = [vcClass viewControllerWithViewModel:viewModel];
+    
+    return vc;
+}
+
+- (NSDictionary *)viewControllerMap {
+    return @{
+             @"ADOauthViewModel" : @"ADOauthViewController",
+             @"ADWebViewModel" : @"ADWebViewController",
+             @"ADProfileViewModel" : @"ADProfileViewController",
+             };
 }
 
 @end

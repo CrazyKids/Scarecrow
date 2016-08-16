@@ -19,6 +19,14 @@
 
 @dynamic viewModel;
 
++ (__kindof ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
+    ADWebViewController *vc = [[ADWebViewController alloc]initWithNibName:@"ADWebViewController" bundle:nil];
+    viewModel.ownerVC = vc;
+    [vc setValue:viewModel forKey:@"viewModel"];
+    
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

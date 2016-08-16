@@ -8,10 +8,19 @@
 
 #import "OCTUser+Persistence.h"
 #import "SSKeychain+Scarecrow.h"
+#import <objc/runtime.h>
 
 static NSString *const kUserPersistenceTag = @"user_persistence_tag";
 
 @implementation OCTUser (Persistence)
+
+- (void)setFollowingStatus:(OCTFollowStatus)followingStatus {
+    objc_setAssociatedObject(self, @selector(followingStatus), @(followingStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (OCTFollowStatus)followingStatus {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+}
 
 + (instancetype)ad_currentUser {
     OCTUser *user = [ADPlatformManager sharedInstance].client.user;

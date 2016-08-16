@@ -39,6 +39,11 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    
+    self.tableView.sectionIndexColor = [UIColor darkGrayColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexMinimumDisplayRowCount = 20;
     
     if (self.viewModel.bShouldFetchData) {
         CGRect frame = self.tableView.frame;
@@ -82,6 +87,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"emptyCell"];
         cell.textLabel.text = @"Empty Cell";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;

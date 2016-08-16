@@ -19,7 +19,7 @@
 
 @implementation ADViewController
 
-+ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
++ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {    
     return nil;
 }
 

@@ -12,7 +12,6 @@
 #import "ADPlatformManager.h"
 #import "OCTUser+Persistence.h"
 #import "ADOauthViewModel.h"
-#import "ADOauthViewController.h"
 
 @interface ADLoginViewModel ()
 
@@ -73,7 +72,7 @@
             [self.exchangeTokenCommand execute:code];
         };
         
-        ADOauthViewController *vc = [ADOauthViewController viewControllerWithViewModel:viewModel];
+        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
         [self.ownerVC.navigationController pushViewController:vc animated:YES];
         
         return [RACSignal empty];
