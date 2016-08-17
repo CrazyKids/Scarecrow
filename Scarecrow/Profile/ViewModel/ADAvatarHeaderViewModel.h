@@ -17,6 +17,8 @@
 @property (strong, nonatomic) RACCommand *followersCommand;
 @property (strong, nonatomic) RACCommand *operationCommand;
 
+@property (assign, nonatomic) CGPoint contentOffset;
+
 - (instancetype)initWithUser:(OCTUser *)user;
 
 @end

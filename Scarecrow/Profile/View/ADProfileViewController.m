@@ -46,6 +46,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
+    
     self.headerView = [[NSBundle mainBundle]loadNibNamed:@"ADAvatarHeanderView" owner:nil options:nil].firstObject;
     [self.headerView bindViewModel:self.viewModel.avatarHeaderViewModel];
     
@@ -139,6 +141,13 @@
     view.backgroundColor = [UIColor clearColor];
     
     return view;
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGPoint contentOffset = scrollView.contentOffset;
+    self.viewModel.avatarHeaderViewModel.contentOffset = contentOffset;
 }
 
 @end

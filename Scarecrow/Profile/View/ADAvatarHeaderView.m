@@ -11,6 +11,7 @@
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
 #import <SDWebImage/SDWebImageManager.h>
+#import <GPUImage/GPUImage.h>
 
 @interface ADAvatarHeaderView ()
 
@@ -31,6 +32,11 @@
 
 @property (strong, nonatomic) UIImage *avatarImage;
 @property (strong, nonatomic) ADAvatarHeaderViewModel *viewModel;
+
+@property (strong, nonatomic) UIImageView *coverImageView;
+@property (strong, nonatomic) UIImageView *blurCoverImageView;
+
+@property (strong, nonatomic) GPUImageGaussianBlurFilter *blurFilter;
 
 @end
 
@@ -54,6 +60,26 @@
     [RACObserve(self, avatarImage) subscribeNext:^(UIImage *avatarImage) {
         @strongify(self);
         [self.avatarButton setImage:avatarImage forState:UIControlStateNormal];
+    }];
+    
+    self.coverImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, LAYOUT_DEFAULT_WIDTH, 380 - 57)];
+    self.coverImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.coverImageView.clipsToBounds = YES;
+    
+    self.blurCoverImageView = [[UIImageView alloc]initWithFrame:self.coverImageView.bounds];
+    self.blurCoverImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.blurCoverImageView.clipsToBounds = YES;
+    
+    [self.coverImageView addSubview:self.blurCoverImageView];
+    [self insertSubview:self.coverImageView atIndex:0];
+    
+    self.blurFilter = [GPUImageGaussianBlurFilter new];
+    self.blurFilter.blurRadiusInPixels = 20.0;
+    
+    RAC(self.coverImageView, image) = RACObserve(self, avatarImage);
+    RAC(self.blurCoverImageView, image) = [RACObserve(self, avatarImage) map:^id(UIImage *avatarImage) {
+        @strongify(self);
+        return [self.blurFilter imageByFilteringImage:avatarImage];
     }];
     
     
@@ -101,6 +127,27 @@
     self.followingButton.rac_command = self.viewModel.followingCommand;
     self.reposButton.rac_command = self.viewModel.reposCommand;
     self.followerButton.rac_command = self.viewModel.followersCommand;
+    
+    [[RACObserve(self.viewModel, contentOffset) filter:^BOOL(NSNumber *offset) {
+        return [offset CGPointValue].y <= 0;
+    }]subscribeNext:^(id x) {
+        @strongify(self);
+        
+        CGPoint contentOffset = [x CGPointValue];
+        
+        self.coverImageView.frame = CGRectMake(0, 0 + contentOffset.y, LAYOUT_DEFAULT_WIDTH, CGRectGetHeight(self.frame) + ABS(contentOffset.y) - 58);
+        self.blurCoverImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.coverImageView.frame), CGRectGetHeight(self.coverImageView.frame));
+        
+        CGFloat diff = MIN(ABS(contentOffset.y), 40.0);
+        CGFloat scale = diff / 40.0;
+        
+        CGFloat alpha = 1 * (1 - scale);
+        
+        self.avatarButton.imageView.alpha = alpha;
+        self.nameLabel.alpha = alpha;
+        self.operationButton.alpha = alpha;
+        self.blurCoverImageView.hidden = alpha == 0;
+    }];
 }
 
 @end
