@@ -127,8 +127,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "FormatterKit/Localizations/vi.lproj"
   install_resource "FormatterKit/Localizations/zh-Hans.lproj"
   install_resource "FormatterKit/Localizations/zh-Hant.lproj"
+  install_resource "GPUImage/framework/Resources/lookup.png"
+  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
+  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
   install_resource "SSKeychain/Support/SSKeychain.bundle"
+  install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/blackArrow.png"
@@ -178,8 +184,14 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "FormatterKit/Localizations/vi.lproj"
   install_resource "FormatterKit/Localizations/zh-Hans.lproj"
   install_resource "FormatterKit/Localizations/zh-Hant.lproj"
+  install_resource "GPUImage/framework/Resources/lookup.png"
+  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
+  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
   install_resource "SSKeychain/Support/SSKeychain.bundle"
+  install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

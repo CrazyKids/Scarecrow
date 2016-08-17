@@ -3,13 +3,15 @@ platform :ios, '9.0'
 
 target 'Scarecrow' do
 
-pod 'SDWebImage'
-pod 'SSKeychain'
-pod 'ZRAlertController'
-pod 'MBProgressHUD'
-pod 'YYKit'
+pod 'SDWebImage', '~> 3.8.1'
+pod 'SSKeychain', '~> 1.4.1'
+pod 'ZRAlertController', '~> 2.2'
+pod 'MBProgressHUD', '~> 1.0.0'
+pod 'YYKit', '~> 1.0.7'
 pod 'OcticonsIOS', :git => 'https://github.com/jacksonh/OcticonsIOS.git'
-pod 'FormatterKit'
-pod 'EGOTableViewPullRefreshAndLoadMore', :git => 'https://github.com/duanhjlt/EGOTableViewPullRefreshAndLoadMore.git'
+pod 'FormatterKit', '~> 1.8.1'
+pod 'EGOTableViewPullRefreshAndLoadMore', '~> 1.0.4'
+pod 'GPUImage', '~> 0.1.7'
+pod 'Vertigo', '~> 0.1'
 
 end
