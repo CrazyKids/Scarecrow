@@ -47,7 +47,6 @@
     
     self.avatarButton.imageView.layer.borderColor  = [UIColor whiteColor].CGColor;
     self.avatarButton.imageView.layer.borderWidth  = 2;
-    self.avatarButton.imageView.layer.cornerRadius = CGRectGetWidth(self.avatarButton.frame) / 2;
     self.avatarButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.avatarButton.backgroundColor = [UIColor clearColor];
     self.avatarImage = [UIImage imageNamed:@"default_avatar"];
@@ -73,8 +72,11 @@
     [self.coverImageView addSubview:self.blurCoverImageView];
     [self insertSubview:self.coverImageView atIndex:0];
     
+    // 模拟器上不具备此功能，而且特别慢
+#if !TARGET_IPHONE_SIMULATOR
     self.blurFilter = [GPUImageGaussianBlurFilter new];
     self.blurFilter.blurRadiusInPixels = 20.0;
+#endif
     
     RAC(self.coverImageView, image) = RACObserve(self, avatarImage);
     RAC(self.blurCoverImageView, image) = [RACObserve(self, avatarImage) map:^id(UIImage *avatarImage) {
@@ -146,7 +148,7 @@
         self.avatarButton.imageView.alpha = alpha;
         self.nameLabel.alpha = alpha;
         self.operationButton.alpha = alpha;
-        self.blurCoverImageView.hidden = alpha == 0;
+        self.blurCoverImageView.alpha = alpha;
     }];
 }
 

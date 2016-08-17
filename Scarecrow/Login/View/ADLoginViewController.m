@@ -100,10 +100,16 @@
 }
 
 - (void)setupAnimationUI {
+#ifndef DISABLE_2FA
     [ADLoginAnimation logoImageViewAnimation:self.logoImageView];
     [ADLoginAnimation loginItemAnimation:self.usernameTextField delay:0.1];
     [ADLoginAnimation loginItemAnimation:self.passwordTextField delay:0.2];
     [ADLoginAnimation loginItemAnimation:self.loginButton delay:0.3];
+#else
+    self.usernameTextField.hidden = YES;
+    self.passwordTextField.hidden = YES;
+    self.loginButton.hidden = YES;
+#endif
 }
 
 @end

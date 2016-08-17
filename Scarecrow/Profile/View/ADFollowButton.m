@@ -44,22 +44,22 @@
 }
 
 - (void)initialize {
-    CGSize size = CGSizeMake(16, 16);
-    self.image = [UIImage ad_imageWithIcon:@"Person" backgroundColor:[UIColor clearColor] iconColor:[UIColor colorWithRgbColor:0xffffff alpha:1] iconScale:1 size:size];
-    self.selectedImage = [UIImage ad_imageWithIcon:@"Person" backgroundColor:[UIColor clearColor] iconColor:[UIColor colorWithRgbColor:0x333333 alpha:1] iconScale:1 size:size];
+//    CGSize size = CGSizeMake(16, 16);
+//    self.image = [UIImage ad_imageWithIcon:@"Person" backgroundColor:[UIColor clearColor] iconColor:[UIColor colorWithRgbColor:0xffffff alpha:1] iconScale:1 size:size];
+//    self.selectedImage = [UIImage ad_imageWithIcon:@"Person" backgroundColor:[UIColor clearColor] iconColor:[UIColor colorWithRgbColor:0x333333 alpha:1] iconScale:1 size:size];
 }
 
 - (void)setSelected:(BOOL)selected {
     super.selected = selected;
     
     if (selected) {
-        [self setImage:self.selectedImage forState:UIControlStateNormal];
+//        [self setImage:self.selectedImage forState:UIControlStateNormal];
         [self setTitle:@"Unfollow" forState:UIControlStateNormal];
         [self setTitleColor:[UIColor colorWithRgbColor:0x333333 alpha:1] forState:UIControlStateNormal];
         
         self.backgroundColor = [UIColor colorWithRgbColor:0xeeeeee alpha:1];
     } else {
-        [self setImage:self.image forState:UIControlStateNormal];
+//        [self setImage:self.image forState:UIControlStateNormal];
         [self setTitle:@"Follow" forState:UIControlStateNormal];
         [self setTitleColor:[UIColor colorWithRgbColor:0xffffff alpha:1] forState:UIControlStateNormal];
         
