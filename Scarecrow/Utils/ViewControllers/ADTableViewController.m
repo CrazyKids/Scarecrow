@@ -46,6 +46,7 @@
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexMinimumDisplayRowCount = 20;
     self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.contentInset = [self contentInsets];
     
     self.view.backgroundColor = RGB(0xE6E6E7);
     
@@ -72,6 +73,10 @@
 
 - (void)reloadData {
     [self.tableView reloadData];
+}
+
+- (UIEdgeInsets)contentInsets {
+    return UIEdgeInsetsZero;
 }
 
 #pragma mark - UITableViewDataSource

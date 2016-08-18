@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (void)reloadData;
+- (UIEdgeInsets)contentInsets;
 
 @end

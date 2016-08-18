@@ -9,6 +9,7 @@
 #import "ADProfileViewModel.h"
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
+#import "ADSetttingsViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -85,7 +86,13 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
         [self didChangeValueForKey:@"user"];
     }];
     
-    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            ADSetttingsViewModel *viewModel = [ADSetttingsViewModel new];
+            ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+            
+            [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        }
         return [RACSignal empty];
     }];
 }

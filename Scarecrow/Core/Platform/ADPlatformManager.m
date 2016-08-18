@@ -46,6 +46,7 @@
              @"ADWebViewModel" : @"ADWebViewController",
              @"ADProfileViewModel" : @"ADProfileViewController",
              @"ADUserInfoViewModel" : @"ADUserInfoViewController",
+             @"ADSetttingsViewModel" : @"ADSettingsViewController",
              };
 }
 

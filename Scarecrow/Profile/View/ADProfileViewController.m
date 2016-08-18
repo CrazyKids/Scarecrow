@@ -43,8 +43,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
     
     self.headerView = [[NSBundle mainBundle]loadNibNamed:@"ADAvatarHeanderView" owner:nil options:nil].firstObject;
     [self.headerView bindViewModel:self.viewModel.avatarHeaderViewModel];
@@ -60,6 +58,10 @@
             [self.tableView reloadData];
         });
     }];
+}
+
+- (UIEdgeInsets)contentInsets {
+    return UIEdgeInsetsMake(-64, 0, 0, 0);
 }
 
 #pragma mark - UITableViewDataSource
