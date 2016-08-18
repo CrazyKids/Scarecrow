@@ -19,7 +19,7 @@
 
 @implementation ADViewController
 
-+ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {    
++ (ADViewController *)viewController {    
     return nil;
 }
 
@@ -51,7 +51,9 @@
     [super viewDidLoad];
 }
 
-- (void)bindViewModel {    
+- (void)bindViewModel {
+    RAC(self, title) = RACObserve(self.viewModel, title);
+    
     UIView *titleView = self.navigationItem.titleView;
 
     UIView *loadingTitleView = [[NSBundle mainBundle] loadNibNamed:@"ADLoadingTitleView" owner:nil options:nil].firstObject;

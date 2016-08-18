@@ -32,7 +32,10 @@
     NSParameterAssert(vmClassString);
     
     Class vcClass = NSClassFromString(vcClassString);
-    ADViewController *vc = [vcClass viewControllerWithViewModel:viewModel];
+    ADViewController *vc = [vcClass viewController];
+    
+    viewModel.ownerVC = vc;
+    [vc initializeWithViewMode:viewModel];
     
     return vc;
 }
@@ -42,6 +45,7 @@
              @"ADOauthViewModel" : @"ADOauthViewController",
              @"ADWebViewModel" : @"ADWebViewController",
              @"ADProfileViewModel" : @"ADProfileViewController",
+             @"ADUserInfoViewModel" : @"ADUserInfoViewController",
              };
 }
 

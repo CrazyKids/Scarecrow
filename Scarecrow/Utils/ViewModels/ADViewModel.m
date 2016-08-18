@@ -20,12 +20,24 @@
     ADViewModel *viewModel = [super allocWithZone:zone];
     
     @weakify(viewModel);
-    [[viewModel rac_signalForSelector:@selector(init)] subscribeNext:^(id x) {
+    [[viewModel rac_signalForSelector:@selector(initWithParam:)] subscribeNext:^(id x) {
         @strongify(viewModel);
         [viewModel initialize];
     }];
     
     return viewModel;
+}
+
+- (instancetype)init {
+    return [self initWithParam:nil];
+}
+
+- (instancetype)initWithParam:(NSDictionary *)param {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
 }
 
 - (void)initialize {

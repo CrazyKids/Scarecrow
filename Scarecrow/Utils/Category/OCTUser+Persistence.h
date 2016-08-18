@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, OCTFollowStatus) {
 + (instancetype)ad_currentUser;
 + (instancetype)ad_userWithRawLogin:(NSString *)rawLogin server:(OCTServer *)server;
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin;
++ (instancetype)ad_fetchUserWithLogin:(NSString *)login;
 
 - (void)ad_update;
 

@@ -20,6 +20,9 @@
 		118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38A1D450EFF006DD475 /* Profile.storyboard */; };
 		118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38E1D450FBF006DD475 /* Discover.storyboard */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
+		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
+		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
+		241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */; };
 		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
 		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
 		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
@@ -319,6 +322,11 @@
 		118AE38E1D450FBF006DD475 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/View/Discover.storyboard; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
+		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
+		241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewModel.m; path = Profile/ViewModel/ADUserInfoViewModel.m; sourceTree = "<group>"; };
+		241B679B1D64BFC200A3960A /* ADUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewController.h; path = Profile/View/ADUserInfoViewController.h; sourceTree = "<group>"; };
+		241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewController.m; path = Profile/View/ADUserInfoViewController.m; sourceTree = "<group>"; };
+		241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADUserInfoViewController.xib; path = Profile/View/ADUserInfoViewController.xib; sourceTree = "<group>"; };
 		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -543,6 +551,9 @@
 				24B0D1621D5FF7BE00805A45 /* ADFollowButton.m */,
 				246E9DD91D62013B00ED9EC4 /* ADProfileViewController.h */,
 				246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */,
+				241B679B1D64BFC200A3960A /* ADUserInfoViewController.h */,
+				241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */,
+				241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -875,6 +886,8 @@
 				24A53C8F1D50214400749A30 /* ADProfileViewModel.m */,
 				24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */,
 				24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */,
+				241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */,
+				241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1166,6 +1179,7 @@
 				2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */,
 				248569E01D5E21820087E62D /* ADLoadingTitleView.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
+				241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */,
 				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
 				24856A111D5EBDDA0087E62D /* ADOauthViewController.xib in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
@@ -1316,6 +1330,7 @@
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
 				246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */,
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
+				241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */,
 				248569DE1D5E21820087E62D /* ADTableViewModel.m in Sources */,
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
@@ -1324,6 +1339,7 @@
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
 				248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */,
+				241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */,
 				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				24B0D1631D5FF7BE00805A45 /* ADFollowButton.m in Sources */,

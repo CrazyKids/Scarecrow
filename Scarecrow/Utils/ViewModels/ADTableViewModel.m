@@ -21,6 +21,7 @@
     
     self.page = 1;
     self.pageStep = 100;
+    self.bShouldFetchData = YES;
     
     @weakify(self);
     self.fetchRemoteDataCommamd = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSNumber *page) {

@@ -11,7 +11,7 @@
 #import "OCTEvent+Persistence.h"
 #import "ADWebViewModel.h"
 #import "NSURL+Scarecrow.h"
-#import "ADProfileViewModel.h"
+#import "ADUserInfoViewModel.h"
 
 
 static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
@@ -29,7 +29,6 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 - (void)initialize {
     [super initialize];
     
-    self.bShouldFetchData = YES;
     self.isCurrentUser = YES;
     
     @weakify(self);
@@ -57,19 +56,19 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
     
     self.didClickLinkCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSURL *url) {
         @strongify(self);
+        ADViewModel *viewModel = nil;
         if (url.linkType == ADLinkTypeUser) {
-            NSDictionary *dic = url.ad_dic[@"user"];
-            OCTUser *user = nil;
-            if (dic) {
-                user = [OCTUser modelWithDictionary:dic error:nil];
-            }
-            
+            ADUserInfoViewModel *userInfoModel = [[ADUserInfoViewModel alloc]initWithParam:[url ad_dic]];
+            viewModel = userInfoModel;
         } else if (url.linkType == ADLinkTypeRepos) {
             
         } else {
-            ADWebViewModel *viewModel = [ADWebViewModel new];
-            viewModel.request = [NSURLRequest requestWithURL:url];
-            
+            ADWebViewModel *webModel = [ADWebViewModel new];
+            webModel.request = [NSURLRequest requestWithURL:url];
+            viewModel = webModel;
+        }
+        
+        if (viewModel) {
             ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
             [self.ownerVC.navigationController pushViewController:vc animated:YES];
         }

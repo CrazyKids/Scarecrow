@@ -25,10 +25,8 @@
 
 @dynamic viewModel;
 
-+ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
++ (ADViewController *)viewController {
     ADViewController *vc = [[UIStoryboard storyboardWithName:@"Profile" bundle:nil]instantiateViewControllerWithIdentifier:@"profile"];
-    viewModel.ownerVC = vc;
-    [vc setValue:viewModel forKey:@"viewModel"];
     
     return vc;
 }

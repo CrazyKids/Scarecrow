@@ -19,10 +19,8 @@
 
 @dynamic viewModel;
 
-+ (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
++ (ADViewController *)viewController {
     ADOauthViewController *vc = [[ADOauthViewController alloc]initWithNibName:@"ADOauthViewController" bundle:nil];
-    viewModel.ownerVC = vc;
-    [vc setValue:viewModel forKey:@"viewModel"];
     
     return vc;
 }

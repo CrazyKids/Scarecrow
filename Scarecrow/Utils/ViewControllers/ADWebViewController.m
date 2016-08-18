@@ -19,10 +19,8 @@
 
 @dynamic viewModel;
 
-+ (__kindof ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
++ (__kindof ADViewController *)viewController {
     ADWebViewController *vc = [[ADWebViewController alloc]initWithNibName:@"ADWebViewController" bundle:nil];
-    viewModel.ownerVC = vc;
-    [vc setValue:viewModel forKey:@"viewModel"];
     
     return vc;
 }

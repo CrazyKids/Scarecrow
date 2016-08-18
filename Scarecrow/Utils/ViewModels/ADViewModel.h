@@ -28,6 +28,7 @@ typedef void (^voidCallback_id)(id);
 
 @property (copy, nonatomic) voidCallback_id callback;
 
+- (instancetype)initWithParam:(NSDictionary *)param;
 - (void)initialize;
 
 @end

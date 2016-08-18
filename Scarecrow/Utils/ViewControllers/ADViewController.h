@@ -18,6 +18,6 @@
 
 - (void)bindViewModel;
 
-+ (__kindof ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel;
++ (__kindof ADViewController *)viewController;
 
 @end

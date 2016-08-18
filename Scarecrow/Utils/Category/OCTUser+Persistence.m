@@ -10,7 +10,8 @@
 #import "SSKeychain+Scarecrow.h"
 #import <objc/runtime.h>
 
-static NSString *const kUserPersistenceTag = @"user_persistence_tag";
+static NSString* const kUserPersistenceTag = @"user_persistence_tag";
+static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 
 @implementation OCTUser (Persistence)
 
@@ -49,14 +50,29 @@ static NSString *const kUserPersistenceTag = @"user_persistence_tag";
 }
 
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin {
-    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, rawLogin];
+    NSString *mapTag = [NSString stringWithFormat:@"%@_%@", kRawLoginMapTag, rawLogin];
+    NSString *login = [[NSUserDefaults standardUserDefaults]objectForKey:mapTag];
+    
+    return [self ad_fetchUserWithLogin:login];
+}
+
++ (instancetype)ad_fetchUserWithLogin:(NSString *)login {
+    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, login];
     NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:tag];
+    
+    if (!data) {
+        return nil;
+    }
+    
     return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 - (void)ad_update {
+    NSString *mapTag = [NSString stringWithFormat:@"%@_%@", kRawLoginMapTag, self.rawLogin];
+    [[NSUserDefaults standardUserDefaults]setObject:self.login forKey:mapTag];
+    
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
-    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, self.rawLogin];
+    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, self.login];
     [[NSUserDefaults standardUserDefaults]setObject:data forKey:tag];
     
     [[NSUserDefaults standardUserDefaults]synchronize];

@@ -25,10 +25,25 @@ static NSString* const kDefaultPlaceHolder = @"";
 
 @implementation ADProfileViewModel
 
+- (instancetype)initWithParam:(NSDictionary *)param {
+    self = [super initWithParam:param];
+    if (self) {
+        id user = param[@"user"];
+        
+        if ([user isKindOfClass:[OCTUser class]]) {
+            self.user = param[@"user"];
+        } else if ([user isKindOfClass:[NSDictionary class]]) {
+            self.user = [OCTUser modelWithDictionary:user error:nil];
+        } else {
+            self.user = [OCTUser ad_currentUser];
+        }
+
+    }
+    return self;
+}
+
 - (void)initialize {
     [super initialize];
-    
-    self.user = [OCTUser ad_currentUser];
     
     self.avatarHeaderViewModel = [[ADAvatarHeaderViewModel alloc]initWithUser:self.user];
     
@@ -61,8 +76,8 @@ static NSString* const kDefaultPlaceHolder = @"";
     RACSignal *fetchLocalDataSignal = [RACSignal return:[self fetchLocalData]];
     RACSignal *fetchRemoteDataSignal = self.fetchRemoteDataCommamd.executionSignals.switchToLatest;
     
-    [[[fetchLocalDataSignal merge:fetchRemoteDataSignal]deliverOnMainThread]subscribeNext:^(OCTUser *user) {
-        @strongify(self);
+    [[[fetchLocalDataSignal merge:fetchRemoteDataSignal]deliverOnMainThread] subscribeNext:^(OCTUser *user) {
+        @strongify(self)
         [self willChangeValueForKey:@"user"];
         user.followingStatus = self.user.followingStatus;
         [self.user mergeValuesForKeysFromModel:user];
@@ -71,7 +86,7 @@ static NSString* const kDefaultPlaceHolder = @"";
 }
 
 - (OCTUser *)fetchLocalData {
-    return [OCTUser ad_fetchUserWithRawLogin:self.user.rawLogin];
+    return [OCTUser ad_fetchUserWithLogin:self.user.login];
 }
 
 - (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {
