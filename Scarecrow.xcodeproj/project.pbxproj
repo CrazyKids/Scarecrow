@@ -68,6 +68,7 @@
 		248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569E91D5E26300087E62D /* ADWebViewController.m */; };
 		248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569EC1D5E289F0087E62D /* ADOauthViewController.m */; };
 		24856A111D5EBDDA0087E62D /* ADOauthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24856A0F1D5EBDDA0087E62D /* ADOauthViewController.xib */; };
+		248EC5F81D660A9800860852 /* OCTClient+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */; };
 		24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C871D5020A200749A30 /* ADFollowingViewModel.m */; };
 		24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */; };
 		24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8F1D50214400749A30 /* ADProfileViewModel.m */; };
@@ -398,6 +399,8 @@
 		248569EB1D5E289F0087E62D /* ADOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADOauthViewController.h; path = Login/View/ADOauthViewController.h; sourceTree = "<group>"; };
 		248569EC1D5E289F0087E62D /* ADOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADOauthViewController.m; path = Login/View/ADOauthViewController.m; sourceTree = "<group>"; };
 		24856A0F1D5EBDDA0087E62D /* ADOauthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADOauthViewController.xib; path = Login/View/ADOauthViewController.xib; sourceTree = "<group>"; };
+		248EC5F61D660A9800860852 /* OCTClient+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Scarecrow.h"; sourceTree = "<group>"; };
+		248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Scarecrow.m"; sourceTree = "<group>"; };
 		24A53C861D5020A200749A30 /* ADFollowingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFollowingViewModel.h; path = Following/ViewModel/ADFollowingViewModel.h; sourceTree = "<group>"; };
 		24A53C871D5020A200749A30 /* ADFollowingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADFollowingViewModel.m; path = Following/ViewModel/ADFollowingViewModel.m; sourceTree = "<group>"; };
 		24A53C8A1D50211500749A30 /* ADDiscoverViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewModel.h; path = Discover/ViewModel/ADDiscoverViewModel.h; sourceTree = "<group>"; };
@@ -816,6 +819,8 @@
 				248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */,
 				24B0D1671D60B90500805A45 /* UIImage+Octions.h */,
 				24B0D1681D60B90500805A45 /* UIImage+Octions.m */,
+				248EC5F61D660A9800860852 /* OCTClient+Scarecrow.h */,
+				248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */,
 			);
 			name = Category;
 			path = Utils/Category;
@@ -1367,6 +1372,7 @@
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,
 				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
+				248EC5F81D660A9800860852 /* OCTClient+Scarecrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

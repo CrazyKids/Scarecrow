@@ -8,6 +8,8 @@
 
 #import "OCTEvent+Persistence.h"
 #import "OCTUser+Persistence.h"
+#import "OCTEvent+AttributedString.h"
+#import "NSURL+Scarecrow.h"
 
 @implementation OCTEvent (Persistence)
 
@@ -43,3 +45,42 @@
 }
 
 @end
+
+@implementation OCTEvent (NSURL)
+
+- (NSURL *)ad_link {
+    NSMutableAttributedString *attributedString = nil;
+    
+    if ([self isMemberOfClass:[OCTCommitCommentEvent class]]) {
+        attributedString = self.ad_commentedCommitAttributedString;
+    } else if ([self isMemberOfClass:[OCTForkEvent class]]) {
+        attributedString = self.ad_forkedRepositoryNameAttributedString;
+    } else if ([self isMemberOfClass:[OCTIssueCommentEvent class]]) {
+        attributedString = self.ad_issueAttributedString;
+    } else if ([self isMemberOfClass:[OCTIssueEvent class]]) {
+        attributedString = self.ad_issueAttributedString;
+    } else if ([self isMemberOfClass:[OCTMemberEvent class]]) {
+        attributedString = self.ad_memberLoginAttributedString;
+    } else if ([self isMemberOfClass:[OCTPublicEvent class]]) {
+        attributedString = self.ad_repositoryNameAttributedString;
+    } else if ([self isMemberOfClass:[OCTPullRequestCommentEvent class]]) {
+        attributedString = self.ad_pullRequestAttributedString;
+    } else if ([self isMemberOfClass:[OCTPullRequestEvent class]]) {
+        attributedString = self.ad_pullRequestAttributedString;
+    } else if ([self isMemberOfClass:[OCTPushEvent class]]) {
+        attributedString = self.ad_branchNameAttributedString;
+    } else if ([self isMemberOfClass:[OCTRefEvent class]]) {
+        if ([self.ad_refNameAttributedString attribute:kLinkAttributeKey atIndex:0 effectiveRange:NULL]) {
+            attributedString = self.ad_refNameAttributedString;
+        } else {
+            attributedString = self.ad_repositoryNameAttributedString;
+        }
+    } else if ([self isMemberOfClass:[OCTWatchEvent class]]) {
+        attributedString = self.ad_repositoryNameAttributedString;
+    }
+    
+    return [attributedString attribute:kLinkAttributeKey atIndex:0 effectiveRange:NULL];
+}
+
+@end
+

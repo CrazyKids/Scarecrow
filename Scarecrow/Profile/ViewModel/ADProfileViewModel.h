@@ -10,6 +10,8 @@
 
 @class ADAvatarHeaderViewModel;
 
+extern NSString* const kDefaultPlaceHolder;
+
 @interface ADProfileViewModel : ADTableViewModel
 
 @property (strong, nonatomic) OCTUser *user;

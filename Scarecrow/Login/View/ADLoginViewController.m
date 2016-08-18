@@ -109,6 +109,7 @@
     self.usernameTextField.hidden = YES;
     self.passwordTextField.hidden = YES;
     self.loginButton.hidden = YES;
+    [ADLoginAnimation loginItemAnimation:self.oauthLoginButton delay:0];
 #endif
 }
 

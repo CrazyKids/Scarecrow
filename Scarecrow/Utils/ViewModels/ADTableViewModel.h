@@ -16,6 +16,8 @@
 @property (assign, nonatomic) int pageStep;
 
 @property (assign, nonatomic) BOOL bShouldFetchData;
+@property (assign, nonatomic) BOOL bShouldPullToRefresh;
+@property (strong, nonatomic) RACCommand *didSelectCommand;
 @property (strong, nonatomic, readonly) RACCommand *fetchRemoteDataCommamd;
 
 - (RACSignal *)fetchRemoteDataSignalWithPage:(int)page;

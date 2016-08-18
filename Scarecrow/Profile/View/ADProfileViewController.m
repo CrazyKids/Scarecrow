@@ -80,8 +80,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    
+    cell.accessoryType  = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     
     UIColor *bgColor = [UIColor clearColor];
     CGSize size = CGSizeMake(25, 25);
@@ -91,18 +93,26 @@
             case 0:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.compay;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 break;
             case 1:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.location;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 break;
             case 2:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.email;
+                if (self.viewModel.email != kDefaultPlaceHolder) {
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
                 break;
             case 3:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.blog;
+                if (self.viewModel.blog != kDefaultPlaceHolder) {
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
                 break;
             default:
                 cell.imageView.image = nil;
@@ -112,6 +122,7 @@
     } else if (indexPath.section == 1) {
         cell.imageView.image = [UIImage ad_imageWithIcon:@"Gear" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
         cell.textLabel.text = @"Setting";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
 }
@@ -133,12 +144,33 @@
     
     return view;
 }
+
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     CGFloat height = [self tableView:tableView heightForFooterInSection:section];
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
     view.backgroundColor = [UIColor clearColor];
     
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 2:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
+                break;
+            case 3:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
+                break;
+            default:
+                break;
+        }
+        return;
+    }
+    
+    [self.viewModel.didSelectCommand execute:indexPath];
 }
 
 #pragma mark - UIScrollViewDelegate

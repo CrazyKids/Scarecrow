@@ -9,6 +9,7 @@
 #import "ADUserInfoViewModel.h"
 #import "OCTUser+Persistence.h"
 #import "ADAvatarHeaderViewModel.h"
+#import "OCTClient+Scarecrow.h"
 
 @implementation ADUserInfoViewModel
 
@@ -22,11 +23,11 @@
         self.avatarHeaderViewModel.operationCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
             if (self.user.followingStatus == ADFollowStatusYes) {
-                
+                [[ADPlatformManager sharedInstance].client ad_unfollowUser:self.user];
             }
             
             if (self.user.followingStatus == ADFollowStatusNo) {
-                
+                [[ADPlatformManager sharedInstance].client ad_followUser:self.user];
             }
             
             return [RACSignal empty];
@@ -44,7 +45,9 @@
         }];
     }
     
-    
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        return [RACSignal empty];
+    }];
 }
 
 @end

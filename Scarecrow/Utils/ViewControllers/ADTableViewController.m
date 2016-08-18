@@ -9,6 +9,7 @@
 #import "ADTableViewController.h"
 #import "ADTableViewModel.h"
 #import <EGOTableViewPullRefreshAndLoadMore/EGORefreshTableHeaderView.h>
+#import "UIColor+Scarecrow.h"
 
 @interface ADTableViewController () <EGORefreshTableHeaderDelegate, UIScrollViewDelegate>
 
@@ -44,8 +45,11 @@
     self.tableView.sectionIndexColor = [UIColor darkGrayColor];
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexMinimumDisplayRowCount = 20;
+    self.tableView.backgroundColor = [UIColor clearColor];
     
-    if (self.viewModel.bShouldFetchData) {
+    self.view.backgroundColor = RGB(0xE6E6E7);
+    
+    if (self.viewModel.bShouldPullToRefresh) {
         CGRect frame = self.tableView.frame;
         frame.origin.x = 0;
         frame.origin.y = -frame.size.height;
@@ -91,6 +95,13 @@
     }
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.viewModel.didSelectCommand execute:indexPath];
 }
 
 #pragma mark - UIScrollViewDelegate

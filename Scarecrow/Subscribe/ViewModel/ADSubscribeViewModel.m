@@ -12,6 +12,7 @@
 #import "ADWebViewModel.h"
 #import "NSURL+Scarecrow.h"
 #import "ADUserInfoViewModel.h"
+#import "OCTEvent+Persistence.h"
 
 
 static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
@@ -74,6 +75,18 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
         }
         
         return [RACSignal empty];
+    }];
+    
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        @strongify(self);
+        
+        NSArray *array = self.dataSourceArray[indexPath.section];
+        if (!array) {
+            return [RACSignal empty];
+        }
+        
+        ADSubscribeItemViewModel *viewModel = array[indexPath.row];
+        return [self.didClickLinkCommand execute:viewModel.event.ad_link];
     }];
 }
 

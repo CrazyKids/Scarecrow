@@ -14,3 +14,9 @@
 + (NSArray *)ad_fetchUserReceivedEvents;
 
 @end
+
+@interface OCTEvent (NSURL)
+
+- (NSURL *)ad_link;
+
+@end

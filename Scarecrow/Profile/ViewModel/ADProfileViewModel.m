@@ -10,7 +10,7 @@
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
 
-static NSString* const kDefaultPlaceHolder = @"";
+NSString* const kDefaultPlaceHolder = @"Not Set";
 
 @interface ADProfileViewModel ()
 
@@ -45,6 +45,7 @@ static NSString* const kDefaultPlaceHolder = @"";
 - (void)initialize {
     [super initialize];
     
+    self.bShouldPullToRefresh = NO;
     self.avatarHeaderViewModel = [[ADAvatarHeaderViewModel alloc]initWithUser:self.user];
     
     @weakify(self);
@@ -82,6 +83,10 @@ static NSString* const kDefaultPlaceHolder = @"";
         user.followingStatus = self.user.followingStatus;
         [self.user mergeValuesForKeysFromModel:user];
         [self didChangeValueForKey:@"user"];
+    }];
+    
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        return [RACSignal empty];
     }];
 }
 

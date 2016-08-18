@@ -29,8 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView.contentInset = UIEdgeInsetsZero;
 }
 
 #pragma mark - UITableViewDataSource
@@ -56,8 +54,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    
+    cell.accessoryType  = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     
     UIColor *bgColor = [UIColor clearColor];
     CGSize size = CGSizeMake(25, 25);
@@ -72,6 +72,7 @@
             case 1:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Star" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = @"Starred Repos";
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 break;
             case 2:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Rss" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
@@ -88,18 +89,26 @@
             case 0:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.compay;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 break;
             case 1:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.location;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 break;
             case 2:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.email;
+                if (self.viewModel.email != kDefaultPlaceHolder) {
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
                 break;
             case 3:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.blog;
+                if (self.viewModel.email != kDefaultPlaceHolder) {
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                }
                 break;
             default:
                 cell.imageView.image = nil;
@@ -109,5 +118,28 @@
     }
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0) {
+        [self.viewModel.didSelectCommand execute:indexPath];
+        return;
+    }
+    
+    switch (indexPath.row) {
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
+            break;
+        default:
+            break;
+    }
+}
+
 
 @end
