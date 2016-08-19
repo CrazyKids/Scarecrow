@@ -68,6 +68,7 @@
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Person" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = @"name";
                 cell.detailTextLabel.text = self.viewModel.user.name;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 break;
             case 1:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Star" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];

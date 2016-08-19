@@ -66,14 +66,17 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
         return nil;
     }
     
-    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    return [MTLJSONAdapter modelOfClass:[OCTUser class] fromJSONDictionary:dic error:nil];
 }
 
 - (void)ad_update {
     NSString *mapTag = [NSString stringWithFormat:@"%@_%@", kRawLoginMapTag, self.rawLogin];
     [[NSUserDefaults standardUserDefaults]setObject:self.login forKey:mapTag];
     
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSDictionary *dic = [MTLJSONAdapter JSONDictionaryFromModel:self];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dic];
     NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, self.login];
     [[NSUserDefaults standardUserDefaults]setObject:data forKey:tag];
     
