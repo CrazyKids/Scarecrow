@@ -106,7 +106,7 @@
             case 3:
                 cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
                 cell.textLabel.text = self.viewModel.blog;
-                if (self.viewModel.email != kDefaultPlaceHolder) {
+                if (self.viewModel.blog != kDefaultPlaceHolder) {
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 }
                 break;

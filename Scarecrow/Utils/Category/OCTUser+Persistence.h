@@ -23,6 +23,9 @@ typedef NS_ENUM(NSInteger, OCTFollowStatus) {
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin;
 + (instancetype)ad_fetchUserWithLogin:(NSString *)login;
 
+- (BOOL)ad_followUser:(OCTUser *)user;
+- (BOOL)ad_unfollowUser:(OCTUser *)user;
+
 - (void)ad_update;
 
 @end

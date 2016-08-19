@@ -7,11 +7,11 @@
 //
 
 #import "ADAvatarHeaderView.h"
-#import "ADFollowButton.h"
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
 #import <SDWebImage/SDWebImageManager.h>
 #import <GPUImage/GPUImage.h>
+#import "UIColor+Scarecrow.h"
 
 @interface ADAvatarHeaderView ()
 
@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *followerButton;
 @property (weak, nonatomic) IBOutlet UIButton *reposButton;
 @property (weak, nonatomic) IBOutlet UIButton *followingButton;
-@property (weak, nonatomic) IBOutlet ADFollowButton *operationButton;
+@property (weak, nonatomic) IBOutlet UIButton *operationButton;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 
@@ -101,6 +101,8 @@
         }];
     }
     
+    
+    
     [[[RACObserve(viewModel.user, avatarURL) ignore:nil]distinctUntilChanged]subscribeNext:^(NSURL *avatarURL) {
         [[SDWebImageManager sharedManager]downloadImageWithURL:avatarURL options:SDWebImageRefreshCached progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             @strongify(self);
@@ -125,6 +127,14 @@
     RAC(self.followerLabel, text) = [RACObserve(self.viewModel.user, followers) map:toString];
     RAC(self.reposLabel, text) = [RACObserve(self.viewModel.user, publicRepoCount) map:toString];
     RAC(self.followingLabel, text) = [RACObserve(self.viewModel.user, following) map:toString];
+    [RACObserve(self.operationButton, selected) subscribeNext:^(NSNumber *selected) {
+        @strongify(self);
+        if (selected.boolValue) {
+            self.operationButton.backgroundColor = RGB(0xEEEEEE);
+        } else {
+            self.operationButton.backgroundColor = RGB(0x569E3D);
+        }
+    }];
     
     self.followingButton.rac_command = self.viewModel.followingCommand;
     self.reposButton.rac_command = self.viewModel.reposCommand;

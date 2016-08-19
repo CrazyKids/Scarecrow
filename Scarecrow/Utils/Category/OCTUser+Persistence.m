@@ -17,6 +17,8 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 
 - (void)setFollowingStatus:(OCTFollowStatus)followingStatus {
     objc_setAssociatedObject(self, @selector(followingStatus), @(followingStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self ad_update];
 }
 
 - (OCTFollowStatus)followingStatus {
@@ -76,6 +78,56 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
     [[NSUserDefaults standardUserDefaults]setObject:data forKey:tag];
     
     [[NSUserDefaults standardUserDefaults]synchronize];
+}
+
+- (BOOL)ad_followUser:(OCTUser *)user {
+    user.followingStatus = ADFollowStatusYes;
+    [user ad_increaseFollowing];
+    [user ad_update];
+    
+    [self ad_increaseFollowers];
+    [self ad_update];
+    
+    return YES;
+}
+
+- (BOOL)ad_unfollowUser:(OCTUser *)user {
+    user.followingStatus = ADFollowStatusNo;
+    [user ad_decreaseFollowing];
+    [user ad_update];
+    
+    [self ad_decreaseFollowers];
+    [self ad_update];
+    
+    return YES;
+}
+
+- (BOOL)ad_increaseFollowers {
+    NSUInteger followers = self.followers + 1;
+    [self setValue:@(followers) forKey:@"followers"];
+    
+    return YES;
+}
+
+- (BOOL)ad_increaseFollowing {
+    NSUInteger following = self.following + 1;
+    [self setValue:@(following) forKey:@"following"];
+    
+    return YES;
+}
+
+- (BOOL)ad_decreaseFollowers {
+    NSUInteger followers = self.followers - 1;
+    [self setValue:@(followers) forKey:@"followers"];
+    
+    return YES;
+}
+
+- (BOOL)ad_decreaseFollowing {
+    NSUInteger following = self.following - 1;
+    [self setValue:@(following) forKey:@"following"];
+    
+    return YES;
 }
 
 @end

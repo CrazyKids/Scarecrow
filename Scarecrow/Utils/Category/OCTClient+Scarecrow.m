@@ -16,6 +16,12 @@
         return [RACSignal empty];
     }
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.user ad_followUser:user];
+    });
+    
+    return [RACSignal empty];
+    
     return [self followUser:user];
 }
 
@@ -23,6 +29,12 @@
     if (user.followingStatus == ADFollowStatusNo) {
         return [RACSignal empty];
     }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.user ad_unfollowUser:user];
+    });
+    
+    return [RACSignal empty];
     
     return [self unfollowUser:user];
 }
