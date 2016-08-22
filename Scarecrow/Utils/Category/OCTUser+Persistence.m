@@ -15,13 +15,23 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 
 @implementation OCTUser (Persistence)
 
-- (void)setFollowingStatus:(OCTFollowStatus)followingStatus {
+- (void)setFollowingStatus:(ADFollowStatus)followingStatus {
     objc_setAssociatedObject(self, @selector(followingStatus), @(followingStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self ad_update];
 }
 
-- (OCTFollowStatus)followingStatus {
+- (ADFollowStatus)followingStatus {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+}
+
+- (void)setFollowersStatus:(ADFollowStatus)followersStatus {
+    objc_setAssociatedObject(self, @selector(followersStatus), @(followersStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self ad_update];
+}
+
+- (ADFollowStatus)followersStatus {
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 

@@ -8,7 +8,7 @@
 
 #import <OctoKit/OctoKit.h>
 
-typedef NS_ENUM(NSInteger, OCTFollowStatus) {
+typedef NS_ENUM(NSInteger, ADFollowStatus) {
     ADFollowStatusUnknown,
     ADFollowStatusYes,
     ADFollowStatusNo,
@@ -16,7 +16,8 @@ typedef NS_ENUM(NSInteger, OCTFollowStatus) {
 
 @interface OCTUser (Persistence)
 
-@property (assign, nonatomic) OCTFollowStatus followingStatus;
+@property (assign, nonatomic) ADFollowStatus followingStatus;
+@property (assign, nonatomic) ADFollowStatus followersStatus;
 
 + (instancetype)ad_currentUser;
 + (instancetype)ad_userWithRawLogin:(NSString *)rawLogin server:(OCTServer *)server;

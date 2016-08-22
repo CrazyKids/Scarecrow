@@ -6,8 +6,8 @@
 //  Copyright © 2016 duanhongjin. All rights reserved.
 //
 
-#import "ADTableViewModel.h"
+#import "ADUserListViewModel.h"
 
-@interface ADFollowingViewModel : ADTableViewModel
+@interface ADFollowingViewModel : ADUserListViewModel
 
 @end

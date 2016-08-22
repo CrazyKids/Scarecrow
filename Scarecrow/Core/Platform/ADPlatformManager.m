@@ -33,6 +33,7 @@
     
     Class vcClass = NSClassFromString(vcClassString);
     ADViewController *vc = [vcClass viewController];
+    vc.hidesBottomBarWhenPushed = YES;
     
     viewModel.ownerVC = vc;
     [vc initializeWithViewMode:viewModel];
@@ -47,6 +48,8 @@
              @"ADProfileViewModel" : @"ADProfileViewController",
              @"ADUserInfoViewModel" : @"ADUserInfoViewController",
              @"ADSetttingsViewModel" : @"ADSettingsViewController",
+             @"ADFollowingViewModel" : @"ADFollowingViewController",
+             @"ADFollowersViewModel" : @"ADFollowersViewController",
              };
 }
 

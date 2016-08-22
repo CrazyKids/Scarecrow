@@ -48,4 +48,8 @@
     return nil;
 }
 
+- (NSUInteger)offsetForPage:(NSUInteger)page {
+    return (page - 1) * self.pageStep;
+}
+
 @end

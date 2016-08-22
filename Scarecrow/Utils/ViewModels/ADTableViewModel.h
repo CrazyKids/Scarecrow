@@ -24,4 +24,6 @@
 - (BOOL (^)(NSError *error))fetchRemoteDataError;
 - (id)fetchLocalData;
 
+- (NSUInteger)offsetForPage:(NSUInteger)page;
+
 @end

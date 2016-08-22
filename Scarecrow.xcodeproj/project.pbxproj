@@ -19,6 +19,8 @@
 		118AE3871D450E30006DD475 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE3861D450E30006DD475 /* Repositories.storyboard */; };
 		118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38A1D450EFF006DD475 /* Profile.storyboard */; };
 		118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38E1D450FBF006DD475 /* Discover.storyboard */; };
+		11EC821F1D6C9C73003ECCD2 /* ADFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */; };
+		11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EC821E1D6C9C73003ECCD2 /* ADFollowersViewController.xib */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
@@ -33,11 +35,19 @@
 		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
 		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
-		2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */; };
 		2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */; };
 		246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */; };
+		2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6BA1D6C3B000035C629 /* ADFollowingViewController.m */; };
+		2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6BC1D6C3B000035C629 /* ADUserListItemTableViewCell.m */; };
+		2479B6CC1D6C3B000035C629 /* ADUserListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2479B6BD1D6C3B000035C629 /* ADUserListItemTableViewCell.xib */; };
+		2479B6CD1D6C3B000035C629 /* ADUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6BF1D6C3B000035C629 /* ADUserListViewController.m */; };
+		2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2479B6C01D6C3B000035C629 /* Following.storyboard */; };
+		2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C31D6C3B000035C629 /* ADFollowersViewModel.m */; };
+		2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C51D6C3B000035C629 /* ADFollowingViewModel.m */; };
+		2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */; };
+		2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */; };
 		247DF6411D5D5F0B00607526 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; };
 		247DF6421D5D5F0B00607526 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF6451D5D5F0B00607526 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331871D2E389900EF8698 /* Mantle.framework */; };
@@ -72,10 +82,10 @@
 		248EC6061D66145200860852 /* ADSetttingsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248EC6051D66145200860852 /* ADSetttingsViewModel.m */; };
 		248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248EC60B1D66165C00860852 /* ADSettingsViewController.m */; };
 		248EC60E1D66165C00860852 /* ADSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248EC60C1D66165C00860852 /* ADSettingsViewController.xib */; };
-		24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C871D5020A200749A30 /* ADFollowingViewModel.m */; };
 		24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */; };
 		24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C8F1D50214400749A30 /* ADProfileViewModel.m */; };
 		24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */; };
+		24AA83A61D676E02009D94D8 /* ADFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AA83A51D676E02009D94D8 /* ADFollowButton.m */; };
 		24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */; };
 		24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */; };
 		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
@@ -323,6 +333,9 @@
 		118AE3861D450E30006DD475 /* Repositories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Repositories.storyboard; path = Repositories/View/Repositories.storyboard; sourceTree = "<group>"; };
 		118AE38A1D450EFF006DD475 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/View/Profile.storyboard; sourceTree = "<group>"; };
 		118AE38E1D450FBF006DD475 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/View/Discover.storyboard; sourceTree = "<group>"; };
+		11EC821C1D6C9C73003ECCD2 /* ADFollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowersViewController.h; sourceTree = "<group>"; };
+		11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowersViewController.m; sourceTree = "<group>"; };
+		11EC821E1D6C9C73003ECCD2 /* ADFollowersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADFollowersViewController.xib; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
@@ -354,7 +367,6 @@
 		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
 		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
 		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
-		2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Following.storyboard; path = Following/View/Following.storyboard; sourceTree = "<group>"; };
 		2459AAA71D538ADC00FCD90F /* ADSubscribeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeTableViewCell.h; path = Subscribe/View/ADSubscribeTableViewCell.h; sourceTree = "<group>"; };
 		2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
@@ -362,6 +374,22 @@
 		246E9DD91D62013B00ED9EC4 /* ADProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADProfileViewController.h; path = Profile/View/ADProfileViewController.h; sourceTree = "<group>"; };
 		246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADProfileViewController.m; path = Profile/View/ADProfileViewController.m; sourceTree = "<group>"; };
 		246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADWebViewController.xib; sourceTree = "<group>"; };
+		2479B6B91D6C3B000035C629 /* ADFollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowingViewController.h; sourceTree = "<group>"; };
+		2479B6BA1D6C3B000035C629 /* ADFollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowingViewController.m; sourceTree = "<group>"; };
+		2479B6BB1D6C3B000035C629 /* ADUserListItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListItemTableViewCell.h; sourceTree = "<group>"; };
+		2479B6BC1D6C3B000035C629 /* ADUserListItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListItemTableViewCell.m; sourceTree = "<group>"; };
+		2479B6BD1D6C3B000035C629 /* ADUserListItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADUserListItemTableViewCell.xib; sourceTree = "<group>"; };
+		2479B6BE1D6C3B000035C629 /* ADUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListViewController.h; sourceTree = "<group>"; };
+		2479B6BF1D6C3B000035C629 /* ADUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListViewController.m; sourceTree = "<group>"; };
+		2479B6C01D6C3B000035C629 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
+		2479B6C21D6C3B000035C629 /* ADFollowersViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowersViewModel.h; sourceTree = "<group>"; };
+		2479B6C31D6C3B000035C629 /* ADFollowersViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowersViewModel.m; sourceTree = "<group>"; };
+		2479B6C41D6C3B000035C629 /* ADFollowingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowingViewModel.h; sourceTree = "<group>"; };
+		2479B6C51D6C3B000035C629 /* ADFollowingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowingViewModel.m; sourceTree = "<group>"; };
+		2479B6C61D6C3B000035C629 /* ADUserListItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListItemViewModel.h; sourceTree = "<group>"; };
+		2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListItemViewModel.m; sourceTree = "<group>"; };
+		2479B6C81D6C3B000035C629 /* ADUserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListViewModel.h; sourceTree = "<group>"; };
+		2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListViewModel.m; sourceTree = "<group>"; };
 		248569B21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Scarecrow.h"; sourceTree = "<group>"; };
 		248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Scarecrow.m"; sourceTree = "<group>"; };
 		248569B41D5E21820087E62D /* NSURL+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Scarecrow.h"; sourceTree = "<group>"; };
@@ -408,14 +436,14 @@
 		248EC60A1D66165C00860852 /* ADSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSettingsViewController.h; path = Profile/View/ADSettingsViewController.h; sourceTree = "<group>"; };
 		248EC60B1D66165C00860852 /* ADSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSettingsViewController.m; path = Profile/View/ADSettingsViewController.m; sourceTree = "<group>"; };
 		248EC60C1D66165C00860852 /* ADSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADSettingsViewController.xib; path = Profile/View/ADSettingsViewController.xib; sourceTree = "<group>"; };
-		24A53C861D5020A200749A30 /* ADFollowingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFollowingViewModel.h; path = Following/ViewModel/ADFollowingViewModel.h; sourceTree = "<group>"; };
-		24A53C871D5020A200749A30 /* ADFollowingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADFollowingViewModel.m; path = Following/ViewModel/ADFollowingViewModel.m; sourceTree = "<group>"; };
 		24A53C8A1D50211500749A30 /* ADDiscoverViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewModel.h; path = Discover/ViewModel/ADDiscoverViewModel.h; sourceTree = "<group>"; };
 		24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverViewModel.m; path = Discover/ViewModel/ADDiscoverViewModel.m; sourceTree = "<group>"; };
 		24A53C8E1D50214400749A30 /* ADProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADProfileViewModel.h; path = Profile/ViewModel/ADProfileViewModel.h; sourceTree = "<group>"; };
 		24A53C8F1D50214400749A30 /* ADProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADProfileViewModel.m; path = Profile/ViewModel/ADProfileViewModel.m; sourceTree = "<group>"; };
 		24A53C921D50217B00749A30 /* ADRepositoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRepositoriesViewModel.h; path = Repositories/ViewModel/ADRepositoriesViewModel.h; sourceTree = "<group>"; };
 		24A53C931D50217B00749A30 /* ADRepositoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRepositoriesViewModel.m; path = Repositories/ViewModel/ADRepositoriesViewModel.m; sourceTree = "<group>"; };
+		24AA83A41D676E02009D94D8 /* ADFollowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowButton.h; sourceTree = "<group>"; };
+		24AA83A51D676E02009D94D8 /* ADFollowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowButton.m; sourceTree = "<group>"; };
 		24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderViewModel.h; path = Profile/ViewModel/ADAvatarHeaderViewModel.h; sourceTree = "<group>"; };
 		24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderViewModel.m; path = Profile/ViewModel/ADAvatarHeaderViewModel.m; sourceTree = "<group>"; };
 		24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderView.h; path = Profile/View/ADAvatarHeaderView.h; sourceTree = "<group>"; };
@@ -628,7 +656,7 @@
 			isa = PBXGroup;
 			children = (
 				243224E61D562F6C00FCCE53 /* Resource */,
-				244998801D4DEEF800D6E9F7 /* Following */,
+				244998801D4DEEF800D6E9F7 /* UserList */,
 				118AE38C1D450F52006DD475 /* Discover */,
 				118AE3881D450ED4006DD475 /* Profile */,
 				118AE3791D450D3B006DD475 /* Repositories */,
@@ -776,21 +804,13 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		244998801D4DEEF800D6E9F7 /* Following */ = {
+		244998801D4DEEF800D6E9F7 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				24A53C7A1D50206E00749A30 /* ViewModel */,
-				2449988C1D4DEF0300D6E9F7 /* View */,
+				2479B6B81D6C3B000035C629 /* View */,
+				2479B6C11D6C3B000035C629 /* ViewModel */,
 			);
-			name = Following;
-			sourceTree = "<group>";
-		};
-		2449988C1D4DEF0300D6E9F7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2449988D1D4DEF2F00D6E9F7 /* Following.storyboard */,
-			);
-			name = View;
+			name = UserList;
 			sourceTree = "<group>";
 		};
 		246CA4171D38E69A002167A2 /* DataBase */ = {
@@ -800,6 +820,41 @@
 				246CA4241D38E6D0002167A2 /* ADDataBase.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		2479B6B81D6C3B000035C629 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2479B6B91D6C3B000035C629 /* ADFollowingViewController.h */,
+				2479B6BA1D6C3B000035C629 /* ADFollowingViewController.m */,
+				2479B6BB1D6C3B000035C629 /* ADUserListItemTableViewCell.h */,
+				2479B6BC1D6C3B000035C629 /* ADUserListItemTableViewCell.m */,
+				2479B6BD1D6C3B000035C629 /* ADUserListItemTableViewCell.xib */,
+				2479B6BE1D6C3B000035C629 /* ADUserListViewController.h */,
+				2479B6BF1D6C3B000035C629 /* ADUserListViewController.m */,
+				2479B6C01D6C3B000035C629 /* Following.storyboard */,
+				11EC821C1D6C9C73003ECCD2 /* ADFollowersViewController.h */,
+				11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */,
+				11EC821E1D6C9C73003ECCD2 /* ADFollowersViewController.xib */,
+			);
+			name = View;
+			path = UserList/View;
+			sourceTree = "<group>";
+		};
+		2479B6C11D6C3B000035C629 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2479B6C21D6C3B000035C629 /* ADFollowersViewModel.h */,
+				2479B6C31D6C3B000035C629 /* ADFollowersViewModel.m */,
+				2479B6C41D6C3B000035C629 /* ADFollowingViewModel.h */,
+				2479B6C51D6C3B000035C629 /* ADFollowingViewModel.m */,
+				2479B6C61D6C3B000035C629 /* ADUserListItemViewModel.h */,
+				2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */,
+				2479B6C81D6C3B000035C629 /* ADUserListViewModel.h */,
+				2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */,
+			);
+			name = ViewModel;
+			path = UserList/ViewModel;
 			sourceTree = "<group>";
 		};
 		248569B11D5E21820087E62D /* Category */ = {
@@ -867,18 +922,11 @@
 			isa = PBXGroup;
 			children = (
 				248569D11D5E21820087E62D /* ADLoadingTitleView.xib */,
+				24AA83A41D676E02009D94D8 /* ADFollowButton.h */,
+				24AA83A51D676E02009D94D8 /* ADFollowButton.m */,
 			);
 			name = Views;
 			path = Utils/Views;
-			sourceTree = "<group>";
-		};
-		24A53C7A1D50206E00749A30 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				24A53C861D5020A200749A30 /* ADFollowingViewModel.h */,
-				24A53C871D5020A200749A30 /* ADFollowingViewModel.m */,
-			);
-			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		24A53C891D5020A800749A30 /* ViewModel */ = {
@@ -1189,12 +1237,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2449988E1D4DEF2F00D6E9F7 /* Following.storyboard in Resources */,
 				248569E01D5E21820087E62D /* ADLoadingTitleView.xib in Resources */,
 				248EC60E1D66165C00860852 /* ADSettingsViewController.xib in Resources */,
+				2479B6CC1D6C3B000035C629 /* ADUserListItemTableViewCell.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
 				241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */,
 				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
+				2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */,
+				11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */,
 				24856A111D5EBDDA0087E62D /* ADOauthViewController.xib in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
 				118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */,
@@ -1340,6 +1390,7 @@
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
 				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
+				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
@@ -1358,7 +1409,10 @@
 				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				248569E41D5E21CA0087E62D /* ADWebViewModel.m in Sources */,
+				2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */,
 				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
+				24AA83A61D676E02009D94D8 /* ADFollowButton.m in Sources */,
+				11EC821F1D6C9C73003ECCD2 /* ADFollowersViewController.m in Sources */,
 				24A53C941D50217B00749A30 /* ADRepositoriesViewModel.m in Sources */,
 				24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */,
 				248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */,
@@ -1371,13 +1425,17 @@
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
-				24A53C881D5020A200749A30 /* ADFollowingViewModel.m in Sources */,
+				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
+				2479B6CD1D6C3B000035C629 /* ADUserListViewController.m in Sources */,
 				248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */,
 				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,
+				2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */,
+				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,
 				248569DF1D5E21820087E62D /* ADViewModel.m in Sources */,
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
+				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
 				248569E71D5E22110087E62D /* ADOauthViewModel.m in Sources */,
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,

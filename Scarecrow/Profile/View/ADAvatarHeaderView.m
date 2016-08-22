@@ -127,14 +127,6 @@
     RAC(self.followerLabel, text) = [RACObserve(self.viewModel.user, followers) map:toString];
     RAC(self.reposLabel, text) = [RACObserve(self.viewModel.user, publicRepoCount) map:toString];
     RAC(self.followingLabel, text) = [RACObserve(self.viewModel.user, following) map:toString];
-    [RACObserve(self.operationButton, selected) subscribeNext:^(NSNumber *selected) {
-        @strongify(self);
-        if (selected.boolValue) {
-            self.operationButton.backgroundColor = RGB(0xEEEEEE);
-        } else {
-            self.operationButton.backgroundColor = RGB(0x569E3D);
-        }
-    }];
     
     self.followingButton.rac_command = self.viewModel.followingCommand;
     self.reposButton.rac_command = self.viewModel.reposCommand;

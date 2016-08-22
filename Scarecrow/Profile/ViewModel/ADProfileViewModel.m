@@ -10,6 +10,8 @@
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
 #import "ADSetttingsViewModel.h"
+#import "ADFollowersViewModel.h"
+#import "ADFollowingViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -51,10 +53,21 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
     
     @weakify(self);
     self.avatarHeaderViewModel.followersCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        ADFollowersViewModel *viewModel = [[ADFollowersViewModel alloc]initWithParam:@{@"user" : self.user}];
+        
+        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        
         return [RACSignal empty];
     }];
     
     self.avatarHeaderViewModel.followingCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        ADFollowingViewModel *viewModel = [[ADFollowingViewModel alloc]initWithParam:@{@"user" : self.user}];
+        
+        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+        [self.ownerVC.navigationController pushViewController:vc animated:YES];
         return [RACSignal empty];
     }];
     
