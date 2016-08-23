@@ -14,4 +14,14 @@
 // 由于github登录提示 Incorrect username or password, 故关闭2FA
 #define DISABLE_2FA
 
+#define AD_DataBaseName            @"scarecrow.db"
+#define AD_DataBaseEncryptionName  @"scarecrowx.db"
+#define AD_DataBaseVersion         1
+
+#ifdef DEBUG
+    #define DataBase_Debug  1
+#else
+    #define DataBase_Debug  0
+#endif
+
 #endif /* DEFINES_h */

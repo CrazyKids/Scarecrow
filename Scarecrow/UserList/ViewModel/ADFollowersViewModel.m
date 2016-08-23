@@ -48,7 +48,8 @@
         return userArray;
     }] doNext:^(NSArray *userArray) {
         if (self.isCurrentUser) {
-            // TODO: 
+            [OCTUser ad_updateUsers:userArray];
+            [OCTUser ad_updateFollowerStatus:userArray];
         }
     }];
 }

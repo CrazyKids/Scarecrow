@@ -21,6 +21,7 @@
 		118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38E1D450FBF006DD475 /* Discover.storyboard */; };
 		11EC821F1D6C9C73003ECCD2 /* ADFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */; };
 		11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EC821E1D6C9C73003ECCD2 /* ADFollowersViewController.xib */; };
+		11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC82421D6F45B5003ECCD2 /* FMDatabaseQueueV2.m */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
@@ -58,6 +59,7 @@
 		247DF64E1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; };
 		247DF6521D5D5F0B00607526 /* OctoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */; };
 		248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */; };
 		248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B51D5E21820087E62D /* NSURL+Scarecrow.m */; };
 		248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B71D5E21820087E62D /* OCTEvent+AttributedString.m */; };
@@ -336,6 +338,8 @@
 		11EC821C1D6C9C73003ECCD2 /* ADFollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFollowersViewController.h; sourceTree = "<group>"; };
 		11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFollowersViewController.m; sourceTree = "<group>"; };
 		11EC821E1D6C9C73003ECCD2 /* ADFollowersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADFollowersViewController.xib; sourceTree = "<group>"; };
+		11EC82411D6F45B5003ECCD2 /* FMDatabaseQueueV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueueV2.h; path = Core/DataBase/FMDatabaseQueueV2.h; sourceTree = "<group>"; };
+		11EC82421D6F45B5003ECCD2 /* FMDatabaseQueueV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueueV2.m; path = Core/DataBase/FMDatabaseQueueV2.m; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 		2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListItemViewModel.m; sourceTree = "<group>"; };
 		2479B6C81D6C3B000035C629 /* ADUserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListViewModel.h; sourceTree = "<group>"; };
 		2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListViewModel.m; sourceTree = "<group>"; };
+		2481A8F01D6E83C300F0C97F /* ADDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBaseManager.h; path = Core/DataBase/ADDataBaseManager.h; sourceTree = "<group>"; };
+		2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBaseManager.m; path = Core/DataBase/ADDataBaseManager.m; sourceTree = "<group>"; };
 		248569B21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Scarecrow.h"; sourceTree = "<group>"; };
 		248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Scarecrow.m"; sourceTree = "<group>"; };
 		248569B41D5E21820087E62D /* NSURL+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Scarecrow.h"; sourceTree = "<group>"; };
@@ -818,6 +824,10 @@
 			children = (
 				246CA4231D38E6D0002167A2 /* ADDataBase.h */,
 				246CA4241D38E6D0002167A2 /* ADDataBase.m */,
+				2481A8F01D6E83C300F0C97F /* ADDataBaseManager.h */,
+				2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */,
+				11EC82411D6F45B5003ECCD2 /* FMDatabaseQueueV2.h */,
+				11EC82421D6F45B5003ECCD2 /* FMDatabaseQueueV2.m */,
 			);
 			name = DataBase;
 			sourceTree = "<group>";
@@ -990,7 +1000,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				2D0EA600EA86CC4B92C6E8F0 /* 📦 Check Pods Manifest.lock */,
+				15FB02CE2E7DE22751DF3AD8 /* 📦 Check Pods Manifest.lock */,
+				2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */,
 				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
 				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
@@ -1290,6 +1301,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		15FB02CE2E7DE22751DF3AD8 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1305,14 +1331,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D0EA600EA86CC4B92C6E8F0 /* 📦 Check Pods Manifest.lock */ = {
+		2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1390,6 +1416,7 @@
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
 				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
+				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
@@ -1425,6 +1452,7 @@
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
+				2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */,
 				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
 				2479B6CD1D6C3B000035C629 /* ADUserListViewController.m in Sources */,
 				248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */,

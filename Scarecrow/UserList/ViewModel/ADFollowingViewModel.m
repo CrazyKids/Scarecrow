@@ -11,10 +11,6 @@
 
 @implementation ADFollowingViewModel
 
-- (void)initialize {
-    [super initialize];
-}
-
 - (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {
     @weakify(self);
     return [[[[[[[ADPlatformManager sharedInstance].client fetchFollowingForUser:self.user offset:[self offsetForPage:page] perPage:self.pageStep]take:self.pageStep]collect]map:^id(NSArray *userArray) {
@@ -46,7 +42,8 @@
         return userArray;
     }] doNext:^(NSArray *userArray) {
         if (self.isCurrentUser) {
-            // TODO:
+            [OCTUser ad_updateUsers:userArray];
+            [OCTUser ad_updateFollowingStatus:userArray];
         }
     }];
 }

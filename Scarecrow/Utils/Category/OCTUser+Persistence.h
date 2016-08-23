@@ -24,9 +24,19 @@ typedef NS_ENUM(NSInteger, ADFollowStatus) {
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin;
 + (instancetype)ad_fetchUserWithLogin:(NSString *)login;
 
-- (BOOL)ad_followUser:(OCTUser *)user;
-- (BOOL)ad_unfollowUser:(OCTUser *)user;
-
 - (void)ad_update;
+
++ (BOOL)ad_updateUsers:(NSArray *)userArray;
++ (BOOL)ad_updateFollowerStatus:(NSArray *)userArray;
++ (BOOL)ad_updateFollowingStatus:(NSArray *)userArray;
+
++ (BOOL)ad_followUser:(OCTUser *)user;
++ (BOOL)ad_unfollowUser:(OCTUser *)user;
+
+- (BOOL)ad_increaseFollowers;
+- (BOOL)ad_increaseFollowing;
+
+- (BOOL)ad_decreaseFollowers;
+- (BOOL)ad_decreaseFollowing;
 
 @end

@@ -9,16 +9,12 @@
 #import "OCTUser+Persistence.h"
 #import "SSKeychain+Scarecrow.h"
 #import <objc/runtime.h>
-
-static NSString* const kUserPersistenceTag = @"user_persistence_tag";
-static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
+#import "ADDataBaseManager.h"
 
 @implementation OCTUser (Persistence)
 
 - (void)setFollowingStatus:(ADFollowStatus)followingStatus {
     objc_setAssociatedObject(self, @selector(followingStatus), @(followingStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    [self ad_update];
 }
 
 - (ADFollowStatus)followingStatus {
@@ -27,18 +23,20 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 
 - (void)setFollowersStatus:(ADFollowStatus)followersStatus {
     objc_setAssociatedObject(self, @selector(followersStatus), @(followersStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    [self ad_update];
 }
 
 - (ADFollowStatus)followersStatus {
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
++ (ADDataBase *)database {
+    return [ADPlatformManager sharedInstance].dataBaseManager.dataBase;
+}
+
 + (instancetype)ad_currentUser {
     OCTUser *user = [ADPlatformManager sharedInstance].client.user;
     if (!user) {
-        user = [self ad_fetchUserWithRawLogin:[SSKeychain username]];
+        user = [[self database]fetchUserWithRawLogin:[SSKeychain username]];
         OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
         [ADPlatformManager sharedInstance].client = client;
     }
@@ -62,57 +60,41 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 }
 
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin {
-    NSString *mapTag = [NSString stringWithFormat:@"%@_%@", kRawLoginMapTag, rawLogin];
-    NSString *login = [[NSUserDefaults standardUserDefaults]objectForKey:mapTag];
-    
-    return [self ad_fetchUserWithLogin:login];
+    return [[self database]fetchUserWithRawLogin:rawLogin];
 }
 
 + (instancetype)ad_fetchUserWithLogin:(NSString *)login {
-    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, login];
-    NSData *data = [[NSUserDefaults standardUserDefaults]objectForKey:tag];
-    
-    if (!data) {
-        return nil;
-    }
-    
-    NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    return [MTLJSONAdapter modelOfClass:[OCTUser class] fromJSONDictionary:dic error:nil];
+    return [[self database]fetchUserWithLogin:login];
 }
 
 - (void)ad_update {
-    NSString *mapTag = [NSString stringWithFormat:@"%@_%@", kRawLoginMapTag, self.rawLogin];
-    [[NSUserDefaults standardUserDefaults]setObject:self.login forKey:mapTag];
-    
-    NSDictionary *dic = [MTLJSONAdapter JSONDictionaryFromModel:self];
-    
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dic];
-    NSString *tag = [NSString stringWithFormat:@"%@_%@", kUserPersistenceTag, self.login];
-    [[NSUserDefaults standardUserDefaults]setObject:data forKey:tag];
-    
-    [[NSUserDefaults standardUserDefaults]synchronize];
+    [[[self class]database]updateUser:self];
 }
 
-- (BOOL)ad_followUser:(OCTUser *)user {
-    user.followingStatus = ADFollowStatusYes;
-    [user ad_increaseFollowing];
-    [user ad_update];
-    
-    [self ad_increaseFollowers];
-    [self ad_update];
++ (BOOL)ad_updateUsers:(NSArray *)userArray {
+    for (OCTUser *user in userArray) {
+        if (![[self database]updateUser:user]) {
+            return NO;
+        }
+    }
     
     return YES;
 }
 
-- (BOOL)ad_unfollowUser:(OCTUser *)user {
-    user.followingStatus = ADFollowStatusNo;
-    [user ad_decreaseFollowing];
-    [user ad_update];
-    
-    [self ad_decreaseFollowers];
-    [self ad_update];
-    
-    return YES;
++ (BOOL)ad_updateFollowerStatus:(NSArray *)userArray {
+    return [[self database]updateFollowerStatus:userArray];
+}
+
++ (BOOL)ad_updateFollowingStatus:(NSArray *)userArray {
+    return [[self database]updateFollowingStatus:userArray];
+}
+
++ (BOOL)ad_followUser:(OCTUser *)user {
+    return [[self database]followeUser:user];
+}
+
++ (BOOL)ad_unfollowUser:(OCTUser *)user {
+    return [[self database]unfollowUser:user];
 }
 
 - (BOOL)ad_increaseFollowers {
@@ -130,6 +112,10 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 }
 
 - (BOOL)ad_decreaseFollowers {
+    if (self.followers == 0) {
+        return YES;
+    }
+    
     NSUInteger followers = self.followers - 1;
     [self setValue:@(followers) forKey:@"followers"];
     
@@ -137,10 +123,15 @@ static NSString* const kRawLoginMapTag = @"user_rawlogin_tag";
 }
 
 - (BOOL)ad_decreaseFollowing {
+    if (self.following == 0) {
+        return YES;
+    }
+    
     NSUInteger following = self.following - 1;
     [self setValue:@(following) forKey:@"following"];
     
     return YES;
 }
+
 
 @end

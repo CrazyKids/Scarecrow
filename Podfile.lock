@@ -1,5 +1,7 @@
 PODS:
   - EGOTableViewPullRefreshAndLoadMore (1.0.4)
+  - FMDB/SQLCipher (2.6.2):
+    - SQLCipher
   - FormatterKit (1.8.1):
     - FormatterKit/AddressFormatter (= 1.8.1)
     - FormatterKit/ArrayFormatter (= 1.8.1)
@@ -36,6 +38,11 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SQLCipher (3.4.0):
+    - SQLCipher/standard (= 3.4.0)
+  - SQLCipher/common (3.4.0)
+  - SQLCipher/standard (3.4.0):
+    - SQLCipher/common
   - SSKeychain (1.4.1)
   - Vertigo (0.1)
   - YYKit (1.0.7):
@@ -45,6 +52,7 @@ PODS:
 
 DEPENDENCIES:
   - EGOTableViewPullRefreshAndLoadMore (~> 1.0.4)
+  - FMDB/SQLCipher (~> 2.6.2)
   - FormatterKit (~> 1.8.1)
   - GPUImage (~> 0.1.7)
   - MBProgressHUD (~> 1.0.0)
@@ -66,16 +74,18 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   EGOTableViewPullRefreshAndLoadMore: 118a0824590db042d42e08fcc442b93cebf15e73
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FormatterKit: 11ad17b983200629246a5a466f6f1bfa2df823cb
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OcticonsIOS: 93f352e0e19df9cabe662c14d2401581d8f89a6a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   Vertigo: b971aa21e904512cfe387196ccba37df3f9a792e
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
   ZRAlertController: ba17b29a02a0675b544a13f50d74c3d34b1a8ecb
 
-PODFILE CHECKSUM: bbf3ddda7406fb031d0a892bb86895d739822bec
+PODFILE CHECKSUM: 73e790ed1971b8bfd5fed20a0f51a4a4fce3b011
 
 COCOAPODS: 1.0.0

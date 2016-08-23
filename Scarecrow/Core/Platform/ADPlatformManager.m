@@ -8,6 +8,8 @@
 
 #import "ADPlatformManager.h"
 #import "ADViewController.h"
+#import "ADDataBaseManager.h"
+#import "SSKeychain+Scarecrow.h"
 
 @implementation ADPlatformManager
 
@@ -23,6 +25,17 @@
 
 - (void)resetRootViewModel:(ADViewModel *)viewModel {
     
+}
+
+- (ADDataBaseManager *)dataBaseManager {
+    @synchronized (self) {
+        NSString *rawLogin = [SSKeychain username];
+        if (!_dataBaseManager && rawLogin.length) {
+            _dataBaseManager = [[ADDataBaseManager alloc]initWithRawLogin:rawLogin];
+        }
+        
+        return _dataBaseManager;
+    }
 }
 
 - (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {

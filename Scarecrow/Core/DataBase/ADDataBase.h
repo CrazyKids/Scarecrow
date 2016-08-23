@@ -8,8 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ADDataBase : NSObject
+@class FMDatabaseQueueV2;
 
+@interface ADDataBase : NSObject {
+    FMDatabaseQueueV2   *_dataBaseQueue;
+}
 
++ (NSArray *)tableCreateSQLSentences;
++ (NSArray *)tableDropSQLSentences;
+
+- (instancetype)initWithDataBaseQueue:(FMDatabaseQueueV2 *)dataBaseQueue;
+
+- (BOOL)updateUser:(OCTUser *)user;
+- (OCTUser *)fetchUserWithLogin:(NSString *)login;
+- (OCTUser *)fetchUserWithRawLogin:(NSString *)rawLogin;
+
+- (BOOL)updateFollowingStatus:(NSArray *)userArray;
+- (BOOL)updateFollowerStatus:(NSArray *)userArray;
+
+- (BOOL)followeUser:(OCTUser *)user;
+- (BOOL)unfollowUser:(OCTUser *)user;
 
 @end

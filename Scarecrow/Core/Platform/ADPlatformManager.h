@@ -10,10 +10,12 @@
 #import "ADViewController.h"
 
 @class ADViewModel;
+@class ADDataBaseManager;
 
 @interface ADPlatformManager : NSObject
 
 @property (strong, nonatomic) OCTClient *client;
+@property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
 
 + (ADPlatformManager *)sharedInstance;
 
