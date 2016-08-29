@@ -19,7 +19,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akr-nW-m3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="WSv-n6-Spa" customClass="ADTabBarLoader">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe,Following,Profile"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe,Profile"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tabBarController" destination="lsr-9H-NMy" id="7O6-fG-p0c"/>
