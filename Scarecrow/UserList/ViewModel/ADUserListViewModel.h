@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) RACCommand *operationCommand;
 
+- (void)fetchLocalDataWithPage:(NSInteger)page perPage:(NSInteger)perPage;
+
 @end

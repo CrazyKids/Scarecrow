@@ -11,6 +11,36 @@
 #import <FMDB/FMDB.h>
 #import "OCTUser+Persistence.h"
 
+@interface OCTRepository (database)
+
+- (NSDictionary *)toDatabaseDic;
++ (OCTRepository *)fromDatabaseDic:(NSDictionary *)dic;
+
+@end
+
+@implementation OCTRepository (database)
+
+- (NSDictionary *)toDatabaseDic {
+    NSMutableDictionary *dic = [MTLJSONAdapter JSONDictionaryFromModel:self].mutableCopy;
+    dic[@"owner_login"] = dic[@"owner"][@"login"];
+    dic[@"owner_avatar_url"] = dic[@"owner"][@"avatar_url"];
+    
+    return dic;
+}
+
++ (OCTRepository *)fromDatabaseDic:(NSDictionary *)dic {
+    NSMutableDictionary *reposDic = dic.mutableCopy;
+    reposDic[@"owner"] = @{
+                           @"login" : dic[@"owner_login"],
+                           @"avatar_url" : dic[@"owner_avatar_url"],
+                           };
+    return [MTLJSONAdapter modelOfClass:[OCTRepository class] fromJSONDictionary:reposDic error:nil];
+}
+
+@end
+
+#pragma mark - ADDataBase
+
 @implementation ADDataBase
 
 + (NSArray *)tableCreateSQLSentences {
@@ -49,6 +79,9 @@
 }
 
 - (BOOL)updateUser:(OCTUser *)user {
+    if (!user) {
+        return YES;
+    }
     __block BOOL success = NO;
     [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         NSString *sql = @"REPLACE INTO user(id, rawLogin, login, name, bio, email, avatar_url, html_url, blog, company, location, collaborators, public_repos, owned_private_repos, public_gists, private_gists, followers, following, disk_usage) VALUES(:id, :rawLogin, :login, :name, :bio, :email, :avatar_url, :html_url, :blog, :company, :location, :collaborators, :public_repos, :owned_private_repos, :public_gists, :private_gists, :followers, :following, :disk_usage)";
@@ -201,6 +234,41 @@
     }];
     
     return success;
+}
+
+- (BOOL)updateRepos:(OCTRepository *)repos {
+    if (!repos) {
+        return YES;
+    }
+    
+    __block BOOL success = NO;
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
+       NSString *sql = @"REPLACE INTO repos (id, name, owner_login, owner_avatar_url, description, language, pushed_at, created_at, updated_at, clone_url, ssh_url, git_url, html_url, default_branch, private, fork, watchers_count, forks_count, stargazers_count, open_issues_count, subscribers_count) VALUES (:id, :name, :owner_login, :owner_avatar_url, :description, :language, :pushed_at, :created_at, :updated_at, :clone_url, :ssh_url, :git_url, :html_url, :default_branch, :private, :fork, :watchers_count, :forks_count, :stargazers_count, :open_issues_count, :subscribers_count)";
+        
+        success = [db executeUpdate:sql withParameterDictionary:[repos toDatabaseDic]];
+    }];
+    
+    return success;
+}
+
+- (NSArray<__kindof OCTRepository *> *)fetchRepos {
+    __block NSMutableArray *reposArray = [NSMutableArray new];
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? ORDER BY LOWER(name)", [OCTUser ad_currentUser].login];
+        
+        @onExit {
+            [rs close];
+        };
+        
+        while ([rs next]) {
+            OCTRepository *repos = [OCTRepository fromDatabaseDic:rs.resultDictionary];
+            if (repos) {
+                [reposArray addObject:repos];
+            }
+        }
+    }];
+    
+    return reposArray;
 }
 
 @end

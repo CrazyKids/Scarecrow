@@ -59,6 +59,7 @@
     }];
     
     RACSignal *fetchLocalDataSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
         return (RACDisposable *)nil;
     }];
     
@@ -69,6 +70,8 @@
         return [self dataSourceWithUsers:userArray];
     }];
 }
+
+
 
 - (BOOL)isCurrentUser {
     return [self.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID];

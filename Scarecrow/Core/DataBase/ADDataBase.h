@@ -19,6 +19,7 @@
 
 - (instancetype)initWithDataBaseQueue:(FMDatabaseQueueV2 *)dataBaseQueue;
 
+// user operation
 - (BOOL)updateUser:(OCTUser *)user;
 - (OCTUser *)fetchUserWithLogin:(NSString *)login;
 - (OCTUser *)fetchUserWithRawLogin:(NSString *)rawLogin;
@@ -28,5 +29,10 @@
 
 - (BOOL)followeUser:(OCTUser *)user;
 - (BOOL)unfollowUser:(OCTUser *)user;
+
+// repos operation
+- (BOOL)updateRepos:(OCTRepository *)repos;
+
+- (NSArray<__kindof OCTRepository *> *)fetchRepos;
 
 @end
