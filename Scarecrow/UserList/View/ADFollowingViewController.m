@@ -7,7 +7,6 @@
 //
 
 #import "ADFollowingViewController.h"
-#import "UIStoryboard+ViewModel.h"
 
 @interface ADFollowingViewController ()
 

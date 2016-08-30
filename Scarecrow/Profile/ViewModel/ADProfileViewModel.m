@@ -12,6 +12,7 @@
 #import "ADSetttingsViewModel.h"
 #import "ADFollowersViewModel.h"
 #import "ADFollowingViewModel.h"
+#import "ADReposViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -68,6 +69,7 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
         
         ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
         [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        
         return [RACSignal empty];
     }];
     

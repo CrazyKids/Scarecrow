@@ -13,14 +13,14 @@
 
 @interface OCTRepository (database)
 
-- (NSDictionary *)toDatabaseDic;
-+ (OCTRepository *)fromDatabaseDic:(NSDictionary *)dic;
+- (NSDictionary *)ad_toDatabaseDic;
++ (OCTRepository *)ad_fromDatabaseDic:(NSDictionary *)dic;
 
 @end
 
 @implementation OCTRepository (database)
 
-- (NSDictionary *)toDatabaseDic {
+- (NSDictionary *)ad_toDatabaseDic {
     NSMutableDictionary *dic = [MTLJSONAdapter JSONDictionaryFromModel:self].mutableCopy;
     dic[@"owner_login"] = dic[@"owner"][@"login"];
     dic[@"owner_avatar_url"] = dic[@"owner"][@"avatar_url"];
@@ -28,7 +28,7 @@
     return dic;
 }
 
-+ (OCTRepository *)fromDatabaseDic:(NSDictionary *)dic {
++ (OCTRepository *)ad_fromDatabaseDic:(NSDictionary *)dic {
     NSMutableDictionary *reposDic = dic.mutableCopy;
     reposDic[@"owner"] = @{
                            @"login" : dic[@"owner_login"],
@@ -84,8 +84,7 @@
     }
     __block BOOL success = NO;
     [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
-        NSString *sql = @"REPLACE INTO user(id, rawLogin, login, name, bio, email, avatar_url, html_url, blog, company, location, collaborators, public_repos, owned_private_repos, public_gists, private_gists, followers, following, disk_usage) VALUES(:id, :rawLogin, :login, :name, :bio, :email, :avatar_url, :html_url, :blog, :company, :location, :collaborators, :public_repos, :owned_private_repos, :public_gists, :private_gists, :followers, :following, :disk_usage)";
-        success = [db executeQuery:sql withParameterDictionary:[MTLJSONAdapter JSONDictionaryFromModel:user]];
+        success = [db executeUpdate:@"REPLACE INTO user(id, rawLogin, login, name, bio, email, avatar_url, html_url, blog, company, location, collaborators, public_repos, owned_private_repos, public_gists, private_gists, followers, following, disk_usage) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", user.objectID, user.rawLogin, user.login, user.name, user.bio, user.email, user.avatarURL, user.HTMLURL, user.blog, user.company, user.location, @(user.collaborators), @(user.publicRepoCount), @(user.privateRepoCount), @(user.publicGistCount), @(user.privateGistCount), @(user.followers), @(user.following), @(user.diskUsage)];
     }];
     
     return success;
@@ -127,7 +126,7 @@
         }].array componentsJoinedByString:@","];
         
         NSString *currentUserId = [OCTUser ad_currentUser].objectID;
-        success = [db executeQuery:@"DELETE FROM userFollowingUser WHERE dstUserId in (?) and userId = ?", newIds, currentUserId];
+        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE dstUserId in (?) and userId = ?", newIds, currentUserId];
         if (!success) {
             return;
         }
@@ -155,7 +154,7 @@
         }].array componentsJoinedByString:@","];
         
         NSString *currentUserId = [OCTUser ad_currentUser].objectID;
-        success = [db executeQuery:@"DELETE FROM userFollowingUser WHERE userId in (?) and dstUserId = ?", newIds, currentUserId];
+        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE userId in (?) and dstUserId = ?", newIds, currentUserId];
         if (!success) {
             return;
         }
@@ -245,7 +244,7 @@
     [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
        NSString *sql = @"REPLACE INTO repos (id, name, owner_login, owner_avatar_url, description, language, pushed_at, created_at, updated_at, clone_url, ssh_url, git_url, html_url, default_branch, private, fork, watchers_count, forks_count, stargazers_count, open_issues_count, subscribers_count) VALUES (:id, :name, :owner_login, :owner_avatar_url, :description, :language, :pushed_at, :created_at, :updated_at, :clone_url, :ssh_url, :git_url, :html_url, :default_branch, :private, :fork, :watchers_count, :forks_count, :stargazers_count, :open_issues_count, :subscribers_count)";
         
-        success = [db executeUpdate:sql withParameterDictionary:[repos toDatabaseDic]];
+        success = [db executeUpdate:sql withParameterDictionary:[repos ad_toDatabaseDic]];
     }];
     
     return success;
@@ -261,7 +260,7 @@
         };
         
         while ([rs next]) {
-            OCTRepository *repos = [OCTRepository fromDatabaseDic:rs.resultDictionary];
+            OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
             if (repos) {
                 [reposArray addObject:repos];
             }

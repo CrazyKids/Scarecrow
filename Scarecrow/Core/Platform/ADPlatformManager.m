@@ -63,6 +63,7 @@
              @"ADSetttingsViewModel" : @"ADSettingsViewController",
              @"ADFollowingViewModel" : @"ADFollowingViewController",
              @"ADFollowersViewModel" : @"ADFollowersViewController",
+             @"ADReposViewModel" : @"ADReposViewController",
              };
 }
 
