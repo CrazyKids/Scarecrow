@@ -1086,6 +1086,7 @@
 		2423311E1D2E36BD00EF8698 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AD;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = duanhongjin;
 				TargetAttributes = {
