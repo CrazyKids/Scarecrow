@@ -24,4 +24,7 @@
     #define DataBase_Debug  0
 #endif
 
+#define AD_APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define AD_APP_BUILD   ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
+
 #endif /* DEFINES_h */

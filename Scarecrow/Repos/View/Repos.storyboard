@@ -42,7 +42,7 @@
         <scene sceneID="EuI-QV-daF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQL-QS-zKP" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Repos" selectedImage="ReposHold" id="pAs-Bf-8Mf">
+                    <tabBarItem key="tabBarItem" title="" image="reposTabBar" selectedImage="selectedReposTabBar" id="pAs-Bf-8Mf">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -64,7 +64,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Repos" width="19" height="23"/>
-        <image name="ReposHold" width="19" height="23"/>
+        <image name="reposTabBar" width="22" height="22"/>
+        <image name="selectedReposTabBar" width="22" height="22"/>
     </resources>
 </document>

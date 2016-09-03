@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Following.pdf"
+      "filename" : "profileTabBar.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {

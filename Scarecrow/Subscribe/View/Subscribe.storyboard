@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-uW-KJ0">
-                                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="15" y="10" width="40" height="40"/>
                                                     <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="4OQ-o9-JbH"/>
@@ -41,7 +41,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4XS-uW-KJ0" firstAttribute="top" secondItem="Vd1-Pb-xC4" secondAttribute="top" constant="10" id="SHD-QZ-hZ7"/>
-                                                <constraint firstItem="4XS-uW-KJ0" firstAttribute="leading" secondItem="Vd1-Pb-xC4" secondAttribute="leading" constant="10" id="jBB-Ha-csD"/>
+                                                <constraint firstItem="4XS-uW-KJ0" firstAttribute="leading" secondItem="Vd1-Pb-xC4" secondAttribute="leading" constant="15" id="jBB-Ha-csD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -72,7 +72,7 @@
         <scene sceneID="tWA-IC-TNx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XTl-CT-hhe" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="HomeHold" id="AJP-l8-XLh">
+                    <tabBarItem key="tabBarItem" title="" image="homeTabBar" selectedImage="selectedHomeTabBar" id="AJP-l8-XLh">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -94,7 +94,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Home" width="24" height="23"/>
-        <image name="HomeHold" width="24" height="23"/>
+        <image name="homeTabBar" width="27" height="27"/>
+        <image name="selectedHomeTabBar" width="27" height="27"/>
     </resources>
 </document>

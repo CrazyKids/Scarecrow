@@ -100,16 +100,6 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
         [self.user mergeValuesForKeysFromModel:user];
         [self didChangeValueForKey:@"user"];
     }];
-    
-    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
-        if (indexPath.section == 1 && indexPath.row == 0) {
-            ADSetttingsViewModel *viewModel = [ADSetttingsViewModel new];
-            ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-            
-            [self.ownerVC.navigationController pushViewController:vc animated:YES];
-        }
-        return [RACSignal empty];
-    }];
 }
 
 - (OCTUser *)fetchLocalData {
@@ -118,6 +108,9 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
 
 - (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {
     return [[[[ADPlatformManager sharedInstance].client fetchUserInfoForUser:self.user]retry:3]doNext:^(OCTUser *user) {
+        if (!user.rawLogin.length) {
+            [user setValue:user.login forKey:@"rawLogin"];
+        }
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [user ad_update];
         });

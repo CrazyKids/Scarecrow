@@ -42,7 +42,7 @@
         <scene sceneID="79z-6t-3n2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9j-fh-26Z" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="Profile" selectedImage="ProfileHold" id="py9-XD-8Ys">
+                    <tabBarItem key="tabBarItem" image="profileTabBar" selectedImage="selectedProfileTabBar" id="py9-XD-8Ys">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -64,7 +64,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Profile" width="15" height="24"/>
-        <image name="ProfileHold" width="15" height="24"/>
+        <image name="profileTabBar" width="27" height="28"/>
+        <image name="selectedProfileTabBar" width="27" height="28"/>
     </resources>
 </document>

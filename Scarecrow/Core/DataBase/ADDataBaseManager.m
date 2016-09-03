@@ -30,7 +30,7 @@
         NSString *dataBasePath = [self dataPathWithRawLogin:rawLogin];
         NSString *fileName = AD_DataBaseName;
         NSString *dbKey = self.dbKey;
-        if (dbKey.length && !DataBase_Debug) {
+        if (dbKey.length) {
             fileName = AD_DataBaseEncryptionName;
         }
         
@@ -70,6 +70,10 @@
 }
 
 - (NSString *)dbKey {
+    if (DataBase_Debug) {
+        return nil;
+    }
+    
     return [SSKeychain username];
 }
 

@@ -18,12 +18,12 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *followerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *followersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reposLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followingLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
-@property (weak, nonatomic) IBOutlet UIButton *followerButton;
+@property (weak, nonatomic) IBOutlet UIButton *followersButton;
 @property (weak, nonatomic) IBOutlet UIButton *reposButton;
 @property (weak, nonatomic) IBOutlet UIButton *followingButton;
 @property (weak, nonatomic) IBOutlet UIButton *operationButton;
@@ -124,13 +124,13 @@
         return text;
     };
     
-    RAC(self.followerLabel, text) = [RACObserve(self.viewModel.user, followers) map:toString];
+    RAC(self.followersLabel, text) = [RACObserve(self.viewModel.user, followers) map:toString];
     RAC(self.reposLabel, text) = [RACObserve(self.viewModel.user, publicRepoCount) map:toString];
     RAC(self.followingLabel, text) = [RACObserve(self.viewModel.user, following) map:toString];
     
     self.followingButton.rac_command = self.viewModel.followingCommand;
     self.reposButton.rac_command = self.viewModel.reposCommand;
-    self.followerButton.rac_command = self.viewModel.followersCommand;
+    self.followersButton.rac_command = self.viewModel.followersCommand;
     
     [[RACObserve(self.viewModel, contentOffset) filter:^BOOL(NSNumber *offset) {
         return [offset CGPointValue].y <= 0;

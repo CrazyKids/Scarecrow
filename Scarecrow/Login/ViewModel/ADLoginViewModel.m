@@ -24,8 +24,6 @@
 - (void)initialize {
     [super initialize];
     
-    @weakify(self);
-    
     void (^loginSuccess)(OCTClient *) = ^(OCTClient *client) {
         [ADPlatformManager sharedInstance].client = client;
         
@@ -42,6 +40,7 @@
  
     [OCTClient setClientID:github_client_id clientSecret:github_client_secret];
     
+    @weakify(self);
     self.loginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
 

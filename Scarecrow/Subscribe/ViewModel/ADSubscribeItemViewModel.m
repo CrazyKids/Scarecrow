@@ -26,7 +26,7 @@
         self.attributedString = event.ad_attributedString;
         
         YYTextContainer *container = [YYTextContainer new];
-        container.size = CGSizeMake(LAYOUT_DEFAULT_WIDTH - 60 - 10, MAXFLOAT);
+        container.size = CGSizeMake(LAYOUT_DEFAULT_WIDTH - 65 - 15, MAXFLOAT);
         container.maximumNumberOfRows = 10;
         container.truncationType = YYTextTruncationTypeEnd;
         

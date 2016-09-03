@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -54,7 +54,7 @@
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DhA-4h-a8n">
                             <rect key="frame" x="367" y="80" width="20" height="20"/>
                         </activityIndicatorView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-VD-sAJ">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-VD-sAJ">
                             <rect key="frame" x="0.0" y="350" width="133.5" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="RUC-DL-tXa"/>
@@ -63,7 +63,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repositories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNY-hS-Nng">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNY-hS-Nng">
                             <rect key="frame" x="133" y="350" width="134" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="xkA-Pr-JOO"/>
@@ -72,7 +72,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-63-79s">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-63-79s">
                             <rect key="frame" x="266" y="350" width="133.5" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="aqA-oK-TY4"/>
@@ -197,8 +197,8 @@
                 <outlet property="activityIndicatorView" destination="DhA-4h-a8n" id="Vmt-s9-AWL"/>
                 <outlet property="avatarButton" destination="eYg-T1-ByT" id="8j5-ss-Yi5"/>
                 <outlet property="containerView" destination="nsX-Ye-b5b" id="mHs-sp-cdg"/>
-                <outlet property="followerButton" destination="1Cl-SF-b5g" id="pVk-AK-f4J"/>
-                <outlet property="followerLabel" destination="Fyu-xI-yUC" id="DYd-09-l4R"/>
+                <outlet property="followersButton" destination="1Cl-SF-b5g" id="caK-pQ-LsL"/>
+                <outlet property="followersLabel" destination="Fyu-xI-yUC" id="ncw-aA-vw2"/>
                 <outlet property="followingButton" destination="rP3-CA-PqH" id="goF-g1-RKr"/>
                 <outlet property="followingLabel" destination="aAA-Ka-Ab3" id="eoD-l2-9QT"/>
                 <outlet property="nameLabel" destination="2gI-xR-BI4" id="oVw-YY-Tb3"/>

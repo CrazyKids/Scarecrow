@@ -28,10 +28,13 @@
     [self.contentView addSubview:self.detailLabel];
     
     self.detailLabel.top = 10;
-    self.detailLabel.left = 60;
-    self.detailLabel.width = LAYOUT_DEFAULT_WIDTH - 60 - 10;
+    self.detailLabel.left = 65;
+    self.detailLabel.width = LAYOUT_DEFAULT_WIDTH - 65 - 15;
     self.detailLabel.displaysAsynchronously = YES;
     self.detailLabel.ignoreCommonProperties = YES;
+    
+    // default setting
+    self.avatarButton.backgroundColor = [UIColor clearColor];
     
     @weakify(self);
     [[self.avatarButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
@@ -54,7 +57,7 @@
 - (void)bindViewModel:(ADSubscribeItemViewModel *)viewModel {
     self.viewModel = viewModel;
     
-    [self.avatarButton sd_setImageWithURL:viewModel.event.actorAvatarURL forState:UIControlStateNormal];
+    [self.avatarButton sd_setImageWithURL:viewModel.event.actorAvatarURL forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_avatar"]];
     self.detailLabel.height = viewModel.textLayout.textBoundingSize.height;
     self.detailLabel.textLayout = viewModel.textLayout;
 }

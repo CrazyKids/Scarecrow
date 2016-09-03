@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Home.pdf"
+      "filename" : "selectedProfileTabBar.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {

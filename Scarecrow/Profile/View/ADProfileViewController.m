@@ -13,6 +13,8 @@
 #import <SDWebImage/SDWebImagePrefetcher.h>
 #import "UIImage+Octions.h"
 #import "UIColor+Scarecrow.h"
+#import "ADSetttingsViewModel.h"
+#import "OCTUser+Persistence.h"
 
 @interface ADProfileViewController ()
 
@@ -51,6 +53,12 @@
     
     self.tableView.tableHeaderView = self.headerView;
     
+    if ([self.viewModel.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID]) {
+        UIImage *image = [UIImage ad_imageWithIcon:@"Gear" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:1 size:CGSizeMake(25, 25)];
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSettingButtonClicked:)];
+    }
+
     @weakify(self);
     [RACObserve(self.viewModel, user)subscribeNext:^(id x) {
         @strongify(self);
@@ -67,15 +75,11 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 4;
-    }
-    
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -90,42 +94,37 @@
     UIColor *bgColor = [UIColor clearColor];
     CGSize size = CGSizeMake(25, 25);
     
-    if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 0:
-                cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
-                cell.textLabel.text = self.viewModel.compay;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                break;
-            case 1:
-                cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
-                cell.textLabel.text = self.viewModel.location;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                break;
-            case 2:
-                cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
-                cell.textLabel.text = self.viewModel.email;
-                if (self.viewModel.email != kDefaultPlaceHolder) {
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                break;
-            case 3:
-                cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
-                cell.textLabel.text = self.viewModel.blog;
-                if (self.viewModel.blog != kDefaultPlaceHolder) {
-                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                }
-                break;
-            default:
-                cell.imageView.image = nil;
-                cell.textLabel.text = nil;
-                break;
-        }
-    } else if (indexPath.section == 1) {
-        cell.imageView.image = [UIImage ad_imageWithIcon:@"Gear" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
-        cell.textLabel.text = @"Setting";
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    switch (indexPath.row) {
+        case 0:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = self.viewModel.compay;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            break;
+        case 1:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = self.viewModel.location;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            break;
+        case 2:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = self.viewModel.email;
+            if (self.viewModel.email != kDefaultPlaceHolder) {
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            break;
+        case 3:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = self.viewModel.blog;
+            if (self.viewModel.blog != kDefaultPlaceHolder) {
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            break;
+        default:
+            cell.imageView.image = nil;
+            cell.textLabel.text = nil;
+            break;
     }
+    
     return cell;
 }
 
@@ -158,21 +157,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 2:
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
-                break;
-            case 3:
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
-                break;
-            default:
-                break;
-        }
-        return;
+    switch (indexPath.row) {
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
+            break;
+        default:
+            break;
     }
-    
-    [self.viewModel.didSelectCommand execute:indexPath];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -180,6 +174,13 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGPoint contentOffset = scrollView.contentOffset;
     self.viewModel.avatarHeaderViewModel.contentOffset = contentOffset;
+}
+
+- (void)onSettingButtonClicked:(id)sender {
+    ADSetttingsViewModel *viewModel = [ADSetttingsViewModel new];
+    ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

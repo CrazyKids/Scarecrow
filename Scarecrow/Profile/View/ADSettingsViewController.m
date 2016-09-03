@@ -9,6 +9,7 @@
 #import "ADSettingsViewController.h"
 #import "ADSetttingsViewModel.h"
 #import <ZRAlertController/ZRAlertController.h>
+#import "UIColor+Scarecrow.h"
 
 @interface ADSettingsViewController ()
 
@@ -27,6 +28,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView *tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 50)];
+    tableFooterView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    tableFooterView.backgroundColor = [UIColor clearColor];
+    self.tableView.tableFooterView = tableFooterView;
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 15, tableFooterView.frame.size.width, 20)];
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:18];
+    label.textColor = DEFAULT_RGB;
+    label.text = [NSString stringWithFormat:@"Version: %@", AD_APP_VERSION];
+    label.textAlignment = NSTextAlignmentCenter;
+    [tableFooterView addSubview:label];
 }
 
 #pragma mark - UITableViewDataSource

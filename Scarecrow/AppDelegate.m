@@ -13,6 +13,7 @@
 #import "ADTabBarViewModel.h"
 #import "OCTUser+Persistence.h"
 #import "SSKeychain+Scarecrow.h"
+#import "UIColor+Scarecrow.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,8 @@
     [self showRootViewController];
     ADViewModel *viewModel = [self createInitialViewModel];
     [[ADPlatformManager sharedInstance]resetRootViewModel:viewModel];
+    
+    [self configureAppearance];
     
     return YES;
 }
@@ -89,6 +92,14 @@
         self.window.rootViewController = rootVC;
         [self.window makeKeyAndVisible];
     }];
+}
+
+- (void)configureAppearance {
+    id navAppearance = [UINavigationBar appearance];
+    [navAppearance setBarTintColor:DEFAULT_RGB];
+    [navAppearance setTintColor:[UIColor whiteColor]];
+    [navAppearance setBarStyle:UIBarStyleBlack];
+    [navAppearance setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 @end

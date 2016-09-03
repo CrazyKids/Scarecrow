@@ -31,7 +31,7 @@
 - (void)bindViewModel:(ADUserListItemViewModel *)viewModel {
     self.viewModel = viewModel;
     
-    [self.avatarImageView sd_setImageWithURL:viewModel.user.avatarURL];
+    [self.avatarImageView sd_setImageWithURL:viewModel.user.avatarURL placeholderImage:[UIImage imageNamed:@"default_avatar"]];
     
     self.loginLabel.text = viewModel.login;
     self.detailLabel.text = viewModel.user.HTMLURL.absoluteString;
