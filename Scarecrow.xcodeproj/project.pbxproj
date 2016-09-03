@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */; };
 		11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11042D821D2EADC700EECC07 /* ADLoginViewModel.m */; };
 		1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */; };
 		1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1156190D1D43D38900ABA15F /* TabBar.storyboard */; };
@@ -317,8 +316,6 @@
 
 /* Begin PBXFileReference section */
 		0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.debug.xcconfig"; sourceTree = "<group>"; };
-		11042D6E1D2EA8C100EECC07 /* ADLoginAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginAnimation.h; path = Login/View/ADLoginAnimation.h; sourceTree = "<group>"; };
-		11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginAnimation.m; path = Login/View/ADLoginAnimation.m; sourceTree = "<group>"; };
 		11042D811D2EADC700EECC07 /* ADLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewModel.h; path = Login/ViewModel/ADLoginViewModel.h; sourceTree = "<group>"; };
 		11042D821D2EADC700EECC07 /* ADLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewModel.m; path = Login/ViewModel/ADLoginViewModel.m; sourceTree = "<group>"; };
 		1118EC081D33ED060099B82B /* configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configure.h; sourceTree = "<group>"; };
@@ -813,8 +810,6 @@
 				242331C71D2E52B500EF8698 /* login.storyboard */,
 				242331C91D2E52D900EF8698 /* ADLoginViewController.h */,
 				242331CA1D2E52D900EF8698 /* ADLoginViewController.m */,
-				11042D6E1D2EA8C100EECC07 /* ADLoginAnimation.h */,
-				11042D6F1D2EA8C100EECC07 /* ADLoginAnimation.m */,
 				248569EB1D5E289F0087E62D /* ADOauthViewController.h */,
 				248569EC1D5E289F0087E62D /* ADOauthViewController.m */,
 				24856A0F1D5EBDDA0087E62D /* ADOauthViewController.xib */,
@@ -1092,6 +1087,7 @@
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = T27MFE7XGH;
 					};
 					2423313E1D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1428,7 +1424,6 @@
 			files = (
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
-				11042D701D2EA8C100EECC07 /* ADLoginAnimation.m in Sources */,
 				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
@@ -1675,6 +1670,7 @@
 			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
@@ -1689,6 +1685,7 @@
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;

@@ -49,6 +49,14 @@
     
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window  {
+    UIViewController *presentedViewController = self.window.rootViewController;
+    if ([presentedViewController shouldAutorotate]) {
+        return presentedViewController.supportedInterfaceOrientations;
+    }
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (ADViewModel *)createInitialViewModel {
     if (SSKeychain.username.length && SSKeychain.accessToken.length) {
         OCTUser *user = [OCTUser ad_userWithRawLogin:[SSKeychain username] server:OCTServer.dotComServer];

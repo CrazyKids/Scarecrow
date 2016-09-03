@@ -10,12 +10,7 @@
 
 @interface ADLoginViewModel : ADViewModel
 
-@property (strong, nonatomic) NSString *username;
-@property (strong, nonatomic) NSString *password;
-
-@property (strong, nonatomic, readonly) RACSignal *validLoginSingal;
 @property (strong, nonatomic, readonly) RACCommand *loginCommand;
-@property (strong, nonatomic, readonly) RACCommand *oauthLoginCommand;
 @property (strong, nonatomic, readonly) RACCommand *exchangeTokenCommand;
 
 @end
