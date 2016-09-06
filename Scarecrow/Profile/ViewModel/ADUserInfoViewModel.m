@@ -18,6 +18,20 @@
     
     self.title = self.user.login;
     
+    self.dataSourceArray = @[
+                             @[
+                                 @(ADUserInfoDataTypeName),
+                                 @(ADUserInfoDataTypeStarred),
+                                 @(ADUserInfoDataTypeActivity),
+                                 ],
+                             @[
+                                 @(ADUserInfoDataTypeOrganization),
+                                 @(ADUserInfoDataTypeLocation),
+                                 @(ADUserInfoDataTypeMail),
+                                 @(ADUserInfoDataTypeLink),
+                                 ],
+                             ];
+    
     @weakify(self);
     if (![self.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID]) {
         self.avatarHeaderViewModel.operationCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
@@ -44,10 +58,6 @@
             }
         }];
     }
-    
-    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        return [RACSignal empty];
-    }];
 }
 
 @end

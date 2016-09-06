@@ -74,14 +74,6 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
@@ -94,30 +86,47 @@
     UIColor *bgColor = [UIColor clearColor];
     CGSize size = CGSizeMake(25, 25);
     
-    switch (indexPath.row) {
-        case 0:
+    ADUserInfoDataType type = [self.viewModel.dataSourceArray[indexPath.section][indexPath.row] integerValue];
+    switch (type) {
+        case ADUserInfoDataTypeOrganization:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.compay;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
-        case 1:
+        case ADUserInfoDataTypeLocation:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.location;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
-        case 2:
+        case ADUserInfoDataTypeMail:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.email;
             if (self.viewModel.email != kDefaultPlaceHolder) {
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
             break;
-        case 3:
+        case ADUserInfoDataTypeLink:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.blog;
             if (self.viewModel.blog != kDefaultPlaceHolder) {
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
+            break;
+        case ADUserInfoDataTypeName:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Person" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"name";
+            cell.detailTextLabel.text = self.viewModel.user.name;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            break;
+        case ADUserInfoDataTypeStarred:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Star" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"Starred Repos";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        case ADUserInfoDataTypeActivity:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Rss" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"Public Activity";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         default:
             cell.imageView.image = nil;
@@ -152,21 +161,6 @@
     view.backgroundColor = [UIColor clearColor];
     
     return view;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    switch (indexPath.row) {
-        case 2:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
-            break;
-        case 3:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
-            break;
-        default:
-            break;
-    }
 }
 
 #pragma mark - UIScrollViewDelegate

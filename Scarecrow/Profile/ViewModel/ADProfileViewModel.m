@@ -49,6 +49,18 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
 - (void)initialize {
     [super initialize];
     
+    self.dataSourceArray = @[
+                             @[
+                                 @(ADUserInfoDataTypeStarred),
+                                 ],
+                             @[
+                                 @(ADUserInfoDataTypeOrganization),
+                                 @(ADUserInfoDataTypeLocation),
+                                 @(ADUserInfoDataTypeMail),
+                                 @(ADUserInfoDataTypeLink),
+                                 ],
+                             ];
+    
     self.bShouldPullToRefresh = NO;
     self.avatarHeaderViewModel = [[ADAvatarHeaderViewModel alloc]initWithUser:self.user];
     
@@ -99,6 +111,22 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
         user.followingStatus = self.user.followingStatus;
         [self.user mergeValuesForKeysFromModel:user];
         [self didChangeValueForKey:@"user"];
+    }];
+    
+    
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        ADUserInfoDataType type = [self.dataSourceArray[indexPath.section][indexPath.row] integerValue];
+        switch (type) {
+            case ADUserInfoDataTypeMail:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.email]]];
+                break;
+            case ADUserInfoDataTypeLink:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.blog]];
+                break;
+            default:
+                break;
+        }
+        return [RACSignal empty];
     }];
 }
 

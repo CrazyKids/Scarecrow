@@ -12,6 +12,16 @@
 
 extern NSString* const kDefaultPlaceHolder;
 
+typedef NS_ENUM(NSInteger, ADUserInfoDataType) {
+    ADUserInfoDataTypeOrganization,
+    ADUserInfoDataTypeLocation,
+    ADUserInfoDataTypeMail,
+    ADUserInfoDataTypeLink,
+    ADUserInfoDataTypeName,
+    ADUserInfoDataTypeStarred,
+    ADUserInfoDataTypeActivity,
+};
+
 @interface ADProfileViewModel : ADTableViewModel
 
 @property (strong, nonatomic) OCTUser *user;
