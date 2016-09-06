@@ -33,6 +33,7 @@
 // repos operation
 - (BOOL)updateRepos:(OCTRepository *)repos;
 
-- (NSArray<__kindof OCTRepository *> *)fetchRepos;
+- (NSArray *)fetchRepos;
+- (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep;
 
 @end

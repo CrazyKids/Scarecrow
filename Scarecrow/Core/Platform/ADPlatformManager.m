@@ -64,6 +64,7 @@
              @"ADFollowingViewModel" : @"ADFollowingViewController",
              @"ADFollowersViewModel" : @"ADFollowersViewController",
              @"ADReposViewModel" : @"ADReposViewController",
+             @"ADPublicReposViewModel" : @"ADPublicReposViewController",
              };
 }
 

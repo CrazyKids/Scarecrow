@@ -8,6 +8,7 @@
 
 #import "OCTRepository+Persistence.h"
 #import "ADDataBaseManager.h"
+#import <objc/runtime.h>
 
 @implementation OCTRepository (Persistence)
 
@@ -15,12 +16,35 @@
     return [ADPlatformManager sharedInstance].dataBaseManager.dataBase;
 }
 
-- (BOOL)ad_update {
-    return [[[self class]database]updateRepos:self];
++ (NSArray *)ad_matchStarredStatus:(NSArray *)reposArray {
+    return reposArray;
 }
 
-- (NSArray<__kindof OCTRepository*> *)fetchRepos {
-    return [[[self class]database]fetchRepos];
++ (BOOL)ad_update:(NSArray *)reposArray {
+    ADDataBase *database = [self database];
+    for (OCTRepository *repos in reposArray) {
+        if (![database updateRepos:repos]) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
++ (NSArray *)ad_fetchRepos {
+    return [[self database]fetchRepos];
+}
+
++ (NSArray *)ad_fetchPublicReposWithPage:(int)page pageStep:(int)pageStep {
+    return [[self database]fetchPublicReposWithPage:page pageStep:pageStep];
+}
+
+- (void)setStarStatus:(ADReposStarStatus)starStatus {
+    objc_setAssociatedObject(self, @selector(starStatus), @(starStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (ADReposStarStatus)starStatus {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
 @end

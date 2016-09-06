@@ -250,7 +250,7 @@
     return success;
 }
 
-- (NSArray<__kindof OCTRepository *> *)fetchRepos {
+- (NSArray *)fetchRepos {
     __block NSMutableArray *reposArray = [NSMutableArray new];
     [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
         FMResultSet *rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? ORDER BY LOWER(name)", [OCTUser ad_currentUser].login];
@@ -258,6 +258,33 @@
         @onExit {
             [rs close];
         };
+        
+        while ([rs next]) {
+            OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+            if (repos) {
+                [reposArray addObject:repos];
+            }
+        }
+    }];
+    
+    return reposArray;
+}
+
+- (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep {
+    __block NSMutableArray *reposArray = [NSMutableArray new];
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = nil;
+        
+        @onExit {
+            [rs close];
+        };
+        
+        int limit = page * pageStep;
+        if (limit != 0) {
+            rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? AND private = 0 ORDER BY LOWER(name)  LIMIT ?", [OCTUser ad_currentUser].login, @(limit)];
+        } else {
+            rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? AND private = 0 ORDER BY LOWER(name)", [OCTUser ad_currentUser].login];
+        }
         
         while ([rs next]) {
             OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];

@@ -33,6 +33,8 @@
             [self.viewModel.fetchRemoteDataCommamd execute:@(1)];
         }];
     }
+    
+    self.showLoading = YES;
 }
 
 - (void)viewDidLoad {
@@ -58,6 +60,18 @@
         self.refreshHeaderView = [[EGORefreshTableHeaderView alloc]initWithFrame:frame];
         self.refreshHeaderView.delegate = self;
         [self.tableView addSubview:self.refreshHeaderView];
+    }
+    
+    if (self.showLoading) {
+        @weakify(self)
+        [self.viewModel.fetchRemoteDataCommamd.executing subscribeNext:^(NSNumber *executing) {
+            @strongify(self)
+            if (executing.boolValue && self.viewModel.dataSourceArray == nil) {
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"Loading...";
+            } else {
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            }
+        }];
     }
 }
 
@@ -140,5 +154,12 @@
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
     return self.isLoading;
 }
+
+#pragma mark - UIViewControllerRotation
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
 
 @end

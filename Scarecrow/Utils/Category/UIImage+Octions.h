@@ -12,4 +12,7 @@
 
 + (UIImage *)ad_imageWithIcon:(NSString *)icon backgroundColor:(UIColor *)backgroundColor iconColor:(UIColor *)iconColor iconScale:(CGFloat)iconScale size:(CGSize)size;
 
++ (UIImage *)ad_normalImageWithIdentifier:(NSString *)identifier size:(CGSize)size;
++ (UIImage *)ad_highlightImageWithIdentifier:(NSString *)identifier size:(CGSize)size;
+
 @end

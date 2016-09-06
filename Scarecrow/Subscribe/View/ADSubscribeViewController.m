@@ -8,7 +8,6 @@
 
 #import "ADSubscribeViewController.h"
 #import "ADSubscribeViewModel.h"
-#import <MBProgressHUD/MBProgressHUD.h>
 #import "ADSubscribeItemViewModel.h"
 #import "ADSubscribeTableViewCell.h"
 
@@ -21,6 +20,12 @@
 @implementation ADSubscribeViewController
 
 @dynamic viewModel;
+
+- (void)initializeWithViewMode:(ADViewModel *)viewModel {
+    [super initializeWithViewMode:viewModel];
+    
+    self.showLoading = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

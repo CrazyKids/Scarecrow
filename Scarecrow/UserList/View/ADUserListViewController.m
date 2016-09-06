@@ -25,20 +25,6 @@
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ADUserListItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    
-    RAC(self.viewModel, titleViewType) = [self.viewModel.fetchRemoteDataCommamd.executing map:^id(NSNumber *excuting) {
-        return excuting.boolValue ? @(ADTitleViewTypeLoading) : @(ADTitleViewTypeDefault);
-    }];
-    
-    @weakify(self)
-    [self.viewModel.fetchRemoteDataCommamd.executing subscribeNext:^(NSNumber *executing) {
-        @strongify(self)
-        if (executing.boolValue && self.viewModel.dataSourceArray == nil) {
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"Loading...";
-        } else {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }
-    }];
 }
 
 #pragma mark - UITableViewDataSource

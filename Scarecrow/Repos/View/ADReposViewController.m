@@ -8,6 +8,8 @@
 
 #import "ADReposViewController.h"
 #import "ADReposViewModel.h"
+#import "ADReposItemViewModel.h"
+#import "ADReposTableViewCell.h"
 
 @interface ADReposViewController ()
 
@@ -18,7 +20,7 @@
 @implementation ADReposViewController
 
 + (ADViewController *)viewController {
-    ADViewController *vc = [[UIStoryboard storyboardWithName:@"Repos" bundle:nil]instantiateInitialViewController];
+    ADViewController *vc = [[UIStoryboard storyboardWithName:@"Repos" bundle:nil]instantiateViewControllerWithIdentifier:@"repos"];
     
     return vc;
 }
@@ -27,8 +29,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Repos";
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ADReposTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
+#pragma mark - UITableViewDataSource
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ADReposItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    
+    ADReposTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    [cell bindViewModel:viewModel];
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ADReposItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    return viewModel.height;
+}
 
 @end

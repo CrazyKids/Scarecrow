@@ -71,8 +71,6 @@
     }];
 }
 
-
-
 - (BOOL)isCurrentUser {
     return [self.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID];
 }
