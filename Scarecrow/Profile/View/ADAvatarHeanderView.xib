@@ -39,7 +39,7 @@
                                 <constraint firstAttribute="height" constant="1" id="0i7-Rs-0DJ"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-Mr-Yvp" customClass="ADFollowButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-Mr-Yvp" customClass="ADFollowButton">
                             <rect key="frame" x="325" y="80" width="62" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="cbg-H0-sEh"/>

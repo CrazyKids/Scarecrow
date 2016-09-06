@@ -23,11 +23,11 @@
         self.avatarHeaderViewModel.operationCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
             if (self.user.followingStatus == ADFollowStatusYes) {
-                [[ADPlatformManager sharedInstance].client ad_unfollowUser:self.user];
+                return [[ADPlatformManager sharedInstance].client ad_unfollowUser:self.user];
             }
             
             if (self.user.followingStatus == ADFollowStatusNo) {
-                [[ADPlatformManager sharedInstance].client ad_followUser:self.user];
+                return [[ADPlatformManager sharedInstance].client ad_followUser:self.user];
             }
             
             return [RACSignal empty];
