@@ -66,7 +66,7 @@
         @weakify(self)
         [self.viewModel.fetchRemoteDataCommamd.executing subscribeNext:^(NSNumber *executing) {
             @strongify(self)
-            if (executing.boolValue && self.viewModel.dataSourceArray == nil) {
+            if (executing.boolValue && self.viewModel.dataSourceArray.count == 0) {
                 [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"Loading...";
             } else {
                 [MBProgressHUD hideHUDForView:self.view animated:YES];

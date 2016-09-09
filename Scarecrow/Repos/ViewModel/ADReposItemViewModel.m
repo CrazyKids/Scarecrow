@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) OCTRepository *repos;
 
-@property (assign, nonatomic) ADReposOption options;
+@property (assign, nonatomic) BOOL currentUser;
 
 @property (copy, nonatomic) NSAttributedString *name;
 @property (copy, nonatomic) NSAttributedString *reposDescription;
@@ -27,11 +27,11 @@
 
 @implementation ADReposItemViewModel
 
-- (instancetype)initWithRepos:(OCTRepository *)repos options:(ADReposOption)options {
+- (instancetype)initWithRepos:(OCTRepository *)repos currentUser:(BOOL)currentUser {
     self = [super init];
     if (self) {
         self.repos = repos;
-        self.options = options;
+        self.currentUser = currentUser;
                 
         self.language = repos.language ?: @"";
         CGFloat height = 0;
@@ -54,7 +54,7 @@
 
 - (NSAttributedString *)name {
     if (!_name) {
-        if (self.options & ADReposOptionShowOwnerLogin) {
+        if (!self.currentUser) {
             NSString *uniName = [NSString stringWithFormat:@"%@/%@", self.repos.ownerLogin, self.repos.name];
             
             NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:uniName];

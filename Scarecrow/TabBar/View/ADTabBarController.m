@@ -48,4 +48,14 @@
     [super viewDidLoad];
 }
 
+#pragma mark - UIViewControllerRotation
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end

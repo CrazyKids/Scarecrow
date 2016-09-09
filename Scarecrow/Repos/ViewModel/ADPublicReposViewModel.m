@@ -31,15 +31,4 @@
     }];
 }
 
-- (ADReposOption)options {
-    ADReposOption options = 0;
-    if (self.isCurrentUser) {
-        options |= ADReposOptionUpdate;
-    } else {
-        options |= ADReposOptionShowOwnerLogin;
-        options |= ADReposOptionUpdate;
-    }
-    return options;
-}
-
 @end

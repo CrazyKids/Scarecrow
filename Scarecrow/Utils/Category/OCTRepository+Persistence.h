@@ -21,7 +21,11 @@ typedef NS_ENUM(NSInteger, ADReposStarStatus) {
 + (NSArray *)ad_matchStarredStatus:(NSArray *)reposArray;
 
 + (BOOL)ad_update:(NSArray *)reposArray;
++ (BOOL)ad_updateStarStatus:(NSArray *)reposArray;
+
 + (NSArray *)ad_fetchRepos;
++ (NSArray *)ad_fetchStarredRepos;
 + (NSArray *)ad_fetchPublicReposWithPage:(int)page pageStep:(int)pageStep;
++ (NSArray *)ad_fetchStarredReposWithPage:(int)page pageStep:(int)pageStep;
 
 @end
