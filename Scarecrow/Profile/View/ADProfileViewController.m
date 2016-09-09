@@ -172,9 +172,8 @@
 
 - (void)onSettingButtonClicked:(id)sender {
     ADSetttingsViewModel *viewModel = [ADSetttingsViewModel new];
-    ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.viewModel pushViewControllerWithViewModel:viewModel];
 }
 
 @end

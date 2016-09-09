@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -105,8 +105,8 @@
                 <outlet property="iconImageView" destination="YPu-oQ-phY" id="47O-0A-j61"/>
                 <outlet property="languageLabel" destination="z1m-tl-p2V" id="b7N-3d-vz1"/>
                 <outlet property="nameLabel" destination="4H0-Ks-7fA" id="Nkg-Fb-Y5l"/>
-                <outlet property="starredCountLabel" destination="cEy-Cp-Mea" id="Ppo-sc-SQm"/>
-                <outlet property="starredImageView" destination="4ka-0W-c7M" id="AEM-zv-CgU"/>
+                <outlet property="starCountLabel" destination="cEy-Cp-Mea" id="we1-Av-q8k"/>
+                <outlet property="starImageView" destination="4ka-0W-c7M" id="sq1-c9-53q"/>
                 <outlet property="starredLeadingConstaint" destination="Nuk-n9-X4f" id="rh3-60-gQM"/>
                 <outlet property="updateTimeLabel" destination="TBS-JJ-gBp" id="bLd-FN-esA"/>
             </connections>

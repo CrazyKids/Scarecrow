@@ -19,8 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *decriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *languageLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *starredImageView;
-@property (weak, nonatomic) IBOutlet UILabel *starredCountLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *starImageView;
+@property (weak, nonatomic) IBOutlet UILabel *starCountLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *forkImageView;
 @property (weak, nonatomic) IBOutlet UILabel *forkCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *updateTimeLabel;
@@ -43,16 +43,16 @@
     self.reposIcon = [UIImage ad_normalImageWithIdentifier:@"Repo" size:self.iconImageView.bounds.size];
     self.forkedReposIcon = [UIImage ad_normalImageWithIdentifier:@"RepoForked" size:self.iconImageView.bounds.size];
     self.privateRepoIcon = [UIImage ad_normalImageWithIdentifier:@"Lock" size:self.iconImageView.bounds.size];
-    self.starIcon = [UIImage ad_normalImageWithIdentifier:@"Star" size:self.starredImageView.bounds.size];
-    self.tintedStarIcon = [UIImage ad_highlightImageWithIdentifier:@"Star" size:self.starredImageView.bounds.size];
+    self.starIcon = [UIImage ad_normalImageWithIdentifier:@"Star" size:self.starImageView.bounds.size];
+    self.tintedStarIcon = [UIImage ad_highlightImageWithIdentifier:@"Star" size:self.starImageView.bounds.size];
 
-    RAC(self.starredImageView, image) = [[RACObserve(self, viewModel.repos.starStatus) map:^id(NSNumber *starStatus) {
+    RAC(self.starImageView, image) = [[RACObserve(self, viewModel.repos.starStatus) map:^id(NSNumber *starStatus) {
         return starStatus.integerValue == ADReposStarStatusYes ? self.tintedStarIcon : self.starIcon;
     }]deliverOnMainThread];
     
     self.forkImageView.image = [UIImage ad_normalImageWithIdentifier:@"GitBranch" size:self.forkImageView.bounds.size];
     
-    RAC(self.starredCountLabel, text) = [[RACObserve(self, viewModel.repos.stargazersCount) map:^id(NSNumber *stargazersCount) {
+    RAC(self.starCountLabel, text) = [[RACObserve(self, viewModel.repos.stargazersCount) map:^id(NSNumber *stargazersCount) {
         return stargazersCount.stringValue;
     }]deliverOnMainThread];
 }

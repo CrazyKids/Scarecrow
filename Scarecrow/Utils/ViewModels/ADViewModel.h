@@ -31,4 +31,6 @@ typedef void (^voidCallback_id)(id);
 - (instancetype)initWithParam:(NSDictionary *)param;
 - (void)initialize;
 
+- (void)pushViewControllerWithViewModel:(ADViewModel *)viewModel;
+
 @end

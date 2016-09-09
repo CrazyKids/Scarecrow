@@ -44,6 +44,9 @@
 		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
 		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
+		243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1001D827C68001F174A /* ADStarredReposViewModel.m */; };
+		243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1261D829CB8001F174A /* ADStarredReposViewController.m */; };
+		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
 		2459AAA91D538ADC00FCD90F /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */; };
@@ -392,6 +395,11 @@
 		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
 		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
 		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
+		243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewModel.h; sourceTree = "<group>"; };
+		243AB1001D827C68001F174A /* ADStarredReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewModel.m; sourceTree = "<group>"; };
+		243AB1251D829CB8001F174A /* ADStarredReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewController.h; sourceTree = "<group>"; };
+		243AB1261D829CB8001F174A /* ADStarredReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewController.m; sourceTree = "<group>"; };
+		243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADStarredReposViewController.xib; sourceTree = "<group>"; };
 		2459AAA71D538ADC00FCD90F /* ADSubscribeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeTableViewCell.h; path = Subscribe/View/ADSubscribeTableViewCell.h; sourceTree = "<group>"; };
 		2459AAA81D538ADC00FCD90F /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
@@ -587,6 +595,9 @@
 				11BD85301D81C8C200698803 /* ADPublicReposViewController.h */,
 				11BD85311D81C8C200698803 /* ADPublicReposViewController.m */,
 				11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */,
+				243AB1251D829CB8001F174A /* ADStarredReposViewController.h */,
+				243AB1261D829CB8001F174A /* ADStarredReposViewController.m */,
+				243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */,
 			);
 			name = View;
 			path = Repos/View;
@@ -601,6 +612,8 @@
 				1172FE7C1D805C8E007181BB /* ADReposItemViewModel.m */,
 				11BD851C1D81C09800698803 /* ADPublicReposViewModel.h */,
 				11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */,
+				243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */,
+				243AB1001D827C68001F174A /* ADStarredReposViewModel.m */,
 			);
 			name = ViewModel;
 			path = Repos/ViewModel;
@@ -1281,6 +1294,7 @@
 				2479B6CC1D6C3B000035C629 /* ADUserListItemTableViewCell.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
 				241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */,
+				243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */,
 				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
 				2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */,
 				11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */,
@@ -1443,6 +1457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
+				243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
 				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
@@ -1457,6 +1472,7 @@
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
+				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,

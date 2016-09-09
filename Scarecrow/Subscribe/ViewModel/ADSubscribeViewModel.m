@@ -69,10 +69,7 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
             viewModel = webModel;
         }
         
-        if (viewModel) {
-            ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-            [self.ownerVC.navigationController pushViewController:vc animated:YES];
-        }
+        [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
     }];

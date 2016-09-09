@@ -41,9 +41,7 @@
         
         ADUserListItemViewModel *vmItem = self.dataSourceArray[indexPath.section][indexPath.row];
         ADUserInfoViewModel *vm = [[ADUserInfoViewModel alloc]initWithParam:@{@"user":vmItem.user}];
-        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:vm];
-        
-        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        [self pushViewControllerWithViewModel:vm];
         
         return [RACSignal empty];
     }];

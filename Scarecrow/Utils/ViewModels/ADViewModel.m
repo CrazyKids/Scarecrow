@@ -51,4 +51,17 @@
     return _errors;
 }
 
+- (void)pushViewControllerWithViewModel:(ADViewModel *)viewModel {
+    if (!viewModel) {
+        return;
+    }
+    
+    ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+    if (!vc || !self.ownerVC.navigationController) {
+        return;
+    }
+    
+    [self.ownerVC.navigationController pushViewController:vc animated:YES];
+}
+
 @end
