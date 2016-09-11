@@ -33,8 +33,6 @@
             [self.viewModel.fetchRemoteDataCommamd execute:@(1)];
         }];
     }
-    
-    self.showLoading = YES;
 }
 
 - (void)viewDidLoad {
@@ -62,7 +60,7 @@
         [self.tableView addSubview:self.refreshHeaderView];
     }
     
-    if (self.showLoading) {
+    if (self.viewModel.showLoading) {
         @weakify(self)
         [self.viewModel.fetchRemoteDataCommamd.executing subscribeNext:^(NSNumber *executing) {
             @strongify(self)
@@ -154,12 +152,5 @@
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
     return self.isLoading;
 }
-
-#pragma mark - UIViewControllerRotation
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskAllButUpsideDown;
-}
-
 
 @end

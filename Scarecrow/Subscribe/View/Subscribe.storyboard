@@ -7,7 +7,7 @@
         <!--Subscribe-->
         <scene sceneID="xUL-Ye-gjW">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9m9-di-Ap1" customClass="ADSubscribeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subscribe" automaticallyAdjustsScrollViewInsets="NO" id="9m9-di-Ap1" customClass="ADSubscribeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fy-yP-PqO"/>
                         <viewControllerLayoutGuide type="bottom" id="pys-Tn-BJ8"/>
@@ -19,36 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PE0-Ie-mtg">
                                 <rect key="frame" x="0.0" y="64" width="300" height="187"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subscribeCell" rowHeight="69" id="V3n-t4-yXe" customClass="ADSubscribeTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="69"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V3n-t4-yXe" id="Vd1-Pb-xC4">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="68.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-uW-KJ0">
-                                                    <rect key="frame" x="15" y="10" width="40" height="40"/>
-                                                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="4OQ-o9-JbH"/>
-                                                        <constraint firstAttribute="width" constant="40" id="NNR-4t-OWt"/>
-                                                    </constraints>
-                                                    <state key="normal">
-                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="4XS-uW-KJ0" firstAttribute="top" secondItem="Vd1-Pb-xC4" secondAttribute="top" constant="10" id="SHD-QZ-hZ7"/>
-                                                <constraint firstItem="4XS-uW-KJ0" firstAttribute="leading" secondItem="Vd1-Pb-xC4" secondAttribute="leading" constant="15" id="jBB-Ha-csD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="avatarButton" destination="4XS-uW-KJ0" id="JAp-1c-Wzc"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

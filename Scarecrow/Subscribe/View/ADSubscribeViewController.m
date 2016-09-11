@@ -21,14 +21,16 @@
 
 @dynamic viewModel;
 
-- (void)initializeWithViewMode:(ADViewModel *)viewModel {
-    [super initializeWithViewMode:viewModel];
++ (ADViewController *)viewController {
+    ADViewController *vc = [[UIStoryboard storyboardWithName:@"Subscribe" bundle:nil]instantiateViewControllerWithIdentifier:@"subscribe"];
     
-    self.showLoading = NO;
+    return vc;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ADSubscribeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     @weakify(self);    
     RAC(self.viewModel, titleViewType) = [self.viewModel.fetchRemoteDataCommamd.executing map:^id(NSNumber *excuting) {
@@ -90,7 +92,7 @@
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subscribeCell"];
+    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     [cell bindViewModel:viewModel];
@@ -103,10 +105,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     return viewModel.height;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
 }
 
 @end

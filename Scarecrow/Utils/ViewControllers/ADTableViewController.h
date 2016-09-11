@@ -11,7 +11,6 @@
 @interface ADTableViewController : ADViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (assign, nonatomic) BOOL showLoading;
 
 - (void)reloadData;
 - (UIEdgeInsets)contentInsets;

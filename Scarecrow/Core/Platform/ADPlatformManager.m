@@ -66,6 +66,7 @@
              @"ADReposViewModel" : @"ADReposViewController",
              @"ADPublicReposViewModel" : @"ADPublicReposViewController",
              @"ADStarredReposViewModel" : @"ADStarredReposViewController",
+             @"ADPublicActivityViewModel" : @"ADPublicActivityViewController",
              };
 }
 

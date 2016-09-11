@@ -51,11 +51,11 @@
 #pragma mark - UIViewControllerRotation
 
 - (BOOL)shouldAutorotate {
-    return YES;
+    return self.selectedViewController.shouldAutorotate;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+    return self.selectedViewController.supportedInterfaceOrientations;
 }
 
 @end

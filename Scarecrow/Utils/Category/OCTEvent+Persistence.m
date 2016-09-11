@@ -18,14 +18,29 @@
     return [NSKeyedArchiver archiveRootObject:eventArray toFile:path];
 }
 
++ (BOOL)ad_saveUserPerformedEvents:(NSArray *)eventArray {
+    NSString *path = [self performedEventPath];
+    return [NSKeyedArchiver archiveRootObject:eventArray toFile:path];
+}
+
 + (NSArray *)ad_fetchUserReceivedEvents {
     NSString *path = [self receivedEvnetPath];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+}
+
++ (NSArray *)ad_fetchUserPerformedEvents {
+    NSString *path = [self performedEventPath];
     return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 }
 
 + (NSString *)receivedEvnetPath {
     NSString *path = [self persistenceDirectory];
     return [path stringByAppendingPathComponent:@"ReceivedEvents"];
+}
+
++ (NSString *)performedEventPath {
+    NSString *path = [self persistenceDirectory];
+    return [path stringByAppendingPathComponent:@"PerformedEvents"];
 }
 
 + (NSString *)persistenceDirectory {

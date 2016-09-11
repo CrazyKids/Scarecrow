@@ -35,7 +35,7 @@
 - (instancetype)initWithParam:(NSDictionary *)param {
     self = [super init];
     if (self) {
-        
+        self.showLoading = YES;
     }
     return self;
 }

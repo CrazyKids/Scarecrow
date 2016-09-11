@@ -69,4 +69,14 @@
     
 }
 
+#pragma mark - UIViewControllerRotation
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
 @end

@@ -14,6 +14,7 @@
 #import "ADFollowingViewModel.h"
 #import "ADPublicReposViewModel.h"
 #import "ADStarredReposViewModel.h"
+#import "ADPublicActivityViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -125,6 +126,13 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
             case ADUserInfoDataTypeStarred: {
                 ADStarredReposViewModel *viewModel = [[ADStarredReposViewModel alloc]initWithParam:@{@"user" : self.user}];
                 [self pushViewControllerWithViewModel:viewModel];
+                
+                break;
+            }
+            case ADUserInfoDataTypeActivity: {
+                ADPublicActivityViewModel *viewModel = [[ADPublicActivityViewModel alloc]initWithParam:@{@"user" : self.user}];
+                [self pushViewControllerWithViewModel:viewModel];
+                
                 break;
             }
             case ADUserInfoDataTypeMail:

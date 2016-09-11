@@ -28,6 +28,8 @@ typedef void (^voidCallback_id)(id);
 
 @property (copy, nonatomic) voidCallback_id callback;
 
+@property (assign, nonatomic) BOOL showLoading;
+
 - (instancetype)initWithParam:(NSDictionary *)param;
 - (void)initialize;
 
