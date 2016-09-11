@@ -38,5 +38,6 @@
 - (NSArray *)fetchStarredRepos;
 - (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep;
 - (NSArray *)fetchStarredReposWithPage:(int)page pageStep:(int)pageStep;
+- (OCTRepository *)fetchFullRepos:(OCTRepository *)repos;
 
 @end

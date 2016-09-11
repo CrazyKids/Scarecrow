@@ -40,7 +40,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADReposItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     
-    ADReposTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    ADReposTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     [cell bindViewModel:viewModel];
     
     return cell;

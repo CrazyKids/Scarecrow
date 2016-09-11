@@ -13,7 +13,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Dpk-4b-2bb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akr-nW-m3n" userLabel="First Responder" sceneMemberID="firstResponder"/>

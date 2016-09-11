@@ -54,6 +54,10 @@
     return [[self database]updateStarStatus:reposArray];
 }
 
+- (BOOL)ad_update {
+    return [[[self class]database]updateRepos:self];
+}
+
 + (NSArray *)ad_fetchRepos {
     return [[self database]fetchRepos];
 }
@@ -68,6 +72,10 @@
 
 + (NSArray *)ad_fetchStarredReposWithPage:(int)page pageStep:(int)pageStep {
     return [[self database]fetchStarredReposWithPage:page pageStep:pageStep];
+}
+
++ (OCTRepository *)ad_fetchFullRepos:(OCTRepository *)repos {
+    return [[self database]fetchFullRepos:repos];
 }
 
 - (void)setStarStatus:(ADReposStarStatus)starStatus {

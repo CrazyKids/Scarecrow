@@ -73,15 +73,12 @@
         return titleView;
     }];
     
-    @weakify(self);
-    [self.viewModel.errors subscribeNext:^(NSError *error) {
-        @strongify(self);
-        
+    [self.viewModel.errors subscribeNext:^(NSError *error) {        
         NSLog(@"%@", error);
         
         if ([error.domain isEqualToString:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
             NSString *message = @"Your authorization has expired, please login again";
-            [[ZRAlertController defaultAlert]alertShow:self title:@"" message:message okayButton:@"OK" completion:^{
+            [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:message okayButton:@"OK" completion:^{
                 [SSKeychain deleteAccessToken];
                 
                 ADLoginViewModel *tabBarViewModel = [ADLoginViewModel new];

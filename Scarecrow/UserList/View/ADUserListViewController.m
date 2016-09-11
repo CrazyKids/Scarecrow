@@ -30,7 +30,7 @@
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ADUserListItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    ADUserListItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     ADUserListItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     [cell bindViewModel:viewModel];

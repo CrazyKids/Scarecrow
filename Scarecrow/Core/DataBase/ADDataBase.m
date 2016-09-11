@@ -120,7 +120,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         NSString *newIds = [[userArray.rac_sequence map:^id(OCTUser *user) {
             return user.objectID;
         }].array componentsJoinedByString:@","];
@@ -148,7 +148,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         NSString *newIds = [[userArray.rac_sequence map:^id(OCTUser *user) {
             return user.objectID;
         }].array componentsJoinedByString:@","];
@@ -176,7 +176,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
        
         OCTUser *currentUser = [OCTUser ad_currentUser];
         success = [db executeUpdate:@"REPLACE INTO userFollowingUser (userId, dstUserId) VALUES(?,?)", currentUser.objectID, user.objectID];
@@ -208,7 +208,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         
         OCTUser *currentUser = [OCTUser ad_currentUser];
         success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE userId = ? AND dstUserId = ?", currentUser.objectID, user.objectID];
@@ -375,6 +375,23 @@
     }];
     
     return reposArray;
+}
+
+- (OCTRepository *)fetchFullRepos:(OCTRepository *)repos {
+    __block OCTRepository *fullRepos = nil;
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:@"SELECT * FROM repos WHERE name = ? AND owner_login = ?", repos.name, repos.ownerLogin];
+        @onExit {
+            [rs close];
+        };
+        
+        if ([rs next]) {
+            fullRepos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+        }
+    }];
+    
+    return fullRepos;
 }
 
 @end

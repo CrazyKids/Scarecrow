@@ -19,7 +19,7 @@
     if (!refer) {
         refer = [OCTRef ad_defaultReferenceName];
     }
-    return [NSURL URLWithString:[NSString stringWithFormat:@"repository://%@", refer]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"repository://%@?referenceName=%@", repos, refer]];
 }
 
 - (ADLinkType)linkType {
@@ -41,7 +41,7 @@
     
     if (self.linkType == ADLinkTypeRepos) {
         return @{
-                 @"repository":@{
+                 @"repos":@{
                          @"ownerLogin":self.host ?: @"",
                          @"name":[self.path substringFromIndex:1] ?: @"",
                          },

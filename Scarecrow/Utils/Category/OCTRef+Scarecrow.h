@@ -14,4 +14,6 @@
 + (NSString *)ad_referenceNameWithBranch:(NSString *)branch;
 + (NSString *)ad_referenceNameWithTag:(NSString *)tag;
 
+- (NSString *)ad_octiconIdentifier;
+
 @end

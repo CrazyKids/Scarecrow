@@ -64,9 +64,7 @@
             desc = @"Incorrect username or password";
         }
         
-        [[ZRAlertController defaultAlert]alertShow:self title:@"" message:desc okayButton:@"OK" completion:^{
-            
-        }];
+        [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:desc okayButton:@"OK" completion:nil];
     }];
 }
 

@@ -10,6 +10,15 @@
 #import "ADViewController.h"
 #import "ADDataBaseManager.h"
 #import "SSKeychain+Scarecrow.h"
+#import "OCTUser+Persistence.h"
+
+@interface ADPlatformManager ()
+
+@property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
+
+@property (strong, nonatomic) YYCache *cacheMgr;
+
+@end
 
 @implementation ADPlatformManager
 
@@ -36,6 +45,14 @@
         
         return _dataBaseManager;
     }
+}
+
+- (YYCache *)cacheMgr {
+    if (!_cacheMgr) {
+        NSString *login = [OCTUser ad_currentUser].login;
+        _cacheMgr = [YYCache cacheWithName:login];
+    }
+    return _cacheMgr;
 }
 
 - (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
@@ -67,6 +84,7 @@
              @"ADPublicReposViewModel" : @"ADPublicReposViewController",
              @"ADStarredReposViewModel" : @"ADStarredReposViewController",
              @"ADPublicActivityViewModel" : @"ADPublicActivityViewController",
+             @"ADReposDetailViewModel" : @"ADReposDetailViewController",
              };
 }
 

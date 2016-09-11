@@ -92,7 +92,7 @@
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     [cell bindViewModel:viewModel];

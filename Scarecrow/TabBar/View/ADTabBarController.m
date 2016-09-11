@@ -7,6 +7,7 @@
 //
 
 #import "ADTabBarController.h"
+#import "UIColor+Scarecrow.h"
 
 @interface ADTabBarController ()
 

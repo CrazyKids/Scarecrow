@@ -42,4 +42,11 @@
     return YES;
 }
 
+#pragma mark - UIViewControllerRotation
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 @end

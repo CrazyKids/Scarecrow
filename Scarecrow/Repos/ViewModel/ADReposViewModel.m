@@ -10,6 +10,7 @@
 #import "OCTUser+Persistence.h"
 #import "OCTRepository+Persistence.h"
 #import "ADReposItemViewModel.h"
+#import "ADReposDetailViewModel.h"
 
 @interface ADReposViewModel ()
 
@@ -36,7 +37,12 @@
     [super initialize];
     
     @weakify(self);
-    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        ADReposItemViewModel *viewModel = self.dataSourceArray[indexPath.section][indexPath.row];
+        
+        ADReposDetailViewModel *reposViewModel = [[ADReposDetailViewModel alloc]initWithParam:@{@"repos" : viewModel.repos}];
+        [self pushViewControllerWithViewModel:reposViewModel];
+        
         return [RACSignal empty];
     }];
     

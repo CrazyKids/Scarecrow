@@ -11,6 +11,7 @@
 		110649481D8452BC00677E4D /* ADPublicActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 110649471D8452BC00677E4D /* ADPublicActivityViewModel.m */; };
 		110649571D8452DE00677E4D /* ADPublicActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110649551D8452DE00677E4D /* ADPublicActivityViewController.m */; };
 		110649581D8452DE00677E4D /* ADPublicActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110649561D8452DE00677E4D /* ADPublicActivityViewController.xib */; };
+		1106705F1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1106705E1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m */; };
 		1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */; };
 		1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1156190D1D43D38900ABA15F /* TabBar.storyboard */; };
 		115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 115619101D43D3F700ABA15F /* ADTabBarLoader.m */; };
@@ -27,6 +28,9 @@
 		1172FE8D1D8064A9007181BB /* ADReposTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1172FE8B1D8064A9007181BB /* ADReposTableViewCell.xib */; };
 		118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38A1D450EFF006DD475 /* Profile.storyboard */; };
 		118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118AE38E1D450FBF006DD475 /* Discover.storyboard */; };
+		11AA335B1D85AE6900C6E990 /* ADReposDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA335A1D85AE6900C6E990 /* ADReposDetailViewModel.m */; };
+		11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA33681D85AE7F00C6E990 /* ADReposDetailViewController.m */; };
+		11AA336B1D85AE7F00C6E990 /* ADReposDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11AA33691D85AE7F00C6E990 /* ADReposDetailViewController.xib */; };
 		11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */; };
 		11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD85311D81C8C200698803 /* ADPublicReposViewController.m */; };
 		11BD85341D81C8C200698803 /* ADPublicReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */; };
@@ -64,6 +68,12 @@
 		2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C51D6C3B000035C629 /* ADFollowingViewModel.m */; };
 		2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */; };
 		2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */; };
+		247D61BA1D86991500BFAF31 /* ADReposStatisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D61B81D86991500BFAF31 /* ADReposStatisticsTableViewCell.m */; };
+		247D61BB1D86991500BFAF31 /* ADReposStatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D61B91D86991500BFAF31 /* ADReposStatisticsTableViewCell.xib */; };
+		247D61CA1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D61C81D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m */; };
+		247D61CB1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D61C91D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib */; };
+		247D61D41D869A0300BFAF31 /* ADReposReadmeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D61D21D869A0300BFAF31 /* ADReposReadmeTableViewCell.m */; };
+		247D61D51D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D61D31D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib */; };
 		247DF6411D5D5F0B00607526 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; };
 		247DF6421D5D5F0B00607526 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331961D2E38A900EF8698 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF6451D5D5F0B00607526 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331871D2E389900EF8698 /* Mantle.framework */; };
@@ -336,6 +346,8 @@
 		110649541D8452DE00677E4D /* ADPublicActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPublicActivityViewController.h; path = Subscribe/View/ADPublicActivityViewController.h; sourceTree = "<group>"; };
 		110649551D8452DE00677E4D /* ADPublicActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPublicActivityViewController.m; path = Subscribe/View/ADPublicActivityViewController.m; sourceTree = "<group>"; };
 		110649561D8452DE00677E4D /* ADPublicActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADPublicActivityViewController.xib; path = Subscribe/View/ADPublicActivityViewController.xib; sourceTree = "<group>"; };
+		1106705D1D8859AA0041CB1D /* ADTableViewCellStyleValue1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTableViewCellStyleValue1.h; sourceTree = "<group>"; };
+		1106705E1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTableViewCellStyleValue1.m; sourceTree = "<group>"; };
 		1118EC081D33ED060099B82B /* configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = configure.h; sourceTree = "<group>"; };
 		1156190A1D43D35C00ABA15F /* ADTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTabBarViewModel.h; path = TabBar/ViewModel/ADTabBarViewModel.h; sourceTree = "<group>"; };
 		1156190B1D43D35C00ABA15F /* ADTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTabBarViewModel.m; path = TabBar/ViewModel/ADTabBarViewModel.m; sourceTree = "<group>"; };
@@ -363,6 +375,11 @@
 		1172FE8B1D8064A9007181BB /* ADReposTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposTableViewCell.xib; sourceTree = "<group>"; };
 		118AE38A1D450EFF006DD475 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/View/Profile.storyboard; sourceTree = "<group>"; };
 		118AE38E1D450FBF006DD475 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/View/Discover.storyboard; sourceTree = "<group>"; };
+		11AA33591D85AE6900C6E990 /* ADReposDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDetailViewModel.h; sourceTree = "<group>"; };
+		11AA335A1D85AE6900C6E990 /* ADReposDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDetailViewModel.m; sourceTree = "<group>"; };
+		11AA33671D85AE7F00C6E990 /* ADReposDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDetailViewController.h; sourceTree = "<group>"; };
+		11AA33681D85AE7F00C6E990 /* ADReposDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDetailViewController.m; sourceTree = "<group>"; };
+		11AA33691D85AE7F00C6E990 /* ADReposDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposDetailViewController.xib; sourceTree = "<group>"; };
 		11BD851C1D81C09800698803 /* ADPublicReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPublicReposViewModel.h; sourceTree = "<group>"; };
 		11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPublicReposViewModel.m; sourceTree = "<group>"; };
 		11BD85301D81C8C200698803 /* ADPublicReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPublicReposViewController.h; sourceTree = "<group>"; };
@@ -433,6 +450,15 @@
 		2479B6C71D6C3B000035C629 /* ADUserListItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListItemViewModel.m; sourceTree = "<group>"; };
 		2479B6C81D6C3B000035C629 /* ADUserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUserListViewModel.h; sourceTree = "<group>"; };
 		2479B6C91D6C3B000035C629 /* ADUserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUserListViewModel.m; sourceTree = "<group>"; };
+		247D61B71D86991500BFAF31 /* ADReposStatisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposStatisticsTableViewCell.h; sourceTree = "<group>"; };
+		247D61B81D86991500BFAF31 /* ADReposStatisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposStatisticsTableViewCell.m; sourceTree = "<group>"; };
+		247D61B91D86991500BFAF31 /* ADReposStatisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposStatisticsTableViewCell.xib; sourceTree = "<group>"; };
+		247D61C71D86992A00BFAF31 /* ADReposViewCodeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposViewCodeTableViewCell.h; sourceTree = "<group>"; };
+		247D61C81D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposViewCodeTableViewCell.m; sourceTree = "<group>"; };
+		247D61C91D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposViewCodeTableViewCell.xib; sourceTree = "<group>"; };
+		247D61D11D869A0300BFAF31 /* ADReposReadmeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposReadmeTableViewCell.h; sourceTree = "<group>"; };
+		247D61D21D869A0300BFAF31 /* ADReposReadmeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposReadmeTableViewCell.m; sourceTree = "<group>"; };
+		247D61D31D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposReadmeTableViewCell.xib; sourceTree = "<group>"; };
 		2481A8F01D6E83C300F0C97F /* ADDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBaseManager.h; path = Core/DataBase/ADDataBaseManager.h; sourceTree = "<group>"; };
 		2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBaseManager.m; path = Core/DataBase/ADDataBaseManager.m; sourceTree = "<group>"; };
 		248569B21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Scarecrow.h"; sourceTree = "<group>"; };
@@ -496,6 +522,7 @@
 		24B0D1681D60B90500805A45 /* UIImage+Octions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octions.m"; sourceTree = "<group>"; };
 		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
 		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
+		24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scarecrow.entitlements; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
 		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -614,6 +641,18 @@
 				243AB1251D829CB8001F174A /* ADStarredReposViewController.h */,
 				243AB1261D829CB8001F174A /* ADStarredReposViewController.m */,
 				243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */,
+				11AA33671D85AE7F00C6E990 /* ADReposDetailViewController.h */,
+				11AA33681D85AE7F00C6E990 /* ADReposDetailViewController.m */,
+				11AA33691D85AE7F00C6E990 /* ADReposDetailViewController.xib */,
+				247D61B71D86991500BFAF31 /* ADReposStatisticsTableViewCell.h */,
+				247D61B81D86991500BFAF31 /* ADReposStatisticsTableViewCell.m */,
+				247D61B91D86991500BFAF31 /* ADReposStatisticsTableViewCell.xib */,
+				247D61C71D86992A00BFAF31 /* ADReposViewCodeTableViewCell.h */,
+				247D61C81D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m */,
+				247D61C91D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib */,
+				247D61D11D869A0300BFAF31 /* ADReposReadmeTableViewCell.h */,
+				247D61D21D869A0300BFAF31 /* ADReposReadmeTableViewCell.m */,
+				247D61D31D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib */,
 			);
 			name = View;
 			path = Repos/View;
@@ -630,6 +669,8 @@
 				11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */,
 				243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */,
 				243AB1001D827C68001F174A /* ADStarredReposViewModel.m */,
+				11AA33591D85AE6900C6E990 /* ADReposDetailViewModel.h */,
+				11AA335A1D85AE6900C6E990 /* ADReposDetailViewModel.m */,
 			);
 			name = ViewModel;
 			path = Repos/ViewModel;
@@ -732,6 +773,7 @@
 		242331281D2E36BD00EF8698 /* Scarecrow */ = {
 			isa = PBXGroup;
 			children = (
+				24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */,
 				244998801D4DEEF800D6E9F7 /* UserList */,
 				118AE38C1D450F52006DD475 /* Discover */,
 				118AE3881D450ED4006DD475 /* Profile */,
@@ -997,6 +1039,8 @@
 				248569D11D5E21820087E62D /* ADLoadingTitleView.xib */,
 				24AA83A41D676E02009D94D8 /* ADFollowButton.h */,
 				24AA83A51D676E02009D94D8 /* ADFollowButton.m */,
+				1106705D1D8859AA0041CB1D /* ADTableViewCellStyleValue1.h */,
+				1106705E1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m */,
 			);
 			name = Views;
 			path = Utils/Views;
@@ -1054,7 +1098,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				15FB02CE2E7DE22751DF3AD8 /* 📦 Check Pods Manifest.lock */,
+				15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */,
 				2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */,
 				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
 				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
@@ -1135,6 +1179,11 @@
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = T27MFE7XGH;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2423313E1D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1309,9 +1358,11 @@
 				248EC60E1D66165C00860852 /* ADSettingsViewController.xib in Resources */,
 				2479B6CC1D6C3B000035C629 /* ADUserListItemTableViewCell.xib in Resources */,
 				1156190E1D43D38900ABA15F /* TabBar.storyboard in Resources */,
+				247D61BB1D86991500BFAF31 /* ADReposStatisticsTableViewCell.xib in Resources */,
 				241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */,
 				243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */,
 				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
+				11AA336B1D85AE7F00C6E990 /* ADReposDetailViewController.xib in Resources */,
 				2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */,
 				110649581D8452DE00677E4D /* ADPublicActivityViewController.xib in Resources */,
 				11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */,
@@ -1324,9 +1375,11 @@
 				242331341D2E36BD00EF8698 /* Main.storyboard in Resources */,
 				115619161D43D5DB00ABA15F /* Subscribe.storyboard in Resources */,
 				11BD85341D81C8C200698803 /* ADPublicReposViewController.xib in Resources */,
+				247D61CB1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib in Resources */,
 				246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */,
 				116FA5EF1D74950D00F0AEE7 /* Repos.storyboard in Resources */,
 				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
+				247D61D51D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,14 +1415,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		15FB02CE2E7DE22751DF3AD8 /* 📦 Check Pods Manifest.lock */ = {
+		15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1484,6 +1537,7 @@
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
 				1172FE8C1D8064A9007181BB /* ADReposTableViewCell.m in Sources */,
 				246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */,
+				247D61D41D869A0300BFAF31 /* ADReposReadmeTableViewCell.m in Sources */,
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
 				241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */,
 				248569DE1D5E21820087E62D /* ADTableViewModel.m in Sources */,
@@ -1520,9 +1574,13 @@
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
 				2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */,
+				247D61CA1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m in Sources */,
+				11AA335B1D85AE6900C6E990 /* ADReposDetailViewModel.m in Sources */,
 				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
+				1106705F1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m in Sources */,
 				2479B6CD1D6C3B000035C629 /* ADUserListViewController.m in Sources */,
 				248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */,
+				11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */,
 				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,
@@ -1530,6 +1588,7 @@
 				2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */,
 				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,
 				248569DF1D5E21820087E62D /* ADViewModel.m in Sources */,
+				247D61BA1D86991500BFAF31 /* ADReposStatisticsTableViewCell.m in Sources */,
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
 				11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */,
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
@@ -1730,6 +1789,7 @@
 			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scarecrow/Scarecrow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
@@ -1745,6 +1805,7 @@
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scarecrow/Scarecrow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";

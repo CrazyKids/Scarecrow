@@ -14,6 +14,7 @@
 #import "ADUserInfoViewModel.h"
 #import "OCTEvent+Persistence.h"
 #import "OCTUser+Persistence.h"
+#import "ADReposDetailViewModel.h"
 
 
 static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
@@ -74,7 +75,8 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
             ADUserInfoViewModel *userInfoModel = [[ADUserInfoViewModel alloc]initWithParam:[url ad_dic]];
             viewModel = userInfoModel;
         } else if (url.linkType == ADLinkTypeRepos) {
-            
+            ADReposDetailViewModel *reposViewModel = [[ADReposDetailViewModel alloc]initWithParam:[url ad_dic]];
+            viewModel = reposViewModel;
         } else {
             ADWebViewModel *webModel = [ADWebViewModel new];
             webModel.request = [NSURLRequest requestWithURL:url];
