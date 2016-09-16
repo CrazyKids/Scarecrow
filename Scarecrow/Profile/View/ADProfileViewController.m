@@ -125,6 +125,11 @@
             cell.textLabel.text = @"Public Activity";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
+        case ADUserInfoDataTypeGenerateQRCode:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Rss" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"My QR Code";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
         default:
             cell.imageView.image = nil;
             cell.textLabel.text = nil;

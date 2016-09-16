@@ -10,8 +10,10 @@
 #import "ADSubscribeViewModel.h"
 #import "ADSubscribeItemViewModel.h"
 #import "ADSubscribeTableViewCell.h"
+#import <ZRPopoverView/ZRPopoverView.h>
+#import "ADQRCodeScanView.h"
 
-@interface ADSubscribeViewController ()
+@interface ADSubscribeViewController ()<ZRPopoverViewDelegate>
 
 @property (strong, nonatomic, readonly) ADSubscribeViewModel *viewModel;
 
@@ -29,6 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarClick)];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ADSubscribeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
@@ -73,6 +77,24 @@
         @strongify(self);
         [self.viewModel.fetchRemoteDataCommamd execute:nil];
     }];
+}
+
+- (void)rightBarClick
+{
+    NSArray *menus = @[
+                       @{ kZRPopoverViewTitle: @"扫一扫" }
+                       ];
+    ZRPopoverView *popover = [[ZRPopoverView alloc] initWithStyle:ZRPopoverViewStyleLightContent menus:menus position:ZRPopoverViewPositionRightOfTop];
+    popover.delegate = self;
+    [popover showWithController:self];
+}
+
+#pragma mark - ZRPopoverViewDelegate
+- (void)popoverView:(ZRPopoverView *)popoverView didClick:(int)index
+{
+    if (index == 0) {
+        [[[ADQRCodeScanView alloc] init] openQRCodeScan:self];
+    }
 }
 
 - (NSArray *)viewModelWithEvents:(NSArray *)eventArray {

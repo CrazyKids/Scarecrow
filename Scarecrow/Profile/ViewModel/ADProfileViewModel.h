@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, ADUserInfoDataType) {
     ADUserInfoDataTypeName,
     ADUserInfoDataTypeStarred,
     ADUserInfoDataTypeActivity,
+    ADUserInfoDataTypeGenerateQRCode
 };
 
 @interface ADProfileViewModel : ADTableViewModel
