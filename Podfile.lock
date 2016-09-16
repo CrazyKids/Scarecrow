@@ -50,7 +50,7 @@ PODS:
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
   - ZRAlertController (2.3)
-  - ZRPopoverView (1.0)
+  - ZRPopoverView (1.1)
   - ZRQRCodeViewController (3.1)
 
 DEPENDENCIES:
@@ -66,7 +66,7 @@ DEPENDENCIES:
   - Vertigo (~> 0.1)
   - YYKit (~> 1.0.7)
   - ZRAlertController (~> 2.2)
-  - ZRPopoverView (~> 1.0)
+  - ZRPopoverView (~> 1.1)
   - ZRQRCodeViewController (~> 3.1)
 
 EXTERNAL SOURCES:
@@ -92,9 +92,9 @@ SPEC CHECKSUMS:
   Vertigo: b971aa21e904512cfe387196ccba37df3f9a792e
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
   ZRAlertController: 19fe0db510525339489b58901482b957cd22a409
-  ZRPopoverView: da93e55efdc40f8996f47c0fec0b273b75106150
+  ZRPopoverView: 587a0f413414bb8aa9383ddb327c30fd23a5e320
   ZRQRCodeViewController: 2b0f4eefe39f69438da46109cf7efbea037aee85
 
-PODFILE CHECKSUM: fedf77dc690bb86f1be7ea6ad023e0eeb312d3eb
+PODFILE CHECKSUM: 37c5613cae82acb4444607b56face619ddaeb5e2
 
 COCOAPODS: 1.0.0
