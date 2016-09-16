@@ -50,6 +50,7 @@ PODS:
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
   - ZRAlertController (2.3)
+  - ZRQRCodeViewController (3.1)
 
 DEPENDENCIES:
   - EGOTableViewPullRefreshAndLoadMore (~> 1.0.4)
@@ -64,6 +65,7 @@ DEPENDENCIES:
   - Vertigo (~> 0.1)
   - YYKit (~> 1.0.7)
   - ZRAlertController (~> 2.2)
+  - ZRQRCodeViewController (~> 3.1)
 
 EXTERNAL SOURCES:
   OcticonsIOS:
@@ -88,7 +90,8 @@ SPEC CHECKSUMS:
   Vertigo: b971aa21e904512cfe387196ccba37df3f9a792e
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
   ZRAlertController: 19fe0db510525339489b58901482b957cd22a409
+  ZRQRCodeViewController: 2b0f4eefe39f69438da46109cf7efbea037aee85
 
-PODFILE CHECKSUM: 1795f6e4cb1a0f681af1008968c0aaad7011ba48
+PODFILE CHECKSUM: bc1548fcd5f4df7a6abd15ec30254ec95655681d
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0
