@@ -8,12 +8,16 @@
 
 #import "ADReposStatisticsTableViewCell.h"
 #import "UIColor+Scarecrow.h"
+#import "ADReposDetailViewModel.h"
 
 @interface ADReposStatisticsTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UILabel *starCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *forkCountLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *separatorWidth;
+
+@property (strong, nonatomic) ADReposDetailViewModel *viewModel;
 
 @end
 
@@ -22,9 +26,22 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.containerView.layer.borderWidth = 1.0f;
+    self.containerView.layer.borderWidth = AD_1PX;
     self.containerView.layer.borderColor = RGB(0x999999).CGColor;
     self.containerView.layer.cornerRadius = 3;
+    
+    self.separatorWidth.constant = AD_1PX;
+}
+
+- (void)bindViewModel:(ADReposDetailViewModel *)viewModel {
+    self.viewModel = viewModel;
+    
+    self.forkCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.forksCount];
+    self.starCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.stargazersCount];
+    
+    [[RACObserve(self.viewModel.repos, stargazersCount) deliverOnMainThread]subscribeNext:^(NSNumber *stargazersCount) {
+        self.starCountLabel.text = stargazersCount.stringValue;
+    }];
 }
 
 @end

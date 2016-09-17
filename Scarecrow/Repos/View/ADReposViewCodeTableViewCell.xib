@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="113.5"/>
+                <frame key="frameInset" width="320" height="113"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0c-YU-66v">
@@ -24,7 +23,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2p-CV-jNX">
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="master">
                                     <color key="titleColor" red="0.2784313725" green="0.60392156860000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -34,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="1" id="Uik-E6-DpJ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTp-v0-1tt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTp-v0-1tt">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -56,18 +55,18 @@
                         <constraints>
                             <constraint firstItem="KM6-dT-Jd2" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" id="2xo-h7-avv"/>
                             <constraint firstItem="agi-Ip-bu7" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" id="3bj-Vg-eeu"/>
-                            <constraint firstItem="nyD-un-LzX" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" id="4qY-iq-zgL"/>
+                            <constraint firstItem="nyD-un-LzX" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" constant="5" id="4qY-iq-zgL"/>
                             <constraint firstItem="zu2-Da-gcu" firstAttribute="top" secondItem="lTp-v0-1tt" secondAttribute="bottom" constant="5" id="Chu-Ux-qeO"/>
-                            <constraint firstItem="agi-Ip-bu7" firstAttribute="top" secondItem="zu2-Da-gcu" secondAttribute="bottom" constant="5" id="IXk-jT-ffL"/>
+                            <constraint firstItem="agi-Ip-bu7" firstAttribute="top" secondItem="zu2-Da-gcu" secondAttribute="bottom" constant="10" id="IXk-jT-ffL"/>
                             <constraint firstAttribute="trailing" secondItem="KM6-dT-Jd2" secondAttribute="trailing" id="Kce-Kw-F8q"/>
-                            <constraint firstAttribute="trailing" secondItem="lTp-v0-1tt" secondAttribute="trailing" constant="248" id="L5V-Gu-XGx"/>
+                            <constraint firstAttribute="trailing" secondItem="lTp-v0-1tt" secondAttribute="trailing" constant="5" id="L5V-Gu-XGx"/>
                             <constraint firstAttribute="trailing" secondItem="agi-Ip-bu7" secondAttribute="trailing" id="Pyc-vs-7bm"/>
                             <constraint firstItem="zu2-Da-gcu" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" id="T9L-9P-v1M"/>
                             <constraint firstAttribute="trailing" secondItem="zu2-Da-gcu" secondAttribute="trailing" id="TXv-Qm-A8z"/>
                             <constraint firstItem="Z2p-CV-jNX" firstAttribute="centerY" secondItem="nyD-un-LzX" secondAttribute="centerY" id="Zn3-5R-ufq"/>
                             <constraint firstItem="nyD-un-LzX" firstAttribute="top" secondItem="D0c-YU-66v" secondAttribute="top" constant="5" id="eRn-VM-WZm"/>
                             <constraint firstItem="nyD-un-LzX" firstAttribute="top" secondItem="D0c-YU-66v" secondAttribute="top" id="egL-Fr-8Co"/>
-                            <constraint firstItem="lTp-v0-1tt" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" id="iHK-nY-zDy"/>
+                            <constraint firstItem="lTp-v0-1tt" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" constant="5" id="iHK-nY-zDy"/>
                             <constraint firstItem="KM6-dT-Jd2" firstAttribute="top" secondItem="Z2p-CV-jNX" secondAttribute="bottom" constant="5" id="kwV-Xt-6rq"/>
                             <constraint firstItem="Z2p-CV-jNX" firstAttribute="leading" secondItem="nyD-un-LzX" secondAttribute="trailing" constant="8" id="yyv-nd-fMS"/>
                             <constraint firstItem="lTp-v0-1tt" firstAttribute="top" secondItem="KM6-dT-Jd2" secondAttribute="bottom" constant="8" id="zAY-a3-1rh"/>
@@ -90,6 +89,8 @@
                 <outlet property="branchButton" destination="Z2p-CV-jNX" id="61P-oY-Trn"/>
                 <outlet property="branchIcon" destination="nyD-un-LzX" id="Ts0-H2-ScK"/>
                 <outlet property="containerView" destination="D0c-YU-66v" id="F3Q-Wy-zuU"/>
+                <outlet property="separator1Height" destination="Uik-E6-DpJ" id="q7f-x9-NF4"/>
+                <outlet property="separator2Height" destination="q3n-de-tQB" id="5h3-fB-ly2"/>
                 <outlet property="timeLabel" destination="lTp-v0-1tt" id="Ncj-fV-iLT"/>
                 <outlet property="viewCodeButton" destination="agi-Ip-bu7" id="5Vf-Re-zQP"/>
             </connections>

@@ -42,6 +42,7 @@
         }
         
         self.referenceName = param[@"referenceName"] ?: [OCTRef ad_referenceNameWithBranch:self.repos.defaultBranch];
+        self.showLoading = NO;
     }
     return self;
 }
@@ -49,13 +50,13 @@
 - (void)initialize {
     [super initialize];
     
-    self.title = self.repos.name;
+    self.title = [NSString stringWithFormat:@"%@/%@", self.repos.ownerLogin, self.repos.name];
     
     self.dataSourceArray = @[
                              @[@(ADReposDetailDataDesc)],
                              @[@(ADReposDetailDataStatistics)],
-//                             @[@(ADReposDetailDataViewCode)],
-//                             @[@(ADReposDetailDataReadme)],
+                             @[@(ADReposDetailDataViewCode)],
+                             @[@(ADReposDetailDataReadme)],
                              ];
     
     self.reference = [[OCTRef alloc]initWithDictionary:@{@"name" : self.referenceName} error:nil];

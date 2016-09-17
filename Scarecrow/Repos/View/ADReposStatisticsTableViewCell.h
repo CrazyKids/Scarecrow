@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ADReposDetailViewModel;
+
 @interface ADReposStatisticsTableViewCell : UITableViewCell
 
-@property (weak, nonatomic, readonly) UILabel *starCountLabel;
-@property (weak, nonatomic, readonly) UILabel *forkCountLabel;
+- (void)bindViewModel:(ADReposDetailViewModel *)viewModel;
 
 @end

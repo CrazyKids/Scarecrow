@@ -117,6 +117,7 @@
 		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
 		24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Octions.m */; };
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
+		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
 		57B5A88C1D8C11C10049C6FC /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A88B1D8C11C10049C6FC /* ADQRCodeScanView.m */; };
 		57B5A8AD1D8C30AF0049C6FC /* ADQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A8AC1D8C30AF0049C6FC /* ADQRCodeViewModel.m */; };
 		57B5A8B01D8C30FD0049C6FC /* ADQRCodeViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A8AF1D8C30FD0049C6FC /* ADQRCodeViewerController.m */; };
@@ -527,6 +528,8 @@
 		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
 		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
 		24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scarecrow.entitlements; sourceTree = "<group>"; };
+		24C257471D8D7EF5003D8F23 /* ADReposDescTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDescTableViewCell.h; sourceTree = "<group>"; };
+		24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDescTableViewCell.m; sourceTree = "<group>"; };
 		57B5A88A1D8C11C10049C6FC /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADQRCodeScanView.h; sourceTree = "<group>"; };
 		57B5A88B1D8C11C10049C6FC /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADQRCodeScanView.m; sourceTree = "<group>"; };
 		57B5A8AB1D8C30AF0049C6FC /* ADQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeViewModel.h; path = Profile/ViewModel/ADQRCodeViewModel.h; sourceTree = "<group>"; };
@@ -666,6 +669,8 @@
 				247D61D11D869A0300BFAF31 /* ADReposReadmeTableViewCell.h */,
 				247D61D21D869A0300BFAF31 /* ADReposReadmeTableViewCell.m */,
 				247D61D31D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib */,
+				24C257471D8D7EF5003D8F23 /* ADReposDescTableViewCell.h */,
+				24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */,
 			);
 			name = View;
 			path = Repos/View;
@@ -1622,6 +1627,7 @@
 				57B5A88C1D8C11C10049C6FC /* ADQRCodeScanView.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,
+				24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */,
 				110649481D8452BC00677E4D /* ADPublicActivityViewModel.m in Sources */,
 				2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */,
 				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,

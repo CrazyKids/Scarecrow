@@ -1,8 +1,8 @@
 //
-//  ADReposViewCodeTableViewCell.h
+//  ADReposDescTableViewCell.h
 //  Scarecrow
 //
-//  Created by duanhongjin on 9/12/16.
+//  Created by duanhongjin on 9/17/16.
 //  Copyright © 2016 duanhongjin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class ADReposDetailViewModel;
 
-@interface ADReposViewCodeTableViewCell : UITableViewCell
+@interface ADReposDescTableViewCell : UITableViewCell
 
 - (void)bindViewModel:(ADReposDetailViewModel *)viewModel;
 

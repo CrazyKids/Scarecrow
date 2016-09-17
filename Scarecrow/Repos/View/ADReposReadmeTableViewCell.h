@@ -10,4 +10,8 @@
 
 @interface ADReposReadmeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic, readonly) UIWebView *webView;
+@property (weak, nonatomic, readonly) UIButton *readmeButton;
+
 @end

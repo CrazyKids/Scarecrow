@@ -8,15 +8,18 @@
 
 #import "ADReposDetailViewController.h"
 #import "ADReposDetailViewModel.h"
+#import "ADReposDescTableViewCell.h"
 #import "ADReposStatisticsTableViewCell.h"
 #import "ADReposViewCodeTableViewCell.h"
 #import "ADReposReadmeTableViewCell.h"
 #import "UIImage+Octions.h"
 #import "OCTRef+Scarecrow.h"
 
-@interface ADReposDetailViewController ()
+@interface ADReposDetailViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic, readonly) ADReposDetailViewModel *viewModel;
+@property (strong, nonatomic) ADReposReadmeTableViewCell *readmeCell;
+@property (strong, nonatomic) RACSignal *webviewExecuting;
 
 @end
 
@@ -35,11 +38,27 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ADReposStatisticsTableViewCell" bundle:nil] forCellReuseIdentifier:@"satisticsCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ADReposViewCodeTableViewCell" bundle:nil] forCellReuseIdentifier:@"viewCodeCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"ADReposReadmeTableViewCell" bundle:nil] forCellReuseIdentifier:@"readmeCell"];
+    [self.tableView registerClass:[ADReposDescTableViewCell class] forCellReuseIdentifier:@"descCell"];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsSelection = NO;
     self.tableView.estimatedRowHeight = 44;
+    
+    @weakify(self)
+    [self.viewModel.fetchRemoteDataCommamd.executing subscribeNext:^(NSNumber *executing) {
+        @strongify(self)
+        if (executing.boolValue) {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES].label.text = @"Loading...";
+        } else {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
+    }];
+
+    self.readmeCell = [[NSBundle mainBundle]loadNibNamed:@"ADReposReadmeTableViewCell" owner:nil options:nil].firstObject;
+}
+
+- (void)dealloc {
+    self.readmeCell.webView.delegate = nil;
 }
 
 - (void)bindViewModel {
@@ -59,6 +78,45 @@
         @strongify(self);
         [self.tableView reloadData];
     }];
+    
+    [[[RACObserve(self.viewModel, readmeHTML)ignore:nil]deliverOnMainThread]subscribeNext:^(NSString *readmeHTML) {
+        @strongify(self);
+        [self.readmeCell.webView loadHTMLString:readmeHTML baseURL:nil];
+    }];
+    
+    RACSignal *startLoadSignal = [self rac_signalForSelector:@selector(webViewDidStartLoad:)];
+    RACSignal *fininedLoadSignal = [self rac_signalForSelector:@selector(webViewDidFinishLoad:)];
+    RACSignal *failedLoadSignal = [self rac_signalForSelector:@selector(webView:didFailLoadWithError:)];
+    self.readmeCell.webView.delegate = self;
+    
+    RAC(self.readmeCell.webView, hidden) = [[[fininedLoadSignal mapReplace:@(NO)]distinctUntilChanged]startWith:@(YES)];
+    
+    [fininedLoadSignal subscribeNext:^(RACTuple *tuple) {
+        @strongify(self);
+        
+        UIWebView *webview = tuple.first;
+        
+        CGRect frame = webview.frame;
+        frame.size.height = 1;
+        
+        webview.frame = frame;
+        CGSize fittingSize = [webview sizeThatFits:CGSizeZero];
+        frame.size = fittingSize;
+        webview.frame = frame;
+        
+        [self.tableView reloadData];
+    }];
+    
+    self.webviewExecuting = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [[startLoadSignal mapReplace:@(YES)]subscribe:subscriber];
+        [[[RACSignal merge:@[fininedLoadSignal, failedLoadSignal]]mapReplace:@(NO)]subscribe:subscriber];
+        
+        return nil;
+    }];
+    
+    RAC(self.readmeCell.activityIndicator, hidden) = [self.webviewExecuting map:^id(NSNumber *executing) {
+        return @(!executing.boolValue);
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -70,41 +128,26 @@
     ADReposDetailData data = [self.viewModel.dataSourceArray[section][row] integerValue];
     switch (data) {
         case ADReposDetailDataDesc: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-            cell.textLabel.font = [UIFont systemFontOfSize:15];
-            cell.textLabel.numberOfLines = 0;
-            cell.textLabel.text = self.viewModel.repos.repoDescription;
+            ADReposDescTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"descCell" forIndexPath:indexPath];
+            [cell bindViewModel:self.viewModel];
             
             return cell;
         }
         case ADReposDetailDataStatistics: {
             ADReposStatisticsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"satisticsCell" forIndexPath:indexPath];
-            
-            cell.forkCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.forksCount];
-            cell.starCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.stargazersCount];
-            
-            [[RACObserve(self.viewModel.repos, stargazersCount) deliverOnMainThread]subscribeNext:^(NSNumber *stargazersCount) {
-                cell.starCountLabel.text = stargazersCount.stringValue;
-            }];
-            
+            [cell bindViewModel:self.viewModel];
+                        
             return cell;
         }
         case ADReposDetailDataViewCode: {
             ADReposViewCodeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewCodeCell" forIndexPath:indexPath];
+            [cell bindViewModel:self.viewModel];
             
-            [RACObserve(self.viewModel, reference)subscribeNext:^(OCTRef *reference) {
-                cell.branchIcon.image = [UIImage ad_normalImageWithIdentifier:reference.ad_octiconIdentifier size:CGSizeMake(24, 24)];
-                NSString *title = [reference.name componentsSeparatedByString:@"/"].lastObject;
-                [cell.branchButton setTitle:title forState:UIControlStateNormal];
-            }];
-            
-            cell.timeLabel.text = self.viewModel.dateUpdated;
-            
-            UIImage *image = [UIImage ad_highlightImageWithIdentifier:@"FileDirectory" size:CGSizeMake(22, 22)];
-            [cell.viewCodeButton setImage:image forState:UIControlStateNormal];
+            return cell;
         }
-        case ADReposDetailDataReadme:
-            break;
+        case ADReposDetailDataReadme: {
+            return self.readmeCell;
+        }
         default:
             break;
     }
@@ -127,7 +170,7 @@
         case ADReposDetailDataViewCode:
             return 114;
         case ADReposDetailDataReadme:
-            break;
+            return 44 + self.readmeCell.webView.frame.size.height + 45;
         default:
             break;
     }
@@ -140,6 +183,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 7.5f;
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return self.navigationController.topViewController == self;
 }
 
 @end

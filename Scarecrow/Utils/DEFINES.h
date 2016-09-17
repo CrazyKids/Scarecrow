@@ -18,4 +18,6 @@
 // Notification Name
 #define AD_NOTIFICATION_STARRED_UPDATE  @"AD_NOTIFICATION_STARRED_UPDATE"
 
+#define AD_1PX    (1.0f / [UIScreen screenScale])
+
 #endif /* DEFINES_h */
