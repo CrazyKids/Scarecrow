@@ -39,8 +39,10 @@
     self.separator2Height.constant = AD_1PX;
     
     self.webView.scrollView.scrollEnabled = NO;
+    
     CGRect frame = self.webView.frame;
     frame.size.height = 1;
+    
     self.webView.frame = frame;
 }
 
