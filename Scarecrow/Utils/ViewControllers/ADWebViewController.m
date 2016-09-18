@@ -12,6 +12,8 @@
 @interface ADWebViewController ()
 
 @property (strong, nonatomic, readonly) ADWebViewModel *viewModel;
+@property (strong, nonatomic) UIBarButtonItem *closeButton;
+@property (strong, nonatomic) UIBarButtonItem *backButton;
 
 @end
 
@@ -29,6 +31,10 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = YES;
+    
+    self.closeButton = [[UIBarButtonItem alloc]initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(popBack:)];
+    self.backButton = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
+    self.navigationItem.leftBarButtonItem = self.backButton;
     
     RACSignal *didFinishLoadSignal   = [self rac_signalForSelector:@selector(webViewDidFinishLoad:) fromProtocol:@protocol(UIWebViewDelegate)];
     RACSignal *didFailLoadLoadSignal = [self rac_signalForSelector:@selector(webView:didFailLoadWithError:) fromProtocol:@protocol(UIWebViewDelegate)];
@@ -81,6 +87,21 @@
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+- (void)popBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)goBack:(id)sender {
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+        
+        self.navigationItem.leftBarButtonItems = @[self.backButton, self.closeButton];
+        return;
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
