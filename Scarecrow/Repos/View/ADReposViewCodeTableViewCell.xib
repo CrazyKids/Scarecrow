@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -68,7 +69,7 @@
                             <constraint firstItem="nyD-un-LzX" firstAttribute="top" secondItem="D0c-YU-66v" secondAttribute="top" id="egL-Fr-8Co"/>
                             <constraint firstItem="lTp-v0-1tt" firstAttribute="leading" secondItem="D0c-YU-66v" secondAttribute="leading" constant="5" id="iHK-nY-zDy"/>
                             <constraint firstItem="KM6-dT-Jd2" firstAttribute="top" secondItem="Z2p-CV-jNX" secondAttribute="bottom" constant="5" id="kwV-Xt-6rq"/>
-                            <constraint firstItem="Z2p-CV-jNX" firstAttribute="leading" secondItem="nyD-un-LzX" secondAttribute="trailing" constant="8" id="yyv-nd-fMS"/>
+                            <constraint firstItem="Z2p-CV-jNX" firstAttribute="leading" secondItem="nyD-un-LzX" secondAttribute="trailing" constant="5" id="yyv-nd-fMS"/>
                             <constraint firstItem="lTp-v0-1tt" firstAttribute="top" secondItem="KM6-dT-Jd2" secondAttribute="bottom" constant="8" id="zAY-a3-1rh"/>
                         </constraints>
                         <variation key="default">

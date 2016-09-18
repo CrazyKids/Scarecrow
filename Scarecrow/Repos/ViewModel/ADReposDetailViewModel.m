@@ -11,6 +11,7 @@
 #import <FormatterKit/TTTTimeIntervalFormatter.h>
 #import "OCTRepository+Persistence.h"
 #import <Ono/Ono.h>
+#import "ADCodeTreeViewModel.h"
 
 @interface ADReposDetailViewModel ()
 
@@ -85,7 +86,28 @@
     }];
     
     NSString *readme = (NSString *)[[ADPlatformManager sharedInstance].cacheMgr objectForKey:[self cachedKeyForReadmeWithMediaType:OCTClientMediaTypeHTML]];
-    [self getReadmeHTML:readme];
+    self.readmeHTML = [self getReadmeHTML:readme];
+    
+    self.viewCodeCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        NSDictionary *dic = @{@"repos" : self.repos,
+                              @"reference" : self.reference};
+        ADCodeTreeViewModel *viewModel = [[ADCodeTreeViewModel alloc]initWithParam:dic];
+        [self pushViewControllerWithViewModel:viewModel];
+        
+        return [RACSignal empty];
+    }];
+    
+    self.viewReadmeCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:@"Wait a moment!!!" okayButton:@"OK" completion:nil];
+        
+        return [RACSignal empty];
+    }];
+    
+    self.changeBranchCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:@"Wait a moment!!!" okayButton:@"OK" completion:nil];
+        
+        return [RACSignal empty];
+    }];
 }
 
 - (NSString *)cachedKeyForReadmeWithMediaType:(OCTClientMediaType)type {
