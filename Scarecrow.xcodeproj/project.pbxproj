@@ -130,10 +130,10 @@
 		24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Octions.m */; };
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
 		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
-		57B5A88C1D8C11C10049C6FC /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A88B1D8C11C10049C6FC /* ADQRCodeScanView.m */; };
 		57B5A8AD1D8C30AF0049C6FC /* ADQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A8AC1D8C30AF0049C6FC /* ADQRCodeViewModel.m */; };
-		57B5A8B01D8C30FD0049C6FC /* ADQRCodeViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A8AF1D8C30FD0049C6FC /* ADQRCodeViewerController.m */; };
-		57B5A8B21D8C31400049C6FC /* ADQRCodeViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B5A8B11D8C31400049C6FC /* ADQRCodeViewerController.xib */; };
+		901EF2C91D8E39F90065EFE3 /* ADQRCodeViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2C71D8E39F90065EFE3 /* ADQRCodeViewerController.m */; };
+		901EF2CA1D8E39F90065EFE3 /* ADQRCodeViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901EF2C81D8E39F90065EFE3 /* ADQRCodeViewerController.xib */; };
+		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
 /* End PBXBuildFile section */
 
@@ -562,13 +562,13 @@
 		24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scarecrow.entitlements; sourceTree = "<group>"; };
 		24C257471D8D7EF5003D8F23 /* ADReposDescTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDescTableViewCell.h; sourceTree = "<group>"; };
 		24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDescTableViewCell.m; sourceTree = "<group>"; };
-		57B5A88A1D8C11C10049C6FC /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADQRCodeScanView.h; sourceTree = "<group>"; };
-		57B5A88B1D8C11C10049C6FC /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADQRCodeScanView.m; sourceTree = "<group>"; };
 		57B5A8AB1D8C30AF0049C6FC /* ADQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeViewModel.h; path = Profile/ViewModel/ADQRCodeViewModel.h; sourceTree = "<group>"; };
 		57B5A8AC1D8C30AF0049C6FC /* ADQRCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeViewModel.m; path = Profile/ViewModel/ADQRCodeViewModel.m; sourceTree = "<group>"; };
-		57B5A8AE1D8C30FD0049C6FC /* ADQRCodeViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADQRCodeViewerController.h; sourceTree = "<group>"; };
-		57B5A8AF1D8C30FD0049C6FC /* ADQRCodeViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADQRCodeViewerController.m; sourceTree = "<group>"; };
-		57B5A8B11D8C31400049C6FC /* ADQRCodeViewerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADQRCodeViewerController.xib; sourceTree = "<group>"; };
+		901EF2C61D8E39F90065EFE3 /* ADQRCodeViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeViewerController.h; path = Profile/View/ADQRCodeViewerController.h; sourceTree = "<group>"; };
+		901EF2C71D8E39F90065EFE3 /* ADQRCodeViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeViewerController.m; path = Profile/View/ADQRCodeViewerController.m; sourceTree = "<group>"; };
+		901EF2C81D8E39F90065EFE3 /* ADQRCodeViewerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADQRCodeViewerController.xib; path = Profile/View/ADQRCodeViewerController.xib; sourceTree = "<group>"; };
+		901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeScanView.h; path = Subscribe/View/ADQRCodeScanView.h; sourceTree = "<group>"; };
+		901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeScanView.m; path = Subscribe/View/ADQRCodeScanView.m; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
 		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -660,9 +660,9 @@
 		115619141D43D59A00ABA15F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */,
+				901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */,
 				115619151D43D5DB00ABA15F /* Subscribe.storyboard */,
-				57B5A88A1D8C11C10049C6FC /* ADQRCodeScanView.h */,
-				57B5A88B1D8C11C10049C6FC /* ADQRCodeScanView.m */,
 				115619321D44F4A100ABA15F /* ADSubscribeViewController.h */,
 				115619331D44F4A100ABA15F /* ADSubscribeViewController.m */,
 				110649541D8452DE00677E4D /* ADPublicActivityViewController.h */,
@@ -765,6 +765,9 @@
 		118AE3891D450EDD006DD475 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				901EF2C61D8E39F90065EFE3 /* ADQRCodeViewerController.h */,
+				901EF2C71D8E39F90065EFE3 /* ADQRCodeViewerController.m */,
+				901EF2C81D8E39F90065EFE3 /* ADQRCodeViewerController.xib */,
 				118AE38A1D450EFF006DD475 /* Profile.storyboard */,
 				24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */,
 				24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */,
@@ -777,9 +780,6 @@
 				248EC60A1D66165C00860852 /* ADSettingsViewController.h */,
 				248EC60B1D66165C00860852 /* ADSettingsViewController.m */,
 				248EC60C1D66165C00860852 /* ADSettingsViewController.xib */,
-				57B5A8AE1D8C30FD0049C6FC /* ADQRCodeViewerController.h */,
-				57B5A8AF1D8C30FD0049C6FC /* ADQRCodeViewerController.m */,
-				57B5A8B11D8C31400049C6FC /* ADQRCodeViewerController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1461,6 +1461,8 @@
 				116FA5EF1D74950D00F0AEE7 /* Repos.storyboard in Resources */,
 				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
 				57B5A8B21D8C31400049C6FC /* ADQRCodeViewerController.xib in Resources */,
+				901EF2CA1D8E39F90065EFE3 /* ADQRCodeViewerController.xib in Resources */,
+				247D61D51D869A0300BFAF31 /* ADReposReadmeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1640,6 +1642,7 @@
 				248569DE1D5E21820087E62D /* ADTableViewModel.m in Sources */,
 				241526511D8E625000AFC6DD /* ADReposReadmeTableViewCell.m in Sources */,
 				57B5A8B01D8C30FD0049C6FC /* ADQRCodeViewerController.m in Sources */,
+				901EF2C91D8E39F90065EFE3 /* ADQRCodeViewerController.m in Sources */,
 				110649571D8452DE00677E4D /* ADPublicActivityViewController.m in Sources */,
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
@@ -1676,6 +1679,7 @@
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
 				2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */,
+				901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */,
 				247D61CA1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m in Sources */,
 				11AA335B1D85AE6900C6E990 /* ADReposDetailViewModel.m in Sources */,
 				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
