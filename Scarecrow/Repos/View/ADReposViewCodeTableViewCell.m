@@ -22,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *separator1Height;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *separator2Height;
 
-@property (strong, nonatomic) ADReposDetailViewModel *viewModel;
-
 @end
 
 @implementation ADReposViewCodeTableViewCell
@@ -40,18 +38,19 @@
 }
 
 - (void)bindViewModel:(ADReposDetailViewModel *)viewModel {
-    self.viewModel = viewModel;
-    
-    [RACObserve(self.viewModel, reference)subscribeNext:^(OCTRef *reference) {
+    [RACObserve(viewModel, reference)subscribeNext:^(OCTRef *reference) {
         self.branchIcon.image = [UIImage ad_normalImageWithIdentifier:reference.ad_octiconIdentifier size:CGSizeMake(24, 24)];
         NSString *title = [reference.name componentsSeparatedByString:@"/"].lastObject;
         [self.branchButton setTitle:title forState:UIControlStateNormal];
     }];
     
-    self.timeLabel.text = self.viewModel.dateUpdated;
+    self.timeLabel.text = viewModel.dateUpdated;
     
     UIImage *image = [UIImage ad_highlightImageWithIdentifier:@"FileDirectory" size:CGSizeMake(22, 22)];
     [self.viewCodeButton setImage:image forState:UIControlStateNormal];
+    
+    self.viewCodeButton.rac_command = viewModel.viewCodeCommand;
+    self.branchButton.rac_command = viewModel.changeBranchCommand;
 }
 
 @end

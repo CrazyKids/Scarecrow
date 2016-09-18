@@ -58,7 +58,7 @@
 }
 
 - (void)dealloc {
-    self.readmeCell.webView.delegate = nil;
+    self.readmeCell.webview.delegate = nil;
 }
 
 - (void)bindViewModel {
@@ -79,17 +79,14 @@
         [self.tableView reloadData];
     }];
     
-    [[[RACObserve(self.viewModel, readmeHTML)ignore:nil]deliverOnMainThread]subscribeNext:^(NSString *readmeHTML) {
-        @strongify(self);
-        [self.readmeCell.webView loadHTMLString:readmeHTML baseURL:nil];
-    }];
+    [self.readmeCell bindViewModel:self.viewModel];
     
     RACSignal *startLoadSignal = [self rac_signalForSelector:@selector(webViewDidStartLoad:)];
     RACSignal *fininedLoadSignal = [self rac_signalForSelector:@selector(webViewDidFinishLoad:)];
     RACSignal *failedLoadSignal = [self rac_signalForSelector:@selector(webView:didFailLoadWithError:)];
-    self.readmeCell.webView.delegate = self;
+    self.readmeCell.webview.delegate = self;
     
-    RAC(self.readmeCell.webView, hidden) = [[[fininedLoadSignal mapReplace:@(NO)]distinctUntilChanged]startWith:@(YES)];
+    RAC(self.readmeCell.webview, hidden) = [[[fininedLoadSignal mapReplace:@(NO)]distinctUntilChanged]startWith:@(YES)];
     
     [fininedLoadSignal subscribeNext:^(RACTuple *tuple) {
         @strongify(self);
@@ -170,7 +167,7 @@
         case ADReposDetailDataViewCode:
             return 114;
         case ADReposDetailDataReadme:
-            return 44 + self.readmeCell.webView.frame.size.height + 45;
+            return self.readmeCell.height;
         default:
             break;
     }

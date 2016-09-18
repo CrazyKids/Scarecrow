@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *forkCountLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *separatorWidth;
 
-@property (strong, nonatomic) ADReposDetailViewModel *viewModel;
-
 @end
 
 @implementation ADReposStatisticsTableViewCell
@@ -33,13 +31,11 @@
     self.separatorWidth.constant = AD_1PX;
 }
 
-- (void)bindViewModel:(ADReposDetailViewModel *)viewModel {
-    self.viewModel = viewModel;
+- (void)bindViewModel:(ADReposDetailViewModel *)viewModel {    
+    self.forkCountLabel.text = [NSString stringWithFormat:@"%ld", viewModel.repos.forksCount];
+    self.starCountLabel.text = [NSString stringWithFormat:@"%ld", viewModel.repos.stargazersCount];
     
-    self.forkCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.forksCount];
-    self.starCountLabel.text = [NSString stringWithFormat:@"%ld", self.viewModel.repos.stargazersCount];
-    
-    [[RACObserve(self.viewModel.repos, stargazersCount) deliverOnMainThread]subscribeNext:^(NSNumber *stargazersCount) {
+    [[RACObserve(viewModel.repos, stargazersCount) deliverOnMainThread]subscribeNext:^(NSNumber *stargazersCount) {
         self.starCountLabel.text = stargazersCount.stringValue;
     }];
 }
