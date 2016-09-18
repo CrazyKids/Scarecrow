@@ -7,9 +7,10 @@
 //
 
 #import "ADViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface ADWebViewController : ADViewController<UIWebViewDelegate>
+@interface ADWebViewController : ADViewController<WKNavigationDelegate>
 
-@property (nonatomic, weak) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) WKWebView *webView;
 
 @end

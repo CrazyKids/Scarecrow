@@ -34,6 +34,7 @@
 		11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */; };
 		11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD85311D81C8C200698803 /* ADPublicReposViewController.m */; };
 		11BD85341D81C8C200698803 /* ADPublicReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */; };
+		11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C353EE1D8EE40E004BEBBB /* WebKit.framework */; };
 		11D43BD61D859D1D00D78D1B /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D43BD41D859D1D00D78D1B /* ADSubscribeTableViewCell.m */; };
 		11D43BD71D859D1D00D78D1B /* ADSubscribeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D43BD51D859D1D00D78D1B /* ADSubscribeTableViewCell.xib */; };
 		11EC821F1D6C9C73003ECCD2 /* ADFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */; };
@@ -393,6 +394,7 @@
 		11BD85301D81C8C200698803 /* ADPublicReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPublicReposViewController.h; sourceTree = "<group>"; };
 		11BD85311D81C8C200698803 /* ADPublicReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPublicReposViewController.m; sourceTree = "<group>"; };
 		11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADPublicReposViewController.xib; sourceTree = "<group>"; };
+		11C353EE1D8EE40E004BEBBB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		11D43BD31D859D1D00D78D1B /* ADSubscribeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeTableViewCell.h; path = Subscribe/View/ADSubscribeTableViewCell.h; sourceTree = "<group>"; };
 		11D43BD41D859D1D00D78D1B /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
 		11D43BD51D859D1D00D78D1B /* ADSubscribeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADSubscribeTableViewCell.xib; path = Subscribe/View/ADSubscribeTableViewCell.xib; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */,
 				247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */,
 				247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */,
 				AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */,
@@ -1118,6 +1121,7 @@
 		C8BA914AFB0D04ACD6A79ABF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11C353EE1D8EE40E004BEBBB /* WebKit.framework */,
 				2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */,
 				2423317B1D2E389900EF8698 /* Mantle.xcodeproj */,
 				2423316C1D2E388E00EF8698 /* OctoKitDependencies.xcodeproj */,

@@ -38,35 +38,39 @@
     
     NSParameterAssert(self.viewModel.request);
     
-    self.webView.delegate = self;
+    WKWebViewConfiguration *configuration = [WKWebViewConfiguration new];
+    configuration.preferences = [WKPreferences new];
+    configuration.userContentController = [WKUserContentController new];
+    
+    self.webView = [[WKWebView alloc]initWithFrame:self.view.bounds configuration:configuration];
+    self.webView.backgroundColor = [UIColor clearColor];
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.webView.navigationDelegate = self;
+    [self.view addSubview:self.webView];
+    
     [self.webView loadRequest:self.viewModel.request];
 }
 
-#pragma mark - UIWebViewDelegate
+- (void)dealloc {
+    self.webView.navigationDelegate = nil;
+}
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if (navigationType == UIWebViewNavigationTypeOther) {
-        if ([request.URL.scheme isEqualToString:@"https"] || [request.URL.scheme isEqualToString:@"http"]) {
-            self.viewModel.titleViewType = ADTitleViewTypeLoading;
-        }
-    } else {
-        [[UIApplication sharedApplication]openURL:request.URL];
+#pragma mark - WKNavigationDelegate
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSString *scheme = webView.URL.scheme;
+    if ([scheme isEqualToString:@"https"] || [scheme isEqualToString:@"http"]) {
+        self.viewModel.titleViewType = ADTitleViewTypeLoading;
     }
     
-    return YES;
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    
-
-}
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    self.title = title.stringByRemovingPercentEncoding;
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    [webView evaluateJavaScript:@"document.title" completionHandler:^(NSString * _Nullable title, NSError * _Nullable error) {
+        self.viewModel.titleViewType = ADTitleViewTypeDefault;
+        self.navigationItem.title = title.stringByRemovingPercentEncoding;
+    }];
 }
 
 #pragma mark - UIViewControllerRotation
