@@ -8,10 +8,12 @@
 
 #import "ADReposInfoViewModel.h"
 #import "OCTRepository+Persistence.h"
+#import "ADReposSettingsViewModel.h"
 
 @interface ADReposInfoViewModel ()
 
 @property (strong, nonatomic) OCTRepository *repos;
+@property (strong, nonatomic) RACCommand *rightBarCommand;
 
 @end
 
@@ -34,6 +36,16 @@
     [super initialize];
     
     self.request = [NSURLRequest requestWithURL:[self.repos ad_url]];
+    
+    @weakify(self);
+    self.rightBarCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADReposSettingsViewModel *viewModel = [[ADReposSettingsViewModel alloc]initWithParam:@{@"repos" : self.repos}];
+        [self pushViewControllerWithViewModel:viewModel];
+        
+        return [RACSignal empty];
+    }];
 }
 
 @end

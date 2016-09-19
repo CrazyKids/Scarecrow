@@ -27,6 +27,15 @@
     [super viewDidLoad];
     
     self.navigationItem.title = self.viewModel.repos.name;
+    
+    UIImage *image = [UIImage imageNamed:@"more"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:nil];
+}
+
+- (void)bindViewModel {
+    [super bindViewModel];
+    
+    self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.rightBarCommand;
 }
 
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {

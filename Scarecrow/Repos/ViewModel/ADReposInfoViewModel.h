@@ -11,5 +11,6 @@
 @interface ADReposInfoViewModel : ADWebViewModel
 
 @property (strong, nonatomic, readonly) OCTRepository *repos;
+@property (strong, nonatomic, readonly) RACCommand *rightBarCommand;
 
 @end

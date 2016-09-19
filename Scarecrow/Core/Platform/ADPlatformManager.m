@@ -87,6 +87,7 @@
              @"ADReposDetailViewModel" : @"ADReposDetailViewController",
              @"ADCodeTreeViewModel" : @"ADCodeTreeViewController",
              @"ADReposInfoViewModel" : @"ADReposInfoViewController",
+             @"ADReposSettingsViewModel" : @"ADReposSettingsViewController",
              };
 }
 
