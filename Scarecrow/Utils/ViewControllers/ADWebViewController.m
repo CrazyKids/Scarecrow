@@ -8,6 +8,7 @@
 
 #import "ADWebViewController.h"
 #import "ADWebViewModel.h"
+#import "ADBarButtonItem.h"
 
 @interface ADWebViewController ()
 
@@ -32,8 +33,10 @@
     
     self.automaticallyAdjustsScrollViewInsets = YES;
     
-    self.closeButton = [[UIBarButtonItem alloc]initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(popBack:)];
-    self.backButton = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
+    self.closeButton = [[ADBarButtonItem alloc]initWithTitle:@"Close" position:ADBarButtonLeft style:UIBarButtonItemStylePlain barColor:[UIColor whiteColor] target:self action:@selector(popBack:)];
+                        
+    self.backButton = [[ADBarButtonItem alloc]initWithTitle:@"Back" position:ADBarButtonBack style:UIBarButtonItemStylePlain barColor:[UIColor whiteColor] target:self action:@selector(goBack:)];
+    
     self.navigationItem.leftBarButtonItem = self.backButton;
     
     RACSignal *didFinishLoadSignal   = [self rac_signalForSelector:@selector(webViewDidFinishLoad:) fromProtocol:@protocol(UIWebViewDelegate)];

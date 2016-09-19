@@ -45,6 +45,7 @@
 		2415265A1D8E6EC400AFC6DD /* ADCodeTreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241526591D8E6EC400AFC6DD /* ADCodeTreeViewModel.m */; };
 		241526691D8E6FB800AFC6DD /* ADCodeTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241526671D8E6FB800AFC6DD /* ADCodeTreeViewController.m */; };
 		2415266A1D8E6FB800AFC6DD /* ADCodeTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241526681D8E6FB800AFC6DD /* ADCodeTreeViewController.xib */; };
+		241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
@@ -411,6 +412,8 @@
 		241526661D8E6FB800AFC6DD /* ADCodeTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCodeTreeViewController.h; sourceTree = "<group>"; };
 		241526671D8E6FB800AFC6DD /* ADCodeTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCodeTreeViewController.m; sourceTree = "<group>"; };
 		241526681D8E6FB800AFC6DD /* ADCodeTreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADCodeTreeViewController.xib; sourceTree = "<group>"; };
+		241526811D8F80BB00AFC6DD /* ADBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBarButtonItem.h; sourceTree = "<group>"; };
+		241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBarButtonItem.m; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
@@ -1078,6 +1081,8 @@
 				24AA83A51D676E02009D94D8 /* ADFollowButton.m */,
 				1106705D1D8859AA0041CB1D /* ADTableViewCellStyleValue1.h */,
 				1106705E1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m */,
+				241526811D8F80BB00AFC6DD /* ADBarButtonItem.h */,
+				241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */,
 			);
 			name = Views;
 			path = Utils/Views;
@@ -1592,6 +1597,7 @@
 				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
+				241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
 				1172FE8C1D8064A9007181BB /* ADReposTableViewCell.m in Sources */,
