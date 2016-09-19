@@ -35,6 +35,8 @@
 		11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD85311D81C8C200698803 /* ADPublicReposViewController.m */; };
 		11BD85341D81C8C200698803 /* ADPublicReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */; };
 		11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C353EE1D8EE40E004BEBBB /* WebKit.framework */; };
+		11C354031D902C52004BEBBB /* ADReposInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C354021D902C52004BEBBB /* ADReposInfoViewModel.m */; };
+		11C354121D9030C9004BEBBB /* ADReposInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C354111D9030C9004BEBBB /* ADReposInfoViewController.m */; };
 		11D43BD61D859D1D00D78D1B /* ADSubscribeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D43BD41D859D1D00D78D1B /* ADSubscribeTableViewCell.m */; };
 		11D43BD71D859D1D00D78D1B /* ADSubscribeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D43BD51D859D1D00D78D1B /* ADSubscribeTableViewCell.xib */; };
 		11EC821F1D6C9C73003ECCD2 /* ADFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC821D1D6C9C73003ECCD2 /* ADFollowersViewController.m */; };
@@ -396,6 +398,10 @@
 		11BD85311D81C8C200698803 /* ADPublicReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPublicReposViewController.m; sourceTree = "<group>"; };
 		11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADPublicReposViewController.xib; sourceTree = "<group>"; };
 		11C353EE1D8EE40E004BEBBB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		11C354011D902C52004BEBBB /* ADReposInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposInfoViewModel.h; sourceTree = "<group>"; };
+		11C354021D902C52004BEBBB /* ADReposInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposInfoViewModel.m; sourceTree = "<group>"; };
+		11C354101D9030C9004BEBBB /* ADReposInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposInfoViewController.h; sourceTree = "<group>"; };
+		11C354111D9030C9004BEBBB /* ADReposInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposInfoViewController.m; sourceTree = "<group>"; };
 		11D43BD31D859D1D00D78D1B /* ADSubscribeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeTableViewCell.h; path = Subscribe/View/ADSubscribeTableViewCell.h; sourceTree = "<group>"; };
 		11D43BD41D859D1D00D78D1B /* ADSubscribeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeTableViewCell.m; path = Subscribe/View/ADSubscribeTableViewCell.m; sourceTree = "<group>"; };
 		11D43BD51D859D1D00D78D1B /* ADSubscribeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADSubscribeTableViewCell.xib; path = Subscribe/View/ADSubscribeTableViewCell.xib; sourceTree = "<group>"; };
@@ -688,6 +694,8 @@
 				241526661D8E6FB800AFC6DD /* ADCodeTreeViewController.h */,
 				241526671D8E6FB800AFC6DD /* ADCodeTreeViewController.m */,
 				241526681D8E6FB800AFC6DD /* ADCodeTreeViewController.xib */,
+				11C354101D9030C9004BEBBB /* ADReposInfoViewController.h */,
+				11C354111D9030C9004BEBBB /* ADReposInfoViewController.m */,
 			);
 			name = View;
 			path = Repos/View;
@@ -708,6 +716,8 @@
 				11AA335A1D85AE6900C6E990 /* ADReposDetailViewModel.m */,
 				241526581D8E6EC400AFC6DD /* ADCodeTreeViewModel.h */,
 				241526591D8E6EC400AFC6DD /* ADCodeTreeViewModel.m */,
+				11C354011D902C52004BEBBB /* ADReposInfoViewModel.h */,
+				11C354021D902C52004BEBBB /* ADReposInfoViewModel.m */,
 			);
 			name = ViewModel;
 			path = Repos/ViewModel;
@@ -1621,6 +1631,7 @@
 				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				2415265A1D8E6EC400AFC6DD /* ADCodeTreeViewModel.m in Sources */,
+				11C354121D9030C9004BEBBB /* ADReposInfoViewController.m in Sources */,
 				248569E41D5E21CA0087E62D /* ADWebViewModel.m in Sources */,
 				2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */,
 				2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */,
@@ -1659,6 +1670,7 @@
 				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,
 				248569DF1D5E21820087E62D /* ADViewModel.m in Sources */,
 				247D61BA1D86991500BFAF31 /* ADReposStatisticsTableViewCell.m in Sources */,
+				11C354031D902C52004BEBBB /* ADReposInfoViewModel.m in Sources */,
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
 				11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */,
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,

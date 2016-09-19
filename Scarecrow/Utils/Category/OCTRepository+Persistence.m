@@ -86,4 +86,22 @@
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
+- (NSURL *)ad_url {
+    if (self.HTMLURL) {
+        return self.HTMLURL;
+    }
+    
+    OCTRepository *repos = [[self class]ad_fetchFullRepos:self];
+    if (repos) {
+        [self mergeValuesForKeysFromModel:repos];
+    }
+    
+    if (self.HTMLURL) {
+        return self.HTMLURL;
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"https://github.com/%@/%@", self.ownerLogin, self.name];
+    return [NSURL URLWithString:url];
+}
+
 @end
