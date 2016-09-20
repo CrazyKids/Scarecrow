@@ -9,12 +9,24 @@
 #import "ADQRCodeViewerController.h"
 #import "ADQRCodeViewModel.h"
 #import <ZRQRCodeViewController/ZRQRCodeController.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIColor+Scarecrow.h"
 
 @interface ADQRCodeViewerController ()
 
 @property (strong, nonatomic, readonly) ADQRCodeViewModel *viewModel;
 
 @property (nonatomic, strong) UIImageView *imageView;
+
+@property (atomic, assign) BOOL isFirstLoad;
+
+@property (weak, nonatomic) IBOutlet UIImageView *smallAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *ownerName;
+@property (weak, nonatomic) IBOutlet UILabel *ownerHomepage;
+@property (weak, nonatomic) IBOutlet UIView *mainView;
+
+
+
 
 @end
 
@@ -27,22 +39,29 @@
     return vc;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!self.isFirstLoad) {
+        self.isFirstLoad = true;
 
-    CGRect rect = CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width - 20, [UIScreen mainScreen].bounds.size.width - 20);
-    UIImage *center = [UIImage imageNamed:@"centericon"];
-    UIImageView *myImage = [[[ZRQRCodeViewController alloc] init] generateQuickResponseCodeWithFrame:rect dataString:@"https://www.baidu.com" centerImage:center needShadow:YES];
-    ADQRCodeViewerController *viewer = [[ADQRCodeViewerController alloc] init];
-    viewer.imageView = myImage;
-    
-    rect.origin.x = 10;
-    rect.origin.y = (self.view.frame.size.height - rect.size.height) / 2;
-    rect.size.width = rect.size.width - 20;
-    self.imageView.frame = rect;
-    [self.view addSubview:self.imageView];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
+        OCTUser *user = self.viewModel.user;
+        NSString *qrcontent = [NSString stringWithFormat:@"%@/Scarecrow", user.HTMLURL.absoluteString];
+        UIImageView *image = [[UIImageView alloc] init];
+        [image sd_setImageWithURL:user.avatarURL];
+        UIImage *iconImage = image.image;
+        if (iconImage) {
+            [self.smallAvatar setImage:iconImage];
+            [self.ownerName setText:user.name];
+            [self.ownerHomepage setText:user.HTMLURL.absoluteString];
+            
+            CGRect rect0 = self.mainView.frame;
+            CGRect rect = CGRectMake(10, 10, rect0.size.width - 20, rect0.size.width - 20);
+            UIImageView *myImage = [[[ZRQRCodeViewController alloc] init] generateQuickResponseCodeWithFrame:rect dataString:qrcontent centerImage:iconImage needShadow:YES];
+            [self.mainView addSubview:myImage];
+        }
+    }
 }
 
 @end

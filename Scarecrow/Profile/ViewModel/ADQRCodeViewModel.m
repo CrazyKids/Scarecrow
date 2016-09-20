@@ -9,12 +9,6 @@
 #import "ADQRCodeViewModel.h"
 #import "OCTUser+Persistence.h"
 
-@interface ADQRCodeViewModel()
-
-@property (strong, nonatomic) OCTUser *user;
-
-@end
-
 @implementation ADQRCodeViewModel
 
 - (instancetype)initWithParam:(NSDictionary *)param {
@@ -25,14 +19,11 @@
     return self;
 }
 
-- (BOOL)isCurrentUser {
-    return [self.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID];
-}
-
 - (void)initialize {
     [super initialize];
-
-
+    
+    self.title = @"My QR Code";
 }
+
 
 @end

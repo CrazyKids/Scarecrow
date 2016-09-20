@@ -126,7 +126,7 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case ADUserInfoDataTypeGenerateQRCode:
-            cell.imageView.image = [UIImage ad_imageWithIcon:@"Rss" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.imageView.image = [UIImage imageNamed:@"icon_qrcode"];
             cell.textLabel.text = @"My QR Code";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;

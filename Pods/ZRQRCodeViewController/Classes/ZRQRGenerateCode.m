@@ -28,7 +28,7 @@
     
     UIImageView *myImage = [self generateQRCodeWithFrame:imageRect dataString:dataString];
     if (image) {
-        [self addCenterImageWithOrigin:&myImage withWidth:100 centerImage:image];
+        [self addCenterImageWithOrigin:&myImage withWidth:80 centerImage:image];
     }
     return myImage;
 }

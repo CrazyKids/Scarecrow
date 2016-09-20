@@ -10,4 +10,6 @@
 
 @interface ADQRCodeViewModel : ADViewModel
 
+@property (strong, nonatomic) OCTUser *user;
+
 @end
