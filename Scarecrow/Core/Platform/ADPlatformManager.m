@@ -89,6 +89,8 @@
              @"ADReposInfoViewModel" : @"ADReposInfoViewController",
              @"ADReposSettingsViewModel" : @"ADReposSettingsViewController",
              @"ADQRCodeViewModel" : @"ADQRCodeViewerController"
+             @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
              };
 }
 

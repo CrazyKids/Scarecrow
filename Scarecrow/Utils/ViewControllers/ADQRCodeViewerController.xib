@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ADQRCodeViewerController">
             <connections>
-                <outlet property="mainView" destination="hZn-3F-6k4" id="vkg-ux-1wy"/>
-                <outlet property="ownerHomepage" destination="pW8-RH-uGz" id="BDk-aF-xYq"/>
+                <outlet property="detailLabel" destination="pW8-RH-uGz" id="OXA-df-Ah1"/>
+                <outlet property="mainView" destination="J7o-0Y-zfq" id="KAY-V6-XnF"/>
                 <outlet property="ownerName" destination="1KY-R3-vwp" id="3hk-Tl-E77"/>
                 <outlet property="smallAvatar" destination="Gsd-lU-ADn" id="ZRL-jI-3NF"/>
                 <outlet property="view" destination="299-oM-ofT" id="K2s-zg-SZI"/>
@@ -48,27 +48,27 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZn-3F-6k4">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-0Y-zfq">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="hZn-3F-6k4" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="10" id="0uz-1G-aKu"/>
                         <constraint firstItem="kAO-7R-eCl" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="20" id="4a5-Zx-auR"/>
+                        <constraint firstItem="J7o-0Y-zfq" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="10" id="4m8-hx-fHR"/>
                         <constraint firstItem="1KY-R3-vwp" firstAttribute="top" secondItem="95d-Bx-BFS" secondAttribute="top" constant="40" id="CO4-Yr-UhU"/>
-                        <constraint firstItem="kAO-7R-eCl" firstAttribute="top" secondItem="hZn-3F-6k4" secondAttribute="bottom" constant="10" id="OZ3-OX-O5a"/>
+                        <constraint firstItem="kAO-7R-eCl" firstAttribute="top" secondItem="J7o-0Y-zfq" secondAttribute="bottom" constant="10" id="HbW-Bi-pCf"/>
                         <constraint firstAttribute="trailing" secondItem="kAO-7R-eCl" secondAttribute="trailing" constant="20" id="Q5S-9S-3ET"/>
                         <constraint firstItem="1KY-R3-vwp" firstAttribute="leading" secondItem="Gsd-lU-ADn" secondAttribute="trailing" constant="8" id="VJf-1V-V4E"/>
-                        <constraint firstAttribute="trailing" secondItem="hZn-3F-6k4" secondAttribute="trailing" constant="10" id="Vww-LV-A8n"/>
                         <constraint firstAttribute="trailing" secondItem="1KY-R3-vwp" secondAttribute="trailing" constant="20" id="bOv-wb-5VG"/>
                         <constraint firstItem="Gsd-lU-ADn" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="19" id="e14-uB-9su"/>
                         <constraint firstItem="pW8-RH-uGz" firstAttribute="leading" secondItem="Gsd-lU-ADn" secondAttribute="trailing" constant="8" id="ez3-n6-h6U"/>
+                        <constraint firstAttribute="trailing" secondItem="J7o-0Y-zfq" secondAttribute="trailing" constant="10" id="ezz-NG-cbP"/>
                         <constraint firstAttribute="bottom" secondItem="kAO-7R-eCl" secondAttribute="bottom" constant="15" id="fGs-89-oxu"/>
                         <constraint firstItem="Gsd-lU-ADn" firstAttribute="top" secondItem="95d-Bx-BFS" secondAttribute="top" constant="21" id="glB-ac-bEp"/>
                         <constraint firstAttribute="trailing" secondItem="pW8-RH-uGz" secondAttribute="trailing" constant="20" id="gxD-wt-QbD"/>
                         <constraint firstItem="pW8-RH-uGz" firstAttribute="top" secondItem="1KY-R3-vwp" secondAttribute="bottom" constant="10" id="hwI-We-7kP"/>
-                        <constraint firstItem="hZn-3F-6k4" firstAttribute="top" secondItem="Gsd-lU-ADn" secondAttribute="bottom" constant="30" id="kDa-Zd-SaW"/>
+                        <constraint firstItem="J7o-0Y-zfq" firstAttribute="top" secondItem="Gsd-lU-ADn" secondAttribute="bottom" constant="10" id="nIr-FA-GwN"/>
                         <constraint firstAttribute="height" constant="500" id="vzr-gR-LyK"/>
                     </constraints>
                 </view>
