@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,13 +69,13 @@
                         <constraint firstAttribute="trailing" secondItem="pW8-RH-uGz" secondAttribute="trailing" constant="20" id="gxD-wt-QbD"/>
                         <constraint firstItem="pW8-RH-uGz" firstAttribute="top" secondItem="1KY-R3-vwp" secondAttribute="bottom" constant="10" id="hwI-We-7kP"/>
                         <constraint firstItem="J7o-0Y-zfq" firstAttribute="top" secondItem="Gsd-lU-ADn" secondAttribute="bottom" constant="10" id="nIr-FA-GwN"/>
-                        <constraint firstAttribute="height" constant="500" id="vzr-gR-LyK"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="95d-Bx-BFS" firstAttribute="leading" secondItem="299-oM-ofT" secondAttribute="leading" constant="16" id="0l2-vh-VCf"/>
+                <constraint firstAttribute="bottom" secondItem="95d-Bx-BFS" secondAttribute="bottom" constant="50" id="3MO-fH-jaq"/>
                 <constraint firstItem="95d-Bx-BFS" firstAttribute="top" secondItem="299-oM-ofT" secondAttribute="top" constant="50" id="FpF-DL-1OW"/>
                 <constraint firstAttribute="trailing" secondItem="95d-Bx-BFS" secondAttribute="trailing" constant="16" id="GhU-xt-BEM"/>
             </constraints>

@@ -39,17 +39,31 @@
     self.ownerName.text = self.viewModel.owner;
     self.detailLabel.text = self.viewModel.detail;
     
-    CGRect rect0 = self.mainView.frame;
-    CGRect rect = CGRectMake(10, 10, rect0.size.width - 20, rect0.size.height - 20);
-    
     @weakify(self);
-    [RACObserve(self.viewModel, qrImage) subscribeNext:^(UIImage *qrImage) {
+    dispatch_async(dispatch_get_main_queue(), ^{
         @strongify(self);
-        UIImageView *qrImageView = [[[ZRQRCodeViewController alloc] init] generateQuickResponseCodeWithFrame:rect dataString:self.viewModel.qrCode centerImage:qrImage needShadow:YES];
-        qrImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
-        [self.mainView addSubview:qrImageView];
-    }];
+        [RACObserve(self.viewModel, qrImage) subscribeNext:^(UIImage *qrImage) {
+            @strongify(self);
+            
+            CGRect rect0 = self.mainView.frame;
+            CGFloat width = rect0.size.width;
+            CGFloat height = rect0.size.height;
+            if (width > height) {
+                height -= 20;
+                width = height;
+            } else {
+                width -= 20;
+                height = width;
+            }
+            
+            CGRect rect = CGRectMake((rect0.size.width - width) / 2.0, (rect0.size.height - height) / 2.0, width, height);
+            
+            UIImageView *qrImageView = [[[ZRQRCodeViewController alloc] init] generateQuickResponseCodeWithFrame:rect dataString:self.viewModel.qrCode centerImage:qrImage needShadow:YES];
+            
+            [self.mainView addSubview:qrImageView];
+        }];
+    });
 }
 
 @end
