@@ -46,8 +46,15 @@
             
             return cell;
         }
-        case ADReposSettingDataQRCode:
-            break;
+        case ADReposSettingDataQRCode: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellStyleValue1" forIndexPath:indexPath];
+            
+            cell.imageView.image = [UIImage imageNamed:@"icon_qrcode"];
+            cell.textLabel.text = @"Repos QR Code Info";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            return cell;
+        }
         default:
             break;
     }
@@ -64,7 +71,7 @@
         case ADReposSettingDataOwner:
             return 88;
         case ADReposSettingDataQRCode:
-            break;
+            return 44;
         default:
             break;
     }

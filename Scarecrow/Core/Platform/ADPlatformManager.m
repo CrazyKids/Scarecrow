@@ -88,7 +88,7 @@
              @"ADCodeTreeViewModel" : @"ADCodeTreeViewController",
              @"ADReposInfoViewModel" : @"ADReposInfoViewController",
              @"ADReposSettingsViewModel" : @"ADReposSettingsViewController",
-             @"ADQRCodeViewModel" : @"ADQRCodeViewerController"
+             @"ADQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
              };

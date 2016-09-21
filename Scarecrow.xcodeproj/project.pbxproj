@@ -126,6 +126,9 @@
 		24AA83A61D676E02009D94D8 /* ADFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AA83A51D676E02009D94D8 /* ADFollowButton.m */; };
 		24AB750C1D922E0F003EDA7D /* ADQRCodeViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AB750A1D922E0F003EDA7D /* ADQRCodeViewerController.m */; };
 		24AB750D1D922E0F003EDA7D /* ADQRCodeViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AB750B1D922E0F003EDA7D /* ADQRCodeViewerController.xib */; };
+		24AB752E1D9235E9003EDA7D /* ADUserQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AB752D1D9235E9003EDA7D /* ADUserQRCodeViewModel.m */; };
+		24AB753C1D9235F8003EDA7D /* ADReposQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AB753B1D9235F8003EDA7D /* ADReposQRCodeViewModel.m */; };
+		24AB753F1D923610003EDA7D /* ADQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AB753E1D923610003EDA7D /* ADQRCodeViewModel.m */; };
 		24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */; };
 		24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */; };
 		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
@@ -552,6 +555,12 @@
 		24AB75091D922E0F003EDA7D /* ADQRCodeViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADQRCodeViewerController.h; sourceTree = "<group>"; };
 		24AB750A1D922E0F003EDA7D /* ADQRCodeViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADQRCodeViewerController.m; sourceTree = "<group>"; };
 		24AB750B1D922E0F003EDA7D /* ADQRCodeViewerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADQRCodeViewerController.xib; sourceTree = "<group>"; };
+		24AB752C1D9235E9003EDA7D /* ADUserQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserQRCodeViewModel.h; path = Profile/ViewModel/ADUserQRCodeViewModel.h; sourceTree = "<group>"; };
+		24AB752D1D9235E9003EDA7D /* ADUserQRCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserQRCodeViewModel.m; path = Profile/ViewModel/ADUserQRCodeViewModel.m; sourceTree = "<group>"; };
+		24AB753A1D9235F8003EDA7D /* ADReposQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposQRCodeViewModel.h; sourceTree = "<group>"; };
+		24AB753B1D9235F8003EDA7D /* ADReposQRCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposQRCodeViewModel.m; sourceTree = "<group>"; };
+		24AB753D1D923610003EDA7D /* ADQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADQRCodeViewModel.h; sourceTree = "<group>"; };
+		24AB753E1D923610003EDA7D /* ADQRCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADQRCodeViewModel.m; sourceTree = "<group>"; };
 		24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderViewModel.h; path = Profile/ViewModel/ADAvatarHeaderViewModel.h; sourceTree = "<group>"; };
 		24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderViewModel.m; path = Profile/ViewModel/ADAvatarHeaderViewModel.m; sourceTree = "<group>"; };
 		24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderView.h; path = Profile/View/ADAvatarHeaderView.h; sourceTree = "<group>"; };
@@ -720,6 +729,8 @@
 		116FA5EC1D74950D00F0AEE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24AB753A1D9235F8003EDA7D /* ADReposQRCodeViewModel.h */,
+				24AB753B1D9235F8003EDA7D /* ADReposQRCodeViewModel.m */,
 				116FA5ED1D74950D00F0AEE7 /* ADReposViewModel.h */,
 				116FA5EE1D74950D00F0AEE7 /* ADReposViewModel.m */,
 				1172FE7B1D805C8E007181BB /* ADReposItemViewModel.h */,
@@ -1090,8 +1101,8 @@
 		248569CB1D5E21820087E62D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				11C3543D1D9185C7004BEBBB /* ADQRCodeViewModel.h */,
-				11C3543E1D9185C7004BEBBB /* ADQRCodeViewModel.m */,
+				24AB753D1D923610003EDA7D /* ADQRCodeViewModel.h */,
+				24AB753E1D923610003EDA7D /* ADQRCodeViewModel.m */,
 				248569CC1D5E21820087E62D /* ADTableViewModel.h */,
 				248569CD1D5E21820087E62D /* ADTableViewModel.m */,
 				248569CE1D5E21820087E62D /* ADViewModel.h */,
@@ -1130,6 +1141,8 @@
 		24A53C8D1D50211C00749A30 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24AB752C1D9235E9003EDA7D /* ADUserQRCodeViewModel.h */,
+				24AB752D1D9235E9003EDA7D /* ADUserQRCodeViewModel.m */,
 				24A53C8E1D50214400749A30 /* ADProfileViewModel.h */,
 				24A53C8F1D50214400749A30 /* ADProfileViewModel.m */,
 				24B0D14E1D5F764500805A45 /* ADAvatarHeaderViewModel.h */,
@@ -1138,8 +1151,6 @@
 				241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */,
 				248EC6041D66145200860852 /* ADSetttingsViewModel.h */,
 				248EC6051D66145200860852 /* ADSetttingsViewModel.m */,
-				11C3543A1D9185AB004BEBBB /* ADUserQRCodeViewModel.h */,
-				11C3543B1D9185AB004BEBBB /* ADUserQRCodeViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1632,7 +1643,6 @@
 				241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
-				11C354471D919B7A004BEBBB /* ADReposQRCodeViewModel.m in Sources */,
 				1172FE8C1D8064A9007181BB /* ADReposTableViewCell.m in Sources */,
 				246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */,
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
@@ -1664,7 +1674,6 @@
 				248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */,
 				11C3541E1D90449D004BEBBB /* ADReposSettingsViewController.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
-				11C3543C1D9185AB004BEBBB /* ADUserQRCodeViewModel.m in Sources */,
 				11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */,
 				248EC6061D66145200860852 /* ADSetttingsViewModel.m in Sources */,
 				248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */,
@@ -1674,12 +1683,12 @@
 				24AB750C1D922E0F003EDA7D /* ADQRCodeViewerController.m in Sources */,
 				116FA5DB1D74933000F0AEE7 /* OCTRepository+Persistence.m in Sources */,
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
+				24AB752E1D9235E9003EDA7D /* ADUserQRCodeViewModel.m in Sources */,
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
 				2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */,
 				901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */,
 				247D61CA1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.m in Sources */,
-				11C3543F1D9185C7004BEBBB /* ADQRCodeViewModel.m in Sources */,
 				11AA335B1D85AE6900C6E990 /* ADReposDetailViewModel.m in Sources */,
 				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
 				1106705F1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m in Sources */,
@@ -1688,7 +1697,6 @@
 				11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */,
 				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				11C3541A1D90403B004BEBBB /* ADReposSettingsViewModel.m in Sources */,
-				57B5A88C1D8C11C10049C6FC /* ADQRCodeScanView.m in Sources */,
 				11C354231D904603004BEBBB /* ADReposOwnerTableViewCell.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,
@@ -1696,6 +1704,7 @@
 				110649481D8452BC00677E4D /* ADPublicActivityViewModel.m in Sources */,
 				2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */,
 				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,
+				24AB753C1D9235F8003EDA7D /* ADReposQRCodeViewModel.m in Sources */,
 				248569DF1D5E21820087E62D /* ADViewModel.m in Sources */,
 				247D61BA1D86991500BFAF31 /* ADReposStatisticsTableViewCell.m in Sources */,
 				11C354031D902C52004BEBBB /* ADReposInfoViewModel.m in Sources */,
@@ -1704,6 +1713,7 @@
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
 				248569E71D5E22110087E62D /* ADOauthViewModel.m in Sources */,
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
+				24AB753F1D923610003EDA7D /* ADQRCodeViewModel.m in Sources */,
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,
 				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
 				248EC5F81D660A9800860852 /* OCTClient+Scarecrow.m in Sources */,
