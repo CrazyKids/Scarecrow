@@ -42,7 +42,8 @@
     self.owner = self.user.name;
     self.avatarURL = self.user.avatarURL;
     self.detail = self.user.HTMLURL.absoluteString;
-    self.qrCode = [NSURL ad_userLink:self.user.login].absoluteString;
+//    self.qrCode = [NSURL ad_userLink:self.user.login].absoluteString;
+    self.qrCode = self.user.HTMLURL.absoluteString;
     
     @weakify(self);
     if (self.avatarURL) {
