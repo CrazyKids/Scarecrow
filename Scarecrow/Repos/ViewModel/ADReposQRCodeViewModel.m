@@ -39,10 +39,10 @@
     
     self.title = @"Repos QR Code Info";
     
-    self.avatarURL = self.repos.ownerAvatarURL;
+    RAC(self, avatarURL) = RACObserve(self.repos, ownerAvatarURL);
+    
     self.owner = self.repos.ownerLogin;
     self.detail = self.repos.name;
-//    self.qrCode = [NSURL ad_reposLink:[NSString stringWithFormat:@"%@/%@", self.repos.ownerLogin, self.repos.name] referName:nil].absoluteString;
     self.qrCode = self.repos.HTMLURL.absoluteString;
     self.qrImage = [UIImage imageNamed:@"welcomeIcon"];
 }

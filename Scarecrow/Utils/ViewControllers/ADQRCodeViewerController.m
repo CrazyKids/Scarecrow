@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 
+@property (strong, nonatomic) UIImageView *qrImageView;
+
 @end
 
 @implementation ADQRCodeViewerController
@@ -35,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.smallAvatar sd_setImageWithURL:self.viewModel.avatarURL placeholderImage:[UIImage imageNamed:@"default_avatar"]];
+    self.smallAvatar.image = [UIImage imageNamed:@"default_avatar"];
     self.ownerName.text = self.viewModel.owner;
     self.detailLabel.text = self.viewModel.detail;
     
@@ -43,7 +45,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         @strongify(self);
         
-        [RACObserve(self.viewModel, qrImage) subscribeNext:^(UIImage *qrImage) {
+        [[RACObserve(self.viewModel, qrImage) distinctUntilChanged] subscribeNext:^(UIImage *qrImage) {
             @strongify(self);
             
             CGRect rect0 = self.mainView.frame;
@@ -61,9 +63,26 @@
             
             UIImageView *qrImageView = [[[ZRQRCodeViewController alloc] init] generateQuickResponseCodeWithFrame:rect dataString:self.viewModel.qrCode centerImage:qrImage needShadow:YES];
             
+            [self.qrImageView removeFromSuperview];
+            self.qrImageView = qrImageView;
+            
             [self.mainView addSubview:qrImageView];
         }];
     });
+}
+
+- (void)bindViewModel {
+    [super bindViewModel];
+    
+    @weakify(self);
+    [[RACObserve(self.viewModel, avatarURL) distinctUntilChanged]subscribeNext:^(NSURL *avatarURL) {
+        [[SDWebImageManager sharedManager]downloadImageWithURL:avatarURL options:SDWebImageRefreshCached progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            @strongify(self);
+            if (image && finished) {
+                self.smallAvatar.image = image;
+            }
+        }];
+    }];
 }
 
 @end

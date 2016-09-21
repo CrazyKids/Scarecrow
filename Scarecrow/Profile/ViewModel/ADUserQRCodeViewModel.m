@@ -39,22 +39,29 @@
     [super initialize];
     
     self.title = @"QR Code Info";
+    
+    RAC(self, avatarURL) = RACObserve(self.user, avatarURL);
+    
     self.owner = self.user.name;
-    self.avatarURL = self.user.avatarURL;
-    self.detail = self.user.HTMLURL.absoluteString;
-//    self.qrCode = [NSURL ad_userLink:self.user.login].absoluteString;
-    self.qrCode = self.user.HTMLURL.absoluteString;
+    
+    NSString *userHTMLURL = self.user.HTMLURL.absoluteString;
+    if (!userHTMLURL.length) {
+        userHTMLURL = [NSString stringWithFormat:@"https://github.com/%@", self.owner];
+    }
+    
+    self.detail = userHTMLURL;
+    self.qrCode = userHTMLURL;
     
     @weakify(self);
-    if (self.avatarURL) {
-        self.qrImage = nil;
-        [[SDWebImageManager sharedManager]downloadImageWithURL:self.avatarURL options:SDWebImageRefreshCached progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+    
+    [[RACObserve(self, avatarURL) distinctUntilChanged] subscribeNext:^(NSURL *avatarURL) {
+        [[SDWebImageManager sharedManager]downloadImageWithURL:avatarURL options:SDWebImageRefreshCached progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             @strongify(self);
             if (image && finished) {
                 self.qrImage = image;
             }
         }];
-    }
+    }];
 }
 
 @end
