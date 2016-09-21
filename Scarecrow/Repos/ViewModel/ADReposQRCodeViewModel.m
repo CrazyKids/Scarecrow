@@ -37,6 +37,8 @@
 - (void)initialize {
     [super initialize];
     
+    self.title = @"Repos QR Code Info";
+    
     self.avatarURL = self.repos.ownerAvatarURL;
     self.owner = self.repos.ownerLogin;
     self.detail = self.repos.name;

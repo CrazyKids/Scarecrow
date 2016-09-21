@@ -62,6 +62,8 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
                                  @(ADUserInfoDataTypeLocation),
                                  @(ADUserInfoDataTypeMail),
                                  @(ADUserInfoDataTypeLink),
+                                 ],
+                             @[
                                  @(ADUserInfoDataTypeGenerateQRCode),
                                  ],
                              ];

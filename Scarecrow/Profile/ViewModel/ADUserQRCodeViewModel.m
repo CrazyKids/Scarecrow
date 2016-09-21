@@ -38,7 +38,7 @@
 - (void)initialize {
     [super initialize];
     
-    self.title = @"My QRCode";
+    self.title = @"QR Code Info";
     self.owner = self.user.name;
     self.avatarURL = self.user.avatarURL;
     self.detail = self.user.HTMLURL.absoluteString;

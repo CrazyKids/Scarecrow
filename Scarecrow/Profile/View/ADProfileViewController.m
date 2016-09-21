@@ -127,7 +127,7 @@
             break;
         case ADUserInfoDataTypeGenerateQRCode:
             cell.imageView.image = [UIImage imageNamed:@"icon_qrcode"];
-            cell.textLabel.text = @"My QR Code";
+            cell.textLabel.text = @"QR Code Info";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         default:
