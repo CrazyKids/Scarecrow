@@ -29,17 +29,16 @@
     [super viewDidLoad];
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if ([request.URL.scheme isEqualToString:@"scarecrow"]) {
-        NSDictionary *param = request.URL.oct_queryArguments;
+#pragma mark - WKNavigationDelegate
+
+-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSString *scheme = webView.URL.scheme;
+    if ([scheme isEqualToString:@"scarecrow"]) {
+        NSDictionary *param = webView.URL.oct_queryArguments;
         if ([param[@"state"] isEqualToString:self.viewModel.UUID] && self.viewModel.callback) {
             self.viewModel.callback(param[@"code"]);
         }
-    } else if (navigationType == UIWebViewNavigationTypeOther) {
-        return [super webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     }
-    
-    return YES;
 }
 
 #pragma mark - UIViewControllerRotation
