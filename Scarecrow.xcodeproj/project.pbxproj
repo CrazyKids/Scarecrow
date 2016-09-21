@@ -31,6 +31,7 @@
 		11AA335B1D85AE6900C6E990 /* ADReposDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA335A1D85AE6900C6E990 /* ADReposDetailViewModel.m */; };
 		11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA33681D85AE7F00C6E990 /* ADReposDetailViewController.m */; };
 		11AA336B1D85AE7F00C6E990 /* ADReposDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11AA33691D85AE7F00C6E990 /* ADReposDetailViewController.xib */; };
+		11AD14D81D92EB2000B1F98D /* ADQRCodeCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AD14D71D92EB2000B1F98D /* ADQRCodeCompletion.m */; };
 		11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */; };
 		11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD85311D81C8C200698803 /* ADPublicReposViewController.m */; };
 		11BD85341D81C8C200698803 /* ADPublicReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BD85321D81C8C200698803 /* ADPublicReposViewController.xib */; };
@@ -399,6 +400,8 @@
 		11AA33671D85AE7F00C6E990 /* ADReposDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDetailViewController.h; sourceTree = "<group>"; };
 		11AA33681D85AE7F00C6E990 /* ADReposDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDetailViewController.m; sourceTree = "<group>"; };
 		11AA33691D85AE7F00C6E990 /* ADReposDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADReposDetailViewController.xib; sourceTree = "<group>"; };
+		11AD14D61D92EB2000B1F98D /* ADQRCodeCompletion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeCompletion.h; path = Subscribe/View/ADQRCodeCompletion.h; sourceTree = "<group>"; };
+		11AD14D71D92EB2000B1F98D /* ADQRCodeCompletion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeCompletion.m; path = Subscribe/View/ADQRCodeCompletion.m; sourceTree = "<group>"; };
 		11BD851C1D81C09800698803 /* ADPublicReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPublicReposViewModel.h; sourceTree = "<group>"; };
 		11BD851D1D81C09800698803 /* ADPublicReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPublicReposViewModel.m; sourceTree = "<group>"; };
 		11BD85301D81C8C200698803 /* ADPublicReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPublicReposViewController.h; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				11D43BD31D859D1D00D78D1B /* ADSubscribeTableViewCell.h */,
 				11D43BD41D859D1D00D78D1B /* ADSubscribeTableViewCell.m */,
 				11D43BD51D859D1D00D78D1B /* ADSubscribeTableViewCell.xib */,
+				11AD14D61D92EB2000B1F98D /* ADQRCodeCompletion.h */,
+				11AD14D71D92EB2000B1F98D /* ADQRCodeCompletion.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1633,6 +1638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AD14D81D92EB2000B1F98D /* ADQRCodeCompletion.m in Sources */,
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
 				243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,

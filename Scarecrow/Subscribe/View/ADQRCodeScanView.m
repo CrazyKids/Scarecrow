@@ -9,6 +9,7 @@
 #import "ADQRCodeScanView.h"
 #import <ZRQRCodeViewController/ZRQRCodeController.h>
 #import <ZRAlertController/ZRAlertController.h>
+#import "ADQRCodeCompletion.h"
 
 @interface ADQRCodeScanView()
 @property (nonatomic, strong) NSTimer *timer;
@@ -32,10 +33,19 @@
     
     ZRQRCodeViewController *qrCode = [[ZRQRCodeViewController alloc] initWithScanType:ZRQRCodeScanTypeContinuation customView:self navigationBarTitle:@"QRCode Scan"];
     qrCode.VCTintColor = [UIColor whiteColor];
-    //__weak typeof(self) wself = self;
+    __weak typeof(self) wself = self;
     [qrCode QRCodeScanningWithViewController:self.lastViewController completion:^(NSString *strValue) {
         NSLog(@"QRCode Scan Result = %@ ", strValue);
-     
+        
+        UIViewController *vc = wself.lastViewController;
+        [[[ADQRCodeCompletion alloc] init] performQRCodeCompletion:vc stringValue:strValue removeTopAfterSuccess:^() {
+            for (UIViewController *tmpVC in self.lastViewController.navigationController.childViewControllers) {
+                if ([tmpVC isKindOfClass:[ZRQRCodeViewController class]]) {
+                    [self.lastViewController.navigationController popViewControllerAnimated:NO];
+                    break;
+                }
+            }
+        }];
     } failure:^(NSString *message) {
         [[ZRAlertController defaultAlert] alertShowWithTitle:@"Note" message:message okayButton:@"Ok" completion:^{ }];
         NSLog(@"Error Message = %@", message);
