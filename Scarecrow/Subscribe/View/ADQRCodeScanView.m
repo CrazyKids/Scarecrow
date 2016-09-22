@@ -11,6 +11,8 @@
 #import <ZRAlertController/ZRAlertController.h>
 #import "ADQRCodeCompletion.h"
 
+#define SCROLL_LINE_SPEED 2.0
+
 @interface ADQRCodeScanView()
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) UIView *scanFrame;
@@ -27,7 +29,7 @@
 - (void)openQRCodeScan:(UIViewController *)viewController
 {
     self.lastViewController = viewController;
-    [self setFrame:self.lastViewController.view.frame];
+    [self setFrame:[UIScreen mainScreen].bounds];
     viewController.hidesBottomBarWhenPushed = YES;
     self.backgroundColor = [UIColor clearColor];
     
@@ -71,21 +73,13 @@
     [self addSubview:bottomText];
     
     CGFloat sfX = 20;
-    CGFloat sfY = sfX * 6;
     CGFloat sfW = rect.size.width - sfX * 2;
+    CGFloat sfY = (rect.size.height - sfW) / 2;
     UIView *scanFrame = [[UIView alloc] initWithFrame:CGRectMake(sfX, sfY, sfW, sfW)];
     scanFrame.layer.borderColor = [UIColor clearColor].CGColor;
     scanFrame.layer.borderWidth = 1;
     [self addSubview:scanFrame];
     self.scanFrame = scanFrame;
-    
-    /*
-    UIRectFill(rect);
-    CGRect holeRection = CGRectMake(sfX, sfY, sfW, sfW);
-    CGRect holeiInterSection = CGRectIntersection(holeRection, rect);
-    [[UIColor clearColor] setFill];
-    UIRectFill(holeiInterSection);
-    */
     
     CGFloat slX = 3;
     CGFloat slY = 2;
@@ -107,6 +101,15 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    //镂空扫描区域
+    [[UIColor colorWithWhite:0 alpha:0.5] setFill];
+    CGRect translucentRect = [UIScreen mainScreen].bounds;
+    CGRect transparentRect = _scanFrame.frame;
+    UIRectFill(translucentRect);
+    CGRect holeiInterSection = CGRectIntersection(transparentRect, translucentRect);
+    [[UIColor clearColor] setFill];
+    UIRectFill(holeiInterSection);
+    
     CGFloat length = 27;
     CGRect sfRect = _scanFrame.frame;
     CGFloat color[4] = { (float)69 / 255, (float)177 / 255, (float)249 / 255, 1 };
@@ -170,20 +173,15 @@
 //扫描滚动条，上上下下持续滚动
 - (void)upAndDownScanLine
 {
-    [UIView animateWithDuration:0.4 animations:^{
+    self.imgScanLine.frame = self.imgScanLineFrame;
+    [UIView animateWithDuration:SCROLL_LINE_SPEED animations:^{
         CGRect rect = self.imgScanLine.frame;
         CGRect rect1 = self.scanFrame.frame;
-        if (self.isUp) {
-            self.isUp = NO;
-            rect.origin.y = rect1.size.height - rect.origin.y * 2;
-            self.imgScanLine.frame = rect;
-        } else {
-            self.isUp = YES;
-            self.imgScanLine.frame = self.imgScanLineFrame;
-        }
+        rect.origin.y = rect1.size.height - rect.origin.y * 2;
+        self.imgScanLine.frame = rect;
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(SCROLL_LINE_SPEED * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self upAndDownScanLine];
     });
 }
