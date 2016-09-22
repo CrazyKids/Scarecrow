@@ -32,8 +32,8 @@
 #pragma mark - WKNavigationDelegate
 
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    NSString *scheme = webView.URL.scheme;
-    if ([scheme isEqualToString:@"scarecrow"]) {
+    NSString *absoluteString = webView.URL.absoluteString;
+    if ([absoluteString hasPrefix:github_callback_url]) {
         NSDictionary *param = webView.URL.oct_queryArguments;
         if ([param[@"state"] isEqualToString:self.viewModel.UUID] && self.viewModel.callback) {
             self.viewModel.callback(param[@"code"]);
