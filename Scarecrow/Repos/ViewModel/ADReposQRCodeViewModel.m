@@ -8,6 +8,7 @@
 
 #import "ADReposQRCodeViewModel.h"
 #import "NSURL+Scarecrow.h"
+#import "OCTRepository+Persistence.h"
 
 @interface ADReposQRCodeViewModel ()
 
@@ -43,7 +44,7 @@
     
     self.owner = self.repos.ownerLogin;
     self.detail = self.repos.name;
-    self.qrCode = self.repos.HTMLURL.absoluteString;
+    self.qrCode = [self.repos ad_url].absoluteString;
     self.qrImage = [UIImage imageNamed:@"welcomeIcon"];
 }
 
