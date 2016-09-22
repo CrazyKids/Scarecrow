@@ -42,7 +42,7 @@
     NSString *soundName = [[NSString alloc] init];
     SystemSoundID soundID = [self getDictSystemSoundID:&soundName];
     if(!soundID){
-        NSString *cafPath = [[NSBundle bundleWithPath:[self.customBundle getBundlePath]] pathForResource:soundName ofType:@".caf"];
+        NSString *cafPath = [[NSBundle bundleWithPath:[self.customBundle getBundlePath]] pathForResource:soundName ofType:@".wav"];
         NSURL *url = [NSURL URLWithString:cafPath];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &soundID);
         AudioServicesPlayAlertSound(soundID);
