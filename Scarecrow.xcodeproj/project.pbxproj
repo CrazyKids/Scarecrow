@@ -137,6 +137,8 @@
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
 		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
 		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
+		90B878F41D941AAA0044B286 /* ADLocalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */; };
+		90B878FC1D941F320044B286 /* ADLocalWebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B878FB1D941F320044B286 /* ADLocalWebViewModel.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
 /* End PBXBuildFile section */
 
@@ -578,6 +580,10 @@
 		24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDescTableViewCell.m; sourceTree = "<group>"; };
 		901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeScanView.h; path = Subscribe/View/ADQRCodeScanView.h; sourceTree = "<group>"; };
 		901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeScanView.m; path = Subscribe/View/ADQRCodeScanView.m; sourceTree = "<group>"; };
+		90B878F21D941AAA0044B286 /* ADLocalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADLocalWebViewController.h; sourceTree = "<group>"; };
+		90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADLocalWebViewController.m; sourceTree = "<group>"; };
+		90B878FA1D941F320044B286 /* ADLocalWebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADLocalWebViewModel.h; sourceTree = "<group>"; };
+		90B878FB1D941F320044B286 /* ADLocalWebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADLocalWebViewModel.m; sourceTree = "<group>"; };
 		A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scarecrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow.release.xcconfig"; sourceTree = "<group>"; };
 		FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Scarecrow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1098,6 +1104,8 @@
 				248569E81D5E26300087E62D /* ADWebViewController.h */,
 				248569E91D5E26300087E62D /* ADWebViewController.m */,
 				246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */,
+				90B878F21D941AAA0044B286 /* ADLocalWebViewController.h */,
+				90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */,
 			);
 			name = ViewControllers;
 			path = Utils/ViewControllers;
@@ -1114,6 +1122,8 @@
 				248569CF1D5E21820087E62D /* ADViewModel.m */,
 				248569E21D5E21CA0087E62D /* ADWebViewModel.h */,
 				248569E31D5E21CA0087E62D /* ADWebViewModel.m */,
+				90B878FA1D941F320044B286 /* ADLocalWebViewModel.h */,
+				90B878FB1D941F320044B286 /* ADLocalWebViewModel.m */,
 			);
 			name = ViewModels;
 			path = Utils/ViewModels;
@@ -1687,6 +1697,7 @@
 				248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */,
 				1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */,
 				24AB750C1D922E0F003EDA7D /* ADQRCodeViewerController.m in Sources */,
+				90B878F41D941AAA0044B286 /* ADLocalWebViewController.m in Sources */,
 				116FA5DB1D74933000F0AEE7 /* OCTRepository+Persistence.m in Sources */,
 				241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */,
 				24AB752E1D9235E9003EDA7D /* ADUserQRCodeViewModel.m in Sources */,
@@ -1703,6 +1714,7 @@
 				11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */,
 				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				11C3541A1D90403B004BEBBB /* ADReposSettingsViewModel.m in Sources */,
+				90B878FC1D941F320044B286 /* ADLocalWebViewModel.m in Sources */,
 				11C354231D904603004BEBBB /* ADReposOwnerTableViewCell.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,

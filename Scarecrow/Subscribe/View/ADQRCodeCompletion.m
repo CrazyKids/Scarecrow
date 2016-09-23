@@ -8,19 +8,24 @@
 
 #import "ADQRCodeCompletion.h"
 #import "ADWebViewModel.h"
+#import "ADLocalWebViewModel.h"
 #import "NSURL+Scarecrow.h"
 #import "ADUserInfoViewModel.h"
 #import "ADReposInfoViewModel.h"
+#import "ADLocalWebViewController.h"
 
 @implementation ADQRCodeCompletion
 
 - (void)performQRCodeCompletion:(__kindof UIViewController *)viewController stringValue:(NSString *)strValue removeTopAfterSuccess:(void(^)())success {
     NSURL *url = [NSURL URLWithString:strValue];
-    if (url && success) {
+    if (success) {
         success();
     }
-    
-    [self parseURL:url ownerVC:viewController];
+    if (url.scheme) {
+        [self parseURL:url ownerVC:viewController];
+    } else {
+        [self gotoWebViewWithValue:strValue ownerVC:viewController];
+    }
 }
 
 - (void)parseURL:(NSURL *)url ownerVC:(UIViewController *)ownerVC {
@@ -75,6 +80,16 @@
         return;
     }
     
+    [ownerVC.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)gotoWebViewWithValue:(NSString *)strValue ownerVC:(UIViewController *)ownerVC {
+    ADLocalWebViewModel *webModel = [[ADLocalWebViewModel alloc] init];
+    webModel.htmlValue = strValue;
+    ADViewController *vc = [[ADPlatformManager sharedInstance] viewControllerWithViewModel:webModel];
+    if (!vc) {
+        return;
+    }
     [ownerVC.navigationController pushViewController:vc animated:YES];
 }
 

@@ -75,6 +75,7 @@
     return @{
              @"ADOauthViewModel" : @"ADOauthViewController",
              @"ADWebViewModel" : @"ADWebViewController",
+             @"ADLocalWebViewModel" : @"ADLocalWebViewController",
              @"ADProfileViewModel" : @"ADProfileViewController",
              @"ADUserInfoViewModel" : @"ADUserInfoViewController",
              @"ADSetttingsViewModel" : @"ADSettingsViewController",
