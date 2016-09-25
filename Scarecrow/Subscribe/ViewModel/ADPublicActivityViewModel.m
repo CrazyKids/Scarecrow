@@ -22,7 +22,7 @@ static NSString *const kPublicActivityETag = @"public_activity_etag";
 }
 
 - (id)fetchLocalData {
-    if (!self.isCurrentUser) {
+    if (self.isCurrentUser) {
         return [OCTEvent ad_fetchUserPerformedEvents];
     }
     
