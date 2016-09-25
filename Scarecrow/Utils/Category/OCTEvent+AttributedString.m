@@ -326,7 +326,6 @@
     [attributedString appendAttributedString:additions.ad_attributedString.ad_addNormalPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
     [attributedString appendAttributedString:@(concreteEvent.pullRequest.deletions).stringValue.ad_attributedString.ad_addNormalTitleAttribute.ad_addPullInfoForegroundColorAttribute];
     [attributedString appendAttributedString:deletions.ad_attributedString.ad_addNormalPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
-    [attributedString ad_addBackgroundColorAttribute];
     
     return attributedString;
 }
@@ -426,8 +425,7 @@
     } else if (concreteEvent.eventType == OCTRefEventDeleted) {
         [attributedString insertAttributedString:@" ".ad_attributedString atIndex:0];
         [attributedString appendAttributedString:@"\n".ad_attributedString];
-        [attributedString ad_addNormalTitleForegroundColorAttribute];
-        [attributedString ad_addBackgroundColorAttribute];
+        [attributedString ad_addTintedForegroundColorAttributeWithAlpha:0.5];
     }
     
     return attributedString;

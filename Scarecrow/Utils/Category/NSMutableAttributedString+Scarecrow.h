@@ -30,9 +30,7 @@
 - (NSMutableAttributedString *)ad_addBoldTitleForegroundColorAttribute;
 - (NSMutableAttributedString *)ad_addPullInfoForegroundColorAttribute;
 - (NSMutableAttributedString *)ad_addTintedForegroundColorAttribute;
-
-// Background Color
-- (NSMutableAttributedString *)ad_addBackgroundColorAttribute;
+- (NSMutableAttributedString *)ad_addTintedForegroundColorAttributeWithAlpha:(CGFloat)alpha;
 
 // Paragraph Style
 
