@@ -75,6 +75,14 @@
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [webView evaluateJavaScript:@"document.title" completionHandler:^(NSString * _Nullable title, NSError * _Nullable error) {
         self.viewModel.titleViewType = ADTitleViewTypeDefault;

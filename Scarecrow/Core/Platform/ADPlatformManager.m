@@ -75,6 +75,7 @@
     return @{
              @"ADOauthViewModel" : @"ADOauthViewController",
              @"ADWebViewModel" : @"ADWebViewController",
+             @"ADLocalWebViewModel" : @"ADLocalWebViewController",
              @"ADProfileViewModel" : @"ADProfileViewController",
              @"ADUserInfoViewModel" : @"ADUserInfoViewController",
              @"ADSetttingsViewModel" : @"ADSettingsViewController",
@@ -88,6 +89,9 @@
              @"ADCodeTreeViewModel" : @"ADCodeTreeViewController",
              @"ADReposInfoViewModel" : @"ADReposInfoViewController",
              @"ADReposSettingsViewModel" : @"ADReposSettingsViewController",
+             @"ADQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
              };
 }
 

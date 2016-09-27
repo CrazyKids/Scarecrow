@@ -27,8 +27,16 @@
     self.logoutCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         [SSKeychain deleteAccessToken];
         
+        //删除目录缓存
+        NSString *libStr = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
+        NSString *cookies = [libStr stringByAppendingPathComponent:@"/Cookies"];
+        NSString *webkit = [libStr stringByAppendingPathComponent:@"/WebKit"];
+        NSFileManager *filemng = [NSFileManager defaultManager];
+        [filemng removeItemAtPath:cookies error:nil];
+        [filemng removeItemAtPath:webkit error:nil];
+        
         ADLoginViewModel *viewModel = [ADLoginViewModel new];
-        [[ADPlatformManager sharedInstance]resetRootViewModel:viewModel];
+        [[ADPlatformManager sharedInstance] resetRootViewModel:viewModel];
         
         return [RACSignal empty];
     }];

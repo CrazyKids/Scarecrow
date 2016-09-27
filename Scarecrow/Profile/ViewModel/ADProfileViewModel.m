@@ -16,7 +16,7 @@
 #import "ADStarredReposViewModel.h"
 #import "ADPublicActivityViewModel.h"
 #import "ADQRCodeViewerController.h"
-#import "ADQRCodeViewModel.h"
+#import "ADUserQRCodeViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -62,6 +62,8 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
                                  @(ADUserInfoDataTypeLocation),
                                  @(ADUserInfoDataTypeMail),
                                  @(ADUserInfoDataTypeLink),
+                                 ],
+                             @[
                                  @(ADUserInfoDataTypeGenerateQRCode),
                                  ],
                              ];
@@ -146,7 +148,7 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
                 break;
             case ADUserInfoDataTypeGenerateQRCode:
             {
-                ADQRCodeViewModel *viewModel = [[ADQRCodeViewModel alloc] initWithParam:@{@"user" : self.user}];
+                ADUserQRCodeViewModel *viewModel = [[ADUserQRCodeViewModel alloc] initWithParam:@{@"user" : self.user}];
                 [self pushViewControllerWithViewModel:viewModel];
             }
                 break;

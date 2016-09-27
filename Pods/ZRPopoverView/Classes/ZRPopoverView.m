@@ -140,7 +140,7 @@
     self.alpha = 0.0;
     CGRect originalRect = self.menus.frame;
     CGRect changeRect = self.menus.frame;
-    changeRect.origin.y = -changeRect.size.width;
+    changeRect.origin.y = -changeRect.size.height;
     self.menus.frame = changeRect;
     [viewController.view addSubview:self];
     [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{

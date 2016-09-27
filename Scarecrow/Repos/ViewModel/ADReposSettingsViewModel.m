@@ -9,6 +9,7 @@
 #import "ADReposSettingsViewModel.h"
 #import "OCTRepository+Persistence.h"
 #import "ADUserInfoViewModel.h"
+#import "ADReposQRCodeViewModel.h"
 
 @interface ADReposSettingsViewModel ()
 
@@ -33,7 +34,7 @@
     
     self.dataSourceArray = @[
                              @[@(ADReposSettingDataOwner)],
-//                             @[@(ADReposSettingDataQRCode)],
+                             @[@(ADReposSettingDataQRCode)],
                              ];
     
     @weakify(self);
@@ -64,8 +65,12 @@
                 
                 break;
             }
-            case ADReposSettingDataQRCode:
+            case ADReposSettingDataQRCode: {
+                ADReposQRCodeViewModel *viewModel = [[ADReposQRCodeViewModel alloc]initWithParam:@{@"repos" : self.repos}];
+                [self pushViewControllerWithViewModel:viewModel];
+                
                 break;
+            }
             default:
                 break;
         }

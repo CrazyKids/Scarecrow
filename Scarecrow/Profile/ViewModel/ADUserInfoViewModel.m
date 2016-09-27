@@ -30,6 +30,9 @@
                                  @(ADUserInfoDataTypeMail),
                                  @(ADUserInfoDataTypeLink),
                                  ],
+                             @[
+                                 @(ADUserInfoDataTypeGenerateQRCode),
+                                 ],
                              ];
     
     @weakify(self);
