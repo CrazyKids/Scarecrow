@@ -7,6 +7,7 @@
 //
 
 #import "ADTabBarController.h"
+#import "UIColor+Scarecrow.h"
 
 @interface ADTabBarController ()
 
@@ -46,6 +47,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+#pragma mark - UIViewControllerRotation
+
+- (BOOL)shouldAutorotate {
+    return self.selectedViewController.shouldAutorotate;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.selectedViewController.supportedInterfaceOrientations;
 }
 
 @end

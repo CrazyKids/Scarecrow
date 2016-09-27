@@ -19,6 +19,8 @@
 @implementation ADTabBarLoader
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     NSArray *array = [self.tabBarItemNames componentsSeparatedByString:@","];
     NSMutableArray *vcArray = [NSMutableArray new];
     for (NSString *name in array) {

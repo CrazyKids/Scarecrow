@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ADQRCodeViewerController">
+            <connections>
+                <outlet property="detailLabel" destination="pW8-RH-uGz" id="OXA-df-Ah1"/>
+                <outlet property="mainView" destination="J7o-0Y-zfq" id="KAY-V6-XnF"/>
+                <outlet property="ownerName" destination="1KY-R3-vwp" id="3hk-Tl-E77"/>
+                <outlet property="smallAvatar" destination="Gsd-lU-ADn" id="ZRL-jI-3NF"/>
+                <outlet property="view" destination="299-oM-ofT" id="K2s-zg-SZI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="299-oM-ofT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95d-Bx-BFS">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gsd-lU-ADn">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="82" id="UW9-NC-dgg"/>
+                                <constraint firstAttribute="height" constant="82" id="ZQL-Tj-ZV1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KY-R3-vwp">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="wZ4-TJ-NhT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-RH-uGz">
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the QR code on Scarecrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-7R-eCl">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="o9L-eZ-xoA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-0Y-zfq">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kAO-7R-eCl" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="20" id="4a5-Zx-auR"/>
+                        <constraint firstItem="J7o-0Y-zfq" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="10" id="4m8-hx-fHR"/>
+                        <constraint firstItem="1KY-R3-vwp" firstAttribute="top" secondItem="95d-Bx-BFS" secondAttribute="top" constant="40" id="CO4-Yr-UhU"/>
+                        <constraint firstItem="kAO-7R-eCl" firstAttribute="top" secondItem="J7o-0Y-zfq" secondAttribute="bottom" constant="10" id="HbW-Bi-pCf"/>
+                        <constraint firstAttribute="trailing" secondItem="kAO-7R-eCl" secondAttribute="trailing" constant="20" id="Q5S-9S-3ET"/>
+                        <constraint firstItem="1KY-R3-vwp" firstAttribute="leading" secondItem="Gsd-lU-ADn" secondAttribute="trailing" constant="8" id="VJf-1V-V4E"/>
+                        <constraint firstAttribute="trailing" secondItem="1KY-R3-vwp" secondAttribute="trailing" constant="20" id="bOv-wb-5VG"/>
+                        <constraint firstItem="Gsd-lU-ADn" firstAttribute="leading" secondItem="95d-Bx-BFS" secondAttribute="leading" constant="19" id="e14-uB-9su"/>
+                        <constraint firstItem="pW8-RH-uGz" firstAttribute="leading" secondItem="Gsd-lU-ADn" secondAttribute="trailing" constant="8" id="ez3-n6-h6U"/>
+                        <constraint firstAttribute="trailing" secondItem="J7o-0Y-zfq" secondAttribute="trailing" constant="10" id="ezz-NG-cbP"/>
+                        <constraint firstAttribute="bottom" secondItem="kAO-7R-eCl" secondAttribute="bottom" constant="15" id="fGs-89-oxu"/>
+                        <constraint firstItem="Gsd-lU-ADn" firstAttribute="top" secondItem="95d-Bx-BFS" secondAttribute="top" constant="21" id="glB-ac-bEp"/>
+                        <constraint firstAttribute="trailing" secondItem="pW8-RH-uGz" secondAttribute="trailing" constant="20" id="gxD-wt-QbD"/>
+                        <constraint firstItem="pW8-RH-uGz" firstAttribute="top" secondItem="1KY-R3-vwp" secondAttribute="bottom" constant="10" id="hwI-We-7kP"/>
+                        <constraint firstItem="J7o-0Y-zfq" firstAttribute="top" secondItem="Gsd-lU-ADn" secondAttribute="bottom" constant="10" id="nIr-FA-GwN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="95d-Bx-BFS" firstAttribute="leading" secondItem="299-oM-ofT" secondAttribute="leading" constant="16" id="0l2-vh-VCf"/>
+                <constraint firstAttribute="bottom" secondItem="95d-Bx-BFS" secondAttribute="bottom" constant="50" id="3MO-fH-jaq"/>
+                <constraint firstItem="95d-Bx-BFS" firstAttribute="top" secondItem="299-oM-ofT" secondAttribute="top" constant="50" id="FpF-DL-1OW"/>
+                <constraint firstAttribute="trailing" secondItem="95d-Bx-BFS" secondAttribute="trailing" constant="16" id="GhU-xt-BEM"/>
+            </constraints>
+            <point key="canvasLocation" x="-79.5" y="-267.5"/>
+        </view>
+    </objects>
+</document>

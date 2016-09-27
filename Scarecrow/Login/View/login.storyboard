@@ -23,12 +23,6 @@
                                     <constraint firstAttribute="width" constant="90" id="pps-6C-HYm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Scarecrow is Near..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-Cm-epV">
-                                <rect key="frame" x="54" y="380" width="212" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <color key="textColor" red="0.27843137254901962" green="0.60392156862745094" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvG-2W-IAq">
                                 <rect key="frame" x="133" y="456" width="54" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
@@ -49,8 +43,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WBp-Cm-epV" firstAttribute="centerX" secondItem="jMo-VD-bme" secondAttribute="centerX" id="6bJ-ms-rdY"/>
-                            <constraint firstItem="WBp-Cm-epV" firstAttribute="top" secondItem="8NQ-gS-lqy" secondAttribute="bottom" constant="100" id="NBi-8c-1iz"/>
                             <constraint firstItem="8NQ-gS-lqy" firstAttribute="centerX" secondItem="jMo-VD-bme" secondAttribute="centerX" id="YnA-Dn-BXz"/>
                             <constraint firstItem="cvX-Rm-rO6" firstAttribute="top" secondItem="pvG-2W-IAq" secondAttribute="bottom" constant="90" id="brB-8I-zMo"/>
                             <constraint firstItem="8NQ-gS-lqy" firstAttribute="top" secondItem="CIe-ci-xzw" secondAttribute="bottom" constant="126" id="cOP-LS-dpg"/>
@@ -63,7 +55,6 @@
                     <connections>
                         <outlet property="loginButton" destination="pvG-2W-IAq" id="rN0-lI-QQY"/>
                         <outlet property="logoImageView" destination="8NQ-gS-lqy" id="5YP-jX-GqM"/>
-                        <outlet property="tipLabel" destination="WBp-Cm-epV" id="M4A-pb-Zla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYg-Mi-xs0" userLabel="First Responder" sceneMemberID="firstResponder"/>

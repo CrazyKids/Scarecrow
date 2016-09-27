@@ -2,8 +2,8 @@
 //  ADSubscribeTableViewCell.h
 //  Scarecrow
 //
-//  Created by duanhongjin on 8/4/16.
-//  Copyright © 2016 duanhongjin. All rights reserved.
+//  Created by duanhongjin on 16/9/11.
+//  Copyright © 2016年 duanhongjin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

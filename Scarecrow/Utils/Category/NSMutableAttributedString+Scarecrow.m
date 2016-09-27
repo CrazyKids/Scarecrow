@@ -58,7 +58,7 @@ NSString *const kLinkAttributeKey = @"ADLinkAttributeKey";
     return [self ad_addFontAttribute:[UIFont boldSystemFontOfSize:12]];
 }
 
-- (NSMutableAttributedString *)ad_addForegroundColorAttribute:(NSInteger)rgbColor alpha:(CGFloat)alpha{
+- (NSMutableAttributedString *)ad_addForegroundColorAttribute:(NSInteger)rgbColor alpha:(CGFloat)alpha {
     UIColor *color = [UIColor colorWithRgbColor:rgbColor alpha:alpha];
     [self addAttribute:NSForegroundColorAttributeName value:color range:self.ad_totalString];
     
@@ -85,8 +85,8 @@ NSString *const kLinkAttributeKey = @"ADLinkAttributeKey";
     return [self ad_addForegroundColorAttribute:0x4078c0 alpha:1];
 }
 
-- (NSMutableAttributedString *)ad_addBackgroundColorAttribute {
-    return [self ad_addForegroundColorAttribute:0xe8f1f6 alpha:1];
+- (NSMutableAttributedString *)ad_addTintedForegroundColorAttributeWithAlpha:(CGFloat)alpha {
+    return [self ad_addForegroundColorAttribute:0x4078c0 alpha:alpha];
 }
 
 - (NSMutableAttributedString *)ad_addParagraphStyleAttribute {

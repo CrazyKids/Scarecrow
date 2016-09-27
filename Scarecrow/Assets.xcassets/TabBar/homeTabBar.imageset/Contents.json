@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "homeTabBar.pdf",
-      "scale" : "1x"
+      "filename" : "homeTabBar.pdf"
     }
   ],
   "info" : {

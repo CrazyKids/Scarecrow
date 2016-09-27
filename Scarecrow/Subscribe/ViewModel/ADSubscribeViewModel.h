@@ -10,10 +10,13 @@
 
 @interface ADSubscribeViewModel : ADTableViewModel
 
+@property (strong, nonatomic, readonly) OCTUser *user;
+
 @property (strong, nonatomic, readonly) NSArray *eventArray;
 @property (assign, nonatomic, readonly) BOOL isCurrentUser;
 @property (strong, nonatomic, readonly) RACCommand *didClickLinkCommand;
 
 - (NSArray *)dataSourceWithEvents:(NSArray *)eventArray;
+- (void)saveEvents:(NSArray *)eventArray;
 
 @end

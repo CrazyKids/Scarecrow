@@ -8,6 +8,7 @@
 
 #import "UIImage+Octions.h"
 #import <OcticonsIOS/NSString+Octicons.h>
+#import "UIColor+Scarecrow.h"
 
 @implementation UIImage (Octions)
 
@@ -36,7 +37,16 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     return image;
+}
+
++ (UIImage *)ad_normalImageWithIdentifier:(NSString *)identifier size:(CGSize)size {
+    return [self ad_imageWithIcon:identifier backgroundColor:[UIColor clearColor] iconColor:RGB(0x666666) iconScale:1 size:size];
+}
+
++ (UIImage *)ad_highlightImageWithIdentifier:(NSString *)identifier size:(CGSize)size {
+    return [self ad_imageWithIcon:identifier backgroundColor:[UIColor clearColor] iconColor:DEFAULT_RGB iconScale:1 size:size];
 }
 
 @end

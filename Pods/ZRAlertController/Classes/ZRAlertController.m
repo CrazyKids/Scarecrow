@@ -101,9 +101,19 @@ typedef NS_ENUM(NSInteger){
 
 @interface ZRAlertController()
 @property (nonatomic, strong) ZRDelegateController *delegateController;
+
+@property (nonatomic, strong) UIViewController *windowsRootViewController;
 @end
 
 @implementation ZRAlertController
+
+- (UIViewController *)windowsRootViewController
+{
+    if (!_windowsRootViewController) {
+        _windowsRootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    }
+    return _windowsRootViewController;
+}
 
 + (instancetype)defaultAlert
 {
@@ -125,6 +135,11 @@ typedef NS_ENUM(NSInteger){
 
 - (void)alertShow:(UIViewController *)controller title:(NSString *  _Nullable )title message:(NSString *)message okayButton:(NSString *)okay completion:(void (^  _Nullable )())completion
 {
+    [self alertShowWithTitle:title message:message okayButton:okay completion:completion];
+}
+
+- (void)alertShowWithTitle:(NSString * _Nullable)title message:(NSString *)message okayButton:(NSString *)okay completion:(void(^ _Nullable)())completion
+{
     completionBlock = completion;
     if (kiOS8) {
         
@@ -135,7 +150,7 @@ typedef NS_ENUM(NSInteger){
             }
         }];
         [alertC addAction:action];
-        [controller presentViewController:alertC animated:YES completion:nil];
+        [self.windowsRootViewController presentViewController:alertC animated:YES completion:nil];
         
     } else {
         self.delegateController.methodStyle = ZRAlertMethodStyleCompletion;
@@ -145,6 +160,11 @@ typedef NS_ENUM(NSInteger){
 }
 
 - (void)alertShow:(UIViewController *)controller title:(NSString *  _Nullable )title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay okayHandler:(AlertBlock)okayHandler cancelHandler:(AlertBlock)cancelHandler
+{
+    [self alertShowWithTitle:title message:message cancelButton:cancel okayButton:okay okayHandler:okayHandler cancelHandler:cancelHandler];
+}
+
+- (void)alertShowWithTitle:(NSString * _Nullable)title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay okayHandler:(AlertBlock)okayHandler cancelHandler:(AlertBlock)cancelHandler
 {
     okayBlock = okayHandler;
     cancelBlock = cancelHandler;
@@ -162,17 +182,20 @@ typedef NS_ENUM(NSInteger){
         }];
         [alertC addAction:action0];
         [alertC addAction:action1];
-        [controller presentViewController:alertC animated:YES completion:nil];
-        
+        [self.windowsRootViewController presentViewController:alertC animated:YES completion:nil];
     } else {
         self.delegateController.methodStyle = ZRAlertMethodStyleDefault;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self.delegateController cancelButtonTitle:cancel otherButtonTitles:okay, nil];
         [alert show];
-        
     }
 }
 
 - (void)alertShow:(UIViewController *)controller title:(NSString *  _Nullable )title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay alertStyle:(ZRAlertStyle)style placeHolder:(NSString *)placeHolder okayHandler:(AlertBlock1)okayHandler cancelHandler:(AlertBlock1)cancelHandler
+{
+    [self alertShowWithTitle:title message:message cancelButton:cancel okayButton:okay alertStyle:style placeHolder:placeHolder okayHandler:okayHandler cancelHandler:cancelHandler];
+}
+
+- (void)alertShowWithTitle:(NSString * _Nullable)title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay alertStyle:(ZRAlertStyle)style placeHolder:(NSString *)placeHolder okayHandler:(AlertBlock1)okayHandler cancelHandler:(AlertBlock1)cancelHandler
 {
     okayBlock1 = okayHandler;
     cancelBlock1 = cancelHandler;
@@ -188,7 +211,7 @@ typedef NS_ENUM(NSInteger){
             } else if (style == ZRAlertStyleSecureTextInput) {
                 textField.secureTextEntry = YES;
             } else {
-               NSLog(@"The parameter of ZRAlertStyle is not correct!");
+                NSLog(@"The parameter of ZRAlertStyle is not correct!");
             }
         }];
         
@@ -202,7 +225,7 @@ typedef NS_ENUM(NSInteger){
         }];
         [alertC addAction:action0];
         [alertC addAction:action1];
-        [controller presentViewController:alertC animated:YES completion:nil];
+        [self.windowsRootViewController presentViewController:alertC animated:YES completion:nil];
         
     } else {
         
@@ -224,6 +247,11 @@ typedef NS_ENUM(NSInteger){
 }
 
 - (void)alertShow:(UIViewController *)controller title:(NSString *  _Nullable )title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay alertStyle:(ZRAlertStyle)style placeHolder1:(NSString *)placeHolder1 placeHolder2:(NSString *)placeHolder2 sureHandler:(AlertBlock2)okayHandler abolishHandler:(AlertBlock2)cancelHandler
+{
+    [self alertShowWithTitle:title message:message cancelButton:cancel okayButton:okay alertStyle:style placeHolder1:placeHolder1 placeHolder2:placeHolder2 sureHandler:okayHandler abolishHandler:cancelHandler];
+}
+
+- (void)alertShowWithTitle:(NSString * _Nullable)title message:(NSString *)message cancelButton:(NSString *)cancel okayButton:(NSString *)okay alertStyle:(ZRAlertStyle)style placeHolder1:(NSString *)placeHolder1 placeHolder2:(NSString *)placeHolder2 sureHandler:(AlertBlock2)okayHandler abolishHandler:(AlertBlock2)cancelHandler
 {
     okayBlock2 = okayHandler;
     cancelBlock2 = cancelHandler;
@@ -251,7 +279,7 @@ typedef NS_ENUM(NSInteger){
         }];
         [alertC addAction:action0];
         [alertC addAction:action1];
-        [controller presentViewController:alertC animated:YES completion:nil];
+        [self.windowsRootViewController presentViewController:alertC animated:YES completion:nil];
         
     } else {
         
@@ -276,6 +304,11 @@ typedef NS_ENUM(NSInteger){
  **/
 - (void)actionView:(UIViewController *)viewController title:( NSString * _Nullable)title cancel:(NSString *)cancel others:(NSArray *)others handler:(ActionBlock)handler
 {
+    [self actionViewWithTitle:title cancel:cancel others:others handler:handler];
+}
+
+- (void)actionViewWithTitle:(NSString * _Nullable)title cancel:(NSString *)cancel others:(NSArray *)others handler:(ActionBlock)handler
+{
     if (kiOS8) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         for (int i = 0; i < others.count; i++) {
@@ -294,14 +327,14 @@ typedef NS_ENUM(NSInteger){
             }];
             [alertController addAction:actionCancel];
         }
-        [viewController presentViewController:alertController animated:YES completion:nil];
+        [self.windowsRootViewController presentViewController:alertController animated:YES completion:nil];
     } else {
         actionBlockHandler = handler;
         UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:title delegate:self.delegateController cancelButtonTitle:cancel destructiveButtonTitle:nil otherButtonTitles:nil, nil];
         for (NSString *item in others) {
             [action addButtonWithTitle:item];
         }
-        [action showInView:viewController.view];
+        [action showInView:self.windowsRootViewController.view];
     }
 }
 

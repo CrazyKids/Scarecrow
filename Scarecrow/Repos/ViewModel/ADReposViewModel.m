@@ -8,6 +8,9 @@
 
 #import "ADReposViewModel.h"
 #import "OCTUser+Persistence.h"
+#import "OCTRepository+Persistence.h"
+#import "ADReposItemViewModel.h"
+#import "ADReposInfoViewModel.h"
 
 @interface ADReposViewModel ()
 
@@ -33,7 +36,57 @@
 - (void)initialize {
     [super initialize];
     
+    @weakify(self);
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        ADReposItemViewModel *viewModel = self.dataSourceArray[indexPath.section][indexPath.row];
+        
+        ADReposInfoViewModel *reposViewModel = [[ADReposInfoViewModel alloc]initWithParam:@{@"repos" : viewModel.repos}];
+        [self pushViewControllerWithViewModel:reposViewModel];
+        
+        return [RACSignal empty];
+    }];
     
+    RACSignal *fetchLocalDataSignal = [RACSignal return:[self fetchLocalData]];
+    RACSignal *fetchRemoteDataSignal = [self.fetchRemoteDataCommamd.executionSignals.switchToLatest doNext:^(NSArray *reposArray) {
+        @strongify(self);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self updateRepos:reposArray];
+       });
+    }];
+    
+    RAC(self, reposArray) = [fetchLocalDataSignal merge:fetchRemoteDataSignal];
+    RAC(self, dataSourceArray) = [RACObserve(self, reposArray) map:^id(NSArray *reposArray) {
+        reposArray = [OCTRepository ad_matchStarredStatus:reposArray];
+        return [self dataSourceSignalWithRopse:reposArray];
+    }];
+}
+
+- (NSArray *)fetchLocalData {
+    return [OCTRepository ad_fetchRepos];
+}
+
+- (void)updateRepos:(NSArray *)reposArray {
+    if (self.isCurrentUser) {
+        [OCTRepository ad_update:reposArray];
+    }
+}
+
+- (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {
+    return [[[ADPlatformManager sharedInstance].client fetchUserRepositories]collect];
+}
+
+- (NSArray *)dataSourceSignalWithRopse:(NSArray *)reposArray {
+    if (!reposArray.count) {
+        return nil;
+    }
+    
+    @weakify(self);
+    NSArray *viewModelArray = [[reposArray rac_sequence]map:^id(OCTRepository *repos) {
+        @strongify(self);
+        return [[ADReposItemViewModel alloc]initWithRepos:repos currentUser:self.isCurrentUser];
+    }].array;
+    
+    return @[viewModelArray];
 }
 
 @end

@@ -40,7 +40,7 @@
     self.layer.masksToBounds = YES;
     self.layer.borderColor = RGB(0xd5d5d5).CGColor;
     
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:13];
+    self.titleLabel.font = [UIFont systemFontOfSize:15];
     self.contentEdgeInsets = UIEdgeInsetsMake(7, 10, 7, 10);
     
     [self setTitle:@"Follow" forState:UIControlStateNormal];

@@ -135,6 +135,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
   install_resource "SSKeychain/Support/SSKeychain.bundle"
   install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
+  install_resource "ZRQRCodeViewController/Classes/ZRQRCode.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/blackArrow.png"
@@ -192,6 +193,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
   install_resource "SSKeychain/Support/SSKeychain.bundle"
   install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
+  install_resource "ZRQRCodeViewController/Classes/ZRQRCode.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -52,8 +52,7 @@
             [self.exchangeTokenCommand execute:code];
         };
         
-        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
     }];

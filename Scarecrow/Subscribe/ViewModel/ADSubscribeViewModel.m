@@ -13,11 +13,15 @@
 #import "NSURL+Scarecrow.h"
 #import "ADUserInfoViewModel.h"
 #import "OCTEvent+Persistence.h"
+#import "OCTUser+Persistence.h"
+#import "ADReposInfoViewModel.h"
 
 
 static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 
 @interface ADSubscribeViewModel ()
+
+@property (strong, nonatomic) OCTUser *user;
 
 @property (strong, nonatomic) NSArray *eventArray;
 @property (assign, nonatomic) BOOL isCurrentUser;
@@ -27,10 +31,19 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 
 @implementation ADSubscribeViewModel
 
+- (instancetype)initWithParam:(NSDictionary *)param {
+    self = [super initWithParam:param];
+    if (self) {
+        self.user = param[@"user"] ?: [OCTUser ad_currentUser];
+        self.showLoading = NO;
+    }
+    return self;
+}
+
 - (void)initialize {
     [super initialize];
     
-    self.isCurrentUser = YES;
+    self.isCurrentUser = [self.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID];
     
     @weakify(self);
     RAC(self, eventArray) = [[self.fetchRemoteDataCommamd.executionSignals.switchToLatest startWith:self.fetchLocalData]map:^id(NSArray *eventArray) {
@@ -51,7 +64,7 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
                 return itemViewModel.event;
             }].array;
             
-            [OCTEvent ad_saveUserReceivedEvents:eventArray];
+            [self saveEvents:eventArray];
         }];
     }
     
@@ -62,17 +75,15 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
             ADUserInfoViewModel *userInfoModel = [[ADUserInfoViewModel alloc]initWithParam:[url ad_dic]];
             viewModel = userInfoModel;
         } else if (url.linkType == ADLinkTypeRepos) {
-            
+            ADReposInfoViewModel *reposViewModel = [[ADReposInfoViewModel alloc]initWithParam:[url ad_dic]];
+            viewModel = reposViewModel;
         } else {
             ADWebViewModel *webModel = [ADWebViewModel new];
             webModel.request = [NSURLRequest requestWithURL:url];
             viewModel = webModel;
         }
         
-        if (viewModel) {
-            ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-            [self.ownerVC.navigationController pushViewController:vc animated:YES];
-        }
+        [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
     }];
@@ -103,9 +114,15 @@ static NSString *const kSubscribeETag = @"subscribe_subscribe_etag";
 - (id)fetchLocalData {
     NSArray *eventArray = nil;
     
-    eventArray = [[OCTEvent ad_fetchUserReceivedEvents].rac_sequence take:500].array;
+    if (self.isCurrentUser) {
+        eventArray = [[OCTEvent ad_fetchUserReceivedEvents].rac_sequence take:500].array;
+    }
     
     return eventArray;
+}
+
+- (void)saveEvents:(NSArray *)eventArray {
+    [OCTEvent ad_saveUserReceivedEvents:eventArray];
 }
 
 - (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {

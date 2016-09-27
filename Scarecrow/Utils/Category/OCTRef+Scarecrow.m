@@ -27,4 +27,21 @@ static NSString *const kRefTagNamePrefix = @"refs/tags/";
     return [NSString stringWithFormat:@"%@%@", kRefTagNamePrefix, tag];
 }
 
+- (NSString *)ad_octiconIdentifier {
+    NSArray *components = [self.name componentsSeparatedByString:@"/"];
+    if (components.count == 3) {
+        // refs/heads/master
+        if ([components[1] isEqualToString:@"heads"]) {
+            return @"GitBranch";
+        }
+        
+        // refs/tags/v0.0.1
+        if ([components[1] isEqualToString:@"tags"]) {
+            return @"Tag";
+        }
+    }
+    
+    return @"GitBranch";
+}
+
 @end

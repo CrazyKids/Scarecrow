@@ -10,6 +10,15 @@
 #import "ADViewController.h"
 #import "ADDataBaseManager.h"
 #import "SSKeychain+Scarecrow.h"
+#import "OCTUser+Persistence.h"
+
+@interface ADPlatformManager ()
+
+@property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
+
+@property (strong, nonatomic) YYCache *cacheMgr;
+
+@end
 
 @implementation ADPlatformManager
 
@@ -38,6 +47,14 @@
     }
 }
 
+- (YYCache *)cacheMgr {
+    if (!_cacheMgr) {
+        NSString *login = [OCTUser ad_currentUser].login;
+        _cacheMgr = [YYCache cacheWithName:login];
+    }
+    return _cacheMgr;
+}
+
 - (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
     NSString *vmClassString = NSStringFromClass(viewModel.class);
     NSString *vcClassString = self.viewControllerMap[vmClassString];
@@ -58,12 +75,23 @@
     return @{
              @"ADOauthViewModel" : @"ADOauthViewController",
              @"ADWebViewModel" : @"ADWebViewController",
+             @"ADLocalWebViewModel" : @"ADLocalWebViewController",
              @"ADProfileViewModel" : @"ADProfileViewController",
              @"ADUserInfoViewModel" : @"ADUserInfoViewController",
              @"ADSetttingsViewModel" : @"ADSettingsViewController",
              @"ADFollowingViewModel" : @"ADFollowingViewController",
              @"ADFollowersViewModel" : @"ADFollowersViewController",
              @"ADReposViewModel" : @"ADReposViewController",
+             @"ADPublicReposViewModel" : @"ADPublicReposViewController",
+             @"ADStarredReposViewModel" : @"ADStarredReposViewController",
+             @"ADPublicActivityViewModel" : @"ADPublicActivityViewController",
+             @"ADReposDetailViewModel" : @"ADReposDetailViewController",
+             @"ADCodeTreeViewModel" : @"ADCodeTreeViewController",
+             @"ADReposInfoViewModel" : @"ADReposInfoViewController",
+             @"ADReposSettingsViewModel" : @"ADReposSettingsViewController",
+             @"ADQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
              };
 }
 

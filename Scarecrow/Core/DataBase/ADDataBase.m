@@ -53,7 +53,7 @@
                        // 比较绕，是user（我）following user（other）
                        @"CREATE TABLE IF NOT EXISTS userFollowingUser (id INTEGER PRIMARY KEY autoincrement, userId INTEGER, dstUserId INTEGER)",
                        
-                       @"CREATE TABLE IF NOT EXISTS userStaredRepos (id INTEGER PRIMARY KEY autoincrement, userId INTEGER, reposId INTEGER)",
+                       @"CREATE TABLE IF NOT EXISTS userStarredRepos (id INTEGER PRIMARY KEY autoincrement, userId INTEGER, reposId INTEGER)",
                        ];
     
     return array;
@@ -120,13 +120,13 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         NSString *newIds = [[userArray.rac_sequence map:^id(OCTUser *user) {
             return user.objectID;
         }].array componentsJoinedByString:@","];
         
         NSString *currentUserId = [OCTUser ad_currentUser].objectID;
-        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE dstUserId in (?) and userId = ?", newIds, currentUserId];
+        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE dstUserId NOT IN (?) and userId = ?", newIds, currentUserId];
         if (!success) {
             return;
         }
@@ -148,13 +148,13 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         NSString *newIds = [[userArray.rac_sequence map:^id(OCTUser *user) {
             return user.objectID;
         }].array componentsJoinedByString:@","];
         
         NSString *currentUserId = [OCTUser ad_currentUser].objectID;
-        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE userId in (?) and dstUserId = ?", newIds, currentUserId];
+        success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE userId NOT IN (?) and dstUserId = ?", newIds, currentUserId];
         if (!success) {
             return;
         }
@@ -176,7 +176,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
        
         OCTUser *currentUser = [OCTUser ad_currentUser];
         success = [db executeUpdate:@"REPLACE INTO userFollowingUser (userId, dstUserId) VALUES(?,?)", currentUser.objectID, user.objectID];
@@ -208,7 +208,7 @@
     }
     
     __block BOOL success = NO;
-    [_dataBaseQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
         
         OCTUser *currentUser = [OCTUser ad_currentUser];
         success = [db executeUpdate:@"DELETE FROM userFollowingUser WHERE userId = ? AND dstUserId = ?", currentUser.objectID, user.objectID];
@@ -250,7 +250,36 @@
     return success;
 }
 
-- (NSArray<__kindof OCTRepository *> *)fetchRepos {
+- (BOOL)updateStarStatus:(NSArray *)reposArray {
+    if (!reposArray.count) {
+        return YES;
+    }
+    
+    __block BOOL success = YES;
+    
+    [_dataBaseQueue updateDatabase:^(FMDatabase *db) {
+        NSString *newIDs = [[reposArray.rac_sequence map:^id(OCTRepository *repos) {
+            return repos.objectID;
+        }].array componentsJoinedByString:@","];
+        
+        NSString *currentUserId = [OCTUser ad_currentUser].objectID;
+        success = [db executeUpdate:@"DELETE FROM userStarredRepos WHERE userId = ? AND reposId NOT IN (?)", currentUserId, newIDs];
+        if (!success) {
+            return;
+        }
+        
+        for (OCTRepository *repos in reposArray) {
+            success = [db executeUpdate:@"REPLACE INTO userStarredRepos (userId, reposId) VALUES (?, ?)", currentUserId, repos.objectID];
+            if (!success) {
+                return;
+            }
+        }
+    }];
+    
+    return success;
+}
+
+- (NSArray *)fetchRepos {
     __block NSMutableArray *reposArray = [NSMutableArray new];
     [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
         FMResultSet *rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? ORDER BY LOWER(name)", [OCTUser ad_currentUser].login];
@@ -268,6 +297,101 @@
     }];
     
     return reposArray;
+}
+
+- (NSArray *)fetchStarredRepos {
+    __block NSMutableArray *reposArray = [NSMutableArray new];
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:@"SELECT * FROM userStarredRepos u, repos r WHERE u.userId = ? AND u.reposId = r.id ORDER BY LOWER(name)", [OCTUser ad_currentUser].objectID];
+        
+        @onExit {
+            [rs close];
+        };
+        
+        while ([rs next]) {
+            OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+            if (repos) {
+                [reposArray addObject:repos];
+            }
+        }
+    }];
+    
+    return reposArray;
+}
+
+- (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep {
+    __block NSMutableArray *reposArray = [NSMutableArray new];
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = nil;
+        
+        @onExit {
+            [rs close];
+        };
+        
+        int limit = page * pageStep;
+        if (limit) {
+            rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? AND private = 0 ORDER BY LOWER(name) LIMIT ?", [OCTUser ad_currentUser].login, @(limit)];
+        } else {
+            rs = [db executeQuery:@"SELECT * FROM repos WHERE owner_login = ? AND private = 0 ORDER BY LOWER(name)", [OCTUser ad_currentUser].login];
+        }
+        
+        while ([rs next]) {
+            OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+            if (repos) {
+                [reposArray addObject:repos];
+            }
+        }
+    }];
+    
+    return reposArray;
+}
+
+- (NSArray *)fetchStarredReposWithPage:(int)page pageStep:(int)pageStep {
+    __block NSMutableArray *reposArray = [NSMutableArray new];
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = nil;
+        
+        @onExit {
+            [rs close];
+        };
+        
+        NSString *currentUserId = [OCTUser ad_currentUser].objectID;
+        
+        int limit = page * pageStep;
+        if (limit) {
+            rs = [db executeQuery:@"SELECT * FROM userStarredRepos u, repos r WHERE u.userId = ? AND u.reposId = r.id ORDER BY LOWER(name) LIMIT ?", currentUserId, @(limit)];
+        } else {
+            rs = [db executeQuery:@"SELECT * FROM userStarredRepos u, repos r WHERE u.userId = ? AND u.reposId = r.id ORDER BY LOWER(name)", currentUserId];
+        }
+        
+        while ([rs next]) {
+            OCTRepository *repos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+            if (repos) {
+                [reposArray addObject:repos];
+            }
+        }
+    }];
+    
+    return reposArray;
+}
+
+- (OCTRepository *)fetchFullRepos:(OCTRepository *)repos {
+    __block OCTRepository *fullRepos = nil;
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:@"SELECT * FROM repos WHERE name = ? AND owner_login = ?", repos.name, repos.ownerLogin];
+        @onExit {
+            [rs close];
+        };
+        
+        if ([rs next]) {
+            fullRepos = [OCTRepository ad_fromDatabaseDic:rs.resultDictionary];
+        }
+    }];
+    
+    return fullRepos;
 }
 
 @end

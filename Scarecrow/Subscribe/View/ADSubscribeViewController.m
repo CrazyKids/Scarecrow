@@ -8,11 +8,12 @@
 
 #import "ADSubscribeViewController.h"
 #import "ADSubscribeViewModel.h"
-#import <MBProgressHUD/MBProgressHUD.h>
 #import "ADSubscribeItemViewModel.h"
 #import "ADSubscribeTableViewCell.h"
+#import <ZRPopoverView/ZRPopoverView.h>
+#import "ADQRCodeScanView.h"
 
-@interface ADSubscribeViewController ()
+@interface ADSubscribeViewController ()<ZRPopoverViewDelegate>
 
 @property (strong, nonatomic, readonly) ADSubscribeViewModel *viewModel;
 
@@ -22,8 +23,18 @@
 
 @dynamic viewModel;
 
++ (ADViewController *)viewController {
+    ADViewController *vc = [[UIStoryboard storyboardWithName:@"Subscribe" bundle:nil]instantiateViewControllerWithIdentifier:@"subscribe"];
+    
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarClick)];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ADSubscribeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     @weakify(self);    
     RAC(self.viewModel, titleViewType) = [self.viewModel.fetchRemoteDataCommamd.executing map:^id(NSNumber *excuting) {
@@ -68,6 +79,24 @@
     }];
 }
 
+- (void)rightBarClick
+{
+    NSArray *menus = @[
+                       @{ kZRPopoverViewTitle: @"扫一扫", kZRPopoverViewIcon : @"QR_snap" }
+                       ];
+    ZRPopoverView *popover = [[ZRPopoverView alloc] initWithStyle:ZRPopoverViewStyleLightContent menus:menus position:ZRPopoverViewPositionRightOfTop];
+    popover.delegate = self;
+    [popover showWithController:self];
+}
+
+#pragma mark - ZRPopoverViewDelegate
+- (void)popoverView:(ZRPopoverView *)popoverView didClick:(int)index
+{
+    if (index == 0) {
+        [[[ADQRCodeScanView alloc] init] openQRCodeScan:self];
+    }
+}
+
 - (NSArray *)viewModelWithEvents:(NSArray *)eventArray {
     @weakify(self);
     return [eventArray.rac_sequence map:^id(OCTEvent *event) {
@@ -85,7 +114,7 @@
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subscribeCell"];
+    ADSubscribeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     [cell bindViewModel:viewModel];
@@ -98,10 +127,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADSubscribeItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     return viewModel.height;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
 }
 
 @end

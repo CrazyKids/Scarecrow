@@ -32,7 +32,12 @@
 
 // repos operation
 - (BOOL)updateRepos:(OCTRepository *)repos;
+- (BOOL)updateStarStatus:(NSArray *)reposArray;
 
-- (NSArray<__kindof OCTRepository *> *)fetchRepos;
+- (NSArray *)fetchRepos;
+- (NSArray *)fetchStarredRepos;
+- (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep;
+- (NSArray *)fetchStarredReposWithPage:(int)page pageStep:(int)pageStep;
+- (OCTRepository *)fetchFullRepos:(OCTRepository *)repos;
 
 @end

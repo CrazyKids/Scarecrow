@@ -29,23 +29,23 @@
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
+#pragma mark - WKNavigationDelegate
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if ([request.URL.scheme isEqualToString:@"scarecrow"]) {
-        NSDictionary *param = request.URL.oct_queryArguments;
+-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSString *absoluteString = webView.URL.absoluteString;
+    if ([absoluteString hasPrefix:github_callback_url]) {
+        NSDictionary *param = webView.URL.oct_queryArguments;
         if ([param[@"state"] isEqualToString:self.viewModel.UUID] && self.viewModel.callback) {
             self.viewModel.callback(param[@"code"]);
         }
-    } else if (navigationType == UIWebViewNavigationTypeOther) {
-        return [super webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     }
-    
-    return YES;
 }
+
+#pragma mark - UIViewControllerRotation
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 
 @end

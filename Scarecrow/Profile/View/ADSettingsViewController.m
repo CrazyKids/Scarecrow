@@ -56,11 +56,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell00"];
-        if (!cell) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell00"];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        }
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellStyleValue1" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.text = @"My Account";
         cell.detailTextLabel.text = [ADPlatformManager sharedInstance].client.user.login;
         
@@ -68,13 +65,10 @@
     }
     
     if (indexPath.section == 1) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell10"];
-        if (!cell) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell10"];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.textLabel.textColor = [UIColor redColor];
-            cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        }
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.text = @"Logout";
         
         return cell;
@@ -93,32 +87,18 @@
     return section == tableView.numberOfSections - 1 ? 20 : 10;
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForFooterInSection:section];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 1) {
         NSString *message = @"Logout will not delete any data. You can login again.";
         @weakify(self);
-        [[ZRAlertController defaultAlert]alertShow:self title:@"" message:message cancelButton:@"Cancel" okayButton:@"OK" okayHandler:^{
+        [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:message cancelButton:@"Cancel" okayButton:@"OK" okayHandler:^{
             @strongify(self);
             [self.viewModel.logoutCommand execute:nil];
-        } cancelHandler:nil];
+        } cancelHandler:^{
+            
+        }];
     }
 }
 

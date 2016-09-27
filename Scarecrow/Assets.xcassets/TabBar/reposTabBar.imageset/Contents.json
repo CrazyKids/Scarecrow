@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reposTabBar.pdf",
-      "scale" : "1x"
+      "filename" : "reposTabBar.pdf"
     }
   ],
   "info" : {

@@ -51,12 +51,9 @@
     OCTUser *user = [self ad_fetchUserWithRawLogin:rawLogin];
     NSParameterAssert(user && user.login.length > 0);
     
-    NSMutableDictionary *dic = [NSMutableDictionary new];
-    [dic setValue:rawLogin forKey:@"rawLogin"];
-    [dic setValue:user.login forKey:@"login"];
-    [dic setValue:server.baseURL forKey:@"baseURL"];
+    [user setValue:server.baseURL forKey:@"baseURL"];
     
-    return [self modelWithDictionary:dic error:nil];
+    return user;
 }
 
 + (instancetype)ad_fetchUserWithRawLogin:(NSString *)rawLogin {

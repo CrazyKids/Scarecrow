@@ -12,7 +12,11 @@
 #import "ADSetttingsViewModel.h"
 #import "ADFollowersViewModel.h"
 #import "ADFollowingViewModel.h"
-#import "ADReposViewModel.h"
+#import "ADPublicReposViewModel.h"
+#import "ADStarredReposViewModel.h"
+#import "ADPublicActivityViewModel.h"
+#import "ADQRCodeViewerController.h"
+#import "ADUserQRCodeViewModel.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -49,31 +53,49 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
 - (void)initialize {
     [super initialize];
     
+    self.dataSourceArray = @[
+                             @[
+                                 @(ADUserInfoDataTypeStarred),
+                                 ],
+                             @[
+                                 @(ADUserInfoDataTypeOrganization),
+                                 @(ADUserInfoDataTypeLocation),
+                                 @(ADUserInfoDataTypeMail),
+                                 @(ADUserInfoDataTypeLink),
+                                 ],
+                             @[
+                                 @(ADUserInfoDataTypeGenerateQRCode),
+                                 ],
+                             ];
+    
     self.bShouldPullToRefresh = NO;
     self.avatarHeaderViewModel = [[ADAvatarHeaderViewModel alloc]initWithUser:self.user];
     
     @weakify(self);
     self.avatarHeaderViewModel.followersCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
-        ADFollowersViewModel *viewModel = [[ADFollowersViewModel alloc]initWithParam:@{@"user" : self.user}];
         
-        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        ADFollowersViewModel *viewModel = [[ADFollowersViewModel alloc]initWithParam:@{@"user" : self.user}];
+        [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
     }];
     
     self.avatarHeaderViewModel.followingCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
-        ADFollowingViewModel *viewModel = [[ADFollowingViewModel alloc]initWithParam:@{@"user" : self.user}];
         
-        ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
-        [self.ownerVC.navigationController pushViewController:vc animated:YES];
+        ADFollowingViewModel *viewModel = [[ADFollowingViewModel alloc]initWithParam:@{@"user" : self.user}];
+        [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
     }];
     
     self.avatarHeaderViewModel.reposCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADPublicReposViewModel *viewModel = [[ADPublicReposViewModel alloc]initWithParam:@{@"user" : self.user}];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -99,6 +121,41 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
         user.followingStatus = self.user.followingStatus;
         [self.user mergeValuesForKeysFromModel:user];
         [self didChangeValueForKey:@"user"];
+    }];
+    
+    
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        @strongify(self);
+        ADUserInfoDataType type = [self.dataSourceArray[indexPath.section][indexPath.row] integerValue];
+        switch (type) {
+            case ADUserInfoDataTypeStarred: {
+                ADStarredReposViewModel *viewModel = [[ADStarredReposViewModel alloc]initWithParam:@{@"user" : self.user}];
+                [self pushViewControllerWithViewModel:viewModel];
+                
+                break;
+            }
+            case ADUserInfoDataTypeActivity: {
+                ADPublicActivityViewModel *viewModel = [[ADPublicActivityViewModel alloc]initWithParam:@{@"user" : self.user}];
+                [self pushViewControllerWithViewModel:viewModel];
+                
+                break;
+            }
+            case ADUserInfoDataTypeMail:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.email]]];
+                break;
+            case ADUserInfoDataTypeLink:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.blog]];
+                break;
+            case ADUserInfoDataTypeGenerateQRCode:
+            {
+                ADUserQRCodeViewModel *viewModel = [[ADUserQRCodeViewModel alloc] initWithParam:@{@"user" : self.user}];
+                [self pushViewControllerWithViewModel:viewModel];
+            }
+                break;
+            default:
+                break;
+        }
+        return [RACSignal empty];
     }];
 }
 

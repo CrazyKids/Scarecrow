@@ -10,12 +10,14 @@
 
 @implementation ADNavigationController
 
+#pragma mark - UIViewControllerRotation
+
 - (BOOL)shouldAutorotate {
-    return YES;
+    return self.topViewController.shouldAutorotate;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+    return self.topViewController.supportedInterfaceOrientations;
 }
 
 @end

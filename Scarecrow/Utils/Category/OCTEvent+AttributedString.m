@@ -14,21 +14,6 @@
 
 @implementation OCTEvent (AttributedString)
 
-- (ADEventOptions)options {
-    ADEventOptions options = 0;
-    
-    if ([self isMemberOfClass:[OCTCommitCommentEvent class]]
-        || [self isMemberOfClass:[OCTIssueCommentEvent class]]
-        || [self isMemberOfClass:[OCTIssueEvent class]]
-        || [self isMemberOfClass:[OCTPullRequestCommentEvent class]]
-        || [self isMemberOfClass:[OCTPullRequestEvent class]]
-        || [self isMemberOfClass:[OCTPushEvent class]]) {
-        options |= ADEventOptionsBoldTitle;
-    }
-    
-    return options;
-}
-
 - (NSMutableAttributedString *)ad_attributedString {
     NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
     
@@ -72,7 +57,7 @@
     
     NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
     
-    [attributedString appendAttributedString:@" commented on commit ".ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:@" commented on commit ".ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_commentedCommitAttributedString];
     
     return attributedString;
@@ -83,7 +68,7 @@
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:@" commented on issue ".ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:@" commented on issue ".ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_issueAttributedString];
     
     return attributedString;
@@ -94,7 +79,7 @@
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:@" commented on pull request ".ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:@" commented on pull request ".ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_pullRequestAttributedString];
     
     return attributedString;
@@ -129,7 +114,7 @@
         action = @"reopened";
     }
     
-    [attributedString appendAttributedString:[NSString stringWithFormat:@" %@ issue ", action].ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:[NSString stringWithFormat:@" %@ issue ", action].ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_issueAttributedString];
     [attributedString appendAttributedString:[@"\n" stringByAppendingString:concreteEvent.issue.title].ad_attributedString.ad_addNormalTitleAttribute.ad_addParagraphStyleAttribute];
     
@@ -178,7 +163,7 @@
         action = @"synchronized";
     }
     
-    [attributedString appendAttributedString:[NSString stringWithFormat:@" %@ pull request ", action].ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:[NSString stringWithFormat:@" %@ pull request ", action].ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_pullRequestAttributedString];
     [attributedString appendAttributedString:[@"\n" stringByAppendingString:concreteEvent.pullRequest.title].ad_attributedString.ad_addNormalTitleAttribute.ad_addParagraphStyleAttribute];
     [attributedString appendAttributedString:@"\n".ad_attributedString];
@@ -241,7 +226,7 @@
     
     NSURL *HTMLURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?title=Commit", concreteEvent.comment.HTMLURL.absoluteString]];
     
-    [attributedString ad_addBoldTitleFontAttribute];
+    [attributedString ad_addNormalTitleAttribute];
     [attributedString ad_addTintedForegroundColorAttribute];
     [attributedString ad_addHTMLURLAttribute:HTMLURL];
     
@@ -258,7 +243,7 @@
     
     NSMutableAttributedString *attributedString = [NSString stringWithFormat:@"%@#%@", self.repositoryName, issueID].ad_attributedString;
     
-    [attributedString ad_addBoldTitleFontAttribute];
+    [attributedString ad_addNormalTitleAttribute];
     [attributedString ad_addTintedForegroundColorAttribute];
     [attributedString ad_addHTMLURLAttribute:HTMLURL];
     
@@ -289,7 +274,7 @@
     
     NSMutableAttributedString *attributedString = [NSString stringWithFormat:@"%@#%@", self.repositoryName, pullRequestID].ad_attributedString;
     
-    [attributedString ad_addBoldTitleFontAttribute];
+    [attributedString ad_addNormalTitleAttribute];
     [attributedString ad_addTintedForegroundColorAttribute];
     [attributedString ad_addHTMLURLAttribute:HTMLURL];
     
@@ -303,12 +288,7 @@
 - (NSMutableAttributedString *)ad_repositoryNameAttributedStringWithString:(NSString *)string {
     NSMutableAttributedString *attributedString = string.ad_attributedString;
     
-    if (self.options & ADEventOptionsBoldTitle) {
-        attributedString = attributedString.ad_addBoldTitleFontAttribute;
-    } else {
-        attributedString = attributedString.ad_addNormalTitleAttribute;
-    }
-    
+    attributedString = attributedString.ad_addNormalTitleAttribute;
     return [attributedString.ad_addTintedForegroundColorAttribute ad_addReposLinkAttributeWithName:attributedString.string referName:nil];
 }
 
@@ -340,13 +320,12 @@
     NSString *deletions = concreteEvent.pullRequest.deletions > 1 ? @" deletions " : @" deletion ";
     
     [attributedString appendAttributedString:octicon.ad_attributedString.ad_addOcticonAttribute.ad_addParagraphStyleAttribute];
-    [attributedString appendAttributedString:@(concreteEvent.pullRequest.commits).stringValue.ad_attributedString.ad_addBoldPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
+    [attributedString appendAttributedString:@(concreteEvent.pullRequest.commits).stringValue.ad_attributedString.ad_addNormalTitleAttribute.ad_addPullInfoForegroundColorAttribute];
     [attributedString appendAttributedString:commits.ad_attributedString.ad_addNormalPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
-    [attributedString appendAttributedString:@(concreteEvent.pullRequest.additions).stringValue.ad_attributedString.ad_addBoldPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
+    [attributedString appendAttributedString:@(concreteEvent.pullRequest.additions).stringValue.ad_attributedString.ad_addNormalTitleAttribute.ad_addPullInfoForegroundColorAttribute];
     [attributedString appendAttributedString:additions.ad_attributedString.ad_addNormalPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
-    [attributedString appendAttributedString:@(concreteEvent.pullRequest.deletions).stringValue.ad_attributedString.ad_addBoldPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
+    [attributedString appendAttributedString:@(concreteEvent.pullRequest.deletions).stringValue.ad_attributedString.ad_addNormalTitleAttribute.ad_addPullInfoForegroundColorAttribute];
     [attributedString appendAttributedString:deletions.ad_attributedString.ad_addNormalPullInfoFontAttribute.ad_addPullInfoForegroundColorAttribute];
-    [attributedString ad_addBackgroundColorAttribute];
     
     return attributedString;
 }
@@ -356,9 +335,9 @@
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
     
-    [attributedString appendAttributedString:@" pushed to ".ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:@" pushed to ".ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_branchNameAttributedString];
-    [attributedString appendAttributedString:@" at ".ad_attributedString.ad_addBoldTitleAttribute];
+    [attributedString appendAttributedString:@" at ".ad_attributedString.ad_addNormalTitleAttribute];
     [attributedString appendAttributedString:self.ad_repositoryNameAttributedString];
     [attributedString appendAttributedString:self.ad_pushedCommitsAttributedString];
     
@@ -372,7 +351,7 @@
     
     NSMutableAttributedString *attributedString = branchName.ad_attributedString;
     
-    [attributedString ad_addBoldTitleFontAttribute];
+    [attributedString ad_addNormalTitleAttribute];
     [attributedString ad_addTintedForegroundColorAttribute];
     [attributedString ad_addReposLinkAttributeWithName:self.repositoryName referName:[OCTRef ad_referenceNameWithBranch:branchName]];
     
@@ -446,8 +425,7 @@
     } else if (concreteEvent.eventType == OCTRefEventDeleted) {
         [attributedString insertAttributedString:@" ".ad_attributedString atIndex:0];
         [attributedString appendAttributedString:@"\n".ad_attributedString];
-        [attributedString ad_addNormalTitleForegroundColorAttribute];
-        [attributedString ad_addBackgroundColorAttribute];
+        [attributedString ad_addTintedForegroundColorAttributeWithAlpha:0.5];
     }
     
     return attributedString;
@@ -518,12 +496,7 @@
 - (NSMutableAttributedString *)ad_loginAttributedStringWithString:(NSString *)string {
     NSMutableAttributedString *attributedString = string.ad_attributedString;
     
-    if (self.options & ADEventOptionsBoldTitle) {
-        [attributedString ad_addBoldTitleFontAttribute];
-    } else {
-        [attributedString ad_addNormalTitleFontAttribute];
-    }
-    
+    [attributedString ad_addNormalTitleFontAttribute];
     [attributedString ad_addTintedForegroundColorAttribute];
     [attributedString ad_addUserLinkAttribute];
     

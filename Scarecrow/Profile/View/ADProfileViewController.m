@@ -74,19 +74,8 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellStyleValue1" forIndexPath:indexPath];
     
     cell.accessoryType  = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -94,30 +83,52 @@
     UIColor *bgColor = [UIColor clearColor];
     CGSize size = CGSizeMake(25, 25);
     
-    switch (indexPath.row) {
-        case 0:
+    ADUserInfoDataType type = [self.viewModel.dataSourceArray[indexPath.section][indexPath.row] integerValue];
+    switch (type) {
+        case ADUserInfoDataTypeOrganization:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Organization" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.compay;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
-        case 1:
+        case ADUserInfoDataTypeLocation:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Location" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.location;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
-        case 2:
+        case ADUserInfoDataTypeMail:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Mail" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.email;
             if (self.viewModel.email != kDefaultPlaceHolder) {
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
             break;
-        case 3:
+        case ADUserInfoDataTypeLink:
             cell.imageView.image = [UIImage ad_imageWithIcon:@"Link" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
             cell.textLabel.text = self.viewModel.blog;
             if (self.viewModel.blog != kDefaultPlaceHolder) {
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
+            break;
+        case ADUserInfoDataTypeName:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Person" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"name";
+            cell.detailTextLabel.text = self.viewModel.user.name;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            break;
+        case ADUserInfoDataTypeStarred:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Star" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"Starred Repos";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        case ADUserInfoDataTypeActivity:
+            cell.imageView.image = [UIImage ad_imageWithIcon:@"Rss" backgroundColor:bgColor iconColor:DEFAULT_RGB iconScale:1 size:size];
+            cell.textLabel.text = @"Public Activity";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        case ADUserInfoDataTypeGenerateQRCode:
+            cell.imageView.image = [UIImage imageNamed:@"icon_qrcode"];
+            cell.textLabel.text = @"QR Code Info";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         default:
             cell.imageView.image = nil;
@@ -138,37 +149,6 @@
     return section == tableView.numberOfSections - 1 ? 20 : 10;
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForFooterInSection:section];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    switch (indexPath.row) {
-        case 2:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", self.viewModel.email]]];
-            break;
-        case 3:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.viewModel.blog]];
-            break;
-        default:
-            break;
-    }
-}
-
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -178,9 +158,8 @@
 
 - (void)onSettingButtonClicked:(id)sender {
     ADSetttingsViewModel *viewModel = [ADSetttingsViewModel new];
-    ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.viewModel pushViewControllerWithViewModel:viewModel];
 }
 
 @end

@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "profileTabBar.pdf",
-      "scale" : "1x"
+      "filename" : "profileTabBar.pdf"
     }
   ],
   "info" : {

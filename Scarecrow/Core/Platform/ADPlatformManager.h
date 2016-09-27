@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ADViewController.h"
+#import <YYKit/YYKit.h>
 
 @class ADViewModel;
 @class ADDataBaseManager;
@@ -15,7 +16,9 @@
 @interface ADPlatformManager : NSObject
 
 @property (strong, nonatomic) OCTClient *client;
-@property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
+@property (strong, nonatomic, readonly) ADDataBaseManager *dataBaseManager;
+
+@property (strong, nonatomic, readonly) YYCache *cacheMgr;
 
 + (ADPlatformManager *)sharedInstance;
 

@@ -8,13 +8,7 @@
 
 #import <OctoKit/OctoKit.h>
 
-typedef NS_OPTIONS(NSUInteger, ADEventOptions) {
-    ADEventOptionsBoldTitle = 1 << 0,
-};
-
 @interface OCTEvent (AttributedString)
-
-@property (nonatomic, assign, readonly) ADEventOptions options;
 
 - (NSMutableAttributedString *)ad_attributedString;
 

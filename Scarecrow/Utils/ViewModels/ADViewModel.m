@@ -35,7 +35,7 @@
 - (instancetype)initWithParam:(NSDictionary *)param {
     self = [super init];
     if (self) {
-        
+        self.showLoading = YES;
     }
     return self;
 }
@@ -49,6 +49,19 @@
         _errors = [RACSubject subject];
     }
     return _errors;
+}
+
+- (void)pushViewControllerWithViewModel:(ADViewModel *)viewModel {
+    if (!viewModel) {
+        return;
+    }
+    
+    ADViewController *vc = [[ADPlatformManager sharedInstance]viewControllerWithViewModel:viewModel];
+    if (!vc || !self.ownerVC.navigationController) {
+        return;
+    }
+    
+    [self.ownerVC.navigationController pushViewController:vc animated:YES];
 }
 
 @end

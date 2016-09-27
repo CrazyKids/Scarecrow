@@ -16,7 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
 @property (strong, nonatomic, readonly) ADLoginViewModel *viewModel;
 
@@ -30,9 +29,6 @@
     [super viewDidLoad];
     
     self.loginButton.layer.borderColor = DEFAULT_RGB.CGColor;
-    
-    self.tipLabel.transform = CGAffineTransformMakeTranslation(0, 130);
-    self.loginButton.transform = CGAffineTransformMakeTranslation(0, 120);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,15 +37,10 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
-    @weakify(self);
-    [UIView animateWithDuration:1.5f animations:^{
-        @strongify(self);
-        self.tipLabel.transform = CGAffineTransformIdentity;
-        self.loginButton.transform = CGAffineTransformIdentity;
-    }];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)bindViewModel {
@@ -73,9 +64,7 @@
             desc = @"Incorrect username or password";
         }
         
-        [[ZRAlertController defaultAlert]alertShow:self title:@"" message:desc okayButton:@"OK" completion:^{
-            
-        }];
+        [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:desc okayButton:@"OK" completion:nil];
     }];
 }
 
