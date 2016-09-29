@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic, readonly) UIImage *qrImage;
 
+@property (nonatomic, strong) UIImage *snapshotLastVCViewImage;
+
 @end

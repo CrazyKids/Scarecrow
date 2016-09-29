@@ -11,6 +11,7 @@
 #import <ZRQRCodeViewController/ZRQRCodeController.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UIColor+Scarecrow.h"
+#import "UIImage+Octions.h"
 
 @interface ADQRCodeViewerController ()
 
@@ -69,6 +70,19 @@
             [self.mainView addSubview:qrImageView];
         }];
     });
+    
+    [self addBlurImage];
+}
+
+- (void)addBlurImage
+{
+    if (!self.viewModel.snapshotLastVCViewImage) {
+        return;
+    }
+    CGRect snapRect = [UIScreen mainScreen].bounds;
+    UIImageView *snapImgView = [self.viewModel.snapshotLastVCViewImage blurImageWithSize:snapRect.size];
+    [snapImgView setFrame:snapRect];
+    [self.view insertSubview:snapImgView belowSubview:[self.view.subviews firstObject]];
 }
 
 - (void)bindViewModel {

@@ -49,4 +49,19 @@
     return [self ad_imageWithIcon:identifier backgroundColor:[UIColor clearColor] iconColor:DEFAULT_RGB iconScale:1 size:size];
 }
 
+
+- (UIImageView *)blurImageWithSize:(CGSize)size
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:self];
+    [imgView setFrame:rect];
+    
+    UIBlurEffect *beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:beffect];
+    effectView.frame = rect;
+    effectView.alpha = 0.95f;
+    [imgView addSubview:effectView];
+    return imgView;
+}
+
 @end

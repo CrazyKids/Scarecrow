@@ -10,6 +10,7 @@
 #import "OCTRepository+Persistence.h"
 #import "ADUserInfoViewModel.h"
 #import "ADReposQRCodeViewModel.h"
+#import "UIView+Extension.h"
 
 @interface ADReposSettingsViewModel ()
 
@@ -67,6 +68,10 @@
             }
             case ADReposSettingDataQRCode: {
                 ADReposQRCodeViewModel *viewModel = [[ADReposQRCodeViewModel alloc]initWithParam:@{@"repos" : self.repos}];
+                ADViewController *tmpVC = (ADViewController*)self.ownerVC.navigationController.topViewController;
+                CGSize viewSize = tmpVC.view.frame.size;
+                viewSize.height -= 64;
+                viewModel.snapshotLastVCViewImage = [tmpVC.view snapshotImageWithSize:viewSize];
                 [self pushViewControllerWithViewModel:viewModel];
                 
                 break;

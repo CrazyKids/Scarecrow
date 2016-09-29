@@ -15,4 +15,7 @@
 + (UIImage *)ad_normalImageWithIdentifier:(NSString *)identifier size:(CGSize)size;
 + (UIImage *)ad_highlightImageWithIdentifier:(NSString *)identifier size:(CGSize)size;
 
+
+- (UIImageView *)blurImageWithSize:(CGSize)size NS_AVAILABLE_IOS(8_0);
+
 @end

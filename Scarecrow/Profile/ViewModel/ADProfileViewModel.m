@@ -17,6 +17,7 @@
 #import "ADPublicActivityViewModel.h"
 #import "ADQRCodeViewerController.h"
 #import "ADUserQRCodeViewModel.h"
+#import "UIView+Extension.h"
 
 NSString* const kDefaultPlaceHolder = @"Not Set";
 
@@ -149,6 +150,10 @@ NSString* const kDefaultPlaceHolder = @"Not Set";
             case ADUserInfoDataTypeGenerateQRCode:
             {
                 ADUserQRCodeViewModel *viewModel = [[ADUserQRCodeViewModel alloc] initWithParam:@{@"user" : self.user}];
+                ADViewController *tmpVC = (ADViewController *)self.ownerVC.navigationController.topViewController;
+                CGSize viewSize = tmpVC.view.frame.size;
+                viewSize.height -= 64;
+                viewModel.snapshotLastVCViewImage = [tmpVC.view snapshotImageWithSize:viewSize];
                 [self pushViewControllerWithViewModel:viewModel];
             }
                 break;

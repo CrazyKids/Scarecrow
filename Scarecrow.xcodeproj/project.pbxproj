@@ -137,6 +137,7 @@
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
 		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
 		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
+		90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 90522B6C1D9B92D2006E8847 /* UIView+Extension.m */; };
 		90B878F41D941AAA0044B286 /* ADLocalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */; };
 		90B878FC1D941F320044B286 /* ADLocalWebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B878FB1D941F320044B286 /* ADLocalWebViewModel.m */; };
 		AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4178A22B1E9BC55BED0135 /* libPods-Scarecrow.a */; };
@@ -580,6 +581,8 @@
 		24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDescTableViewCell.m; sourceTree = "<group>"; };
 		901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeScanView.h; path = Subscribe/View/ADQRCodeScanView.h; sourceTree = "<group>"; };
 		901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeScanView.m; path = Subscribe/View/ADQRCodeScanView.m; sourceTree = "<group>"; };
+		90522B6B1D9B92D2006E8847 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		90522B6C1D9B92D2006E8847 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		90B878F21D941AAA0044B286 /* ADLocalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADLocalWebViewController.h; sourceTree = "<group>"; };
 		90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADLocalWebViewController.m; sourceTree = "<group>"; };
 		90B878FA1D941F320044B286 /* ADLocalWebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADLocalWebViewModel.h; sourceTree = "<group>"; };
@@ -1084,6 +1087,8 @@
 				248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */,
 				116FA5D91D74933000F0AEE7 /* OCTRepository+Persistence.h */,
 				116FA5DA1D74933000F0AEE7 /* OCTRepository+Persistence.m */,
+				90522B6B1D9B92D2006E8847 /* UIView+Extension.h */,
+				90522B6C1D9B92D2006E8847 /* UIView+Extension.m */,
 			);
 			name = Category;
 			path = Utils/Category;
@@ -1730,6 +1735,7 @@
 				11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */,
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
 				248569E71D5E22110087E62D /* ADOauthViewModel.m in Sources */,
+				90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */,
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
 				24AB753F1D923610003EDA7D /* ADQRCodeViewModel.m in Sources */,
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,
