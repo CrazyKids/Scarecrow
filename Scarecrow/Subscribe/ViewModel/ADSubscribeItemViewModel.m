@@ -27,7 +27,7 @@
         
         YYTextContainer *container = [YYTextContainer new];
         container.size = CGSizeMake(LAYOUT_DEFAULT_WIDTH - 65 - 15, MAXFLOAT);
-        container.maximumNumberOfRows = 10;
+//        container.maximumNumberOfRows = 10;
         container.truncationType = YYTextTruncationTypeEnd;
         
         self.textLayout = [YYTextLayout layoutWithContainer:container text:self.attributedString];
