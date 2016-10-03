@@ -13,9 +13,12 @@
 - (UIImage *)snapshotImageWithSize:(CGSize)size
 {
     UIGraphicsBeginImageContext(size);
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    BOOL snapshotRet = [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
+    UIImage *image = nil;
+    if (snapshotRet) {
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
     return image;
 }
 
