@@ -48,4 +48,8 @@
     }];
 }
 
+- (NSArray *)fetchLocalDataWithPage:(int)page pageStep:(int)pageStep {
+    return [OCTUser ad_fetchFollowingWithPage:page pageStep:pageStep];
+}
+
 @end

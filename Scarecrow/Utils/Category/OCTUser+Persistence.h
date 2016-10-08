@@ -33,6 +33,9 @@ typedef NS_ENUM(NSInteger, ADFollowStatus) {
 + (BOOL)ad_followUser:(OCTUser *)user;
 + (BOOL)ad_unfollowUser:(OCTUser *)user;
 
++ (NSArray *)ad_fetchFollowingWithPage:(int)page pageStep:(int)pageStep;
++ (NSArray *)ad_fetchFollowersWithPage:(int)page pageStep:(int)pageStep;
+
 - (BOOL)ad_increaseFollowers;
 - (BOOL)ad_increaseFollowing;
 

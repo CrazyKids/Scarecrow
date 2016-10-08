@@ -34,6 +34,9 @@
 - (BOOL)updateRepos:(OCTRepository *)repos;
 - (BOOL)updateStarStatus:(NSArray *)reposArray;
 
+- (NSArray *)fetchFollowingWithPage:(int)page pageStep:(int)pageStep;
+- (NSArray *)fetchFollowersWithPage:(int)page pageStep:(int)pageStep;
+
 - (NSArray *)fetchRepos;
 - (NSArray *)fetchStarredRepos;
 - (NSArray *)fetchPublicReposWithPage:(int)page pageStep:(int)pageStep;
