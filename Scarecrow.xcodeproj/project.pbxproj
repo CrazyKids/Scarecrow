@@ -1285,10 +1285,11 @@
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = T27MFE7XGH;
+						DevelopmentTeam = B873AZ7BS6;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1933,14 +1934,16 @@
 			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Scarecrow/Scarecrow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = B873AZ7BS6;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scarecrow.scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4fef0def-0af6-4b07-8ce9-ebd9c7fcf219";
+				PROVISIONING_PROFILE_SPECIFIER = Scarecrow_dev_profile;
 			};
 			name = Debug;
 		};
@@ -1949,14 +1952,17 @@
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Scarecrow/Scarecrow.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = B873AZ7BS6;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scarecrow.scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "342f118f-e04e-432d-a3da-698adfdd9a19";
+				PROVISIONING_PROFILE_SPECIFIER = Scarecrow_distribution_profile;
 			};
 			name = Release;
 		};
