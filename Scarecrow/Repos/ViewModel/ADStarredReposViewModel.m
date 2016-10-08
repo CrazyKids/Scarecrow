@@ -41,7 +41,7 @@
         }];
     }
     
-    return [[[[[client fetchStarredRepositoriesForUser:self.user offset:[self offsetForPage:self.page] perPage:self.pageStep]take:self.pageStep]collect]doNext:^(NSArray *reposArray) {
+    return [[[[[client fetchStarredRepositoriesForUser:self.user offset:[self offsetForPage:page] perPage:self.pageStep]take:self.pageStep]collect]doNext:^(NSArray *reposArray) {
         if (self.isCurrentUser) {
             for (OCTRepository *repos in reposArray) {
                 repos.starStatus = ADReposStarStatusYes;
