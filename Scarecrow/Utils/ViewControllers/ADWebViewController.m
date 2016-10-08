@@ -11,7 +11,6 @@
 #import "ADBarButtonItem.h"
 
 @interface ADWebViewController ()
-
 @property (strong, nonatomic, readonly) ADWebViewModel *viewModel;
 @property (strong, nonatomic) UIBarButtonItem *closeButton;
 @property (strong, nonatomic) UIBarButtonItem *backButton;
@@ -58,6 +57,20 @@
     [self.view addSubview:self.webView];
     
     [self.webView loadRequest:self.viewModel.request];
+
+    UIPinchGestureRecognizer *pinchGes = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchScaleToWebView:)];
+    [self.webView.scrollView addGestureRecognizer:pinchGes];
+}
+
+- (void)pinchScaleToWebView:(UIPinchGestureRecognizer *)pinchGesture
+{
+    if([pinchGesture state] == UIGestureRecognizerStateEnded || [pinchGesture state] == UIGestureRecognizerStateCancelled) {
+        [[pinchGesture view] setTransform:CGAffineTransformIdentity];
+        return;
+    }
+    
+    CGAffineTransform newTransform = CGAffineTransformMakeScale(pinchGesture.scale, pinchGesture.scale);
+    [[pinchGesture view] setTransform:newTransform];
 }
 
 - (void)dealloc {
