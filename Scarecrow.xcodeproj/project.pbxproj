@@ -1285,8 +1285,8 @@
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = B873AZ7BS6;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = T27MFE7XGH;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -1935,15 +1935,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = B873AZ7BS6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T27MFE7XGH;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scarecrow.scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4fef0def-0af6-4b07-8ce9-ebd9c7fcf219";
-				PROVISIONING_PROFILE_SPECIFIER = Scarecrow_dev_profile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1953,16 +1954,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = B873AZ7BS6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T27MFE7XGH;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scarecrow.scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "342f118f-e04e-432d-a3da-698adfdd9a19";
-				PROVISIONING_PROFILE_SPECIFIER = Scarecrow_distribution_profile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
