@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) RACCommand *operationCommand;
 
+- (NSArray *)fetchLocalDataWithPage:(int)page pageStep:(int)pageStep;
+
 @end

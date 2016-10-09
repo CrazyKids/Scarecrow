@@ -159,14 +159,32 @@
     [self.refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
 }
 
+- (NSUInteger)dataCount {
+    NSUInteger count = 0;
+    
+    for (NSArray *array in self.viewModel.dataSourceArray) {
+        count += array.count;
+    }
+    
+    return count;
+}
+
+- (BOOL)needRefresh {
+    return self.viewModel.page * self.viewModel.pageStep <= self.dataCount;
+}
+
 #pragma mark - EGORefreshTableHeaderDelegate
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view {
     self.loading = YES;
     
+    int page = self.viewModel.page;
+    if (self.needRefresh) {
+        page += 1;
+    }
+
     @weakify(self);
-    [[[self.viewModel.fetchRemoteDataCommamd execute:@1]deliverOnMainThread]subscribeNext:^(id x) {
-        @strongify(self);
-        self.viewModel.page = 1;
+    [[[self.viewModel.fetchRemoteDataCommamd execute:@(page)]deliverOnMainThread]subscribeNext:^(NSArray *dataSourceArray) {
+
     } error:^(NSError *error) {
         @strongify(self);
         self.loading = NO;
