@@ -57,6 +57,12 @@
     }];
     
     RACSignal *fetchLocalDataSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        
+        NSArray *array = [self fetchLocalDataWithPage:self.page pageStep:self.pageStep];
+        if (array.count) {
+            [subscriber sendNext:array];
+        }
         
         return (RACDisposable *)nil;
     }];
@@ -100,6 +106,10 @@
     }].array;
     
     return @[viewModelArray ?: @[]];
+}
+
+- (NSArray *)fetchLocalDataWithPage:(int)page pageStep:(int)pageStep {
+    return nil;
 }
 
 @end

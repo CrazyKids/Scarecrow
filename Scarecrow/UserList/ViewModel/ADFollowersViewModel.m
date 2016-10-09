@@ -54,4 +54,8 @@
     }];
 }
 
+- (NSArray *)fetchLocalDataWithPage:(int)page pageStep:(int)pageStep {
+    return [OCTUser ad_fetchFollowersWithPage:page pageStep:pageStep];
+}
+
 @end

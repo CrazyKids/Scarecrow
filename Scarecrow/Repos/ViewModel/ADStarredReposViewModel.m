@@ -41,9 +41,11 @@
         }];
     }
     
-    return [[[[[client fetchStarredRepositoriesForUser:self.user offset:[self offsetForPage:self.page] perPage:self.pageStep]take:self.page]collect]doNext:^(NSArray *reposArray) {
-        for (OCTRepository *repos in reposArray) {
-            repos.starStatus = ADReposStarStatusYes;
+    return [[[[[client fetchStarredRepositoriesForUser:self.user offset:[self offsetForPage:page] perPage:self.pageStep]take:self.pageStep]collect]doNext:^(NSArray *reposArray) {
+        if (self.isCurrentUser) {
+            for (OCTRepository *repos in reposArray) {
+                repos.starStatus = ADReposStarStatusYes;
+            }
         }
     }]map:^id(NSArray *reposArray) {
         if (page != 1) {

@@ -71,7 +71,7 @@
     self.nameLabel.attributedText = viewModel.name;
     self.decriptionLabel.attributedText = viewModel.reposDescription;
     self.languageLabel.text = viewModel.language;
-    self.forkCountLabel.text = [NSString stringWithFormat:@"%ld", viewModel.repos.forksCount];
+    self.forkCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)viewModel.repos.forksCount];
     self.updateTimeLabel.text = viewModel.udpateTime;
 }
 

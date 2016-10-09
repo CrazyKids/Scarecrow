@@ -279,6 +279,66 @@
     return success;
 }
 
+- (NSArray *)fetchFollowingWithPage:(int)page pageStep:(int)pageStep {
+    __block NSMutableArray *array = [NSMutableArray new];
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = nil;
+        
+        @onExit {
+            [rs close];
+        };
+        
+        NSString *currentUserId = [OCTUser ad_currentUser].objectID;
+        
+        int limit = page * pageStep;
+        if (limit) {
+            rs = [db executeQuery:@"SELECT * FROM userFollowingUser ufu, user u WHERE ufu.userId = ? AND ufu.dstUserId = u.id ORDER BY u.id LIMIT ?", currentUserId, @(limit)];
+        } else {
+            rs = [db executeQuery:@"SELECT * FROM userFollowingUser ufu, user u WHERE ufu.userId = ? AND ufu.dstUserId = u.id ORDER BY u.id", currentUserId];
+        }
+        
+        while ([rs next]) {
+            OCTUser *user = [MTLJSONAdapter modelOfClass:[OCTUser class] fromJSONDictionary:rs.resultDictionary error:nil];
+            user.followingStatus = ADFollowStatusYes;
+            
+            [array addObject:user];
+        }
+    }];
+    
+    return array;
+}
+
+- (NSArray *)fetchFollowersWithPage:(int)page pageStep:(int)pageStep {
+    __block NSMutableArray *array = [NSMutableArray new];
+    
+    [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = nil;
+        
+        @onExit {
+            [rs close];
+        };
+        
+        NSString *currentUserId = [OCTUser ad_currentUser].objectID;
+        
+        int limit = page * pageStep;
+        if (limit) {
+            rs = [db executeQuery:@"SELECT * FROM userFollowingUser ufu, user u WHERE ufu.dstUserId = ? AND ufu.userId = u.id ORDER BY u.id LIMIT ?", currentUserId, @(limit)];
+        } else {
+            rs = [db executeQuery:@"SELECT * FROM userFollowingUser ufu, user u WHERE ufu.dstUserId = ? AND ufu.userId = u.id ORDER BY u.id", currentUserId];
+        }
+        
+        while ([rs next]) {
+            OCTUser *user = [MTLJSONAdapter modelOfClass:[OCTUser class] fromJSONDictionary:rs.resultDictionary error:nil];
+            user.followingStatus = ADFollowStatusYes;
+            
+            [array addObject:user];
+        }
+    }];
+    
+    return array;
+}
+
 - (NSArray *)fetchRepos {
     __block NSMutableArray *reposArray = [NSMutableArray new];
     [_dataBaseQueue queryInDatabase:^(FMDatabase *db) {

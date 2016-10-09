@@ -94,6 +94,14 @@
     return [[self database]unfollowUser:user];
 }
 
++ (NSArray *)ad_fetchFollowingWithPage:(int)page pageStep:(int)pageStep {
+    return [[self database]fetchFollowingWithPage:page pageStep:pageStep];
+}
+
++ (NSArray *)ad_fetchFollowersWithPage:(int)page pageStep:(int)pageStep {
+    return [[self database]fetchFollowersWithPage:page pageStep:pageStep];
+}
+
 - (BOOL)ad_increaseFollowers {
     NSUInteger followers = self.followers + 1;
     [self setValue:@(followers) forKey:@"followers"];
