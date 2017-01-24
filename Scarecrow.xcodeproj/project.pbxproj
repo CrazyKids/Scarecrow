@@ -1285,7 +1285,7 @@
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = T27MFE7XGH;
+						DevelopmentTeam = KMLJ77QN3L;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -1936,12 +1936,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = T27MFE7XGH;
+				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1953,14 +1953,14 @@
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hongjin Duan (KMLJ77QN3L)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = T27MFE7XGH;
+				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.comisys.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Scarecrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
