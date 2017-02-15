@@ -1941,10 +1941,10 @@
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d9758a1-ef0c-4ddb-b186-156c64f0ba52";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for Scarecrow";
+				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
+				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
 			};
 			name = Debug;
 		};
@@ -1953,17 +1953,17 @@
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hongjin Duan (KMLJ77QN3L)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = KMLJ77QN3L;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Scarecrow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d9758a1-ef0c-4ddb-b186-156c64f0ba52";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for Scarecrow";
+				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
+				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
 			};
 			name = Release;
 		};
