@@ -1,0 +1,4 @@
+github "rs/SDWebImage"
+github "soffes/SAMKeychain"
+github "jdg/MBProgressHUD" ~> 1.0.0
+github "ibireme/YYKit"
