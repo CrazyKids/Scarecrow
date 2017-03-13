@@ -10,7 +10,7 @@
 #import "ADSubscribeViewModel.h"
 #import "ADSubscribeItemViewModel.h"
 #import "ADSubscribeTableViewCell.h"
-#import <ZRPopoverView/ZRPopoverView.h>
+#import <ZRPopView/ZRPopView.h>
 #import "ADQRCodeScanView.h"
 
 @interface ADSubscribeViewController ()<ZRPopoverViewDelegate>

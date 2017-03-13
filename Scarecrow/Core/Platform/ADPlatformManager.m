@@ -9,7 +9,7 @@
 #import "ADPlatformManager.h"
 #import "ADViewController.h"
 #import "ADDataBaseManager.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "OCTUser+Persistence.h"
 
 @interface ADPlatformManager ()
@@ -38,7 +38,7 @@
 
 - (ADDataBaseManager *)dataBaseManager {
     @synchronized (self) {
-        NSString *rawLogin = [SSKeychain username];
+        NSString *rawLogin = [SAMKeychain username];
         if (!_dataBaseManager && rawLogin.length) {
             _dataBaseManager = [[ADDataBaseManager alloc]initWithRawLogin:rawLogin];
         }

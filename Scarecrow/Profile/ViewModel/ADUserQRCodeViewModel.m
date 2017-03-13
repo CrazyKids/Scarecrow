@@ -8,7 +8,7 @@
 
 #import "ADUserQRCodeViewModel.h"
 #import "NSURL+Scarecrow.h"
-#import <SDWebImage/SDWebImageManager.h>
+#import <WebImage/SDWebImageManager.h>
 
 @interface ADUserQRCodeViewModel ()
 

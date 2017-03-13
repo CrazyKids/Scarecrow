@@ -7,8 +7,7 @@
 //
 
 #import "ADQRCodeScanView.h"
-#import <ZRQRCodeViewController/ZRQRCodeController.h>
-#import <ZRAlertController/ZRAlertController.h>
+#import <ZRQRCodeController/ZRQRCodeController.h>
 #import "ADQRCodeCompletion.h"
 
 #define SCROLL_LINE_SPEED 2.0

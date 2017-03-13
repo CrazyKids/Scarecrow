@@ -9,7 +9,7 @@
 #import "ADUserInfoViewController.h"
 #import "ADUserInfoViewModel.h"
 #import "UIColor+Scarecrow.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 
 @interface ADUserInfoViewController ()
 

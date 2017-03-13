@@ -8,7 +8,7 @@
 
 #import "ADReposTableViewCell.h"
 #import "ADReposItemViewModel.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 #import "OCTRepository+Persistence.h"
 
 @interface ADReposTableViewCell ()

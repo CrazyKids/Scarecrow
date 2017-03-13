@@ -7,7 +7,7 @@
 //
 
 #import "OCTEvent+AttributedString.h"
-#import <OcticonsIOS/NSString+Octicons.h>
+#import <Octicons/NSString+Octicons.h>
 #import "NSMutableAttributedString+Scarecrow.h"
 #import "OCTRef+Scarecrow.h"
 #import <FormatterKit/TTTTimeIntervalFormatter.h>

@@ -8,10 +8,10 @@
 
 #import "ADQRCodeViewerController.h"
 #import "ADQRCodeViewModel.h"
-#import <ZRQRCodeViewController/ZRQRCodeController.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <ZRQRCodeController/ZRQRCodeController.h>
+#import <WebImage/UIImageView+WebCache.h>
 #import "UIColor+Scarecrow.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 
 @interface ADQRCodeViewerController ()
 

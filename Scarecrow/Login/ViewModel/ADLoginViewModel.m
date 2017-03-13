@@ -7,7 +7,7 @@
 //
 
 #import "ADLoginViewModel.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "ADTabBarViewModel.h"
 #import "ADPlatformManager.h"
 #import "OCTUser+Persistence.h"
@@ -27,8 +27,8 @@
     void (^loginSuccess)(OCTClient *) = ^(OCTClient *client) {
         [ADPlatformManager sharedInstance].client = client;
         
-        SSKeychain.username = client.user.rawLogin;
-        SSKeychain.accessToken = client.token;
+        SAMKeychain.username = client.user.rawLogin;
+        SAMKeychain.accessToken = client.token;
         
         [client.user ad_update];
         

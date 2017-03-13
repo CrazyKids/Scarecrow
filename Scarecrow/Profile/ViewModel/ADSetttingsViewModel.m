@@ -7,7 +7,7 @@
 //
 
 #import "ADSetttingsViewModel.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "ADLoginViewModel.h"
 
 @interface ADSetttingsViewModel ()
@@ -25,7 +25,7 @@
     self.bShouldPullToRefresh = NO;
     
     self.logoutCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        [SSKeychain deleteAccessToken];
+        [SAMKeychain deleteAccessToken];
         
         //删除目录缓存
         NSString *libStr = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];

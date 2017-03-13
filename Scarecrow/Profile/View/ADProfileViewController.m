@@ -10,8 +10,8 @@
 #import "ADProfileViewModel.h"
 #import "ADAvatarHeaderViewModel.h"
 #import "ADAvatarHeaderView.h"
-#import <SDWebImage/SDWebImagePrefetcher.h>
-#import "UIImage+Octions.h"
+#import <WebImage/SDWebImagePrefetcher.h>
+#import "UIImage+Scarecrow.h"
 #import "UIColor+Scarecrow.h"
 #import "ADSetttingsViewModel.h"
 #import "OCTUser+Persistence.h"

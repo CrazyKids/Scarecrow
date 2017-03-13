@@ -9,10 +9,9 @@
 #import "AppDelegate.h"
 #import "ADViewController.h"
 #import "ADLoginViewModel.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "ADTabBarViewModel.h"
 #import "OCTUser+Persistence.h"
-#import "SSKeychain+Scarecrow.h"
 #import "UIColor+Scarecrow.h"
 
 @interface AppDelegate ()
@@ -61,10 +60,10 @@
 }
 
 - (ADViewModel *)createInitialViewModel {
-    if (SSKeychain.username.length && SSKeychain.accessToken.length) {
-        OCTUser *user = [OCTUser ad_userWithRawLogin:[SSKeychain username] server:OCTServer.dotComServer];
+    if (SAMKeychain.username.length && SAMKeychain.accessToken.length) {
+        OCTUser *user = [OCTUser ad_userWithRawLogin:[SAMKeychain username] server:OCTServer.dotComServer];
         
-        OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+        OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SAMKeychain accessToken]];
         [ADPlatformManager sharedInstance].client = client;
         
         return [ADTabBarViewModel new];

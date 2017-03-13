@@ -7,8 +7,7 @@
 //
 
 #import "ADViewController.h"
-#import <ZRAlertController/ZRAlertController.h>
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "ADLoginViewModel.h"
 
 @interface ADViewController ()
@@ -79,7 +78,7 @@
         if ([error.domain isEqualToString:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
             NSString *message = @"Your authorization has expired, please login again";
             [[ZRAlertController defaultAlert]alertShowWithTitle:nil message:message okayButton:@"OK" completion:^{
-                [SSKeychain deleteAccessToken];
+                [SAMKeychain deleteAccessToken];
                 
                 ADLoginViewModel *tabBarViewModel = [ADLoginViewModel new];
                 dispatch_async(dispatch_get_main_queue(), ^{

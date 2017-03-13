@@ -1,4 +1,9 @@
-github "rs/SDWebImage"
+github "rs/SDWebImage" ~> 3.8.1
+github "jdg/MBProgressHUD"
+github "VictorZhang2014/ZRPopoverView"
+github "VictorZhang2014/ZRAlertController"
+github "VictorZhang2014/ZRQRCodeViewController"
+github "BradLarson/GPUImage"
+github "duanhjlt/OcticonsIOS"
+github "mattt/FormatterKit"
 github "soffes/SAMKeychain"
-github "jdg/MBProgressHUD" ~> 1.0.0
-github "ibireme/YYKit"

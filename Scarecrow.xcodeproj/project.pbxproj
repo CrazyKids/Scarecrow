@@ -55,6 +55,15 @@
 		2415266A1D8E6FB800AFC6DD /* ADCodeTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241526681D8E6FB800AFC6DD /* ADCodeTreeViewController.xib */; };
 		241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
+		241789721E76407000546D68 /* ZRAlertViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417896F1E76407000546D68 /* ZRAlertViewController.framework */; };
+		241789731E76407000546D68 /* ZRPopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789701E76407000546D68 /* ZRPopView.framework */; };
+		241789741E76407000546D68 /* ZRQRCodeController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789711E76407000546D68 /* ZRQRCodeController.framework */; };
+		241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789C01E764B7D00546D68 /* WebImage.framework */; };
+		241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789E91E764EDE00546D68 /* MBProgressHUD.framework */; };
+		24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A051E7650B900546D68 /* GPUImage.framework */; };
+		24178A181E76527200546D68 /* Octicons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A171E76527200546D68 /* Octicons.framework */; };
+		24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A341E76545C00546D68 /* FormatterKit.framework */; };
+		24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A3B1E76562B00546D68 /* SAMKeychain.framework */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
 		241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */; };
@@ -104,7 +113,7 @@
 		248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B91D5E21820087E62D /* OCTEvent+Persistence.m */; };
 		248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */; };
 		248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BD1D5E21820087E62D /* OCTUser+Persistence.m */; };
-		248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */; };
+		248569D81D5E21820087E62D /* SAMKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */; };
 		248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C11D5E21820087E62D /* UIColor+Scarecrow.m */; };
 		248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */; };
 		248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C61D5E21820087E62D /* ADNavigationController.m */; };
@@ -133,7 +142,7 @@
 		24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */; };
 		24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */; };
 		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
-		24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Octions.m */; };
+		24B0D1691D60B90500805A45 /* UIImage+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */; };
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
 		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
 		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
@@ -443,6 +452,15 @@
 		241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBarButtonItem.m; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
+		2417896F1E76407000546D68 /* ZRAlertViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRAlertViewController.framework; path = Carthage/Build/iOS/ZRAlertViewController.framework; sourceTree = "<group>"; };
+		241789701E76407000546D68 /* ZRPopView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRPopView.framework; path = Carthage/Build/iOS/ZRPopView.framework; sourceTree = "<group>"; };
+		241789711E76407000546D68 /* ZRQRCodeController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRQRCodeController.framework; path = Carthage/Build/iOS/ZRQRCodeController.framework; sourceTree = "<group>"; };
+		241789C01E764B7D00546D68 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		241789E91E764EDE00546D68 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		24178A051E7650B900546D68 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
+		24178A171E76527200546D68 /* Octicons.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Octicons.framework; path = Carthage/Build/iOS/Octicons.framework; sourceTree = "<group>"; };
+		24178A341E76545C00546D68 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
+		24178A3B1E76562B00546D68 /* SAMKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAMKeychain.framework; path = Carthage/Build/iOS/SAMKeychain.framework; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
 		241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewModel.m; path = Profile/ViewModel/ADUserInfoViewModel.m; sourceTree = "<group>"; };
 		241B679B1D64BFC200A3960A /* ADUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewController.h; path = Profile/View/ADUserInfoViewController.h; sourceTree = "<group>"; };
@@ -518,8 +536,8 @@
 		248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTRef+Scarecrow.m"; sourceTree = "<group>"; };
 		248569BC1D5E21820087E62D /* OCTUser+Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTUser+Persistence.h"; sourceTree = "<group>"; };
 		248569BD1D5E21820087E62D /* OCTUser+Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTUser+Persistence.m"; sourceTree = "<group>"; };
-		248569BE1D5E21820087E62D /* SSKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSKeychain+Scarecrow.h"; sourceTree = "<group>"; };
-		248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain+Scarecrow.m"; sourceTree = "<group>"; };
+		248569BE1D5E21820087E62D /* SAMKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain+Scarecrow.h"; sourceTree = "<group>"; };
+		248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain+Scarecrow.m"; sourceTree = "<group>"; };
 		248569C01D5E21820087E62D /* UIColor+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Scarecrow.h"; sourceTree = "<group>"; };
 		248569C11D5E21820087E62D /* UIColor+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Scarecrow.m"; sourceTree = "<group>"; };
 		248569C21D5E21820087E62D /* UIStoryboard+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+ViewModel.h"; sourceTree = "<group>"; };
@@ -572,8 +590,8 @@
 		24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderView.h; path = Profile/View/ADAvatarHeaderView.h; sourceTree = "<group>"; };
 		24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderView.m; path = Profile/View/ADAvatarHeaderView.m; sourceTree = "<group>"; };
 		24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADAvatarHeanderView.xib; path = Profile/View/ADAvatarHeanderView.xib; sourceTree = "<group>"; };
-		24B0D1671D60B90500805A45 /* UIImage+Octions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Octions.h"; sourceTree = "<group>"; };
-		24B0D1681D60B90500805A45 /* UIImage+Octions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octions.m"; sourceTree = "<group>"; };
+		24B0D1671D60B90500805A45 /* UIImage+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scarecrow.h"; sourceTree = "<group>"; };
+		24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scarecrow.m"; sourceTree = "<group>"; };
 		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
 		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
 		24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scarecrow.entitlements; sourceTree = "<group>"; };
@@ -596,6 +614,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */,
+				24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */,
+				24178A181E76527200546D68 /* Octicons.framework in Frameworks */,
+				24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */,
+				241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */,
+				241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */,
+				241789721E76407000546D68 /* ZRAlertViewController.framework in Frameworks */,
+				241789731E76407000546D68 /* ZRPopView.framework in Frameworks */,
+				241789741E76407000546D68 /* ZRQRCodeController.framework in Frameworks */,
 				11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */,
 				247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */,
 				247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */,
@@ -1075,14 +1102,14 @@
 				248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */,
 				248569BC1D5E21820087E62D /* OCTUser+Persistence.h */,
 				248569BD1D5E21820087E62D /* OCTUser+Persistence.m */,
-				248569BE1D5E21820087E62D /* SSKeychain+Scarecrow.h */,
-				248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */,
+				248569BE1D5E21820087E62D /* SAMKeychain+Scarecrow.h */,
+				248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */,
 				248569C01D5E21820087E62D /* UIColor+Scarecrow.h */,
 				248569C11D5E21820087E62D /* UIColor+Scarecrow.m */,
 				248569C21D5E21820087E62D /* UIStoryboard+ViewModel.h */,
 				248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */,
-				24B0D1671D60B90500805A45 /* UIImage+Octions.h */,
-				24B0D1681D60B90500805A45 /* UIImage+Octions.m */,
+				24B0D1671D60B90500805A45 /* UIImage+Scarecrow.h */,
+				24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */,
 				248EC5F61D660A9800860852 /* OCTClient+Scarecrow.h */,
 				248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */,
 				116FA5D91D74933000F0AEE7 /* OCTRepository+Persistence.h */,
@@ -1187,6 +1214,15 @@
 		C8BA914AFB0D04ACD6A79ABF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24178A3B1E76562B00546D68 /* SAMKeychain.framework */,
+				24178A341E76545C00546D68 /* FormatterKit.framework */,
+				24178A171E76527200546D68 /* Octicons.framework */,
+				24178A051E7650B900546D68 /* GPUImage.framework */,
+				241789E91E764EDE00546D68 /* MBProgressHUD.framework */,
+				241789C01E764B7D00546D68 /* WebImage.framework */,
+				2417896F1E76407000546D68 /* ZRAlertViewController.framework */,
+				241789701E76407000546D68 /* ZRPopView.framework */,
+				241789711E76407000546D68 /* ZRQRCodeController.framework */,
 				11C353EE1D8EE40E004BEBBB /* WebKit.framework */,
 				2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */,
 				2423317B1D2E389900EF8698 /* Mantle.xcodeproj */,
@@ -1204,19 +1240,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				DD28242E7A26EC0C165FDE44 /* 📦 Check Pods Manifest.lock */,
-				15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */,
-				2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */,
-				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
-				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
+				7F6424D08111C79C2CA44118 /* 📦 Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
 				242331231D2E36BD00EF8698 /* Frameworks */,
 				242331241D2E36BD00EF8698 /* Resources */,
-				6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */,
-				099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */,
-				82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */,
-				1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */,
 				247DF6551D5D5F0B00607526 /* Embed Frameworks */,
+				2417895E1E763F9200546D68 /* ShellScript */,
+				EF71D8E21DB9BA4DB518E1BB /* 📦 Embed Pods Frameworks */,
+				E06FC93A75EE5E6DEBFCFDF9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1280,7 +1311,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AD;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = duanhongjin;
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
@@ -1512,29 +1543,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */ = {
+		2417895E1E763F9200546D68 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ZRAlertViewController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZRPopView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZRQRCodeController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GPUImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Octicons.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FormatterKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SAMKeychain.framework",
 			);
-			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */ = {
+		7F6424D08111C79C2CA44118 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1542,7 +1580,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */ = {
+		E06FC93A75EE5E6DEBFCFDF9 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1557,52 +1595,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */ = {
+		EF71D8E21DB9BA4DB518E1BB /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1615,36 +1608,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DD28242E7A26EC0C165FDE44 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1679,10 +1642,10 @@
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
-				248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */,
+				248569D81D5E21820087E62D /* SAMKeychain+Scarecrow.m in Sources */,
 				1172FE7D1D805C8E007181BB /* ADReposItemViewModel.m in Sources */,
 				241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */,
-				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
+				24B0D1691D60B90500805A45 /* UIImage+Scarecrow.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				2415265A1D8E6EC400AFC6DD /* ADCodeTreeViewModel.m in Sources */,
 				11C354121D9030C9004BEBBB /* ADReposInfoViewController.m in Sources */,
@@ -1933,10 +1896,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
@@ -1952,10 +1920,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
