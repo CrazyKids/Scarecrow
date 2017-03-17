@@ -18,7 +18,7 @@
 
 @property (copy, nonatomic) NSAttributedString *name;
 @property (copy, nonatomic) NSAttributedString *reposDescription;
-@property (copy, nonatomic) NSString *udpateTime;
+@property (copy, nonatomic) NSString *updateTime;
 @property (copy, nonatomic) NSString *language;
 
 @property (assign, nonatomic) CGFloat height;
@@ -47,7 +47,7 @@
         
         TTTTimeIntervalFormatter *formatter = [TTTTimeIntervalFormatter new];
         formatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
-        self.udpateTime = [formatter stringForTimeIntervalFromDate:[NSDate date] toDate:repos.dateUpdated];
+        self.updateTime = [formatter stringForTimeIntervalFromDate:[NSDate date] toDate:repos.dateUpdated];
     }
     return self;
 }

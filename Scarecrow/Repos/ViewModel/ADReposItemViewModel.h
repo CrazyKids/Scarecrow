@@ -15,7 +15,7 @@
 
 @property (copy, nonatomic, readonly) NSAttributedString *name;
 @property (copy, nonatomic, readonly) NSAttributedString *reposDescription;
-@property (copy, nonatomic, readonly) NSString *udpateTime;
+@property (copy, nonatomic, readonly) NSString *updateTime;
 @property (copy, nonatomic, readonly) NSString *language;
 
 @property (assign, nonatomic, readonly) CGFloat height;

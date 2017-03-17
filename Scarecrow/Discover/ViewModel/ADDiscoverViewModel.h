@@ -6,8 +6,10 @@
 //  Copyright © 2016 duanhongjin. All rights reserved.
 //
 
-#import "ADViewModel.h"
+#import "ADTableViewModel.h"
 
-@interface ADDiscoverViewModel : ADViewModel
+@class ADDiscoverItemViewModel;
+
+@interface ADDiscoverViewModel : ADTableViewModel
 
 @end
