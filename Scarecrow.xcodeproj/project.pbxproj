@@ -106,7 +106,6 @@
 		247DF64A1D5D5F0B00607526 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331761D2E388E00EF8698 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; };
 		247DF64E1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; };
 		247DF6521D5D5F0B00607526 /* OctoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */; };
 		248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */; };
@@ -630,7 +629,6 @@
 				241789731E76407000546D68 /* ZRPopView.framework in Frameworks */,
 				241789741E76407000546D68 /* ZRQRCodeController.framework in Frameworks */,
 				11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */,
-				247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */,
 				247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */,
 				AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */,
 				247DF6491D5D5F0B00607526 /* AFNetworking.framework in Frameworks */,
@@ -1565,7 +1563,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GPUImage.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Octicons.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FormatterKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SAMKeychain.framework",
 			);
