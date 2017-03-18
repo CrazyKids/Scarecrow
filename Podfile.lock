@@ -2,11 +2,12 @@ PODS:
   - EGOTableViewPullRefreshAndLoadMore (1.0.4)
   - FMDB/SQLCipher (2.6.2):
     - SQLCipher
+  - OcticonsIOS (0.0.3)
   - Ono (1.2.2)
-  - SQLCipher (3.4.0):
-    - SQLCipher/standard (= 3.4.0)
-  - SQLCipher/common (3.4.0)
-  - SQLCipher/standard (3.4.0):
+  - SQLCipher (3.4.1):
+    - SQLCipher/standard (= 3.4.1)
+  - SQLCipher/common (3.4.1)
+  - SQLCipher/standard (3.4.1):
     - SQLCipher/common
   - Vertigo (0.1)
   - YYKit (1.0.9):
@@ -16,18 +17,29 @@ PODS:
 DEPENDENCIES:
   - EGOTableViewPullRefreshAndLoadMore (~> 1.0.4)
   - FMDB/SQLCipher (~> 2.6.2)
+  - OcticonsIOS (from `https://github.com/jacksonh/OcticonsIOS.git`)
   - Ono (~> 1.2.2)
   - Vertigo (~> 0.1)
   - YYKit (~> 1.0.7)
 
+EXTERNAL SOURCES:
+  OcticonsIOS:
+    :git: https://github.com/jacksonh/OcticonsIOS.git
+
+CHECKOUT OPTIONS:
+  OcticonsIOS:
+    :commit: b39a45887a949de005214a50abdd375ba7d25208
+    :git: https://github.com/jacksonh/OcticonsIOS.git
+
 SPEC CHECKSUMS:
   EGOTableViewPullRefreshAndLoadMore: 118a0824590db042d42e08fcc442b93cebf15e73
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  OcticonsIOS: 93f352e0e19df9cabe662c14d2401581d8f89a6a
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
-  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
+  SQLCipher: 43d12c0eb9c57fb438749618fc3ce0065509a559
   Vertigo: b971aa21e904512cfe387196ccba37df3f9a792e
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 36f0ca6686cc1b26d4e1ef3a543e6a96ac7be77c
+PODFILE CHECKSUM: c921734302b568bde1391d6dabb78f9fe27a9821
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0

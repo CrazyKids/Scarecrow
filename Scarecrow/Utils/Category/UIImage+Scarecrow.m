@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+Scarecrow.h"
-#import <Octicons/NSString+Octicons.h>
+#import <OcticonsIOS/NSString+Octicons.h>
 #import "UIColor+Scarecrow.h"
 
 @implementation UIImage (Scarecrow)

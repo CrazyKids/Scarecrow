@@ -61,7 +61,6 @@
 		241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789C01E764B7D00546D68 /* WebImage.framework */; };
 		241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789E91E764EDE00546D68 /* MBProgressHUD.framework */; };
 		24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A051E7650B900546D68 /* GPUImage.framework */; };
-		24178A181E76527200546D68 /* Octicons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A171E76527200546D68 /* Octicons.framework */; };
 		24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A341E76545C00546D68 /* FormatterKit.framework */; };
 		24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A3B1E76562B00546D68 /* SAMKeychain.framework */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
@@ -459,7 +458,6 @@
 		241789C01E764B7D00546D68 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		241789E91E764EDE00546D68 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		24178A051E7650B900546D68 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
-		24178A171E76527200546D68 /* Octicons.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Octicons.framework; path = Carthage/Build/iOS/Octicons.framework; sourceTree = "<group>"; };
 		24178A341E76545C00546D68 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
 		24178A3B1E76562B00546D68 /* SAMKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAMKeychain.framework; path = Carthage/Build/iOS/SAMKeychain.framework; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
@@ -621,7 +619,6 @@
 			files = (
 				24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */,
 				24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */,
-				24178A181E76527200546D68 /* Octicons.framework in Frameworks */,
 				24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */,
 				241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */,
 				241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */,
@@ -1224,7 +1221,6 @@
 			children = (
 				24178A3B1E76562B00546D68 /* SAMKeychain.framework */,
 				24178A341E76545C00546D68 /* FormatterKit.framework */,
-				24178A171E76527200546D68 /* Octicons.framework */,
 				24178A051E7650B900546D68 /* GPUImage.framework */,
 				241789E91E764EDE00546D68 /* MBProgressHUD.framework */,
 				241789C01E764B7D00546D68 /* WebImage.framework */,
@@ -1248,14 +1244,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				7F6424D08111C79C2CA44118 /* 📦 Check Pods Manifest.lock */,
+				7F6424D08111C79C2CA44118 /* [CP] Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
 				242331231D2E36BD00EF8698 /* Frameworks */,
 				242331241D2E36BD00EF8698 /* Resources */,
 				247DF6551D5D5F0B00607526 /* Embed Frameworks */,
 				2417895E1E763F9200546D68 /* ShellScript */,
-				EF71D8E21DB9BA4DB518E1BB /* 📦 Embed Pods Frameworks */,
-				E06FC93A75EE5E6DEBFCFDF9 /* 📦 Copy Pods Resources */,
+				EF71D8E21DB9BA4DB518E1BB /* [CP] Embed Pods Frameworks */,
+				E06FC93A75EE5E6DEBFCFDF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1572,29 +1568,29 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		7F6424D08111C79C2CA44118 /* 📦 Check Pods Manifest.lock */ = {
+		7F6424D08111C79C2CA44118 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E06FC93A75EE5E6DEBFCFDF9 /* 📦 Copy Pods Resources */ = {
+		E06FC93A75EE5E6DEBFCFDF9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1602,14 +1598,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF71D8E21DB9BA4DB518E1BB /* 📦 Embed Pods Frameworks */ = {
+		EF71D8E21DB9BA4DB518E1BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

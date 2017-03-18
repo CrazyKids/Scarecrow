@@ -7,7 +7,7 @@
 //
 
 #import "NSMutableAttributedString+Scarecrow.h"
-#import <Octicons/NSString+Octicons.h>
+#import <OcticonsIOS/NSString+Octicons.h>
 #import "UIColor+Scarecrow.h"
 #import <YYKit/YYKit.h>
 #import "NSURL+Scarecrow.h"
