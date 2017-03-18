@@ -92,6 +92,13 @@
              @"ADQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADTrendingViewModel" : @"ADTrendingViewController",
+             @"ADPopluarUsersViewModel" : @"ADPopularUsersViewController",
+             @"ADPopluarRepositoriesViewModel" : @"ADPopluarRepositoriesViewController",
+             @"ADShowCasesViewModel" : @"ADShowCasesViewController",
+             @"ADSearchViewModel" : @"ADSearchViewController",
+             @"ADBrowseViewModel" : @"ADBrowseViewController",
+             @"ADTrendingReposViewModel" : @"ADTrendingReposViewController",
              };
 }
 

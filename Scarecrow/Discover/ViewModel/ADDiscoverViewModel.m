@@ -8,6 +8,12 @@
 
 #import "ADDiscoverViewModel.h"
 #import "ADDiscoverItemViewModel.h"
+#import "ADTrendingViewModel.h"
+#import "ADPopluarUsersViewModel.h"
+#import "ADPopluarRepositoriesViewModel.h"
+#import "ADShowCasesViewModel.h"
+#import "ADSearchViewModel.h"
+#import "ADBrowseViewModel.h"
 
 @interface ADDiscoverViewModel ()
 
@@ -22,6 +28,15 @@
     self.bShouldPullToRefresh = NO;
     
     [self setupData];
+    
+    @weakify(self);
+    self.didSelectCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        @strongify(self);
+        NSArray *sectionData = self.dataSourceArray[indexPath.section];
+        ADDiscoverItemViewModel *viewModel = sectionData[indexPath.row];
+        
+        return [viewModel.itemCommand execute:nil];
+    }];
 }
 
 - (void)setupData {
@@ -30,24 +45,31 @@
     // 1.Trending
     [sectionData addObject:@[self.trendingViewModel]];
     
-    // 2. Popular users and repositories
-    [sectionData addObject:@[self.popularUsersViewModel, self.popularRepositoriesViewModel]];
-    
-    // 3. Show Cases
-    [sectionData addObject:@[self.showCasesViewModel]];
-    
-    // 4. Search
-    [sectionData addObject:@[self.searchViewModel]];
-    
-    // 5. Browse
-    [sectionData addObject:@[self.browseViewModel]];
+//    // 2. Popular users and repositories
+//    [sectionData addObject:@[self.popularUsersViewModel, self.popularRepositoriesViewModel]];
+//    
+//    // 3. Show Cases
+//    [sectionData addObject:@[self.showCasesViewModel]];
+//    
+//    // 4. Search
+//    [sectionData addObject:@[self.searchViewModel]];
+//    
+//    // 5. Browse
+//    [sectionData addObject:@[self.browseViewModel]];
     
     self.dataSourceArray = sectionData;
 }
 
 - (ADDiscoverItemViewModel *)trendingViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADTrendingViewModel *viewModel = [[ADTrendingViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -59,8 +81,15 @@
 }
 
 - (ADDiscoverItemViewModel *)popularUsersViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADPopluarUsersViewModel *viewModel = [[ADPopluarUsersViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -72,8 +101,15 @@
 }
 
 - (ADDiscoverItemViewModel *)popularRepositoriesViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADPopluarRepositoriesViewModel *viewModel = [[ADPopluarRepositoriesViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -85,8 +121,15 @@
 }
 
 - (ADDiscoverItemViewModel *)showCasesViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADShowCasesViewModel *viewModel = [[ADShowCasesViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -98,8 +141,15 @@
 }
 
 - (ADDiscoverItemViewModel *)searchViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADSearchViewModel *viewModel = [[ADSearchViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     
@@ -111,8 +161,15 @@
 }
 
 - (ADDiscoverItemViewModel *)browseViewModel {
-    UIImage *itemIcon = [UIImage new];
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADBrowseViewModel *viewModel = [[ADBrowseViewModel alloc]initWithParam:nil];
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     

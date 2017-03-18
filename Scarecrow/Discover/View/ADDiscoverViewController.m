@@ -12,7 +12,7 @@
 
 @interface ADDiscoverViewController ()
 
-@property (strong, nonatomic) ADDiscoverItemViewModel *viewModel;
+@property (strong, nonatomic) ADDiscoverViewModel *viewModel;
 
 @end
 
@@ -34,13 +34,22 @@
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellStyleValue1" forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    NSArray *sectionData = self.viewModel.dataSourceArray[indexPath.section];
+    ADDiscoverItemViewModel *viewModel = sectionData[indexPath.row];
+    
+    cell.imageView.image = viewModel.itemIcon;
+    cell.textLabel.text = viewModel.itemName;
+    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 15.0;
 }
 
 @end
