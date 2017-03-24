@@ -59,7 +59,7 @@ NSString *const kLinkAttributeKey = @"ADLinkAttributeKey";
 }
 
 - (NSMutableAttributedString *)ad_addForegroundColorAttribute:(NSInteger)rgbColor alpha:(CGFloat)alpha {
-    UIColor *color = [UIColor colorWithRgbColor:rgbColor alpha:alpha];
+    UIColor *color = [UIColor ad_colorWithRgbColor:rgbColor alpha:alpha];
     [self addAttribute:NSForegroundColorAttributeName value:color range:self.ad_totalString];
     
     return self;
@@ -125,7 +125,7 @@ NSString *const kLinkAttributeKey = @"ADLinkAttributeKey";
     YYTextBorder *highlightBorder = [YYTextBorder new];
     highlightBorder.insets = UIEdgeInsetsMake(-2, 0, -2, 0);
     highlightBorder.cornerRadius = 3;
-    highlightBorder.fillColor = [UIColor colorWithRgbColor:0xD9D9D9 alpha:1];
+    highlightBorder.fillColor = [UIColor ad_colorWithRgbColor:0xD9D9D9 alpha:1];
     
     YYTextHighlight *highlight = [YYTextHighlight new];
     [highlight setBackgroundBorder:highlightBorder];

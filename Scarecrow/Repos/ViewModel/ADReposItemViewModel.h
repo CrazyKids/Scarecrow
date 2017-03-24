@@ -20,6 +20,6 @@
 
 @property (assign, nonatomic, readonly) CGFloat height;
 
-- (instancetype)initWithRepos:(OCTRepository *)repos currentUser:(BOOL)currentUser;
+- (instancetype)initWithRepos:(OCTRepository *)repos currentUser:(BOOL)currentUser options:(ADReposViewModelOptions)options;
 
 @end

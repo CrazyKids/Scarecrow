@@ -8,7 +8,6 @@
 
 #import "ADTrendingViewModel.h"
 #import "ADTrendingReposViewModel.h"
-#import "YYCache+Scarecrow.h"
 #import "ADLanguageViewModel.h"
 
 @interface ADTrendingViewModel ()
@@ -28,7 +27,7 @@
 - (void)initialize {
     [super initialize];
     
-    self.language = [(NSDictionary *)[YYCache sharedInstance]objectForKey:kTrendingLanguageCacheKey];
+    self.language = (NSDictionary *)[[ADPlatformManager sharedInstance].cacheMgr objectForKey:kTrendingLanguageCacheKey];
     if (!self.language) {
         self.language = @{@"name" : @"All Languages", @"slug" : @""};
     }
@@ -47,7 +46,7 @@
             @strongify(self);
             self.language = language;
             
-            [[YYCache sharedInstance]setObject:language forKey:kTrendingLanguageCacheKey];
+            [[ADPlatformManager sharedInstance].cacheMgr setObject:language forKey:kTrendingLanguageCacheKey];
         };
         
         [self pushViewControllerWithViewModel:viewModel];
@@ -55,13 +54,17 @@
         return [RACSignal empty];
     }];
     
-    self.dailyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:nil];
-    self.weeklyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:nil];
-    self.monthlyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:nil];
+    NSDictionary *param = @{@"since":@{@"name" : @"Today", @"slug" : @"daily"},
+                            @"language":self.language};
+    self.dailyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:param];
     
-    self.dailyViewModel.sinceDic = @{@"name" : @"Today", @"slug" : @"daily"};
-    self.weeklyViewModel.sinceDic = @{@"name" : @"This Week", @"slug" : @"weekly"};
-    self.monthlyViewModel.sinceDic = @{@"name" : @"This Month", @"slug" : @"monthly"};
+    param = @{@"since":@{@"name" : @"Today", @"slug" : @"weekly"},
+              @"language":self.language};
+    self.weeklyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:param];
+    
+    param = @{@"since":@{@"name" : @"Today", @"slug" : @"monthly"},
+              @"language":self.language};
+    self.monthlyViewModel = [[ADTrendingReposViewModel alloc]initWithParam:param];
     
     RAC(self.dailyViewModel, languageDic) = RACObserve(self, language);
     RAC(self.weeklyViewModel, languageDic) = RACObserve(self, language);

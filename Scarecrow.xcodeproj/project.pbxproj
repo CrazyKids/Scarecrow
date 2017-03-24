@@ -79,6 +79,8 @@
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
 		242A69FA1E84D5DE002063DD /* ADLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A69F81E84D5DE002063DD /* ADLanguageViewController.m */; };
 		242A69FB1E84D5DE002063DD /* ADLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */; };
+		242A6A001E851A37002063DD /* ADViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A69FF1E851A37002063DD /* ADViewModelService.m */; };
+		242A6A031E851AD8002063DD /* ADRepositoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A6A021E851AD8002063DD /* ADRepositoryService.m */; };
 		243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1001D827C68001F174A /* ADStarredReposViewModel.m */; };
 		243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1261D829CB8001F174A /* ADStarredReposViewController.m */; };
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
@@ -170,7 +172,6 @@
 		24D4AA011E8415C200205C22 /* ADTrendingReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4AA001E8415C200205C22 /* ADTrendingReposViewModel.m */; };
 		24D4AA081E8417D700205C22 /* ADTrendingReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */; };
 		24D4AA091E8417D700205C22 /* ADTrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */; };
-		24D4AA0C1E841D0D00205C22 /* YYCache+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4AA0B1E841D0D00205C22 /* YYCache+Scarecrow.m */; };
 		24D4AA0E1E84294300205C22 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D4AA0D1E84294300205C22 /* Masonry.framework */; };
 		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
 		90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 90522B6C1D9B92D2006E8847 /* UIView+Extension.m */; };
@@ -521,6 +522,10 @@
 		242A69F71E84D5DE002063DD /* ADLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLanguageViewController.h; path = Discover/View/ADLanguageViewController.h; sourceTree = "<group>"; };
 		242A69F81E84D5DE002063DD /* ADLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLanguageViewController.m; path = Discover/View/ADLanguageViewController.m; sourceTree = "<group>"; };
 		242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADLanguageViewController.xib; path = Discover/View/ADLanguageViewController.xib; sourceTree = "<group>"; };
+		242A69FE1E851A37002063DD /* ADViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADViewModelService.h; path = Core/Service/ADViewModelService.h; sourceTree = "<group>"; };
+		242A69FF1E851A37002063DD /* ADViewModelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADViewModelService.m; path = Core/Service/ADViewModelService.m; sourceTree = "<group>"; };
+		242A6A011E851AD8002063DD /* ADRepositoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRepositoryService.h; path = Core/Service/ADRepositoryService.h; sourceTree = "<group>"; };
+		242A6A021E851AD8002063DD /* ADRepositoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRepositoryService.m; path = Core/Service/ADRepositoryService.m; sourceTree = "<group>"; };
 		243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewModel.h; sourceTree = "<group>"; };
 		243AB1001D827C68001F174A /* ADStarredReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewModel.m; sourceTree = "<group>"; };
 		243AB1251D829CB8001F174A /* ADStarredReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewController.h; sourceTree = "<group>"; };
@@ -668,8 +673,6 @@
 		24D4AA051E8417D700205C22 /* ADTrendingReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTrendingReposViewController.h; path = Discover/View/ADTrendingReposViewController.h; sourceTree = "<group>"; };
 		24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTrendingReposViewController.m; path = Discover/View/ADTrendingReposViewController.m; sourceTree = "<group>"; };
 		24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADTrendingReposViewController.xib; path = Discover/View/ADTrendingReposViewController.xib; sourceTree = "<group>"; };
-		24D4AA0A1E841D0D00205C22 /* YYCache+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YYCache+Scarecrow.h"; sourceTree = "<group>"; };
-		24D4AA0B1E841D0D00205C22 /* YYCache+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YYCache+Scarecrow.m"; sourceTree = "<group>"; };
 		24D4AA0D1E84294300205C22 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeScanView.h; path = Subscribe/View/ADQRCodeScanView.h; sourceTree = "<group>"; };
 		901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeScanView.m; path = Subscribe/View/ADQRCodeScanView.m; sourceTree = "<group>"; };
@@ -949,6 +952,7 @@
 		241637C01D2FAE6100A16944 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				242A69FD1E851939002063DD /* Service */,
 				246CA4171D38E69A002167A2 /* DataBase */,
 				241637C11D2FAEB000A16944 /* Platform */,
 			);
@@ -1130,6 +1134,17 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		242A69FD1E851939002063DD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				242A69FE1E851A37002063DD /* ADViewModelService.h */,
+				242A69FF1E851A37002063DD /* ADViewModelService.m */,
+				242A6A011E851AD8002063DD /* ADRepositoryService.h */,
+				242A6A021E851AD8002063DD /* ADRepositoryService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		244998801D4DEEF800D6E9F7 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1216,8 +1231,6 @@
 				116FA5DA1D74933000F0AEE7 /* OCTRepository+Persistence.m */,
 				90522B6B1D9B92D2006E8847 /* UIView+Extension.h */,
 				90522B6C1D9B92D2006E8847 /* UIView+Extension.m */,
-				24D4AA0A1E841D0D00205C22 /* YYCache+Scarecrow.h */,
-				24D4AA0B1E841D0D00205C22 /* YYCache+Scarecrow.m */,
 			);
 			name = Category;
 			path = Utils/Category;
@@ -1453,7 +1466,7 @@
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KMLJ77QN3L;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -1787,6 +1800,7 @@
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
 				241E371E1E84C4F400C5761B /* ADLanguageViewModel.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
+				242A6A001E851A37002063DD /* ADViewModelService.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
 				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
@@ -1800,7 +1814,6 @@
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				2415265A1D8E6EC400AFC6DD /* ADCodeTreeViewModel.m in Sources */,
 				245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */,
-				24D4AA0C1E841D0D00205C22 /* YYCache+Scarecrow.m in Sources */,
 				11C354121D9030C9004BEBBB /* ADReposInfoViewController.m in Sources */,
 				248569E41D5E21CA0087E62D /* ADWebViewModel.m in Sources */,
 				2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */,
@@ -1861,6 +1874,7 @@
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
 				11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */,
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
+				242A6A031E851AD8002063DD /* ADRepositoryService.m in Sources */,
 				248569E71D5E22110087E62D /* ADOauthViewModel.m in Sources */,
 				90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */,
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
@@ -2063,8 +2077,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2075,8 +2089,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -2087,8 +2101,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2099,8 +2113,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

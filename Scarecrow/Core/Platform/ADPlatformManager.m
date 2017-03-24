@@ -11,12 +11,17 @@
 #import "ADDataBaseManager.h"
 #import "SAMKeychain+Scarecrow.h"
 #import "OCTUser+Persistence.h"
+#import "ADViewModelService.h"
+
+NSString *const kTrendingLanguageCacheKey = @"kTrendingLanguageCacheKey";
+NSString *const kExploreTrendingRepositoriesCacheKey = @"kExploreTrendingRepositoriesCacheKey";
 
 @interface ADPlatformManager ()
 
 @property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
 
 @property (strong, nonatomic) YYCache *cacheMgr;
+@property (strong, nonatomic) ADViewModelService *service;
 
 @end
 
@@ -53,6 +58,13 @@
         _cacheMgr = [YYCache cacheWithName:login];
     }
     return _cacheMgr;
+}
+
+- (ADViewModelService *)service {
+    if (!_service) {
+        _service = [ADViewModelService new];
+    }
+    return _service;
 }
 
 - (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {

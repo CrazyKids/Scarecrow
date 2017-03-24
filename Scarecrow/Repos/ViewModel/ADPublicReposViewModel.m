@@ -31,4 +31,10 @@
     }];
 }
 
+- (ADReposViewModelOptions)options {
+    ADReposViewModelOptions option = ADReposViewModelOptionsShowOwnerLogin;
+    
+    return option;
+}
+
 @end

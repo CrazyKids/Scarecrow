@@ -41,14 +41,8 @@
     self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.rightBarButtonCommand;
     
     // Content View
-    self.contentView = [UIView new];
+    self.contentView = [[UIView alloc]initWithFrame:CGRectMake(0, 45, LAYOUT_DEFAULT_WIDTH, LAYOUT_DEFAULT_HEIGHT - 45)];
     [self.view addSubview:self.contentView];
-    
-    @weakify(self);
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(45, 0, 0, 0));
-    }];
     
     // Segment Control
     UIView *wrapView = self.segmentWrapView;
@@ -70,7 +64,7 @@
     ADViewController *weeklyViewController = [manager viewControllerWithViewModel:(ADViewModel *)self.viewModel.weeklyViewModel];
     ADViewController *monthlyViewController = [manager viewControllerWithViewModel:(ADViewModel *)self.viewModel.monthlyViewModel];
     
-    NSArray *viewControllers = @[ dailyViewController, weeklyViewController, monthlyViewController ];
+    NSArray *viewControllers = @[dailyViewController, weeklyViewController, monthlyViewController];
     
     for (UIViewController *viewController in viewControllers) {
         viewController.view.frame = self.contentView.bounds;
@@ -80,6 +74,7 @@
     self.currentViewController = dailyViewController;
     [self.contentView addSubview:dailyViewController.view];
     
+    @weakify(self);
     [[self.segmentedControl
       rac_newSelectedSegmentIndexChannelWithNilValue:@0]
     	subscribeNext:^(NSNumber *selectedSegmentIndex) {
@@ -113,13 +108,13 @@
     }];
     
     UIView *bottomLine = [UIView new];
-    bottomLine.backgroundColor = [UIColor colorWithRgbColor:0x000000 alpha:(0x1A / 100.0)];
+    bottomLine.backgroundColor = [UIColor ad_bottomLineColor];
     [wrapView addSubview:bottomLine];
     [bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(wrapView.mas_left);
         make.right.equalTo(wrapView.mas_right);
         make.bottom.equalTo(wrapView.mas_bottom);
-        make.height.equalTo(@(0.5));
+        make.height.equalTo(@(AD_1PX));
     }];
     
     return wrapView;

@@ -9,5 +9,6 @@ pod 'Vertigo', '~> 0.1'
 pod 'FMDB/SQLCipher', '~> 2.6.2'
 pod 'Ono', '~> 1.2.2'
 pod 'OcticonsIOS', :git => 'https://github.com/jacksonh/OcticonsIOS.git'
+pod 'MKNetworkKit', '~> 0.87'
 
 end

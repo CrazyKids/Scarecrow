@@ -9,8 +9,8 @@
 #import "ADReposViewModel.h"
 #import "OCTUser+Persistence.h"
 #import "OCTRepository+Persistence.h"
-#import "ADReposItemViewModel.h"
 #import "ADReposInfoViewModel.h"
+#import "ADReposItemViewModel.h"
 
 @interface ADReposViewModel ()
 
@@ -83,7 +83,7 @@
     @weakify(self);
     NSArray *viewModelArray = [[reposArray rac_sequence]map:^id(OCTRepository *repos) {
         @strongify(self);
-        return [[ADReposItemViewModel alloc]initWithRepos:repos currentUser:self.isCurrentUser];
+        return [[ADReposItemViewModel alloc]initWithRepos:repos currentUser:self.isCurrentUser options:self.options];
     }].array;
     
     return @[viewModelArray];
