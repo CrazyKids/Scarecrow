@@ -9,6 +9,7 @@
 #import "ADTrendingViewModel.h"
 #import "ADTrendingReposViewModel.h"
 #import "YYCache+Scarecrow.h"
+#import "ADLanguageViewModel.h"
 
 @interface ADTrendingViewModel ()
 
@@ -36,7 +37,21 @@
         return value[@"name"];
     }];
     
+    @weakify(self);
     self.rightBarButtonCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        NSDictionary *param = @{@"language" : self.language ?: @{}};
+        ADLanguageViewModel *viewModel = [[ADLanguageViewModel alloc]initWithParam:param];
+        viewModel.callback = ^(NSDictionary *language) {
+            @strongify(self);
+            self.language = language;
+            
+            [[YYCache sharedInstance]setObject:language forKey:kTrendingLanguageCacheKey];
+        };
+        
+        [self pushViewControllerWithViewModel:viewModel];
+        
         return [RACSignal empty];
     }];
     

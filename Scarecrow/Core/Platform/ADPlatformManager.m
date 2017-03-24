@@ -99,6 +99,7 @@
              @"ADSearchViewModel" : @"ADSearchViewController",
              @"ADBrowseViewModel" : @"ADBrowseViewController",
              @"ADTrendingReposViewModel" : @"ADTrendingReposViewController",
+             @"ADLanguageViewModel" : @"ADLanguageViewController",
              };
 }
 

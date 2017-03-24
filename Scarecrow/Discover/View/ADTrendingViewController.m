@@ -47,7 +47,7 @@
     @weakify(self);
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
-        make.edges.equalTo(self.view);
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(45, 0, 0, 0));
     }];
     
     // Segment Control

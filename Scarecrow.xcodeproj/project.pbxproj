@@ -66,6 +66,7 @@
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
 		241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */; };
+		241E371E1E84C4F400C5761B /* ADLanguageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */; };
 		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
 		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
 		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
@@ -76,6 +77,8 @@
 		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
 		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
+		242A69FA1E84D5DE002063DD /* ADLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A69F81E84D5DE002063DD /* ADLanguageViewController.m */; };
+		242A69FB1E84D5DE002063DD /* ADLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */; };
 		243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1001D827C68001F174A /* ADStarredReposViewModel.m */; };
 		243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1261D829CB8001F174A /* ADStarredReposViewController.m */; };
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
@@ -489,6 +492,8 @@
 		241B679B1D64BFC200A3960A /* ADUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewController.h; path = Profile/View/ADUserInfoViewController.h; sourceTree = "<group>"; };
 		241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewController.m; path = Profile/View/ADUserInfoViewController.m; sourceTree = "<group>"; };
 		241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADUserInfoViewController.xib; path = Profile/View/ADUserInfoViewController.xib; sourceTree = "<group>"; };
+		241E371C1E84C4F400C5761B /* ADLanguageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLanguageViewModel.h; path = Discover/ViewModel/ADLanguageViewModel.h; sourceTree = "<group>"; };
+		241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLanguageViewModel.m; path = Discover/ViewModel/ADLanguageViewModel.m; sourceTree = "<group>"; };
 		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -513,6 +518,9 @@
 		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
 		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
 		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
+		242A69F71E84D5DE002063DD /* ADLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLanguageViewController.h; path = Discover/View/ADLanguageViewController.h; sourceTree = "<group>"; };
+		242A69F81E84D5DE002063DD /* ADLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLanguageViewController.m; path = Discover/View/ADLanguageViewController.m; sourceTree = "<group>"; };
+		242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADLanguageViewController.xib; path = Discover/View/ADLanguageViewController.xib; sourceTree = "<group>"; };
 		243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewModel.h; sourceTree = "<group>"; };
 		243AB1001D827C68001F174A /* ADStarredReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewModel.m; sourceTree = "<group>"; };
 		243AB1251D829CB8001F174A /* ADStarredReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewController.h; sourceTree = "<group>"; };
@@ -931,6 +939,9 @@
 				24D4AA051E8417D700205C22 /* ADTrendingReposViewController.h */,
 				24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */,
 				24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */,
+				242A69F71E84D5DE002063DD /* ADLanguageViewController.h */,
+				242A69F81E84D5DE002063DD /* ADLanguageViewController.m */,
+				242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1288,6 +1299,8 @@
 				24D4A9BE1E7D9C6D00205C22 /* ADSearchViewModel.m */,
 				24D4A9FF1E8415C200205C22 /* ADTrendingReposViewModel.h */,
 				24D4AA001E8415C200205C22 /* ADTrendingReposViewModel.m */,
+				241E371C1E84C4F400C5761B /* ADLanguageViewModel.h */,
+				241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1628,6 +1641,7 @@
 				24D4A9CE1E7D9CD700205C22 /* ADPopluarRepositoriesViewController.xib in Resources */,
 				24AB750D1D922E0F003EDA7D /* ADQRCodeViewerController.xib in Resources */,
 				243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */,
+				242A69FB1E84D5DE002063DD /* ADLanguageViewController.xib in Resources */,
 				241526521D8E625000AFC6DD /* ADReposReadmeTableViewCell.xib in Resources */,
 				24D4AA091E8417D700205C22 /* ADTrendingReposViewController.xib in Resources */,
 				24D4A9C41E7D9CAA00205C22 /* ADTrendingViewController.xib in Resources */,
@@ -1757,6 +1771,7 @@
 				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
+				242A69FA1E84D5DE002063DD /* ADLanguageViewController.m in Sources */,
 				241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */,
 				24D4A9DC1E7D9D1E00205C22 /* ADBrowseViewController.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
@@ -1770,6 +1785,7 @@
 				241526511D8E625000AFC6DD /* ADReposReadmeTableViewCell.m in Sources */,
 				110649571D8452DE00677E4D /* ADPublicActivityViewController.m in Sources */,
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
+				241E371E1E84C4F400C5761B /* ADLanguageViewModel.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
 				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
