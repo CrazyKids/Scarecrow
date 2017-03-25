@@ -13,7 +13,7 @@
 @property (strong, nonatomic, readonly) OCTUser *user;
 
 @property (assign, nonatomic, readonly) BOOL isCurrentUser;
-@property (copy, nonatomic, readonly) NSArray *userArray;
+@property (strong, nonatomic, readonly) NSArray *userArray;
 
 @property (strong, nonatomic) RACCommand *operationCommand;
 

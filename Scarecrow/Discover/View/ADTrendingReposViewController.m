@@ -11,7 +11,7 @@
 
 @interface ADTrendingReposViewController ()
 
-@property (strong, nonatomic) ADTrendingReposViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADTrendingReposViewModel *viewModel;
 
 @end
 

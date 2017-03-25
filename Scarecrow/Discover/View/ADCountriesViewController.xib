@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ADPopularUsersViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ADCountriesViewController">
             <connections>
-                <outlet property="tableView" destination="JTc-w2-Cpf" id="f8v-JM-fHl"/>
+                <outlet property="tableView" destination="Im4-N9-2C2" id="xb3-4G-9Ag"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-w2-Cpf">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Im4-N9-2C2">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="JTc-w2-Cpf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4ge-dY-MSJ"/>
-                <constraint firstItem="JTc-w2-Cpf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9GS-sv-NJw"/>
-                <constraint firstAttribute="trailing" secondItem="JTc-w2-Cpf" secondAttribute="trailing" id="Osr-Kw-Oyh"/>
-                <constraint firstAttribute="bottom" secondItem="JTc-w2-Cpf" secondAttribute="bottom" id="txy-9m-U4n"/>
+                <constraint firstAttribute="bottom" secondItem="Im4-N9-2C2" secondAttribute="bottom" id="MkJ-k6-vFC"/>
+                <constraint firstItem="Im4-N9-2C2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oun-4G-UPH"/>
+                <constraint firstAttribute="trailing" secondItem="Im4-N9-2C2" secondAttribute="trailing" id="Qv1-Qh-tEB"/>
+                <constraint firstItem="Im4-N9-2C2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jpt-ml-C11"/>
             </constraints>
         </view>
     </objects>

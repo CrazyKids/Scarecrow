@@ -2,42 +2,57 @@
 //  ADPopularUsersViewController.m
 //  Scarecrow
 //
-//  Created by duanhongjin on 2017/3/19.
+//  Created by duanhongjin on 2017/3/25.
 //  Copyright © 2017年 duanhongjin. All rights reserved.
 //
 
 #import "ADPopularUsersViewController.h"
+#import "ADPopularUsersViewModel.h"
+#import "UIImage+Scarecrow.h"
+#import <ZRPopView/ZRPopView.h>
+#import "ZRPopoverView+RACSignalSupport.h"
 
 @interface ADPopularUsersViewController ()
+
+@property (strong, nonatomic, readonly) ADPopularUsersViewModel *viewModel;
+@property (strong, nonatomic) ZRPopoverView *popoverView;
 
 @end
 
 @implementation ADPopularUsersViewController
 
-+ (ADViewController *)viewController {
-    ADPopularUsersViewController *vc = [[ADPopularUsersViewController alloc]initWithNibName:@"ADPopularUsersViewController" bundle:nil];
-    return vc;
-}
+@dynamic viewModel;
 
++ (ADViewController *)viewController {
+    return [[ADPopularUsersViewController alloc]initWithNibName:@"ADPopularUsersViewController" bundle:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UIImage *image = [UIImage ad_normalImageWithIdentifier:@"Gear" size:CGSizeMake(22, 22)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarButtonClicked:)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [self.popoverView dismiss:nil];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Action
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)onRightBarButtonClicked:(id)sender {
+    ZRPopoverView *popoverView = [[ZRPopoverView alloc]initWithStyle:ZRPopoverViewStyleLightContent menus:self.viewModel.popoverMenus position:ZRPopoverViewPositionRightOfTop];
+    self.popoverView = popoverView;
+    
+    @weakify(self);
+    [[popoverView rac_buttonClickedSignal]subscribeNext:^(NSNumber *index) {
+        @strongify(self);
+        [self.viewModel.popoverCommand execute:index];
+    }];
+    
+    [popoverView showWithController:self];
 }
-*/
 
 @end

@@ -35,17 +35,14 @@
                                       return language[@"slug"];
                                   }] distinctUntilChanged];
     
-    @weakify(self)
-    [[[RACSignal
-       combineLatest:@[ sinceSignal, languageSignal ]]
-      doNext:^(id x) {
-          @strongify(self)
-          self.dataSourceArray = nil;
-      }]
-     subscribeNext:^(id x) {
-         @strongify(self)
-         [self.fetchRemoteDataCommamd execute:nil];
-     }];
+    @weakify(self);
+    [[[RACSignal combineLatest:@[sinceSignal, languageSignal]] doNext:^(id x) {
+        @strongify(self);
+        self.dataSourceArray = nil;
+    }] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.fetchRemoteDataCommamd execute:nil];
+    }];
 }
 
 - (NSArray *)fetchLocalData { 

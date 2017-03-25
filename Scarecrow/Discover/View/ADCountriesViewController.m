@@ -1,33 +1,33 @@
 //
-//  ADLanguageViewController.m
+//  ADCountriesViewController.m
 //  Scarecrow
 //
-//  Created by duanhongjin on 24/03/2017.
-//  Copyright © 2017 duanhongjin. All rights reserved.
+//  Created by duanhongjin on 2017/3/26.
+//  Copyright © 2017年 duanhongjin. All rights reserved.
 //
 
-#import "ADLanguageViewController.h"
-#import "ADLanguageViewModel.h"
+#import "ADCountriesViewController.h"
+#import "ADCountriesViewModel.h"
 
-@interface ADLanguageViewController ()
+@interface ADCountriesViewController ()
 
-@property (strong, nonatomic, readonly) ADLanguageViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADCountriesViewModel *viewModel;
 
 @end
 
-@implementation ADLanguageViewController
+@implementation ADCountriesViewController
 
 @dynamic viewModel;
 
 + (ADViewController *)viewController {
-    return [[ADLanguageViewController alloc]initWithNibName:@"ADLanguageViewController" bundle:nil];
+    return [[ADCountriesViewController alloc]initWithNibName:@"ADCountriesViewController" bundle:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     @weakify(self)
-    [[[RACObserve(self.viewModel, currentLanguageDic) distinctUntilChanged]deliverOnMainThread]subscribeNext:^(id x) {
+    [[[RACObserve(self.viewModel, currentCountry) distinctUntilChanged]deliverOnMainThread]subscribeNext:^(id x) {
         @strongify(self)
         [self reloadData];
     }];
@@ -36,14 +36,14 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    if (self.beingDismissed || self.movingFromParentViewController) {
+    if (self.isBeingDismissed || self.isMovingFromParentViewController) {
         if (self.viewModel.callback) {
-            self.viewModel.callback(self.viewModel.currentLanguageDic);
+            self.viewModel.callback(self.viewModel.currentCountry);
         }
     }
 }
 
-#pragma mark - UITabelViewDatasource
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
@@ -52,7 +52,7 @@
     NSDictionary *language = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     cell.textLabel.text = language[@"name"];
     
-    if ([language[@"slug"] isEqualToString:self.viewModel.currentLanguageDic[@"slug"]]) {
+    if ([language[@"slug"] isEqualToString:self.viewModel.currentCountry[@"slug"]]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;

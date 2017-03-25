@@ -17,7 +17,7 @@
 
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) UIViewController *currentViewController;
-@property (strong, nonatomic) ADTrendingViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADTrendingViewModel *viewModel;
 
 @property (strong, nonatomic) UIView *contentView;
 

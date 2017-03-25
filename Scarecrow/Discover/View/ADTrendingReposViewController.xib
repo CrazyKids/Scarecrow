@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ADTrendingReposViewController">
             <connections>
-                <outlet property="tableView" destination="NLr-JJ-JOd" id="zmo-k4-3Bg"/>
+                <outlet property="tableView" destination="NLr-JJ-JOd" id="9r7-JR-ikV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

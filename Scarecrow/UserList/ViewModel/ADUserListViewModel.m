@@ -17,7 +17,7 @@
 @property (strong, nonatomic) OCTUser *user;
 
 @property (assign, nonatomic) BOOL isCurrentUser;
-@property (copy, nonatomic) NSArray *userArray;
+@property (strong, nonatomic) NSArray *userArray;
 
 @end
 

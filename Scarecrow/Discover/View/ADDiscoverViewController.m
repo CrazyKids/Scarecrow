@@ -12,7 +12,7 @@
 
 @interface ADDiscoverViewController ()
 
-@property (strong, nonatomic) ADDiscoverViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADDiscoverViewModel *viewModel;
 
 @end
 

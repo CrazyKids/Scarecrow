@@ -18,7 +18,7 @@
 
 @interface ADProfileViewController ()
 
-@property (strong, nonatomic) ADProfileViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADProfileViewModel *viewModel;
 @property (strong, nonatomic) ADAvatarHeaderView *headerView;
 
 @end

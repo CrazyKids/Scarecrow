@@ -9,8 +9,8 @@
 #import "ADDiscoverViewModel.h"
 #import "ADDiscoverItemViewModel.h"
 #import "ADTrendingViewModel.h"
-#import "ADPopluarUsersViewModel.h"
-#import "ADPopluarRepositoriesViewModel.h"
+#import "ADPopularUsersViewModel.h"
+#import "ADPopularReposViewModel.h"
 #import "ADShowCasesViewModel.h"
 #import "ADSearchViewModel.h"
 #import "ADBrowseViewModel.h"
@@ -45,9 +45,9 @@
     // 1.Trending
     [sectionData addObject:@[self.trendingViewModel]];
     
-//    // 2. Popular users and repositories
-//    [sectionData addObject:@[self.popularUsersViewModel, self.popularRepositoriesViewModel]];
-//    
+    // 2. Popular users and repositories
+    [sectionData addObject:@[self.popularUsersViewModel, self.popularRepositoriesViewModel]];
+//
 //    // 3. Show Cases
 //    [sectionData addObject:@[self.showCasesViewModel]];
 //    
@@ -87,7 +87,7 @@
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         
-        ADPopluarUsersViewModel *viewModel = [[ADPopluarUsersViewModel alloc]initWithParam:nil];
+        ADPopularUsersViewModel *viewModel = [[ADPopularUsersViewModel alloc]initWithParam:nil];
         [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
@@ -107,7 +107,7 @@
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         
-        ADPopluarRepositoriesViewModel *viewModel = [[ADPopluarRepositoriesViewModel alloc]initWithParam:nil];
+        ADPopularReposViewModel *viewModel = [[ADPopularReposViewModel alloc]initWithParam:nil];
         [self pushViewControllerWithViewModel:viewModel];
         
         return [RACSignal empty];
