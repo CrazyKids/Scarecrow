@@ -10,4 +10,7 @@
 
 @interface ADPopularReposViewModel : ADReposViewModel
 
+@property (strong, nonatomic, readonly) NSDictionary *language;
+@property (strong, nonatomic, readonly) RACCommand *rightBarButtonCommand;
+
 @end

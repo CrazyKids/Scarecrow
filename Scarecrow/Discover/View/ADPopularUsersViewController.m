@@ -10,9 +10,8 @@
 #import "ADPopularUsersViewModel.h"
 #import "UIImage+Scarecrow.h"
 #import <ZRPopView/ZRPopView.h>
-#import "ZRPopoverView+RACSignalSupport.h"
 
-@interface ADPopularUsersViewController ()
+@interface ADPopularUsersViewController () <ZRPopoverViewDelegate>
 
 @property (strong, nonatomic, readonly) ADPopularUsersViewModel *viewModel;
 @property (strong, nonatomic) ZRPopoverView *popoverView;
@@ -43,16 +42,18 @@
 #pragma mark - Action
 
 - (void)onRightBarButtonClicked:(id)sender {
+    self.popoverView.delegate = nil;
+    
     ZRPopoverView *popoverView = [[ZRPopoverView alloc]initWithStyle:ZRPopoverViewStyleLightContent menus:self.viewModel.popoverMenus position:ZRPopoverViewPositionRightOfTop];
     self.popoverView = popoverView;
-    
-    @weakify(self);
-    [[popoverView rac_buttonClickedSignal]subscribeNext:^(NSNumber *index) {
-        @strongify(self);
-        [self.viewModel.popoverCommand execute:index];
-    }];
+    popoverView.delegate = self;
     
     [popoverView showWithController:self];
+}
+
+#pragma mark - ZRPopoverViewDelegate
+- (void)popoverView:(ZRPopoverView * _Nullable)popoverView didClick:(int)index {
+    [self.viewModel.popoverCommand execute:@(index)];
 }
 
 @end

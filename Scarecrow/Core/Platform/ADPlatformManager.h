@@ -18,6 +18,7 @@ extern NSString *const kTrendingLanguageCacheKey;
 extern NSString *const kExploreTrendingRepositoriesCacheKey;
 extern NSString *const kPopularUsersLanguageCacheKey;
 extern NSString *const kPopularUserCountryCacheKey;
+extern NSString *const kPopularReposLanguageCacheKey;
 
 @interface ADPlatformManager : NSObject
 

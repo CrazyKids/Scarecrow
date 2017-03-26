@@ -17,6 +17,7 @@ NSString *const kTrendingLanguageCacheKey = @"kTrendingLanguageCacheKey";
 NSString *const kExploreTrendingRepositoriesCacheKey = @"kExploreTrendingRepositoriesCacheKey";
 NSString *const kPopularUsersLanguageCacheKey = @"kPopularUsersLanguageCacheKey";
 NSString *const kPopularUserCountryCacheKey = @"kPopularUserCountryCacheKey";
+NSString *const kPopularReposLanguageCacheKey = @"kPopularReposLanguageCacheKey";
 
 @interface ADPlatformManager ()
 
@@ -108,7 +109,7 @@ NSString *const kPopularUserCountryCacheKey = @"kPopularUserCountryCacheKey";
              @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADTrendingViewModel" : @"ADTrendingViewController",
              @"ADPopularUsersViewModel" : @"ADPopularUsersViewController",
-             @"ADPopularReposViewModel" : @"ADPopluarReposViewController",
+             @"ADPopularReposViewModel" : @"ADPopularReposViewController",
              @"ADShowCasesViewModel" : @"ADShowCasesViewController",
              @"ADSearchViewModel" : @"ADSearchViewController",
              @"ADBrowseViewModel" : @"ADBrowseViewController",

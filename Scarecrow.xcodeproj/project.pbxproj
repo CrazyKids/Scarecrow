@@ -84,7 +84,6 @@
 		243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1001D827C68001F174A /* ADStarredReposViewModel.m */; };
 		243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1261D829CB8001F174A /* ADStarredReposViewController.m */; };
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
-		243C79E41E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 243C79E31E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.m */; };
 		245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */; };
 		245D02BE1E7BF29300B6CE0B /* ADDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */; };
 		245D96A71E8806D6001EB3DD /* ADCountriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */; };
@@ -536,8 +535,6 @@
 		243AB1251D829CB8001F174A /* ADStarredReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewController.h; sourceTree = "<group>"; };
 		243AB1261D829CB8001F174A /* ADStarredReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewController.m; sourceTree = "<group>"; };
 		243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADStarredReposViewController.xib; sourceTree = "<group>"; };
-		243C79E21E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZRPopoverView+RACSignalSupport.h"; sourceTree = "<group>"; };
-		243C79E31E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZRPopoverView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		245D02AE1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverItemViewModel.h; path = Discover/ViewModel/ADDiscoverItemViewModel.h; sourceTree = "<group>"; };
 		245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverItemViewModel.m; path = Discover/ViewModel/ADDiscoverItemViewModel.m; sourceTree = "<group>"; };
 		245D02BC1E7BF29300B6CE0B /* ADDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewController.h; path = Discover/View/ADDiscoverViewController.h; sourceTree = "<group>"; };
@@ -1247,8 +1244,6 @@
 				116FA5DA1D74933000F0AEE7 /* OCTRepository+Persistence.m */,
 				90522B6B1D9B92D2006E8847 /* UIView+Extension.h */,
 				90522B6C1D9B92D2006E8847 /* UIView+Extension.m */,
-				243C79E21E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.h */,
-				243C79E31E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.m */,
 			);
 			name = Category;
 			path = Utils/Category;
@@ -1863,7 +1858,6 @@
 				24AB752E1D9235E9003EDA7D /* ADUserQRCodeViewModel.m in Sources */,
 				24D4A9D71E7D9D0A00205C22 /* ADSearchViewController.m in Sources */,
 				24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */,
-				243C79E41E87EDD600722C8B /* ZRPopoverView+RACSignalSupport.m in Sources */,
 				248569D41D5E21820087E62D /* OCTEvent+AttributedString.m in Sources */,
 				2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */,
 				901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */,

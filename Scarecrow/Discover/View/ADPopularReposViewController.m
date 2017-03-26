@@ -7,21 +7,29 @@
 //
 
 #import "ADPopularReposViewController.h"
+#import "UIImage+Scarecrow.h"
+#import "ADPopularReposViewModel.h"
 
 @interface ADPopularReposViewController ()
+
+@property (strong, nonatomic, readonly) ADPopularReposViewModel *viewModel;
 
 @end
 
 @implementation ADPopularReposViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+@dynamic viewModel;
+
++ (ADViewController *)viewController {
+    return [[ADPopularReposViewController alloc]initWithNibName:@"ADPopularReposViewController" bundle:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UIImage *rightBarImage = [UIImage ad_highlightImageWithIdentifier:@"Gear" size:CGSizeMake(22, 22)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:rightBarImage style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.rightBarButtonCommand;
 }
 
 @end
