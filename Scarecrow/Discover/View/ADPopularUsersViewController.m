@@ -10,6 +10,7 @@
 #import "ADPopularUsersViewModel.h"
 #import "UIImage+Scarecrow.h"
 #import <ZRPopView/ZRPopView.h>
+#import "ADBarButtonItem.h"
 
 @interface ADPopularUsersViewController () <ZRPopoverViewDelegate>
 
@@ -30,7 +31,7 @@
     [super viewDidLoad];
     
     UIImage *image = [UIImage ad_normalImageWithIdentifier:@"Gear" size:CGSizeMake(22, 22)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarButtonClicked:)];
+    self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarButtonClicked:)];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

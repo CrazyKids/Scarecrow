@@ -12,4 +12,7 @@
 
 - (RACSignal *)fetchTrendingRepositoriesWithSince:(NSString *)since language:(NSString *)language;
 
+- (RACSignal *)fetchShowCases;
+- (RACSignal *)fetchShowCasesReposWithSlug:(NSString *)slug;
+
 @end

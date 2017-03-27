@@ -8,6 +8,7 @@
 
 #import "ADRepositoryService.h"
 #import <MKNetworkKit/MKNetworkKit.h>
+#import "ADModelShowCases.h"
 
 @implementation ADRepositoryService
 
@@ -47,6 +48,64 @@
         }];
     }]replayLazily]doNext:^(NSArray *repositories) {
     }] setNameWithFormat:@"-fetchTrendingRepositoriesWithSince:%@ language:%@", since, language];
+}
+
+- (RACSignal *)fetchShowCases {
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSString *urlString = @"http://trending.codehub-app.com/v2/showcases";
+        
+        MKNetworkEngine *engine = [[MKNetworkEngine alloc]init];
+        MKNetworkOperation *operation = [engine operationWithURLString:urlString];
+        [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSArray *array = completedOperation.responseJSON;
+            if (array.count > 0) {
+                NSError *error = nil;
+                NSArray *showCases = [MTLJSONAdapter modelsOfClass:[ADModelShowCases class] fromJSONArray:array error:&error];
+                
+                if (!error) {
+                    [subscriber sendNext:showCases];
+                }
+            }
+            [subscriber sendCompleted];
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            [subscriber sendError:error];
+        }];
+        
+        [engine enqueueOperation:operation];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [operation cancel];
+        }];
+    }]replayLazily];
+}
+
+- (RACSignal *)fetchShowCasesReposWithSlug:(NSString *)slug {
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSString *urlString = [NSString stringWithFormat:@"http://trending.codehub-app.com/v2/showcases/%@", slug];
+        
+        MKNetworkEngine *engine = [[MKNetworkEngine alloc]init];
+        MKNetworkOperation *operation = [engine operationWithURLString:urlString];
+        [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+            NSArray *array = completedOperation.responseJSON;
+            if (array.count > 0) {
+                NSError *error = nil;
+                NSArray *repositories = [MTLJSONAdapter modelsOfClass:[OCTRepository class] fromJSONArray:array error:&error];
+                
+                if (!error) {
+                    [subscriber sendNext:repositories];
+                }
+            }
+            [subscriber sendCompleted];
+        } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+            [subscriber sendError:error];
+        }];
+        
+        [engine enqueueOperation:operation];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [operation cancel];
+        }];
+    }]replayLazily];
 }
 
 @end

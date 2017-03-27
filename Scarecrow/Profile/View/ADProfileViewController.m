@@ -15,6 +15,7 @@
 #import "UIColor+Scarecrow.h"
 #import "ADSetttingsViewModel.h"
 #import "OCTUser+Persistence.h"
+#import "ADBarButtonItem.h"
 
 @interface ADProfileViewController ()
 
@@ -56,7 +57,7 @@
     if ([self.viewModel.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID]) {
         UIImage *image = [UIImage ad_imageWithIcon:@"Gear" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:1 size:CGSizeMake(25, 25)];
         
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSettingButtonClicked:)];
+        self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSettingButtonClicked:)];
     }
 
     @weakify(self);

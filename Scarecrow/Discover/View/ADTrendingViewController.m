@@ -12,6 +12,7 @@
 #import <Masonry/Masonry.h>
 #import "UIColor+Scarecrow.h"
 #import "ADTrendingReposViewController.h"
+#import "ADBarButtonItem.h"
 
 @interface ADTrendingViewController ()
 
@@ -37,7 +38,7 @@
     
     // Right Bar Button
     UIImage *rightBarImage = [UIImage ad_highlightImageWithIdentifier:@"Gear" size:CGSizeMake(22, 22)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:rightBarImage style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc]initWithImage:rightBarImage style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.rightBarButtonItem.rac_command = self.viewModel.rightBarButtonCommand;
     
     // Content View

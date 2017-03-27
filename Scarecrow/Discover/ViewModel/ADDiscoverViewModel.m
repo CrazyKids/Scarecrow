@@ -47,10 +47,10 @@
     
     // 2. Popular users and repositories
     [sectionData addObject:@[self.popularUsersViewModel, self.popularRepositoriesViewModel]];
+
+    // 3. Show Cases
+    [sectionData addObject:@[self.showCasesViewModel]];
 //
-//    // 3. Show Cases
-//    [sectionData addObject:@[self.showCasesViewModel]];
-//    
 //    // 4. Search
 //    [sectionData addObject:@[self.searchViewModel]];
 //    

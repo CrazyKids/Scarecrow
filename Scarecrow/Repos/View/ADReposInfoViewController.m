@@ -8,6 +8,7 @@
 
 #import "ADReposInfoViewController.h"
 #import "ADReposInfoViewModel.h"
+#import "ADBarButtonItem.h"
 
 @interface ADReposInfoViewController ()
 
@@ -29,7 +30,7 @@
     self.navigationItem.title = self.viewModel.repos.name;
     
     UIImage *image = [UIImage imageNamed:@"more"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:nil];
 }
 
 - (void)bindViewModel {

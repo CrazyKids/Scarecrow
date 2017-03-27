@@ -12,6 +12,7 @@
 #import "ADSubscribeTableViewCell.h"
 #import <ZRPopView/ZRPopView.h>
 #import "ADQRCodeScanView.h"
+#import "ADBarButtonItem.h"
 
 @interface ADSubscribeViewController ()<ZRPopoverViewDelegate>
 
@@ -33,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarClick)];
+    self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarClick)];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ADSubscribeTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     

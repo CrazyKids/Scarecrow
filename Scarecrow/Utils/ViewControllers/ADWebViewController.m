@@ -13,8 +13,8 @@
 @interface ADWebViewController ()
 
 @property (strong, nonatomic, readonly) ADWebViewModel *viewModel;
-@property (strong, nonatomic) UIBarButtonItem *closeButton;
-@property (strong, nonatomic) UIBarButtonItem *backButton;
+@property (strong, nonatomic) ADBarButtonItem *closeButton;
+@property (strong, nonatomic) ADBarButtonItem *backButton;
 
 @end
 
