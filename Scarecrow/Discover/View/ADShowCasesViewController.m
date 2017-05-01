@@ -7,12 +7,20 @@
 //
 
 #import "ADShowCasesViewController.h"
+#import "ADShowCasesViewModel.h"
+#import "ADShowCaseItemTableViewCell.h"
+#import "ADShowCasesItemViewModel.h"
 
 @interface ADShowCasesViewController ()
+
+@property (strong, nonatomic) ADShowCasesViewModel *viewModel
+;
 
 @end
 
 @implementation ADShowCasesViewController
+
+@dynamic viewModel;
 
 + (ADViewController *)viewController {
     ADShowCasesViewController *vc = [[ADShowCasesViewController alloc]initWithNibName:@"ADShowCasesViewController" bundle:nil];
@@ -22,11 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ADShowCaseItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ADShowCasesItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    
+    return viewModel.height;
 }
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    ADShowCaseItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    ADShowCasesItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    
+    [cell bindModel:viewModel];
+    return cell;
 }
 
 @end

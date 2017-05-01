@@ -9,6 +9,7 @@
 #import "ADRepositoryService.h"
 #import <MKNetworkKit/MKNetworkKit.h>
 #import "ADModelShowCases.h"
+#import "ADShowCasesItemViewModel.h"
 
 @implementation ADRepositoryService
 
@@ -63,7 +64,13 @@
                 NSArray *showCases = [MTLJSONAdapter modelsOfClass:[ADModelShowCases class] fromJSONArray:array error:&error];
                 
                 if (!error) {
-                    [subscriber sendNext:showCases];
+                    NSArray *viewModelArray = [showCases.rac_sequence map:^id(ADModelShowCases *showCase) {
+                        ADShowCasesItemViewModel *viewModel = [[ADShowCasesItemViewModel alloc]initWithShowCase:showCase];
+                        
+                        return viewModel;
+                    }].array;
+                    
+                    [subscriber sendNext:@[viewModelArray ?: @[]]];
                 }
             }
             [subscriber sendCompleted];

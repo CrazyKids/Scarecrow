@@ -10,6 +10,7 @@
 #import "ADViewModelService.h"
 #import "ADRepositoryService.h"
 #import "ADModelShowCases.h"
+#import "ADShowCasesItemViewModel.h"
 
 @implementation ADShowCasesViewModel
 
@@ -37,13 +38,19 @@
     NSError *error = nil;
     NSArray *showCases = [MTLJSONAdapter modelsOfClass:[ADModelShowCases class] fromJSONArray:array error:&error];
     
-    return @[showCases];
+    NSArray *viewModelArray = [showCases.rac_sequence map:^id(ADModelShowCases *showCase) {
+        ADShowCasesItemViewModel *viewModel = [[ADShowCasesItemViewModel alloc]initWithShowCase:showCase];
+        
+        return viewModel;
+    }].array;
+    
+    return @[viewModelArray ?: @[]];
 #else
     return nil;
 #endif
 }
 
-- (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {
+- (RACSignal *)fetchRemoteDataSignalWithPage:(int)page {    
     ADRepositoryService *service = [ADPlatformManager sharedInstance].service.reposService;
     
     return [service fetchShowCases];

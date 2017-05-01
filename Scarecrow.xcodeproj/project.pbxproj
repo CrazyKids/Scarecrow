@@ -86,6 +86,9 @@
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
 		245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */; };
 		245D02BE1E7BF29300B6CE0B /* ADDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */; };
+		245D529D1EB717FF00859A38 /* ADShowCasesItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */; };
+		245D52AC1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */; };
+		245D52AD1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */; };
 		245D96A71E8806D6001EB3DD /* ADCountriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */; };
 		245D96B41E880894001EB3DD /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 245D96B31E880894001EB3DD /* Countries.json */; };
 		245D96B81E8808B8001EB3DD /* ADCountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */; };
@@ -541,6 +544,11 @@
 		245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverItemViewModel.m; path = Discover/ViewModel/ADDiscoverItemViewModel.m; sourceTree = "<group>"; };
 		245D02BC1E7BF29300B6CE0B /* ADDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewController.h; path = Discover/View/ADDiscoverViewController.h; sourceTree = "<group>"; };
 		245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverViewController.m; path = Discover/View/ADDiscoverViewController.m; sourceTree = "<group>"; };
+		245D529B1EB717FF00859A38 /* ADShowCasesItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCasesItemViewModel.h; path = Discover/ViewModel/ADShowCasesItemViewModel.h; sourceTree = "<group>"; };
+		245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCasesItemViewModel.m; path = Discover/ViewModel/ADShowCasesItemViewModel.m; sourceTree = "<group>"; };
+		245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseItemTableViewCell.h; path = Discover/View/ADShowCaseItemTableViewCell.h; sourceTree = "<group>"; };
+		245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseItemTableViewCell.m; path = Discover/View/ADShowCaseItemTableViewCell.m; sourceTree = "<group>"; };
+		245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCaseItemTableViewCell.xib; path = Discover/View/ADShowCaseItemTableViewCell.xib; sourceTree = "<group>"; };
 		245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCountriesViewModel.h; path = Discover/ViewModel/ADCountriesViewModel.h; sourceTree = "<group>"; };
 		245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADCountriesViewModel.m; path = Discover/ViewModel/ADCountriesViewModel.m; sourceTree = "<group>"; };
 		245D96B31E880894001EB3DD /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
@@ -963,6 +971,9 @@
 				245D96B51E8808B8001EB3DD /* ADCountriesViewController.h */,
 				245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */,
 				245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */,
+				245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */,
+				245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */,
+				245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1344,6 +1355,8 @@
 				24BB83561E867FDF0065FAF8 /* ADPopularReposViewModel.m */,
 				245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */,
 				245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */,
+				245D529B1EB717FF00859A38 /* ADShowCasesItemViewModel.h */,
+				245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1697,6 +1710,7 @@
 				24D4A9F81E8031EC00205C22 /* Languages.json in Resources */,
 				2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */,
 				110649581D8452DE00677E4D /* ADPublicActivityViewController.xib in Resources */,
+				245D52AD1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib in Resources */,
 				11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */,
 				11D43BD71D859D1D00D78D1B /* ADSubscribeTableViewCell.xib in Resources */,
 				24D4A9D31E7D9CED00205C22 /* ADShowCasesViewController.xib in Resources */,
@@ -1839,6 +1853,7 @@
 				242A6A001E851A37002063DD /* ADViewModelService.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
 				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
+				245D529D1EB717FF00859A38 /* ADShowCasesItemViewModel.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
@@ -1865,6 +1880,7 @@
 				11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */,
 				248EC6061D66145200860852 /* ADSetttingsViewModel.m in Sources */,
 				248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */,
+				245D52AC1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m in Sources */,
 				24BB835B1E8680000065FAF8 /* ADPopularReposViewController.m in Sources */,
 				11D43BD61D859D1D00D78D1B /* ADSubscribeTableViewCell.m in Sources */,
 				248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */,
