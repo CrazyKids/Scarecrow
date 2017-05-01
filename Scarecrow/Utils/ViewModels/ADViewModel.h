@@ -34,5 +34,6 @@ typedef void (^voidCallback_id)(id);
 - (void)initialize;
 
 - (void)pushViewControllerWithViewModel:(ADViewModel *)viewModel;
+- (void)presentViewControllerWithViewModel:(ADViewModel *)viewModel animated:(BOOL)animated;
 
 @end

@@ -16,6 +16,10 @@
 + (UIImage *)ad_highlightImageWithIdentifier:(NSString *)identifier size:(CGSize)size;
 
 
-- (UIImageView *)blurImageWithSize:(CGSize)size NS_AVAILABLE_IOS(8_0);
+- (UIImageView *)ad_blurImageWithSize:(CGSize)size NS_AVAILABLE_IOS(8_0);
+
++ (UIImage *)ad_viewCapture:(UIView*)view;
++ (UIImage *)ad_screenCaptureWithRect:(CGRect)rect;
++ (UIImage *)ad_screenCapture;
 
 @end

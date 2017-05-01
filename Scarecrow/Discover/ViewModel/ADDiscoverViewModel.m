@@ -14,6 +14,7 @@
 #import "ADShowCasesViewModel.h"
 #import "ADSearchViewModel.h"
 #import "ADBrowseViewModel.h"
+#import "UIImage+Scarecrow.h"
 
 @interface ADDiscoverViewModel ()
 
@@ -50,10 +51,10 @@
 
     // 3. Show Cases
     [sectionData addObject:@[self.showCasesViewModel]];
+
+    // 4. Search users and repositories
+    [sectionData addObject:@[self.searchUsersViewModel, self.searchReposViewModel]];
 //
-//    // 4. Search
-//    [sectionData addObject:@[self.searchViewModel]];
-//    
 //    // 5. Browse
 //    [sectionData addObject:@[self.browseViewModel]];
     
@@ -140,20 +141,42 @@
     return [[ADDiscoverItemViewModel alloc]initWithParam:param];
 }
 
-- (ADDiscoverItemViewModel *)searchViewModel {
+- (ADDiscoverItemViewModel *)searchUsersViewModel {
     UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
     
     @weakify(self);
     RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         
-        ADSearchViewModel *viewModel = [[ADSearchViewModel alloc]initWithParam:nil];
-        [self pushViewControllerWithViewModel:viewModel];
+        ADSearchViewModel *viewModel = [[ADSearchViewModel alloc]initWithParam:@{@"searchType":@"users"}];
+        viewModel.capture = [UIImage ad_screenCapture];
+        [self presentViewControllerWithViewModel:viewModel animated:NO];
         
         return [RACSignal empty];
     }];
     
-    NSDictionary *param = @{@"itemName" : @"Search",
+    NSDictionary *param = @{@"itemName" : @"Search Users",
+                            @"itemIcon" : itemIcon,
+                            @"itemCommand": itemCommand};
+    
+    return [[ADDiscoverItemViewModel alloc]initWithParam:param];
+}
+
+- (ADDiscoverItemViewModel *)searchReposViewModel {
+    UIImage *itemIcon = [UIImage imageNamed:@"icon_qrcode"];
+    
+    @weakify(self);
+    RACCommand *itemCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        
+        ADSearchViewModel *viewModel = [[ADSearchViewModel alloc]initWithParam:@{@"searchType":@"repositories"}];
+        viewModel.capture = [UIImage ad_screenCapture];
+        [self presentViewControllerWithViewModel:viewModel animated:NO];
+        
+        return [RACSignal empty];
+    }];
+    
+    NSDictionary *param = @{@"itemName" : @"Search Repositories",
                             @"itemIcon" : itemIcon,
                             @"itemCommand": itemCommand};
     

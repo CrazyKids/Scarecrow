@@ -50,7 +50,7 @@
 }
 
 
-- (UIImageView *)blurImageWithSize:(CGSize)size
+- (UIImageView *)ad_blurImageWithSize:(CGSize)size
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIImageView *imgView = [[UIImageView alloc] initWithImage:self];
@@ -62,6 +62,58 @@
     effectView.alpha = 0.95f;
     [imgView addSubview:effectView];
     return imgView;
+}
+
++ (UIImage *)ad_viewCapture:(UIView*)view {
+    CGSize imageSize = view.bounds.size;
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, [view center].x, [view center].y);
+    CGContextConcatCTM(context, [view transform]);
+    CGContextTranslateCTM(context, -[view bounds].size.width*[[view layer] anchorPoint].x, -[view bounds].size.height*[[view layer] anchorPoint].y);
+    CGContextTranslateCTM(context, -view.frame.origin.x, -view.frame.origin.y);
+    
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++ (UIImage *)ad_screenCaptureWithRect:(CGRect)rect {
+    CGSize imageSize = rect.size;
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if ([window screen] == [UIScreen mainScreen]) {
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, [window center].x, [window center].y);
+        CGContextConcatCTM(context, [window transform]);
+        CGContextTranslateCTM(context, -[window bounds].size.width*[[window layer] anchorPoint].x, -[window bounds].size.height*[[window layer] anchorPoint].y);
+        CGContextTranslateCTM(context, -rect.origin.x, -rect.origin.y);
+        
+        [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
+
+        CGContextRestoreGState(context);
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++ (UIImage *)ad_screenCapture {
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    return [[self class] ad_screenCaptureWithRect:rect];
 }
 
 @end

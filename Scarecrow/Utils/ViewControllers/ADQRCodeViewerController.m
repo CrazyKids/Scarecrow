@@ -80,7 +80,7 @@
         return;
     }
     CGRect snapRect = [UIScreen mainScreen].bounds;
-    UIImageView *snapImgView = [self.viewModel.snapshotLastVCViewImage blurImageWithSize:snapRect.size];
+    UIImageView *snapImgView = [self.viewModel.snapshotLastVCViewImage ad_blurImageWithSize:snapRect.size];
     [snapImgView setFrame:snapRect];
     [self.view insertSubview:snapImgView belowSubview:[self.view.subviews firstObject]];
 }
