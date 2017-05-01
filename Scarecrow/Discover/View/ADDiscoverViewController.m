@@ -40,7 +40,7 @@
     NSArray *sectionData = self.viewModel.dataSourceArray[indexPath.section];
     ADDiscoverItemViewModel *viewModel = sectionData[indexPath.row];
     
-    cell.imageView.image = viewModel.itemIcon;
+//    cell.imageView.image = viewModel.itemIcon;
     cell.textLabel.text = viewModel.itemName;
     
     return cell;
