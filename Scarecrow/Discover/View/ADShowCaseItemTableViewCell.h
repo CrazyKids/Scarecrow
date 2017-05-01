@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class ADShowCasesItemViewModel;
+@class ADShowCaseItemViewModel;
 
 @interface ADShowCaseItemTableViewCell : UITableViewCell
 
-- (void)bindModel:(ADShowCasesItemViewModel *)model;
+- (void)bindModel:(ADShowCaseItemViewModel *)model;
 
 @end

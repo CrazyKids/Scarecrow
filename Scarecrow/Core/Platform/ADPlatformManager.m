@@ -116,6 +116,7 @@ NSString *const kPopularReposLanguageCacheKey = @"kPopularReposLanguageCacheKey"
              @"ADTrendingReposViewModel" : @"ADTrendingReposViewController",
              @"ADLanguageViewModel" : @"ADLanguageViewController",
              @"ADCountriesViewModel" : @"ADCountriesViewController",
+             @"ADShowCaseReposViewModel" : @"ADShowCaseReposViewController",
              };
 }
 

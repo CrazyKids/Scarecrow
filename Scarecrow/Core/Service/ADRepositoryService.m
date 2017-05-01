@@ -8,8 +8,8 @@
 
 #import "ADRepositoryService.h"
 #import <MKNetworkKit/MKNetworkKit.h>
-#import "ADModelShowCases.h"
-#import "ADShowCasesItemViewModel.h"
+#import "ADModelShowCase.h"
+#import "ADShowCaseItemViewModel.h"
 
 @implementation ADRepositoryService
 
@@ -61,16 +61,10 @@
             NSArray *array = completedOperation.responseJSON;
             if (array.count > 0) {
                 NSError *error = nil;
-                NSArray *showCases = [MTLJSONAdapter modelsOfClass:[ADModelShowCases class] fromJSONArray:array error:&error];
+                NSArray *showCases = [MTLJSONAdapter modelsOfClass:[ADModelShowCase class] fromJSONArray:array error:&error];
                 
                 if (!error) {
-                    NSArray *viewModelArray = [showCases.rac_sequence map:^id(ADModelShowCases *showCase) {
-                        ADShowCasesItemViewModel *viewModel = [[ADShowCasesItemViewModel alloc]initWithShowCase:showCase];
-                        
-                        return viewModel;
-                    }].array;
-                    
-                    [subscriber sendNext:@[viewModelArray ?: @[]]];
+                    [subscriber sendNext:showCases];
                 }
             }
             [subscriber sendCompleted];
@@ -93,7 +87,7 @@
         MKNetworkEngine *engine = [[MKNetworkEngine alloc]init];
         MKNetworkOperation *operation = [engine operationWithURLString:urlString];
         [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-            NSArray *array = completedOperation.responseJSON;
+            NSArray *array = completedOperation.responseJSON[@"repositories"];
             if (array.count > 0) {
                 NSError *error = nil;
                 NSArray *repositories = [MTLJSONAdapter modelsOfClass:[OCTRepository class] fromJSONArray:array error:&error];

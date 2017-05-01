@@ -1,5 +1,5 @@
 //
-//  ADShowCasesViewController.m
+//  ADShowCaseViewController.m
 //  Scarecrow
 //
 //  Created by duanhongjin on 2017/3/19.
@@ -9,7 +9,7 @@
 #import "ADShowCasesViewController.h"
 #import "ADShowCasesViewModel.h"
 #import "ADShowCaseItemTableViewCell.h"
-#import "ADShowCasesItemViewModel.h"
+#import "ADShowCaseItemViewModel.h"
 
 @interface ADShowCasesViewController ()
 
@@ -37,7 +37,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ADShowCasesItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    ADShowCaseItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     
     return viewModel.height;
 }
@@ -46,7 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ADShowCaseItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    ADShowCasesItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
+    ADShowCaseItemViewModel *viewModel = self.viewModel.dataSourceArray[indexPath.section][indexPath.row];
     
     [cell bindModel:viewModel];
     return cell;

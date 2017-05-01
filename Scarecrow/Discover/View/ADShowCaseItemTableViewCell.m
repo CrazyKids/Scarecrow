@@ -7,12 +7,12 @@
 //
 
 #import "ADShowCaseItemTableViewCell.h"
-#import "ADShowCasesItemViewModel.h"
+#import "ADShowCaseItemViewModel.h"
 #import <WebImage/UIImageView+WebCache.h>
 
 @interface ADShowCaseItemTableViewCell ()
 
-@property (strong, nonatomic) ADShowCasesItemViewModel *viewModel;
+@property (strong, nonatomic) ADShowCaseItemViewModel *viewModel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -27,7 +27,7 @@
     [super awakeFromNib];
 }
 
-- (void)bindModel:(ADShowCasesItemViewModel *)model {
+- (void)bindModel:(ADShowCaseItemViewModel *)model {
     self.viewModel = model;
     
     [self.iconImageView sd_setImageWithURL:model.imageURL placeholderImage:[UIImage imageNamed:@"default_avatar"]];

@@ -1,5 +1,5 @@
 //
-//  ADModelShowCases.h
+//  ADModelShowCase.h
 //  Scarecrow
 //
 //  Created by duanhongjin on 2017/3/27.
@@ -8,7 +8,7 @@
 
 #import <OctoKit/OctoKit.h>
 
-@interface ADModelShowCases : OCTObject
+@interface ADModelShowCase : OCTObject
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *slug;

@@ -86,14 +86,17 @@
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
 		245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */; };
 		245D02BE1E7BF29300B6CE0B /* ADDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */; };
-		245D529D1EB717FF00859A38 /* ADShowCasesItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */; };
+		245D529D1EB717FF00859A38 /* ADShowCaseItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */; };
 		245D52AC1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */; };
 		245D52AD1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */; };
+		245D52D21EB73AA300859A38 /* ADShowCaseReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */; };
+		245D52D61EB73ABF00859A38 /* ADShowCaseReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */; };
+		245D52D71EB73ABF00859A38 /* ADShowCaseReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */; };
 		245D96A71E8806D6001EB3DD /* ADCountriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */; };
 		245D96B41E880894001EB3DD /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 245D96B31E880894001EB3DD /* Countries.json */; };
 		245D96B81E8808B8001EB3DD /* ADCountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */; };
 		245D96B91E8808B8001EB3DD /* ADCountriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */; };
-		245D96BD1E89656E001EB3DD /* ADModelShowCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96BC1E89656E001EB3DD /* ADModelShowCases.m */; };
+		245D96BD1E89656E001EB3DD /* ADModelShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96BC1E89656E001EB3DD /* ADModelShowCase.m */; };
 		245D96BF1E896A1B001EB3DD /* showCases.json in Resources */ = {isa = PBXBuildFile; fileRef = 245D96BE1E896A1B001EB3DD /* showCases.json */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */; };
@@ -544,19 +547,24 @@
 		245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverItemViewModel.m; path = Discover/ViewModel/ADDiscoverItemViewModel.m; sourceTree = "<group>"; };
 		245D02BC1E7BF29300B6CE0B /* ADDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewController.h; path = Discover/View/ADDiscoverViewController.h; sourceTree = "<group>"; };
 		245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverViewController.m; path = Discover/View/ADDiscoverViewController.m; sourceTree = "<group>"; };
-		245D529B1EB717FF00859A38 /* ADShowCasesItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCasesItemViewModel.h; path = Discover/ViewModel/ADShowCasesItemViewModel.h; sourceTree = "<group>"; };
-		245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCasesItemViewModel.m; path = Discover/ViewModel/ADShowCasesItemViewModel.m; sourceTree = "<group>"; };
+		245D529B1EB717FF00859A38 /* ADShowCaseItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseItemViewModel.h; path = Discover/ViewModel/ADShowCaseItemViewModel.h; sourceTree = "<group>"; };
+		245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseItemViewModel.m; path = Discover/ViewModel/ADShowCaseItemViewModel.m; sourceTree = "<group>"; };
 		245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseItemTableViewCell.h; path = Discover/View/ADShowCaseItemTableViewCell.h; sourceTree = "<group>"; };
 		245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseItemTableViewCell.m; path = Discover/View/ADShowCaseItemTableViewCell.m; sourceTree = "<group>"; };
 		245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCaseItemTableViewCell.xib; path = Discover/View/ADShowCaseItemTableViewCell.xib; sourceTree = "<group>"; };
+		245D52D01EB73AA300859A38 /* ADShowCaseReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseReposViewModel.h; path = Discover/ViewModel/ADShowCaseReposViewModel.h; sourceTree = "<group>"; };
+		245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseReposViewModel.m; path = Discover/ViewModel/ADShowCaseReposViewModel.m; sourceTree = "<group>"; };
+		245D52D31EB73ABF00859A38 /* ADShowCaseReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseReposViewController.h; path = Discover/View/ADShowCaseReposViewController.h; sourceTree = "<group>"; };
+		245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseReposViewController.m; path = Discover/View/ADShowCaseReposViewController.m; sourceTree = "<group>"; };
+		245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCaseReposViewController.xib; path = Discover/View/ADShowCaseReposViewController.xib; sourceTree = "<group>"; };
 		245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCountriesViewModel.h; path = Discover/ViewModel/ADCountriesViewModel.h; sourceTree = "<group>"; };
 		245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADCountriesViewModel.m; path = Discover/ViewModel/ADCountriesViewModel.m; sourceTree = "<group>"; };
 		245D96B31E880894001EB3DD /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		245D96B51E8808B8001EB3DD /* ADCountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCountriesViewController.h; path = Discover/View/ADCountriesViewController.h; sourceTree = "<group>"; };
 		245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADCountriesViewController.m; path = Discover/View/ADCountriesViewController.m; sourceTree = "<group>"; };
 		245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADCountriesViewController.xib; path = Discover/View/ADCountriesViewController.xib; sourceTree = "<group>"; };
-		245D96BB1E89656E001EB3DD /* ADModelShowCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADModelShowCases.h; path = Core/Model/ADModelShowCases.h; sourceTree = "<group>"; };
-		245D96BC1E89656E001EB3DD /* ADModelShowCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADModelShowCases.m; path = Core/Model/ADModelShowCases.m; sourceTree = "<group>"; };
+		245D96BB1E89656E001EB3DD /* ADModelShowCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADModelShowCase.h; path = Core/Model/ADModelShowCase.h; sourceTree = "<group>"; };
+		245D96BC1E89656E001EB3DD /* ADModelShowCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADModelShowCase.m; path = Core/Model/ADModelShowCase.m; sourceTree = "<group>"; };
 		245D96BE1E896A1B001EB3DD /* showCases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = showCases.json; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
 		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
@@ -974,6 +982,9 @@
 				245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */,
 				245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */,
 				245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */,
+				245D52D31EB73ABF00859A38 /* ADShowCaseReposViewController.h */,
+				245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */,
+				245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1187,8 +1198,8 @@
 		245D96BA1E896547001EB3DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				245D96BB1E89656E001EB3DD /* ADModelShowCases.h */,
-				245D96BC1E89656E001EB3DD /* ADModelShowCases.m */,
+				245D96BB1E89656E001EB3DD /* ADModelShowCase.h */,
+				245D96BC1E89656E001EB3DD /* ADModelShowCase.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1355,8 +1366,10 @@
 				24BB83561E867FDF0065FAF8 /* ADPopularReposViewModel.m */,
 				245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */,
 				245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */,
-				245D529B1EB717FF00859A38 /* ADShowCasesItemViewModel.h */,
-				245D529C1EB717FF00859A38 /* ADShowCasesItemViewModel.m */,
+				245D529B1EB717FF00859A38 /* ADShowCaseItemViewModel.h */,
+				245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */,
+				245D52D01EB73AA300859A38 /* ADShowCaseReposViewModel.h */,
+				245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1729,6 +1742,7 @@
 				246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */,
 				116FA5EF1D74950D00F0AEE7 /* Repos.storyboard in Resources */,
 				245D96B91E8808B8001EB3DD /* ADCountriesViewController.xib in Resources */,
+				245D52D71EB73ABF00859A38 /* ADShowCaseReposViewController.xib in Resources */,
 				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1853,9 +1867,10 @@
 				242A6A001E851A37002063DD /* ADViewModelService.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
 				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
-				245D529D1EB717FF00859A38 /* ADShowCasesItemViewModel.m in Sources */,
+				245D529D1EB717FF00859A38 /* ADShowCaseItemViewModel.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
+				245D52D61EB73ABF00859A38 /* ADShowCaseReposViewController.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
 				248569D81D5E21820087E62D /* SAMKeychain+Scarecrow.m in Sources */,
 				24D4A9D21E7D9CED00205C22 /* ADShowCasesViewController.m in Sources */,
@@ -1876,7 +1891,7 @@
 				248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */,
 				11C3541E1D90449D004BEBBB /* ADReposSettingsViewController.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
-				245D96BD1E89656E001EB3DD /* ADModelShowCases.m in Sources */,
+				245D96BD1E89656E001EB3DD /* ADModelShowCase.m in Sources */,
 				11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */,
 				248EC6061D66145200860852 /* ADSetttingsViewModel.m in Sources */,
 				248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */,
@@ -1936,6 +1951,7 @@
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,
 				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
 				24BB83571E867FDF0065FAF8 /* ADPopularReposViewModel.m in Sources */,
+				245D52D21EB73AA300859A38 /* ADShowCaseReposViewModel.m in Sources */,
 				248EC5F81D660A9800860852 /* OCTClient+Scarecrow.m in Sources */,
 				116FA5F31D7496FD00F0AEE7 /* ADReposViewController.m in Sources */,
 			);
