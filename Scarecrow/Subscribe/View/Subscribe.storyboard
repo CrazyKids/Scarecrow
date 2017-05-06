@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XTl-CT-hhe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XTl-CT-hhe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +46,7 @@
         <scene sceneID="tWA-IC-TNx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XTl-CT-hhe" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="homeTabBar" selectedImage="selectedHomeTabBar" id="AJP-l8-XLh">
+                    <tabBarItem key="tabBarItem" title="" image="HomeHold" selectedImage="HomeHold" id="AJP-l8-XLh">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -68,7 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homeTabBar" width="27" height="27"/>
-        <image name="selectedHomeTabBar" width="27" height="27"/>
+        <image name="HomeHold" width="24" height="24"/>
     </resources>
 </document>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q9j-fh-26Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q9j-fh-26Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,14 +46,14 @@
         <scene sceneID="79z-6t-3n2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9j-fh-26Z" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="profileTabBar" selectedImage="selectedProfileTabBar" id="py9-XD-8Ys">
+                    <tabBarItem key="tabBarItem" image="Profile" selectedImage="ProfileHold" id="py9-XD-8Ys">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qYs-nd-Bcj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qYs-nd-Bcj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -68,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profileTabBar" width="27" height="28"/>
-        <image name="selectedProfileTabBar" width="27" height="28"/>
+        <image name="Profile" width="24" height="24"/>
+        <image name="ProfileHold" width="24" height="24"/>
     </resources>
 </document>

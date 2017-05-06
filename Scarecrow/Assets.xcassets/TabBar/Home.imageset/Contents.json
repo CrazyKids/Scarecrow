@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "selectedHomeTabBar.pdf"
+      "filename" : "Home.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {

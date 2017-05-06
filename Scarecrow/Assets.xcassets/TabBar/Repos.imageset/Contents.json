@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reposTabBar.pdf"
+      "filename" : "Repos.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {

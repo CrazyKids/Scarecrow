@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "selectedReposTabBar.pdf"
+      "filename" : "DiscoverHold.pdf",
+      "scale" : "1x"
     }
   ],
   "info" : {

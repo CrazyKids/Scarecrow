@@ -53,7 +53,7 @@
     [sectionData addObject:@[self.showCasesViewModel]];
 
     // 4. Search users and repositories
-    [sectionData addObject:@[self.searchUsersViewModel, self.searchReposViewModel]];
+//    [sectionData addObject:@[self.searchUsersViewModel, self.searchReposViewModel]];
 //
 //    // 5. Browse
 //    [sectionData addObject:@[self.browseViewModel]];
