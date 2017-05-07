@@ -1,0 +1,59 @@
+[{
+    "name":"All Countries",
+    "slug":""
+}, 
+{
+    "name": "Australia",
+    "slug": "australia"
+}, 
+{
+    "name": "Canada",
+    "slug": "canada"
+}, 
+{
+    "name": "China",
+    "slug": "china"
+}, 
+{
+    "name": "England",
+    "slug": "england"
+}, 
+{
+    "name": "France",
+    "slug": "france"
+},
+{
+    "name": "Germany",
+    "slug": "germany"
+},
+{
+    "name": "Hong Kong",
+    "slug": "hong-kong"
+}, 
+{
+    "name": "India",
+    "slug": "india"
+}, 
+{
+    "name": "Italy",
+    "slug": "italy"
+}, 
+{
+    "name": "Japan",
+    "slug": "japan"
+}, 
+{
+    "name": "Mexico",
+    "slug": "mexico"
+}, 
+{
+    "name": "Swaziland",
+    "slug": "swaziland"
+}, 
+{
+    "name": "United Kingdom",
+    "slug": "united-kingdom"
+}, {
+    "name": "United States",
+    "slug": "united-states"
+}]

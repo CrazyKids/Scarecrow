@@ -8,10 +8,10 @@
 
 #import "ADQRCodeViewerController.h"
 #import "ADQRCodeViewModel.h"
-#import <ZRQRCodeViewController/ZRQRCodeController.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <ZRQRCodeController/ZRQRCodeController.h>
+#import <WebImage/UIImageView+WebCache.h>
 #import "UIColor+Scarecrow.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 
 @interface ADQRCodeViewerController ()
 
@@ -80,7 +80,7 @@
         return;
     }
     CGRect snapRect = [UIScreen mainScreen].bounds;
-    UIImageView *snapImgView = [self.viewModel.snapshotLastVCViewImage blurImageWithSize:snapRect.size];
+    UIImageView *snapImgView = [self.viewModel.snapshotLastVCViewImage ad_blurImageWithSize:snapRect.size];
     [snapImgView setFrame:snapRect];
     [self.view insertSubview:snapImgView belowSubview:[self.view.subviews firstObject]];
 }

@@ -18,20 +18,22 @@
 
 @property (copy, nonatomic) NSAttributedString *name;
 @property (copy, nonatomic) NSAttributedString *reposDescription;
-@property (copy, nonatomic) NSString *udpateTime;
+@property (copy, nonatomic) NSString *updateTime;
 @property (copy, nonatomic) NSString *language;
 
 @property (assign, nonatomic) CGFloat height;
+@property (assign, nonatomic) ADReposViewModelOptions options;
 
 @end
 
 @implementation ADReposItemViewModel
 
-- (instancetype)initWithRepos:(OCTRepository *)repos currentUser:(BOOL)currentUser {
+- (instancetype)initWithRepos:(OCTRepository *)repos currentUser:(BOOL)currentUser options:(ADReposViewModelOptions)options {
     self = [super init];
     if (self) {
         self.repos = repos;
         self.currentUser = currentUser;
+        self.options = options;
                 
         self.language = repos.language ?: @"";
         CGFloat height = 0;
@@ -47,14 +49,14 @@
         
         TTTTimeIntervalFormatter *formatter = [TTTTimeIntervalFormatter new];
         formatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
-        self.udpateTime = [formatter stringForTimeIntervalFromDate:[NSDate date] toDate:repos.dateUpdated];
+        self.updateTime = [formatter stringForTimeIntervalFromDate:[NSDate date] toDate:repos.dateUpdated];
     }
     return self;
 }
 
 - (NSAttributedString *)name {
     if (!_name) {
-        if (!self.currentUser) {
+        if (self.options & ADReposViewModelOptionsShowOwnerLogin) {
             NSString *uniName = [NSString stringWithFormat:@"%@/%@", self.repos.ownerLogin, self.repos.name];
             
             NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:uniName];

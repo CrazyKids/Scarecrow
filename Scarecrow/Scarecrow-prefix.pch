@@ -16,7 +16,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <OctoKit/OctoKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <ZRAlertController/ZRAlertController.h>
+#import <ZRAlertViewController/ZRAlertViewController.h>
 
 #import "configure.h"
 #import "ADPlatformManager.h"

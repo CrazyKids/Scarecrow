@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.rowHeight = 75;
     [self.tableView registerNib:[UINib nibWithNibName:@"ADUserListItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 

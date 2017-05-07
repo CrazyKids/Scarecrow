@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DQL-QS-zKP">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DQL-QS-zKP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Repos-->
@@ -17,6 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cQl-Lc-pu7">
+                                <rect key="frame" x="0.0" y="64" width="300" height="187"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
@@ -41,14 +46,14 @@
         <scene sceneID="EuI-QV-daF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQL-QS-zKP" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="reposTabBar" selectedImage="selectedReposTabBar" id="pAs-Bf-8Mf">
+                    <tabBarItem key="tabBarItem" title="" image="Repos" selectedImage="ReposHold" id="pAs-Bf-8Mf">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWm-nI-s4A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CWm-nI-s4A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -63,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="reposTabBar" width="22" height="22"/>
-        <image name="selectedReposTabBar" width="22" height="22"/>
+        <image name="Repos" width="24" height="24"/>
+        <image name="ReposHold" width="24" height="24"/>
     </resources>
 </document>

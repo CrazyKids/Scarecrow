@@ -1,0 +1,72 @@
+[{
+    "name": "All Languages",
+    "slug":""
+},
+{
+    "name": "ASP",
+    "slug": "aspx-vb"
+},
+{
+    "name": "C",
+    "slug": "c"
+},
+{
+    "name": "C#",
+    "slug": "csharp"
+},
+{
+    "name": "C++",
+    "slug": "cpp"
+}, 
+{
+    "name": "Erlang",
+    "slug": "erlang"
+}, 
+{
+    "name": "Go",
+    "slug": "go"
+},
+{
+    "name": "HTML",
+    "slug": "html"
+},
+{
+    "name": "Java",
+    "slug": "java"
+}, 
+{
+    "name": "JavaScript",
+    "slug": "javascript"
+},
+{
+    "name": "Lua",
+    "slug": "lua"
+},
+{
+    "name": "Objective-C",
+    "slug": "objective-c"
+}, 
+{
+    "name": "Objective-C++",
+    "slug": "objective-c++"
+}, 
+{
+    "name": "Perl",
+    "slug": "perl"
+},
+{
+    "name": "Python",
+    "slug": "python"
+},
+{
+    "name": "Ruby",
+    "slug": "ruby"
+},
+{
+    "name": "Swift",
+    "slug": "swift"
+}, 
+{
+    "name": "Vue",
+    "slug": "vue"
+}]

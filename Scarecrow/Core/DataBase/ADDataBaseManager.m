@@ -7,7 +7,7 @@
 //
 
 #import "ADDataBaseManager.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import <FMDB/FMDB.h>
 #import "FMDatabaseQueueV2.h"
 
@@ -74,7 +74,7 @@
         return nil;
     }
     
-    return [SSKeychain username];
+    return [SAMKeychain username];
 }
 
 - (FMDatabaseQueueV2 *)dataBaseQueue {

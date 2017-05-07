@@ -9,8 +9,8 @@
 #import "ADAvatarHeaderView.h"
 #import "ADAvatarHeaderViewModel.h"
 #import "OCTUser+Persistence.h"
-#import <SDWebImage/SDWebImageManager.h>
-#import <GPUImage/GPUImage.h>
+#import <WebImage/SDWebImageManager.h>
+#import <GPUImage/GPUImageFramework.h>
 #import "UIColor+Scarecrow.h"
 
 @interface ADAvatarHeaderView ()

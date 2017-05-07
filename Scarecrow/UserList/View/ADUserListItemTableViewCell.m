@@ -10,7 +10,7 @@
 #import "ADFollowButton.h"
 #import "ADUserListItemViewModel.h"
 #import "OCTUser+Persistence.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <WebImage/UIImageView+WebCache.h>
 
 @interface ADUserListItemTableViewCell ()
 

@@ -8,7 +8,6 @@
 
 #import "ADSettingsViewController.h"
 #import "ADSetttingsViewModel.h"
-#import <ZRAlertController/ZRAlertController.h>
 #import "UIColor+Scarecrow.h"
 
 @interface ADSettingsViewController ()

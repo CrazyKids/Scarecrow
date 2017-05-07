@@ -7,7 +7,7 @@
 //
 
 #import "OCTUser+Persistence.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import <objc/runtime.h>
 #import "ADDataBaseManager.h"
 
@@ -36,8 +36,8 @@
 + (instancetype)ad_currentUser {
     OCTUser *user = [ADPlatformManager sharedInstance].client.user;
     if (!user) {
-        user = [[self database]fetchUserWithRawLogin:[SSKeychain username]];
-        OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+        user = [[self database]fetchUserWithRawLogin:[SAMKeychain username]];
+        OCTClient *client = [OCTClient authenticatedClientWithUser:user token:[SAMKeychain accessToken]];
         [ADPlatformManager sharedInstance].client = client;
     }
     

@@ -8,7 +8,7 @@
 
 #import "ADReposOwnerTableViewCell.h"
 #import "ADReposSettingsViewModel.h"
-#import <SDWebImage/SDWebImageManager.h>
+#import <WebImage/SDWebImageManager.h>
 
 @interface ADReposOwnerTableViewCell ()
 

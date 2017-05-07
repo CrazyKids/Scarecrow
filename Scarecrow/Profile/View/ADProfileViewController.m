@@ -10,15 +10,16 @@
 #import "ADProfileViewModel.h"
 #import "ADAvatarHeaderViewModel.h"
 #import "ADAvatarHeaderView.h"
-#import <SDWebImage/SDWebImagePrefetcher.h>
-#import "UIImage+Octions.h"
+#import <WebImage/SDWebImagePrefetcher.h>
+#import "UIImage+Scarecrow.h"
 #import "UIColor+Scarecrow.h"
 #import "ADSetttingsViewModel.h"
 #import "OCTUser+Persistence.h"
+#import "ADBarButtonItem.h"
 
 @interface ADProfileViewController ()
 
-@property (strong, nonatomic) ADProfileViewModel *viewModel;
+@property (strong, nonatomic, readonly) ADProfileViewModel *viewModel;
 @property (strong, nonatomic) ADAvatarHeaderView *headerView;
 
 @end
@@ -56,7 +57,7 @@
     if ([self.viewModel.user.objectID isEqualToString:[OCTUser ad_currentUser].objectID]) {
         UIImage *image = [UIImage ad_imageWithIcon:@"Gear" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:1 size:CGSizeMake(25, 25)];
         
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSettingButtonClicked:)];
+        self.navigationItem.rightBarButtonItem = [[ADBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(onSettingButtonClicked:)];
     }
 
     @weakify(self);
@@ -142,11 +143,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return section == 0 ? 20 : 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return section == tableView.numberOfSections - 1 ? 20 : 10;
+    return 15;
 }
 
 #pragma mark - UIScrollViewDelegate

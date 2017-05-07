@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lsr-9H-NMy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lsr-9H-NMy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +24,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akr-nW-m3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="WSv-n6-Spa" customClass="ADTabBarLoader">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe,Repos,Profile"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tabBarItemNames" value="Subscribe,Repos,Discover,Profile"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tabBarController" destination="lsr-9H-NMy" id="7O6-fG-p0c"/>

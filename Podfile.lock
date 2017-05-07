@@ -2,72 +2,29 @@ PODS:
   - EGOTableViewPullRefreshAndLoadMore (1.0.4)
   - FMDB/SQLCipher (2.6.2):
     - SQLCipher
-  - FormatterKit (1.8.1):
-    - FormatterKit/AddressFormatter (= 1.8.1)
-    - FormatterKit/ArrayFormatter (= 1.8.1)
-    - FormatterKit/ColorFormatter (= 1.8.1)
-    - FormatterKit/LocationFormatter (= 1.8.1)
-    - FormatterKit/NameFormatter (= 1.8.1)
-    - FormatterKit/OrdinalNumberFormatter (= 1.8.1)
-    - FormatterKit/Resources (= 1.8.1)
-    - FormatterKit/TimeIntervalFormatter (= 1.8.1)
-    - FormatterKit/UnitOfInformationFormatter (= 1.8.1)
-    - FormatterKit/URLRequestFormatter (= 1.8.1)
-  - FormatterKit/AddressFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/ArrayFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/ColorFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/LocationFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/NameFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/OrdinalNumberFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/Resources (1.8.1)
-  - FormatterKit/TimeIntervalFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/UnitOfInformationFormatter (1.8.1):
-    - FormatterKit/Resources
-  - FormatterKit/URLRequestFormatter (1.8.1):
-    - FormatterKit/Resources
-  - GPUImage (0.1.7)
-  - MBProgressHUD (1.0.0)
+  - MKNetworkKit (0.87):
+    - Reachability (~> 3.1.0)
   - OcticonsIOS (0.0.3)
   - Ono (1.2.2)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
-  - SQLCipher (3.4.0):
-    - SQLCipher/standard (= 3.4.0)
-  - SQLCipher/common (3.4.0)
-  - SQLCipher/standard (3.4.0):
+  - Reachability (3.1.1)
+  - SQLCipher (3.4.1):
+    - SQLCipher/standard (= 3.4.1)
+  - SQLCipher/common (3.4.1)
+  - SQLCipher/standard (3.4.1):
     - SQLCipher/common
-  - SSKeychain (1.4.1)
   - Vertigo (0.1)
-  - YYKit (1.0.7):
-    - YYKit/no-arc (= 1.0.7)
-  - YYKit/no-arc (1.0.7)
-  - ZRAlertController (2.3)
-  - ZRPopoverView (1.2)
-  - ZRQRCodeViewController (3.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - EGOTableViewPullRefreshAndLoadMore (~> 1.0.4)
   - FMDB/SQLCipher (~> 2.6.2)
-  - FormatterKit (~> 1.8.1)
-  - GPUImage (~> 0.1.7)
-  - MBProgressHUD (~> 1.0.0)
+  - MKNetworkKit (~> 0.87)
   - OcticonsIOS (from `https://github.com/jacksonh/OcticonsIOS.git`)
   - Ono (~> 1.2.2)
-  - SDWebImage (~> 3.8.1)
-  - SSKeychain (~> 1.4.1)
   - Vertigo (~> 0.1)
   - YYKit (~> 1.0.7)
-  - ZRAlertController (~> 2.2)
-  - ZRPopoverView (~> 1.2)
-  - ZRQRCodeViewController (~> 3.1)
 
 EXTERNAL SOURCES:
   OcticonsIOS:
@@ -81,20 +38,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   EGOTableViewPullRefreshAndLoadMore: 118a0824590db042d42e08fcc442b93cebf15e73
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  FormatterKit: 11ad17b983200629246a5a466f6f1bfa2df823cb
-  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MKNetworkKit: 60ad3c83b62183e40ba75ce772c9427c25b520de
   OcticonsIOS: 93f352e0e19df9cabe662c14d2401581d8f89a6a
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
-  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
+  SQLCipher: 43d12c0eb9c57fb438749618fc3ce0065509a559
   Vertigo: b971aa21e904512cfe387196ccba37df3f9a792e
-  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
-  ZRAlertController: 19fe0db510525339489b58901482b957cd22a409
-  ZRPopoverView: 4af5c815216a84b874be69e394ffc29b5ec6f323
-  ZRQRCodeViewController: 2b0f4eefe39f69438da46109cf7efbea037aee85
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fecf01a9a7817639c399b044a7913ec5ad5865a4
+PODFILE CHECKSUM: 52e1a85936784ba96d3fd057494fc8144d2cb981
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0

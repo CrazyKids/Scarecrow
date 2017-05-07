@@ -55,9 +55,18 @@
 		2415266A1D8E6FB800AFC6DD /* ADCodeTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241526681D8E6FB800AFC6DD /* ADCodeTreeViewController.xib */; };
 		241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */; };
 		241637C41D2FAECA00A16944 /* ADPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241637C31D2FAECA00A16944 /* ADPlatformManager.m */; };
+		241789721E76407000546D68 /* ZRAlertViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417896F1E76407000546D68 /* ZRAlertViewController.framework */; };
+		241789731E76407000546D68 /* ZRPopView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789701E76407000546D68 /* ZRPopView.framework */; };
+		241789741E76407000546D68 /* ZRQRCodeController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789711E76407000546D68 /* ZRQRCodeController.framework */; };
+		241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789C01E764B7D00546D68 /* WebImage.framework */; };
+		241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241789E91E764EDE00546D68 /* MBProgressHUD.framework */; };
+		24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A051E7650B900546D68 /* GPUImage.framework */; };
+		24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A341E76545C00546D68 /* FormatterKit.framework */; };
+		24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24178A3B1E76562B00546D68 /* SAMKeychain.framework */; };
 		241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */; };
 		241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */; };
 		241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */; };
+		241E371E1E84C4F400C5761B /* ADLanguageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */; };
 		2423312B1D2E36BD00EF8698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312A1D2E36BD00EF8698 /* main.m */; };
 		2423312E1D2E36BD00EF8698 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423312D1D2E36BD00EF8698 /* AppDelegate.m */; };
 		242331311D2E36BD00EF8698 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331301D2E36BD00EF8698 /* ViewController.m */; };
@@ -68,9 +77,31 @@
 		2423314F1D2E36BD00EF8698 /* ScarecrowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2423314E1D2E36BD00EF8698 /* ScarecrowUITests.m */; };
 		242331C81D2E52B500EF8698 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242331C71D2E52B500EF8698 /* login.storyboard */; };
 		242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242331CA1D2E52D900EF8698 /* ADLoginViewController.m */; };
+		242A69FA1E84D5DE002063DD /* ADLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A69F81E84D5DE002063DD /* ADLanguageViewController.m */; };
+		242A69FB1E84D5DE002063DD /* ADLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */; };
+		242A6A001E851A37002063DD /* ADViewModelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A69FF1E851A37002063DD /* ADViewModelService.m */; };
+		242A6A031E851AD8002063DD /* ADRepositoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 242A6A021E851AD8002063DD /* ADRepositoryService.m */; };
 		243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1001D827C68001F174A /* ADStarredReposViewModel.m */; };
 		243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243AB1261D829CB8001F174A /* ADStarredReposViewController.m */; };
 		243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */; };
+		245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */; };
+		245D02BE1E7BF29300B6CE0B /* ADDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */; };
+		245D529D1EB717FF00859A38 /* ADShowCaseItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */; };
+		245D52AC1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */; };
+		245D52AD1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */; };
+		245D52D21EB73AA300859A38 /* ADShowCaseReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */; };
+		245D52D61EB73ABF00859A38 /* ADShowCaseReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */; };
+		245D52D71EB73ABF00859A38 /* ADShowCaseReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */; };
+		245D52EA1EB77FA100859A38 /* ADSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52E91EB77FA100859A38 /* ADSearchViewModel.m */; };
+		245D52EE1EB77FC300859A38 /* ADSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52EC1EB77FC300859A38 /* ADSearchViewController.m */; };
+		245D52EF1EB77FC300859A38 /* ADSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D52ED1EB77FC300859A38 /* ADSearchViewController.xib */; };
+		245D52F21EB78D1B00859A38 /* ADSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D52F11EB78D1B00859A38 /* ADSearchBar.m */; };
+		245D96A71E8806D6001EB3DD /* ADCountriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */; };
+		245D96B41E880894001EB3DD /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 245D96B31E880894001EB3DD /* Countries.json */; };
+		245D96B81E8808B8001EB3DD /* ADCountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */; };
+		245D96B91E8808B8001EB3DD /* ADCountriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */; };
+		245D96BD1E89656E001EB3DD /* ADModelShowCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D96BC1E89656E001EB3DD /* ADModelShowCase.m */; };
+		245D96BF1E896A1B001EB3DD /* showCases.json in Resources */ = {isa = PBXBuildFile; fileRef = 245D96BE1E896A1B001EB3DD /* showCases.json */; };
 		246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 246CA4241D38E6D0002167A2 /* ADDataBase.m */; };
 		246E9DDB1D62013B00ED9EC4 /* ADProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E9DDA1D62013B00ED9EC4 /* ADProfileViewController.m */; };
 		246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246E9E061D637BC700ED9EC4 /* ADWebViewController.xib */; };
@@ -95,7 +126,6 @@
 		247DF64A1D5D5F0B00607526 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331761D2E388E00EF8698 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; };
 		247DF64E1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2423317A1D2E388E00EF8698 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; };
 		247DF6521D5D5F0B00607526 /* OctoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242331691D2E387600EF8698 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2481A8F21D6E83C300F0C97F /* ADDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2481A8F11D6E83C300F0C97F /* ADDataBaseManager.m */; };
 		248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B31D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m */; };
@@ -104,7 +134,7 @@
 		248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569B91D5E21820087E62D /* OCTEvent+Persistence.m */; };
 		248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */; };
 		248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BD1D5E21820087E62D /* OCTUser+Persistence.m */; };
-		248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */; };
+		248569D81D5E21820087E62D /* SAMKeychain+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */; };
 		248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C11D5E21820087E62D /* UIColor+Scarecrow.m */; };
 		248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */; };
 		248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248569C61D5E21820087E62D /* ADNavigationController.m */; };
@@ -133,9 +163,29 @@
 		24B0D1501D5F764500805A45 /* ADAvatarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D14F1D5F764500805A45 /* ADAvatarHeaderViewModel.m */; };
 		24B0D15E1D5F780400805A45 /* ADAvatarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */; };
 		24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */; };
-		24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Octions.m */; };
+		24B0D1691D60B90500805A45 /* UIImage+Scarecrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */; };
 		24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */; };
+		24BB83571E867FDF0065FAF8 /* ADPopularReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BB83561E867FDF0065FAF8 /* ADPopularReposViewModel.m */; };
+		24BB835B1E8680000065FAF8 /* ADPopularReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BB83591E8680000065FAF8 /* ADPopularReposViewController.m */; };
+		24BB835C1E8680000065FAF8 /* ADPopularReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BB835A1E8680000065FAF8 /* ADPopularReposViewController.xib */; };
+		24BB83601E86812D0065FAF8 /* ADPopularUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BB835E1E86812D0065FAF8 /* ADPopularUsersViewController.m */; };
+		24BB83611E86812D0065FAF8 /* ADPopularUsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BB835F1E86812D0065FAF8 /* ADPopularUsersViewController.xib */; };
 		24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */; };
+		24D4A9B01E7D9AE700205C22 /* ADBrowseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9AF1E7D9AE700205C22 /* ADBrowseViewModel.m */; };
+		24D4A9B31E7D9B5E00205C22 /* ADTrendingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9B21E7D9B5E00205C22 /* ADTrendingViewModel.m */; };
+		24D4A9B61E7D9C3100205C22 /* ADPopularUsersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9B51E7D9C3100205C22 /* ADPopularUsersViewModel.m */; };
+		24D4A9BC1E7D9C5A00205C22 /* ADShowCasesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9BB1E7D9C5A00205C22 /* ADShowCasesViewModel.m */; };
+		24D4A9C31E7D9CAA00205C22 /* ADTrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9C11E7D9CAA00205C22 /* ADTrendingViewController.m */; };
+		24D4A9C41E7D9CAA00205C22 /* ADTrendingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D4A9C21E7D9CAA00205C22 /* ADTrendingViewController.xib */; };
+		24D4A9D21E7D9CED00205C22 /* ADShowCasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9D01E7D9CED00205C22 /* ADShowCasesViewController.m */; };
+		24D4A9D31E7D9CED00205C22 /* ADShowCasesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D4A9D11E7D9CED00205C22 /* ADShowCasesViewController.xib */; };
+		24D4A9DC1E7D9D1E00205C22 /* ADBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4A9DA1E7D9D1E00205C22 /* ADBrowseViewController.m */; };
+		24D4A9DD1E7D9D1E00205C22 /* ADBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D4A9DB1E7D9D1E00205C22 /* ADBrowseViewController.xib */; };
+		24D4A9F81E8031EC00205C22 /* Languages.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D4A9F61E8031EC00205C22 /* Languages.json */; };
+		24D4AA011E8415C200205C22 /* ADTrendingReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4AA001E8415C200205C22 /* ADTrendingReposViewModel.m */; };
+		24D4AA081E8417D700205C22 /* ADTrendingReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */; };
+		24D4AA091E8417D700205C22 /* ADTrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */; };
+		24D4AA0E1E84294300205C22 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D4AA0D1E84294300205C22 /* Masonry.framework */; };
 		901EF2CD1D8E3A0C0065EFE3 /* ADQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */; };
 		90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 90522B6C1D9B92D2006E8847 /* UIView+Extension.m */; };
 		90B878F41D941AAA0044B286 /* ADLocalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B878F31D941AAA0044B286 /* ADLocalWebViewController.m */; };
@@ -443,11 +493,21 @@
 		241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBarButtonItem.m; sourceTree = "<group>"; };
 		241637C21D2FAECA00A16944 /* ADPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPlatformManager.h; path = Core/Platform/ADPlatformManager.h; sourceTree = "<group>"; };
 		241637C31D2FAECA00A16944 /* ADPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPlatformManager.m; path = Core/Platform/ADPlatformManager.m; sourceTree = "<group>"; };
+		2417896F1E76407000546D68 /* ZRAlertViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRAlertViewController.framework; path = Carthage/Build/iOS/ZRAlertViewController.framework; sourceTree = "<group>"; };
+		241789701E76407000546D68 /* ZRPopView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRPopView.framework; path = Carthage/Build/iOS/ZRPopView.framework; sourceTree = "<group>"; };
+		241789711E76407000546D68 /* ZRQRCodeController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZRQRCodeController.framework; path = Carthage/Build/iOS/ZRQRCodeController.framework; sourceTree = "<group>"; };
+		241789C01E764B7D00546D68 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		241789E91E764EDE00546D68 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		24178A051E7650B900546D68 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
+		24178A341E76545C00546D68 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
+		24178A3B1E76562B00546D68 /* SAMKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAMKeychain.framework; path = Carthage/Build/iOS/SAMKeychain.framework; sourceTree = "<group>"; };
 		241B678D1D64BFA300A3960A /* ADUserInfoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewModel.h; path = Profile/ViewModel/ADUserInfoViewModel.h; sourceTree = "<group>"; };
 		241B678E1D64BFA300A3960A /* ADUserInfoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewModel.m; path = Profile/ViewModel/ADUserInfoViewModel.m; sourceTree = "<group>"; };
 		241B679B1D64BFC200A3960A /* ADUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUserInfoViewController.h; path = Profile/View/ADUserInfoViewController.h; sourceTree = "<group>"; };
 		241B679C1D64BFC200A3960A /* ADUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUserInfoViewController.m; path = Profile/View/ADUserInfoViewController.m; sourceTree = "<group>"; };
 		241B679D1D64BFC200A3960A /* ADUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADUserInfoViewController.xib; path = Profile/View/ADUserInfoViewController.xib; sourceTree = "<group>"; };
+		241E371C1E84C4F400C5761B /* ADLanguageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLanguageViewModel.h; path = Discover/ViewModel/ADLanguageViewModel.h; sourceTree = "<group>"; };
+		241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLanguageViewModel.m; path = Discover/ViewModel/ADLanguageViewModel.m; sourceTree = "<group>"; };
 		242331261D2E36BD00EF8698 /* Scarecrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scarecrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2423312A1D2E36BD00EF8698 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2423312C1D2E36BD00EF8698 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -472,11 +532,48 @@
 		242331C71D2E52B500EF8698 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = Login/View/login.storyboard; sourceTree = "<group>"; };
 		242331C91D2E52D900EF8698 /* ADLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLoginViewController.h; path = Login/View/ADLoginViewController.h; sourceTree = "<group>"; };
 		242331CA1D2E52D900EF8698 /* ADLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLoginViewController.m; path = Login/View/ADLoginViewController.m; sourceTree = "<group>"; };
+		242A69F71E84D5DE002063DD /* ADLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLanguageViewController.h; path = Discover/View/ADLanguageViewController.h; sourceTree = "<group>"; };
+		242A69F81E84D5DE002063DD /* ADLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLanguageViewController.m; path = Discover/View/ADLanguageViewController.m; sourceTree = "<group>"; };
+		242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADLanguageViewController.xib; path = Discover/View/ADLanguageViewController.xib; sourceTree = "<group>"; };
+		242A69FE1E851A37002063DD /* ADViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADViewModelService.h; path = Core/Service/ADViewModelService.h; sourceTree = "<group>"; };
+		242A69FF1E851A37002063DD /* ADViewModelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADViewModelService.m; path = Core/Service/ADViewModelService.m; sourceTree = "<group>"; };
+		242A6A011E851AD8002063DD /* ADRepositoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRepositoryService.h; path = Core/Service/ADRepositoryService.h; sourceTree = "<group>"; };
+		242A6A021E851AD8002063DD /* ADRepositoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRepositoryService.m; path = Core/Service/ADRepositoryService.m; sourceTree = "<group>"; };
 		243AB0FF1D827C68001F174A /* ADStarredReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewModel.h; sourceTree = "<group>"; };
 		243AB1001D827C68001F174A /* ADStarredReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewModel.m; sourceTree = "<group>"; };
 		243AB1251D829CB8001F174A /* ADStarredReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADStarredReposViewController.h; sourceTree = "<group>"; };
 		243AB1261D829CB8001F174A /* ADStarredReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADStarredReposViewController.m; sourceTree = "<group>"; };
 		243AB1271D829CB8001F174A /* ADStarredReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADStarredReposViewController.xib; sourceTree = "<group>"; };
+		245D02AE1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverItemViewModel.h; path = Discover/ViewModel/ADDiscoverItemViewModel.h; sourceTree = "<group>"; };
+		245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverItemViewModel.m; path = Discover/ViewModel/ADDiscoverItemViewModel.m; sourceTree = "<group>"; };
+		245D02BC1E7BF29300B6CE0B /* ADDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDiscoverViewController.h; path = Discover/View/ADDiscoverViewController.h; sourceTree = "<group>"; };
+		245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDiscoverViewController.m; path = Discover/View/ADDiscoverViewController.m; sourceTree = "<group>"; };
+		245D529B1EB717FF00859A38 /* ADShowCaseItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseItemViewModel.h; path = Discover/ViewModel/ADShowCaseItemViewModel.h; sourceTree = "<group>"; };
+		245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseItemViewModel.m; path = Discover/ViewModel/ADShowCaseItemViewModel.m; sourceTree = "<group>"; };
+		245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseItemTableViewCell.h; path = Discover/View/ADShowCaseItemTableViewCell.h; sourceTree = "<group>"; };
+		245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseItemTableViewCell.m; path = Discover/View/ADShowCaseItemTableViewCell.m; sourceTree = "<group>"; };
+		245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCaseItemTableViewCell.xib; path = Discover/View/ADShowCaseItemTableViewCell.xib; sourceTree = "<group>"; };
+		245D52D01EB73AA300859A38 /* ADShowCaseReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseReposViewModel.h; path = Discover/ViewModel/ADShowCaseReposViewModel.h; sourceTree = "<group>"; };
+		245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseReposViewModel.m; path = Discover/ViewModel/ADShowCaseReposViewModel.m; sourceTree = "<group>"; };
+		245D52D31EB73ABF00859A38 /* ADShowCaseReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCaseReposViewController.h; path = Discover/View/ADShowCaseReposViewController.h; sourceTree = "<group>"; };
+		245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCaseReposViewController.m; path = Discover/View/ADShowCaseReposViewController.m; sourceTree = "<group>"; };
+		245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCaseReposViewController.xib; path = Discover/View/ADShowCaseReposViewController.xib; sourceTree = "<group>"; };
+		245D52E81EB77FA100859A38 /* ADSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSearchViewModel.h; path = Discover/ViewModel/ADSearchViewModel.h; sourceTree = "<group>"; };
+		245D52E91EB77FA100859A38 /* ADSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSearchViewModel.m; path = Discover/ViewModel/ADSearchViewModel.m; sourceTree = "<group>"; };
+		245D52EB1EB77FC300859A38 /* ADSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSearchViewController.h; path = Discover/View/ADSearchViewController.h; sourceTree = "<group>"; };
+		245D52EC1EB77FC300859A38 /* ADSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSearchViewController.m; path = Discover/View/ADSearchViewController.m; sourceTree = "<group>"; };
+		245D52ED1EB77FC300859A38 /* ADSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADSearchViewController.xib; path = Discover/View/ADSearchViewController.xib; sourceTree = "<group>"; };
+		245D52F01EB78D1B00859A38 /* ADSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSearchBar.h; sourceTree = "<group>"; };
+		245D52F11EB78D1B00859A38 /* ADSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSearchBar.m; sourceTree = "<group>"; };
+		245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCountriesViewModel.h; path = Discover/ViewModel/ADCountriesViewModel.h; sourceTree = "<group>"; };
+		245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADCountriesViewModel.m; path = Discover/ViewModel/ADCountriesViewModel.m; sourceTree = "<group>"; };
+		245D96B31E880894001EB3DD /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
+		245D96B51E8808B8001EB3DD /* ADCountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCountriesViewController.h; path = Discover/View/ADCountriesViewController.h; sourceTree = "<group>"; };
+		245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADCountriesViewController.m; path = Discover/View/ADCountriesViewController.m; sourceTree = "<group>"; };
+		245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADCountriesViewController.xib; path = Discover/View/ADCountriesViewController.xib; sourceTree = "<group>"; };
+		245D96BB1E89656E001EB3DD /* ADModelShowCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADModelShowCase.h; path = Core/Model/ADModelShowCase.h; sourceTree = "<group>"; };
+		245D96BC1E89656E001EB3DD /* ADModelShowCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADModelShowCase.m; path = Core/Model/ADModelShowCase.m; sourceTree = "<group>"; };
+		245D96BE1E896A1B001EB3DD /* showCases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = showCases.json; sourceTree = "<group>"; };
 		246CA4231D38E6D0002167A2 /* ADDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADDataBase.h; path = Core/DataBase/ADDataBase.h; sourceTree = "<group>"; };
 		246CA4241D38E6D0002167A2 /* ADDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADDataBase.m; path = Core/DataBase/ADDataBase.m; sourceTree = "<group>"; };
 		246E9DD91D62013B00ED9EC4 /* ADProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADProfileViewController.h; path = Profile/View/ADProfileViewController.h; sourceTree = "<group>"; };
@@ -518,8 +615,8 @@
 		248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTRef+Scarecrow.m"; sourceTree = "<group>"; };
 		248569BC1D5E21820087E62D /* OCTUser+Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTUser+Persistence.h"; sourceTree = "<group>"; };
 		248569BD1D5E21820087E62D /* OCTUser+Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTUser+Persistence.m"; sourceTree = "<group>"; };
-		248569BE1D5E21820087E62D /* SSKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSKeychain+Scarecrow.h"; sourceTree = "<group>"; };
-		248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain+Scarecrow.m"; sourceTree = "<group>"; };
+		248569BE1D5E21820087E62D /* SAMKeychain+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain+Scarecrow.h"; sourceTree = "<group>"; };
+		248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain+Scarecrow.m"; sourceTree = "<group>"; };
 		248569C01D5E21820087E62D /* UIColor+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Scarecrow.h"; sourceTree = "<group>"; };
 		248569C11D5E21820087E62D /* UIColor+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Scarecrow.m"; sourceTree = "<group>"; };
 		248569C21D5E21820087E62D /* UIStoryboard+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+ViewModel.h"; sourceTree = "<group>"; };
@@ -572,13 +669,45 @@
 		24B0D15C1D5F780400805A45 /* ADAvatarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADAvatarHeaderView.h; path = Profile/View/ADAvatarHeaderView.h; sourceTree = "<group>"; };
 		24B0D15D1D5F780400805A45 /* ADAvatarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADAvatarHeaderView.m; path = Profile/View/ADAvatarHeaderView.m; sourceTree = "<group>"; };
 		24B0D15F1D5F784400805A45 /* ADAvatarHeanderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADAvatarHeanderView.xib; path = Profile/View/ADAvatarHeanderView.xib; sourceTree = "<group>"; };
-		24B0D1671D60B90500805A45 /* UIImage+Octions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Octions.h"; sourceTree = "<group>"; };
-		24B0D1681D60B90500805A45 /* UIImage+Octions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Octions.m"; sourceTree = "<group>"; };
+		24B0D1671D60B90500805A45 /* UIImage+Scarecrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scarecrow.h"; sourceTree = "<group>"; };
+		24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scarecrow.m"; sourceTree = "<group>"; };
 		24B2DA861D52EF7B00CD93A2 /* ADSubscribeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSubscribeItemViewModel.h; path = Subscribe/ViewModel/ADSubscribeItemViewModel.h; sourceTree = "<group>"; };
 		24B2DA871D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSubscribeItemViewModel.m; path = Subscribe/ViewModel/ADSubscribeItemViewModel.m; sourceTree = "<group>"; };
+		24BB83551E867FDF0065FAF8 /* ADPopularReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPopularReposViewModel.h; path = Discover/ViewModel/ADPopularReposViewModel.h; sourceTree = "<group>"; };
+		24BB83561E867FDF0065FAF8 /* ADPopularReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPopularReposViewModel.m; path = Discover/ViewModel/ADPopularReposViewModel.m; sourceTree = "<group>"; };
+		24BB83581E8680000065FAF8 /* ADPopularReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPopularReposViewController.h; path = Discover/View/ADPopularReposViewController.h; sourceTree = "<group>"; };
+		24BB83591E8680000065FAF8 /* ADPopularReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPopularReposViewController.m; path = Discover/View/ADPopularReposViewController.m; sourceTree = "<group>"; };
+		24BB835A1E8680000065FAF8 /* ADPopularReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADPopularReposViewController.xib; path = Discover/View/ADPopularReposViewController.xib; sourceTree = "<group>"; };
+		24BB835D1E86812D0065FAF8 /* ADPopularUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPopularUsersViewController.h; path = Discover/View/ADPopularUsersViewController.h; sourceTree = "<group>"; };
+		24BB835E1E86812D0065FAF8 /* ADPopularUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPopularUsersViewController.m; path = Discover/View/ADPopularUsersViewController.m; sourceTree = "<group>"; };
+		24BB835F1E86812D0065FAF8 /* ADPopularUsersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADPopularUsersViewController.xib; path = Discover/View/ADPopularUsersViewController.xib; sourceTree = "<group>"; };
 		24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scarecrow.entitlements; sourceTree = "<group>"; };
 		24C257471D8D7EF5003D8F23 /* ADReposDescTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADReposDescTableViewCell.h; sourceTree = "<group>"; };
 		24C257481D8D7EF5003D8F23 /* ADReposDescTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReposDescTableViewCell.m; sourceTree = "<group>"; };
+		24D4A9AE1E7D9AE700205C22 /* ADBrowseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADBrowseViewModel.h; path = Discover/ViewModel/ADBrowseViewModel.h; sourceTree = "<group>"; };
+		24D4A9AF1E7D9AE700205C22 /* ADBrowseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADBrowseViewModel.m; path = Discover/ViewModel/ADBrowseViewModel.m; sourceTree = "<group>"; };
+		24D4A9B11E7D9B5E00205C22 /* ADTrendingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTrendingViewModel.h; path = Discover/ViewModel/ADTrendingViewModel.h; sourceTree = "<group>"; };
+		24D4A9B21E7D9B5E00205C22 /* ADTrendingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTrendingViewModel.m; path = Discover/ViewModel/ADTrendingViewModel.m; sourceTree = "<group>"; };
+		24D4A9B41E7D9C3100205C22 /* ADPopularUsersViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADPopularUsersViewModel.h; path = Discover/ViewModel/ADPopularUsersViewModel.h; sourceTree = "<group>"; };
+		24D4A9B51E7D9C3100205C22 /* ADPopularUsersViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADPopularUsersViewModel.m; path = Discover/ViewModel/ADPopularUsersViewModel.m; sourceTree = "<group>"; };
+		24D4A9BA1E7D9C5A00205C22 /* ADShowCasesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCasesViewModel.h; path = Discover/ViewModel/ADShowCasesViewModel.h; sourceTree = "<group>"; };
+		24D4A9BB1E7D9C5A00205C22 /* ADShowCasesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCasesViewModel.m; path = Discover/ViewModel/ADShowCasesViewModel.m; sourceTree = "<group>"; };
+		24D4A9C01E7D9CAA00205C22 /* ADTrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTrendingViewController.h; path = Discover/View/ADTrendingViewController.h; sourceTree = "<group>"; };
+		24D4A9C11E7D9CAA00205C22 /* ADTrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTrendingViewController.m; path = Discover/View/ADTrendingViewController.m; sourceTree = "<group>"; };
+		24D4A9C21E7D9CAA00205C22 /* ADTrendingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADTrendingViewController.xib; path = Discover/View/ADTrendingViewController.xib; sourceTree = "<group>"; };
+		24D4A9CF1E7D9CED00205C22 /* ADShowCasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADShowCasesViewController.h; path = Discover/View/ADShowCasesViewController.h; sourceTree = "<group>"; };
+		24D4A9D01E7D9CED00205C22 /* ADShowCasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADShowCasesViewController.m; path = Discover/View/ADShowCasesViewController.m; sourceTree = "<group>"; };
+		24D4A9D11E7D9CED00205C22 /* ADShowCasesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADShowCasesViewController.xib; path = Discover/View/ADShowCasesViewController.xib; sourceTree = "<group>"; };
+		24D4A9D91E7D9D1E00205C22 /* ADBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADBrowseViewController.h; path = Discover/View/ADBrowseViewController.h; sourceTree = "<group>"; };
+		24D4A9DA1E7D9D1E00205C22 /* ADBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADBrowseViewController.m; path = Discover/View/ADBrowseViewController.m; sourceTree = "<group>"; };
+		24D4A9DB1E7D9D1E00205C22 /* ADBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADBrowseViewController.xib; path = Discover/View/ADBrowseViewController.xib; sourceTree = "<group>"; };
+		24D4A9F61E8031EC00205C22 /* Languages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Languages.json; sourceTree = "<group>"; };
+		24D4A9FF1E8415C200205C22 /* ADTrendingReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTrendingReposViewModel.h; path = Discover/ViewModel/ADTrendingReposViewModel.h; sourceTree = "<group>"; };
+		24D4AA001E8415C200205C22 /* ADTrendingReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTrendingReposViewModel.m; path = Discover/ViewModel/ADTrendingReposViewModel.m; sourceTree = "<group>"; };
+		24D4AA051E8417D700205C22 /* ADTrendingReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADTrendingReposViewController.h; path = Discover/View/ADTrendingReposViewController.h; sourceTree = "<group>"; };
+		24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADTrendingReposViewController.m; path = Discover/View/ADTrendingReposViewController.m; sourceTree = "<group>"; };
+		24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ADTrendingReposViewController.xib; path = Discover/View/ADTrendingReposViewController.xib; sourceTree = "<group>"; };
+		24D4AA0D1E84294300205C22 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		901EF2CB1D8E3A0C0065EFE3 /* ADQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADQRCodeScanView.h; path = Subscribe/View/ADQRCodeScanView.h; sourceTree = "<group>"; };
 		901EF2CC1D8E3A0C0065EFE3 /* ADQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADQRCodeScanView.m; path = Subscribe/View/ADQRCodeScanView.m; sourceTree = "<group>"; };
 		90522B6B1D9B92D2006E8847 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -596,8 +725,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D4AA0E1E84294300205C22 /* Masonry.framework in Frameworks */,
+				24178A3C1E76562B00546D68 /* SAMKeychain.framework in Frameworks */,
+				24178A351E76545C00546D68 /* FormatterKit.framework in Frameworks */,
+				24178A061E7650B900546D68 /* GPUImage.framework in Frameworks */,
+				241789EA1E764EDE00546D68 /* MBProgressHUD.framework in Frameworks */,
+				241789C11E764B7D00546D68 /* WebImage.framework in Frameworks */,
+				241789721E76407000546D68 /* ZRAlertViewController.framework in Frameworks */,
+				241789731E76407000546D68 /* ZRPopView.framework in Frameworks */,
+				241789741E76407000546D68 /* ZRQRCodeController.framework in Frameworks */,
 				11C353EF1D8EE40E004BEBBB /* WebKit.framework in Frameworks */,
-				247DF6511D5D5F0B00607526 /* OctoKit.framework in Frameworks */,
 				247DF64D1D5D5F0B00607526 /* ISO8601DateFormatter.framework in Frameworks */,
 				AEFB1039A36CC7EFA63B91F0 /* libPods-Scarecrow.a in Frameworks */,
 				247DF6491D5D5F0B00607526 /* AFNetworking.framework in Frameworks */,
@@ -816,6 +953,41 @@
 			isa = PBXGroup;
 			children = (
 				118AE38E1D450FBF006DD475 /* Discover.storyboard */,
+				245D02BC1E7BF29300B6CE0B /* ADDiscoverViewController.h */,
+				245D02BD1E7BF29300B6CE0B /* ADDiscoverViewController.m */,
+				24D4A9C01E7D9CAA00205C22 /* ADTrendingViewController.h */,
+				24D4A9C11E7D9CAA00205C22 /* ADTrendingViewController.m */,
+				24D4A9C21E7D9CAA00205C22 /* ADTrendingViewController.xib */,
+				24D4A9CF1E7D9CED00205C22 /* ADShowCasesViewController.h */,
+				24D4A9D01E7D9CED00205C22 /* ADShowCasesViewController.m */,
+				24D4A9D11E7D9CED00205C22 /* ADShowCasesViewController.xib */,
+				24D4A9D91E7D9D1E00205C22 /* ADBrowseViewController.h */,
+				24D4A9DA1E7D9D1E00205C22 /* ADBrowseViewController.m */,
+				24D4A9DB1E7D9D1E00205C22 /* ADBrowseViewController.xib */,
+				24D4AA051E8417D700205C22 /* ADTrendingReposViewController.h */,
+				24D4AA061E8417D700205C22 /* ADTrendingReposViewController.m */,
+				24D4AA071E8417D700205C22 /* ADTrendingReposViewController.xib */,
+				242A69F71E84D5DE002063DD /* ADLanguageViewController.h */,
+				242A69F81E84D5DE002063DD /* ADLanguageViewController.m */,
+				242A69F91E84D5DE002063DD /* ADLanguageViewController.xib */,
+				24BB83581E8680000065FAF8 /* ADPopularReposViewController.h */,
+				24BB83591E8680000065FAF8 /* ADPopularReposViewController.m */,
+				24BB835A1E8680000065FAF8 /* ADPopularReposViewController.xib */,
+				24BB835D1E86812D0065FAF8 /* ADPopularUsersViewController.h */,
+				24BB835E1E86812D0065FAF8 /* ADPopularUsersViewController.m */,
+				24BB835F1E86812D0065FAF8 /* ADPopularUsersViewController.xib */,
+				245D96B51E8808B8001EB3DD /* ADCountriesViewController.h */,
+				245D96B61E8808B8001EB3DD /* ADCountriesViewController.m */,
+				245D96B71E8808B8001EB3DD /* ADCountriesViewController.xib */,
+				245D52A91EB71D4300859A38 /* ADShowCaseItemTableViewCell.h */,
+				245D52AA1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m */,
+				245D52AB1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib */,
+				245D52D31EB73ABF00859A38 /* ADShowCaseReposViewController.h */,
+				245D52D41EB73ABF00859A38 /* ADShowCaseReposViewController.m */,
+				245D52D51EB73ABF00859A38 /* ADShowCaseReposViewController.xib */,
+				245D52EB1EB77FC300859A38 /* ADSearchViewController.h */,
+				245D52EC1EB77FC300859A38 /* ADSearchViewController.m */,
+				245D52ED1EB77FC300859A38 /* ADSearchViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -823,6 +995,8 @@
 		241637C01D2FAE6100A16944 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				245D96BA1E896547001EB3DD /* Model */,
+				242A69FD1E851939002063DD /* Service */,
 				246CA4171D38E69A002167A2 /* DataBase */,
 				241637C11D2FAEB000A16944 /* Platform */,
 			);
@@ -864,6 +1038,7 @@
 			isa = PBXGroup;
 			children = (
 				24C257141D8A3E3A003D8F23 /* Scarecrow.entitlements */,
+				24D4A9F41E8031EC00205C22 /* Resources */,
 				244998801D4DEEF800D6E9F7 /* UserList */,
 				118AE38C1D450F52006DD475 /* Discover */,
 				118AE3881D450ED4006DD475 /* Profile */,
@@ -1003,6 +1178,17 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		242A69FD1E851939002063DD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				242A69FE1E851A37002063DD /* ADViewModelService.h */,
+				242A69FF1E851A37002063DD /* ADViewModelService.m */,
+				242A6A011E851AD8002063DD /* ADRepositoryService.h */,
+				242A6A021E851AD8002063DD /* ADRepositoryService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		244998801D4DEEF800D6E9F7 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1196,15 @@
 				2479B6C11D6C3B000035C629 /* ViewModel */,
 			);
 			name = UserList;
+			sourceTree = "<group>";
+		};
+		245D96BA1E896547001EB3DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				245D96BB1E89656E001EB3DD /* ADModelShowCase.h */,
+				245D96BC1E89656E001EB3DD /* ADModelShowCase.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		246CA4171D38E69A002167A2 /* DataBase */ = {
@@ -1075,14 +1270,14 @@
 				248569BB1D5E21820087E62D /* OCTRef+Scarecrow.m */,
 				248569BC1D5E21820087E62D /* OCTUser+Persistence.h */,
 				248569BD1D5E21820087E62D /* OCTUser+Persistence.m */,
-				248569BE1D5E21820087E62D /* SSKeychain+Scarecrow.h */,
-				248569BF1D5E21820087E62D /* SSKeychain+Scarecrow.m */,
+				248569BE1D5E21820087E62D /* SAMKeychain+Scarecrow.h */,
+				248569BF1D5E21820087E62D /* SAMKeychain+Scarecrow.m */,
 				248569C01D5E21820087E62D /* UIColor+Scarecrow.h */,
 				248569C11D5E21820087E62D /* UIColor+Scarecrow.m */,
 				248569C21D5E21820087E62D /* UIStoryboard+ViewModel.h */,
 				248569C31D5E21820087E62D /* UIStoryboard+ViewModel.m */,
-				24B0D1671D60B90500805A45 /* UIImage+Octions.h */,
-				24B0D1681D60B90500805A45 /* UIImage+Octions.m */,
+				24B0D1671D60B90500805A45 /* UIImage+Scarecrow.h */,
+				24B0D1681D60B90500805A45 /* UIImage+Scarecrow.m */,
 				248EC5F61D660A9800860852 /* OCTClient+Scarecrow.h */,
 				248EC5F71D660A9800860852 /* OCTClient+Scarecrow.m */,
 				116FA5D91D74933000F0AEE7 /* OCTRepository+Persistence.h */,
@@ -1144,6 +1339,8 @@
 				1106705E1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m */,
 				241526811D8F80BB00AFC6DD /* ADBarButtonItem.h */,
 				241526821D8F80BB00AFC6DD /* ADBarButtonItem.m */,
+				245D52F01EB78D1B00859A38 /* ADSearchBar.h */,
+				245D52F11EB78D1B00859A38 /* ADSearchBar.m */,
 			);
 			name = Views;
 			path = Utils/Views;
@@ -1154,6 +1351,30 @@
 			children = (
 				24A53C8A1D50211500749A30 /* ADDiscoverViewModel.h */,
 				24A53C8B1D50211500749A30 /* ADDiscoverViewModel.m */,
+				245D02AE1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.h */,
+				245D02AF1E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m */,
+				24D4A9AE1E7D9AE700205C22 /* ADBrowseViewModel.h */,
+				24D4A9AF1E7D9AE700205C22 /* ADBrowseViewModel.m */,
+				24D4A9B11E7D9B5E00205C22 /* ADTrendingViewModel.h */,
+				24D4A9B21E7D9B5E00205C22 /* ADTrendingViewModel.m */,
+				24D4A9B41E7D9C3100205C22 /* ADPopularUsersViewModel.h */,
+				24D4A9B51E7D9C3100205C22 /* ADPopularUsersViewModel.m */,
+				24D4A9BA1E7D9C5A00205C22 /* ADShowCasesViewModel.h */,
+				24D4A9BB1E7D9C5A00205C22 /* ADShowCasesViewModel.m */,
+				24D4A9FF1E8415C200205C22 /* ADTrendingReposViewModel.h */,
+				24D4AA001E8415C200205C22 /* ADTrendingReposViewModel.m */,
+				241E371C1E84C4F400C5761B /* ADLanguageViewModel.h */,
+				241E371D1E84C4F400C5761B /* ADLanguageViewModel.m */,
+				24BB83551E867FDF0065FAF8 /* ADPopularReposViewModel.h */,
+				24BB83561E867FDF0065FAF8 /* ADPopularReposViewModel.m */,
+				245D96A51E8806D5001EB3DD /* ADCountriesViewModel.h */,
+				245D96A61E8806D6001EB3DD /* ADCountriesViewModel.m */,
+				245D529B1EB717FF00859A38 /* ADShowCaseItemViewModel.h */,
+				245D529C1EB717FF00859A38 /* ADShowCaseItemViewModel.m */,
+				245D52D01EB73AA300859A38 /* ADShowCaseReposViewModel.h */,
+				245D52D11EB73AA300859A38 /* ADShowCaseReposViewModel.m */,
+				245D52E81EB77FA100859A38 /* ADSearchViewModel.h */,
+				245D52E91EB77FA100859A38 /* ADSearchViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1175,6 +1396,24 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		24D4A9F41E8031EC00205C22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24D4A9F51E8031EC00205C22 /* JSON */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		24D4A9F51E8031EC00205C22 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				245D96BE1E896A1B001EB3DD /* showCases.json */,
+				245D96B31E880894001EB3DD /* Countries.json */,
+				24D4A9F61E8031EC00205C22 /* Languages.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		9B095427F6D0D959A830A929 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1187,6 +1426,15 @@
 		C8BA914AFB0D04ACD6A79ABF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24D4AA0D1E84294300205C22 /* Masonry.framework */,
+				24178A3B1E76562B00546D68 /* SAMKeychain.framework */,
+				24178A341E76545C00546D68 /* FormatterKit.framework */,
+				24178A051E7650B900546D68 /* GPUImage.framework */,
+				241789E91E764EDE00546D68 /* MBProgressHUD.framework */,
+				241789C01E764B7D00546D68 /* WebImage.framework */,
+				2417896F1E76407000546D68 /* ZRAlertViewController.framework */,
+				241789701E76407000546D68 /* ZRPopView.framework */,
+				241789711E76407000546D68 /* ZRQRCodeController.framework */,
 				11C353EE1D8EE40E004BEBBB /* WebKit.framework */,
 				2423318A1D2E38A900EF8698 /* ReactiveCocoa.xcodeproj */,
 				2423317B1D2E389900EF8698 /* Mantle.xcodeproj */,
@@ -1204,19 +1452,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 242331531D2E36BD00EF8698 /* Build configuration list for PBXNativeTarget "Scarecrow" */;
 			buildPhases = (
-				DD28242E7A26EC0C165FDE44 /* 📦 Check Pods Manifest.lock */,
-				15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */,
-				2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */,
-				C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */,
-				33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */,
+				7F6424D08111C79C2CA44118 /* [CP] Check Pods Manifest.lock */,
 				242331221D2E36BD00EF8698 /* Sources */,
 				242331231D2E36BD00EF8698 /* Frameworks */,
 				242331241D2E36BD00EF8698 /* Resources */,
-				6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */,
-				099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */,
-				82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */,
-				1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */,
 				247DF6551D5D5F0B00607526 /* Embed Frameworks */,
+				2417895E1E763F9200546D68 /* ShellScript */,
+				EF71D8E21DB9BA4DB518E1BB /* [CP] Embed Pods Frameworks */,
+				E06FC93A75EE5E6DEBFCFDF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1280,13 +1523,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AD;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = duanhongjin;
 				TargetAttributes = {
 					242331251D2E36BD00EF8698 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KMLJ77QN3L;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -1463,6 +1706,7 @@
 			files = (
 				2415266A1D8E6FB800AFC6DD /* ADCodeTreeViewController.xib in Resources */,
 				1172FE8D1D8064A9007181BB /* ADReposTableViewCell.xib in Resources */,
+				24D4A9DD1E7D9D1E00205C22 /* ADBrowseViewController.xib in Resources */,
 				248569E01D5E21820087E62D /* ADLoadingTitleView.xib in Resources */,
 				248EC60E1D66165C00860852 /* ADSettingsViewController.xib in Resources */,
 				2479B6CC1D6C3B000035C629 /* ADUserListItemTableViewCell.xib in Resources */,
@@ -1472,16 +1716,27 @@
 				241B679F1D64BFC200A3960A /* ADUserInfoViewController.xib in Resources */,
 				24AB750D1D922E0F003EDA7D /* ADQRCodeViewerController.xib in Resources */,
 				243AB1291D829CB8001F174A /* ADStarredReposViewController.xib in Resources */,
+				242A69FB1E84D5DE002063DD /* ADLanguageViewController.xib in Resources */,
 				241526521D8E625000AFC6DD /* ADReposReadmeTableViewCell.xib in Resources */,
+				24D4AA091E8417D700205C22 /* ADTrendingReposViewController.xib in Resources */,
+				24D4A9C41E7D9CAA00205C22 /* ADTrendingViewController.xib in Resources */,
 				24B0D1601D5F784400805A45 /* ADAvatarHeanderView.xib in Resources */,
+				24BB835C1E8680000065FAF8 /* ADPopularReposViewController.xib in Resources */,
 				11AA336B1D85AE7F00C6E990 /* ADReposDetailViewController.xib in Resources */,
+				245D96BF1E896A1B001EB3DD /* showCases.json in Resources */,
+				245D96B41E880894001EB3DD /* Countries.json in Resources */,
+				24D4A9F81E8031EC00205C22 /* Languages.json in Resources */,
 				2479B6CE1D6C3B000035C629 /* Following.storyboard in Resources */,
 				110649581D8452DE00677E4D /* ADPublicActivityViewController.xib in Resources */,
+				245D52AD1EB71D4300859A38 /* ADShowCaseItemTableViewCell.xib in Resources */,
 				11EC82201D6C9C73003ECCD2 /* ADFollowersViewController.xib in Resources */,
 				11D43BD71D859D1D00D78D1B /* ADSubscribeTableViewCell.xib in Resources */,
+				24D4A9D31E7D9CED00205C22 /* ADShowCasesViewController.xib in Resources */,
 				11C354241D904603004BEBBB /* ADReposOwnerTableViewCell.xib in Resources */,
+				245D52EF1EB77FC300859A38 /* ADSearchViewController.xib in Resources */,
 				24856A111D5EBDDA0087E62D /* ADOauthViewController.xib in Resources */,
 				242331C81D2E52B500EF8698 /* login.storyboard in Resources */,
+				24BB83611E86812D0065FAF8 /* ADPopularUsersViewController.xib in Resources */,
 				118AE38B1D450EFF006DD475 /* Profile.storyboard in Resources */,
 				242331391D2E36BD00EF8698 /* LaunchScreen.storyboard in Resources */,
 				242331361D2E36BD00EF8698 /* Assets.xcassets in Resources */,
@@ -1491,6 +1746,8 @@
 				247D61CB1D86992A00BFAF31 /* ADReposViewCodeTableViewCell.xib in Resources */,
 				246E9E071D637BC700ED9EC4 /* ADWebViewController.xib in Resources */,
 				116FA5EF1D74950D00F0AEE7 /* Repos.storyboard in Resources */,
+				245D96B91E8808B8001EB3DD /* ADCountriesViewController.xib in Resources */,
+				245D52D71EB73ABF00859A38 /* ADShowCaseReposViewController.xib in Resources */,
 				118AE38F1D450FBF006DD475 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1512,7 +1769,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		099C78DEE15379CF10314BBA /* [CP] Copy Pods Resources */ = {
+		2417895E1E763F9200546D68 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ZRAlertViewController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZRPopView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZRQRCodeController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GPUImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FormatterKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SAMKeychain.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Masonry.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		7F6424D08111C79C2CA44118 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E06FC93A75EE5E6DEBFCFDF9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1527,67 +1821,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		15FB02CE2E7DE22751DF3AD8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		1815EE930D091CF5271E3FCD /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D0EA600EA86CC4B92C6E8F0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		33612B78137712FE068D60ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6DAC8ABC26F7DBB0C9C60B7D /* [CP] Embed Pods Frameworks */ = {
+		EF71D8E21DB9BA4DB518E1BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1602,51 +1836,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82C9487A87AD23840917D8E9 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scarecrow/Pods-Scarecrow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C02CB333B70F6A18601D519C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DD28242E7A26EC0C165FDE44 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1655,6 +1844,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11AD14D81D92EB2000B1F98D /* ADQRCodeCompletion.m in Sources */,
+				24D4A9B61E7D9C3100205C22 /* ADPopularUsersViewModel.m in Sources */,
+				245D96A71E8806D6001EB3DD /* ADCountriesViewModel.m in Sources */,
 				248569D71D5E21820087E62D /* OCTUser+Persistence.m in Sources */,
 				243AB1011D827C68001F174A /* ADStarredReposViewModel.m in Sources */,
 				246CA4251D38E6D0002167A2 /* ADDataBase.m in Sources */,
@@ -1662,7 +1853,9 @@
 				11EC82431D6F45B5003ECCD2 /* FMDatabaseQueueV2.m in Sources */,
 				2479B6D11D6C3B000035C629 /* ADUserListItemViewModel.m in Sources */,
 				24B2DA881D52EF7B00CD93A2 /* ADSubscribeItemViewModel.m in Sources */,
+				242A69FA1E84D5DE002063DD /* ADLanguageViewController.m in Sources */,
 				241526831D8F80BB00AFC6DD /* ADBarButtonItem.m in Sources */,
+				24D4A9DC1E7D9D1E00205C22 /* ADBrowseViewController.m in Sources */,
 				248EC60D1D66165C00860852 /* ADSettingsViewController.m in Sources */,
 				248569DC1D5E21820087E62D /* ADTableViewController.m in Sources */,
 				1172FE8C1D8064A9007181BB /* ADReposTableViewCell.m in Sources */,
@@ -1670,21 +1863,29 @@
 				1156191C1D43DDFA00ABA15F /* ADTabBarController.m in Sources */,
 				241B678F1D64BFA300A3960A /* ADUserInfoViewModel.m in Sources */,
 				248569DE1D5E21820087E62D /* ADTableViewModel.m in Sources */,
+				24D4AA081E8417D700205C22 /* ADTrendingReposViewController.m in Sources */,
 				241526511D8E625000AFC6DD /* ADReposReadmeTableViewCell.m in Sources */,
 				110649571D8452DE00677E4D /* ADPublicActivityViewController.m in Sources */,
 				248569D31D5E21820087E62D /* NSURL+Scarecrow.m in Sources */,
+				241E371E1E84C4F400C5761B /* ADLanguageViewModel.m in Sources */,
 				242331CB1D2E52D900EF8698 /* ADLoginViewController.m in Sources */,
+				242A6A001E851A37002063DD /* ADViewModelService.m in Sources */,
 				115619341D44F4A100ABA15F /* ADSubscribeViewController.m in Sources */,
 				243AB1281D829CB8001F174A /* ADStarredReposViewController.m in Sources */,
+				245D52EE1EB77FC300859A38 /* ADSearchViewController.m in Sources */,
+				245D529D1EB717FF00859A38 /* ADShowCaseItemViewModel.m in Sources */,
 				242331311D2E36BD00EF8698 /* ViewController.m in Sources */,
 				115619111D43D3F700ABA15F /* ADTabBarLoader.m in Sources */,
+				245D52D61EB73ABF00859A38 /* ADShowCaseReposViewController.m in Sources */,
 				24A53C901D50214400749A30 /* ADProfileViewModel.m in Sources */,
-				248569D81D5E21820087E62D /* SSKeychain+Scarecrow.m in Sources */,
+				248569D81D5E21820087E62D /* SAMKeychain+Scarecrow.m in Sources */,
+				24D4A9D21E7D9CED00205C22 /* ADShowCasesViewController.m in Sources */,
 				1172FE7D1D805C8E007181BB /* ADReposItemViewModel.m in Sources */,
 				241B679E1D64BFC200A3960A /* ADUserInfoViewController.m in Sources */,
-				24B0D1691D60B90500805A45 /* UIImage+Octions.m in Sources */,
+				24B0D1691D60B90500805A45 /* UIImage+Scarecrow.m in Sources */,
 				248569EA1D5E26300087E62D /* ADWebViewController.m in Sources */,
 				2415265A1D8E6EC400AFC6DD /* ADCodeTreeViewModel.m in Sources */,
+				245D02B01E7BE43B00B6CE0B /* ADDiscoverItemViewModel.m in Sources */,
 				11C354121D9030C9004BEBBB /* ADReposInfoViewController.m in Sources */,
 				248569E41D5E21CA0087E62D /* ADWebViewModel.m in Sources */,
 				2479B6D21D6C3B000035C629 /* ADUserListViewModel.m in Sources */,
@@ -1696,9 +1897,12 @@
 				248569D61D5E21820087E62D /* OCTRef+Scarecrow.m in Sources */,
 				11C3541E1D90449D004BEBBB /* ADReposSettingsViewController.m in Sources */,
 				2423312B1D2E36BD00EF8698 /* main.m in Sources */,
+				245D96BD1E89656E001EB3DD /* ADModelShowCase.m in Sources */,
 				11BD85331D81C8C200698803 /* ADPublicReposViewController.m in Sources */,
 				248EC6061D66145200860852 /* ADSetttingsViewModel.m in Sources */,
 				248569DA1D5E21820087E62D /* UIStoryboard+ViewModel.m in Sources */,
+				245D52AC1EB71D4300859A38 /* ADShowCaseItemTableViewCell.m in Sources */,
+				24BB835B1E8680000065FAF8 /* ADPopularReposViewController.m in Sources */,
 				11D43BD61D859D1D00D78D1B /* ADSubscribeTableViewCell.m in Sources */,
 				248569D91D5E21820087E62D /* UIColor+Scarecrow.m in Sources */,
 				1156190C1D43D35C00ABA15F /* ADTabBarViewModel.m in Sources */,
@@ -1716,31 +1920,44 @@
 				2479B6CA1D6C3B000035C629 /* ADFollowingViewController.m in Sources */,
 				1106705F1D8859AA0041CB1D /* ADTableViewCellStyleValue1.m in Sources */,
 				2479B6CD1D6C3B000035C629 /* ADUserListViewController.m in Sources */,
+				245D52EA1EB77FA100859A38 /* ADSearchViewModel.m in Sources */,
 				248569D51D5E21820087E62D /* OCTEvent+Persistence.m in Sources */,
 				11AA336A1D85AE7F00C6E990 /* ADReposDetailViewController.m in Sources */,
+				24D4A9C31E7D9CAA00205C22 /* ADTrendingViewController.m in Sources */,
+				24D4A9B31E7D9B5E00205C22 /* ADTrendingViewModel.m in Sources */,
 				24A53C8C1D50211500749A30 /* ADDiscoverViewModel.m in Sources */,
 				11C3541A1D90403B004BEBBB /* ADReposSettingsViewModel.m in Sources */,
 				90B878FC1D941F320044B286 /* ADLocalWebViewModel.m in Sources */,
 				11C354231D904603004BEBBB /* ADReposOwnerTableViewCell.m in Sources */,
 				248569DD1D5E21820087E62D /* ADViewController.m in Sources */,
+				24BB83601E86812D0065FAF8 /* ADPopularUsersViewController.m in Sources */,
 				248569ED1D5E289F0087E62D /* ADOauthViewController.m in Sources */,
 				24C257491D8D7EF5003D8F23 /* ADReposDescTableViewCell.m in Sources */,
 				110649481D8452BC00677E4D /* ADPublicActivityViewModel.m in Sources */,
+				24D4A9B01E7D9AE700205C22 /* ADBrowseViewModel.m in Sources */,
 				2479B6CF1D6C3B000035C629 /* ADFollowersViewModel.m in Sources */,
+				24D4AA011E8415C200205C22 /* ADTrendingReposViewModel.m in Sources */,
 				2479B6D01D6C3B000035C629 /* ADFollowingViewModel.m in Sources */,
+				24D4A9BC1E7D9C5A00205C22 /* ADShowCasesViewModel.m in Sources */,
+				245D02BE1E7BF29300B6CE0B /* ADDiscoverViewController.m in Sources */,
 				24AB753C1D9235F8003EDA7D /* ADReposQRCodeViewModel.m in Sources */,
 				248569DF1D5E21820087E62D /* ADViewModel.m in Sources */,
 				247D61BA1D86991500BFAF31 /* ADReposStatisticsTableViewCell.m in Sources */,
 				11C354031D902C52004BEBBB /* ADReposInfoViewModel.m in Sources */,
 				11042D831D2EADC700EECC07 /* ADLoginViewModel.m in Sources */,
+				245D52F21EB78D1B00859A38 /* ADSearchBar.m in Sources */,
 				11BD851E1D81C09800698803 /* ADPublicReposViewModel.m in Sources */,
 				2479B6CB1D6C3B000035C629 /* ADUserListItemTableViewCell.m in Sources */,
+				242A6A031E851AD8002063DD /* ADRepositoryService.m in Sources */,
+				245D96B81E8808B8001EB3DD /* ADCountriesViewController.m in Sources */,
 				248569E71D5E22110087E62D /* ADOauthViewModel.m in Sources */,
 				90522B6D1D9B92D2006E8847 /* UIView+Extension.m in Sources */,
 				248569D21D5E21820087E62D /* NSMutableAttributedString+Scarecrow.m in Sources */,
 				24AB753F1D923610003EDA7D /* ADQRCodeViewModel.m in Sources */,
 				248569DB1D5E21820087E62D /* ADNavigationController.m in Sources */,
 				115619191D43DA8D00ABA15F /* ADSubscribeViewModel.m in Sources */,
+				24BB83571E867FDF0065FAF8 /* ADPopularReposViewModel.m in Sources */,
+				245D52D21EB73AA300859A38 /* ADShowCaseReposViewModel.m in Sources */,
 				248EC5F81D660A9800860852 /* OCTClient+Scarecrow.m in Sources */,
 				116FA5F31D7496FD00F0AEE7 /* ADReposViewController.m in Sources */,
 			);
@@ -1933,18 +2150,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F1B985E458E72E81AC860FA /* Pods-Scarecrow.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1952,18 +2174,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A106AB193F5A36313CE52DD2 /* Pods-Scarecrow.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = KMLJ77QN3L;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "Scarecrow/Scarecrow-prefix.pch";
 				INFOPLIST_FILE = Scarecrow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrazyKids.Github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cb6cf6a-7978-4624-b8cd-2c6e3881fc76";
-				PROVISIONING_PROFILE_SPECIFIER = "Profile for github";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 #import "ADReposReadmeTableViewCell.h"
 #import "UIColor+Scarecrow.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 #import "ADReposDetailViewModel.h"
 
 @interface ADReposReadmeTableViewCell ()

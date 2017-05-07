@@ -10,7 +10,7 @@
 
 #import "ADSubscribeTableViewCell.h"
 #import <YYKit/YYKit.h>
-#import <SDWebImage/UIButton+WebCache.h>
+#import <WebImage/UIButton+WebCache.h>
 #import "NSURL+Scarecrow.h"
 
 @interface ADSubscribeTableViewCell ()

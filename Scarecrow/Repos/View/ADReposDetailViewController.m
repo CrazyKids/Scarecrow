@@ -12,7 +12,7 @@
 #import "ADReposStatisticsTableViewCell.h"
 #import "ADReposViewCodeTableViewCell.h"
 #import "ADReposReadmeTableViewCell.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 #import "OCTRef+Scarecrow.h"
 
 @interface ADReposDetailViewController () <UIWebViewDelegate>

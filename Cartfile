@@ -1,0 +1,9 @@
+github "rs/SDWebImage" ~> 3.8.1
+github "jdg/MBProgressHUD"
+github "VictorZhang2014/ZRPopoverView"
+github "VictorZhang2014/ZRAlertController"
+github "VictorZhang2014/ZRQRCodeViewController"
+github "BradLarson/GPUImage"
+github "mattt/FormatterKit"
+github "soffes/SAMKeychain"
+github "SnapKit/Masonry"

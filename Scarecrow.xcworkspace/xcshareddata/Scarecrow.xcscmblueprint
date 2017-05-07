@@ -11,7 +11,8 @@
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : 0,
     "7E0002657A26341904E2EF084A9078017CA17E33" : 0,
     "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : 0,
-    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
+    "9E5D318A07B9CC15E73B8FE4E14FD1DF86778641" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CE940695-BC40-4D6D-AA7E-8A3A307652A2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
@@ -22,7 +23,8 @@
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "Scarecrow\/Octokit\/Carthage\/Checkouts\/ReactiveCocoa\/",
     "7E0002657A26341904E2EF084A9078017CA17E33" : "Scarecrow\/",
     "F4E0D01C239078022205F5EFE09E8AB524DA87ED" : "Scarecrow\/Octokit\/",
-    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Scarecrow\/Octokit\/External\/AFNetworking\/"
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Scarecrow\/Octokit\/External\/AFNetworking\/",
+    "9E5D318A07B9CC15E73B8FE4E14FD1DF86778641" : "..\/..\/SourceCode\/ZRPopoverView"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Scarecrow",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -47,6 +49,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duanhjlt\/Scarecrow.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E0002657A26341904E2EF084A9078017CA17E33"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/VictorZhang2014\/ZRPopoverView",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E5D318A07B9CC15E73B8FE4E14FD1DF86778641"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/github\/AFNetworking.git",

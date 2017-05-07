@@ -12,6 +12,13 @@
 
 @class ADViewModel;
 @class ADDataBaseManager;
+@class ADViewModelService;
+
+extern NSString *const kTrendingLanguageCacheKey;
+extern NSString *const kExploreTrendingRepositoriesCacheKey;
+extern NSString *const kPopularUsersLanguageCacheKey;
+extern NSString *const kPopularUserCountryCacheKey;
+extern NSString *const kPopularReposLanguageCacheKey;
 
 @interface ADPlatformManager : NSObject
 
@@ -19,6 +26,7 @@
 @property (strong, nonatomic, readonly) ADDataBaseManager *dataBaseManager;
 
 @property (strong, nonatomic, readonly) YYCache *cacheMgr;
+@property (strong, nonatomic, readonly) ADViewModelService *service;
 
 + (ADPlatformManager *)sharedInstance;
 

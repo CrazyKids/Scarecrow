@@ -39,12 +39,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RGB(0xE6E6E7);
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundColor = RGB(0xE6E6E7);
     self.tableView.contentInset = [self contentInsets];
     
     [self.tableView registerClass:[ADTableViewCellStyleValue1 class] forCellReuseIdentifier:@"UITableViewCellStyleValue1"];
@@ -116,38 +116,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self.viewModel.didSelectCommand execute:indexPath];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForHeaderInSection:section];
-    if (height == 0) {
-        return nil;
-    }
-    
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
-}
-
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    CGFloat height = [self tableView:tableView heightForFooterInSection:section];
-    if (height == 0) {
-        return nil;
-    }
-    
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    return view;
 }
 
 #pragma mark - UIScrollViewDelegate

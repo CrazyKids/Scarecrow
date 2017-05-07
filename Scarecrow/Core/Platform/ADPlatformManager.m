@@ -9,14 +9,22 @@
 #import "ADPlatformManager.h"
 #import "ADViewController.h"
 #import "ADDataBaseManager.h"
-#import "SSKeychain+Scarecrow.h"
+#import "SAMKeychain+Scarecrow.h"
 #import "OCTUser+Persistence.h"
+#import "ADViewModelService.h"
+
+NSString *const kTrendingLanguageCacheKey = @"kTrendingLanguageCacheKey";
+NSString *const kExploreTrendingRepositoriesCacheKey = @"kExploreTrendingRepositoriesCacheKey";
+NSString *const kPopularUsersLanguageCacheKey = @"kPopularUsersLanguageCacheKey";
+NSString *const kPopularUserCountryCacheKey = @"kPopularUserCountryCacheKey";
+NSString *const kPopularReposLanguageCacheKey = @"kPopularReposLanguageCacheKey";
 
 @interface ADPlatformManager ()
 
 @property (strong, nonatomic) ADDataBaseManager *dataBaseManager;
 
 @property (strong, nonatomic) YYCache *cacheMgr;
+@property (strong, nonatomic) ADViewModelService *service;
 
 @end
 
@@ -38,7 +46,7 @@
 
 - (ADDataBaseManager *)dataBaseManager {
     @synchronized (self) {
-        NSString *rawLogin = [SSKeychain username];
+        NSString *rawLogin = [SAMKeychain username];
         if (!_dataBaseManager && rawLogin.length) {
             _dataBaseManager = [[ADDataBaseManager alloc]initWithRawLogin:rawLogin];
         }
@@ -53,6 +61,13 @@
         _cacheMgr = [YYCache cacheWithName:login];
     }
     return _cacheMgr;
+}
+
+- (ADViewModelService *)service {
+    if (!_service) {
+        _service = [ADViewModelService new];
+    }
+    return _service;
 }
 
 - (ADViewController *)viewControllerWithViewModel:(ADViewModel *)viewModel {
@@ -92,6 +107,16 @@
              @"ADQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADUserQRCodeViewModel" : @"ADQRCodeViewerController",
              @"ADReposQRCodeViewModel" : @"ADQRCodeViewerController",
+             @"ADTrendingViewModel" : @"ADTrendingViewController",
+             @"ADPopularUsersViewModel" : @"ADPopularUsersViewController",
+             @"ADPopularReposViewModel" : @"ADPopularReposViewController",
+             @"ADShowCasesViewModel" : @"ADShowCasesViewController",
+             @"ADSearchViewModel" : @"ADSearchViewController",
+             @"ADBrowseViewModel" : @"ADBrowseViewController",
+             @"ADTrendingReposViewModel" : @"ADTrendingReposViewController",
+             @"ADLanguageViewModel" : @"ADLanguageViewController",
+             @"ADCountriesViewModel" : @"ADCountriesViewController",
+             @"ADShowCaseReposViewModel" : @"ADShowCaseReposViewController",
              };
 }
 

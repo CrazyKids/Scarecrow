@@ -18,16 +18,13 @@ case "${TARGETED_DEVICE_FAMILY}" in
   2)
     TARGET_DEVICE_ARGS="--target-device ipad"
     ;;
+  3)
+    TARGET_DEVICE_ARGS="--target-device tv"
+    ;;
   *)
     TARGET_DEVICE_ARGS="--target-device mac"
     ;;
 esac
-
-realpath() {
-  DIRECTORY="$(cd "${1%/*}" && pwd)"
-  FILENAME="${1##*/}"
-  echo "$DIRECTORY/$FILENAME"
-}
 
 install_resource()
 {
@@ -48,8 +45,8 @@ EOM
       ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .storyboard`.storyboardc" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.xib)
-      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT}"
-      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib" "$RESOURCE_PATH" --sdk "${SDKROOT}"
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}"
+      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.framework)
       echo "mkdir -p ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
@@ -70,7 +67,7 @@ EOM
       xcrun mapc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm"
       ;;
     *.xcassets)
-      ABSOLUTE_XCASSET_FILE=$(realpath "$RESOURCE_PATH")
+      ABSOLUTE_XCASSET_FILE="$RESOURCE_PATH"
       XCASSET_FILES+=("$ABSOLUTE_XCASSET_FILE")
       ;;
     *)
@@ -96,46 +93,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrow@2x.png"
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrowLoadMore.png"
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrowLoadMore@2x.png"
-  install_resource "FormatterKit/Localizations/ar.lproj"
-  install_resource "FormatterKit/Localizations/ca.lproj"
-  install_resource "FormatterKit/Localizations/cs.lproj"
-  install_resource "FormatterKit/Localizations/da.lproj"
-  install_resource "FormatterKit/Localizations/de.lproj"
-  install_resource "FormatterKit/Localizations/el.lproj"
-  install_resource "FormatterKit/Localizations/en.lproj"
-  install_resource "FormatterKit/Localizations/es.lproj"
-  install_resource "FormatterKit/Localizations/fr.lproj"
-  install_resource "FormatterKit/Localizations/he.lproj"
-  install_resource "FormatterKit/Localizations/hu.lproj"
-  install_resource "FormatterKit/Localizations/id.lproj"
-  install_resource "FormatterKit/Localizations/it.lproj"
-  install_resource "FormatterKit/Localizations/ja.lproj"
-  install_resource "FormatterKit/Localizations/ko.lproj"
-  install_resource "FormatterKit/Localizations/ms.lproj"
-  install_resource "FormatterKit/Localizations/nb.lproj"
-  install_resource "FormatterKit/Localizations/nl.lproj"
-  install_resource "FormatterKit/Localizations/nn.lproj"
-  install_resource "FormatterKit/Localizations/pl.lproj"
-  install_resource "FormatterKit/Localizations/pt.lproj"
-  install_resource "FormatterKit/Localizations/pt_BR.lproj"
-  install_resource "FormatterKit/Localizations/ro.lproj"
-  install_resource "FormatterKit/Localizations/ru.lproj"
-  install_resource "FormatterKit/Localizations/sv.lproj"
-  install_resource "FormatterKit/Localizations/th.lproj"
-  install_resource "FormatterKit/Localizations/tr.lproj"
-  install_resource "FormatterKit/Localizations/uk.lproj"
-  install_resource "FormatterKit/Localizations/vi.lproj"
-  install_resource "FormatterKit/Localizations/zh-Hans.lproj"
-  install_resource "FormatterKit/Localizations/zh-Hant.lproj"
-  install_resource "GPUImage/framework/Resources/lookup.png"
-  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
-  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
-  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
-  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
-  install_resource "SSKeychain/Support/SSKeychain.bundle"
   install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
-  install_resource "ZRQRCodeViewController/Classes/ZRQRCode.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/blackArrow.png"
@@ -154,46 +113,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrow@2x.png"
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrowLoadMore.png"
   install_resource "EGOTableViewPullRefreshAndLoadMore/EGOTableViewPullRefreshAndLoadMore/Resources/whiteArrowLoadMore@2x.png"
-  install_resource "FormatterKit/Localizations/ar.lproj"
-  install_resource "FormatterKit/Localizations/ca.lproj"
-  install_resource "FormatterKit/Localizations/cs.lproj"
-  install_resource "FormatterKit/Localizations/da.lproj"
-  install_resource "FormatterKit/Localizations/de.lproj"
-  install_resource "FormatterKit/Localizations/el.lproj"
-  install_resource "FormatterKit/Localizations/en.lproj"
-  install_resource "FormatterKit/Localizations/es.lproj"
-  install_resource "FormatterKit/Localizations/fr.lproj"
-  install_resource "FormatterKit/Localizations/he.lproj"
-  install_resource "FormatterKit/Localizations/hu.lproj"
-  install_resource "FormatterKit/Localizations/id.lproj"
-  install_resource "FormatterKit/Localizations/it.lproj"
-  install_resource "FormatterKit/Localizations/ja.lproj"
-  install_resource "FormatterKit/Localizations/ko.lproj"
-  install_resource "FormatterKit/Localizations/ms.lproj"
-  install_resource "FormatterKit/Localizations/nb.lproj"
-  install_resource "FormatterKit/Localizations/nl.lproj"
-  install_resource "FormatterKit/Localizations/nn.lproj"
-  install_resource "FormatterKit/Localizations/pl.lproj"
-  install_resource "FormatterKit/Localizations/pt.lproj"
-  install_resource "FormatterKit/Localizations/pt_BR.lproj"
-  install_resource "FormatterKit/Localizations/ro.lproj"
-  install_resource "FormatterKit/Localizations/ru.lproj"
-  install_resource "FormatterKit/Localizations/sv.lproj"
-  install_resource "FormatterKit/Localizations/th.lproj"
-  install_resource "FormatterKit/Localizations/tr.lproj"
-  install_resource "FormatterKit/Localizations/uk.lproj"
-  install_resource "FormatterKit/Localizations/vi.lproj"
-  install_resource "FormatterKit/Localizations/zh-Hans.lproj"
-  install_resource "FormatterKit/Localizations/zh-Hant.lproj"
-  install_resource "GPUImage/framework/Resources/lookup.png"
-  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
-  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
-  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
-  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "OcticonsIOS/OcticonsIOS/octicons.ttf"
-  install_resource "SSKeychain/Support/SSKeychain.bundle"
   install_resource "Vertigo/Vertigo/TGRImageViewController.xib"
-  install_resource "ZRQRCodeViewController/Classes/ZRQRCode.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
@@ -209,7 +130,7 @@ then
   # Find all other xcassets (this unfortunately includes those of path pods and other targets).
   OTHER_XCASSETS=$(find "$PWD" -iname "*.xcassets" -type d)
   while read line; do
-    if [[ $line != "`realpath $PODS_ROOT`*" ]]; then
+    if [[ $line != "${PODS_ROOT}*" ]]; then
       XCASSET_FILES+=("$line")
     fi
   done <<<"$OTHER_XCASSETS"

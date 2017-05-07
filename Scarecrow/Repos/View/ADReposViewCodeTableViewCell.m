@@ -10,7 +10,7 @@
 #import "UIColor+Scarecrow.h"
 #import "ADReposDetailViewModel.h"
 #import "OCTRef+Scarecrow.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Scarecrow.h"
 
 @interface ADReposViewCodeTableViewCell ()
 

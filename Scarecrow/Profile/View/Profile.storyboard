@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q9j-fh-26Z">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q9j-fh-26Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Profile-->
@@ -18,10 +22,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-ob-4yx">
                                 <rect key="frame" x="0.0" y="64" width="300" height="187"/>
-                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Oq3-ob-4yx" secondAttribute="trailing" id="6Tx-2k-MBe"/>
                             <constraint firstItem="m30-t1-3O7" firstAttribute="top" secondItem="Oq3-ob-4yx" secondAttribute="bottom" id="A2g-E6-pHP"/>
@@ -36,20 +40,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWN-8w-1cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="327"/>
+            <point key="canvasLocation" x="1034" y="327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="79z-6t-3n2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9j-fh-26Z" customClass="ADNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="profileTabBar" selectedImage="selectedProfileTabBar" id="py9-XD-8Ys">
+                    <tabBarItem key="tabBarItem" image="Profile" selectedImage="ProfileHold" id="py9-XD-8Ys">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qYs-nd-Bcj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qYs-nd-Bcj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -64,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profileTabBar" width="27" height="28"/>
-        <image name="selectedProfileTabBar" width="27" height="28"/>
+        <image name="Profile" width="24" height="24"/>
+        <image name="ProfileHold" width="24" height="24"/>
     </resources>
 </document>
